@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../chat/chat_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -12,7 +13,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MatchesWidget extends StatefulWidget {
-  const MatchesWidget({Key key}) : super(key: key);
+  const MatchesWidget({
+    Key key,
+    this.user,
+  }) : super(key: key);
+
+  final UsersRecord user;
 
   @override
   _MatchesWidgetState createState() => _MatchesWidgetState();
@@ -79,8 +85,18 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                         color: FlutterFlowTheme.primaryColor,
                         size: 30,
                       ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            duration: Duration(milliseconds: 0),
+                            reverseDuration: Duration(milliseconds: 0),
+                            child: ChatWidget(
+                              chatUser: widget.user,
+                            ),
+                          ),
+                        );
                       },
                     ),
                   ],

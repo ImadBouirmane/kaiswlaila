@@ -9,6 +9,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:kais_et_leila/sign_in/sign_in_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'matches/matches_widget.dart';
 import 'home_page/home_page_widget.dart';
@@ -103,9 +104,18 @@ class _NavBarPageState extends State<NavBarPage> {
       'HomePage': HomePageWidget(),
       'notifications': NotificationsWidget(),
     };
+    final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
       body: tabs[_currentPage],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
+        backgroundColor: Colors.white,
+        selectedItemColor: FlutterFlowTheme.primaryColor,
+        unselectedItemColor: Color(0x8A000000),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: FaIcon(
@@ -144,14 +154,6 @@ class _NavBarPageState extends State<NavBarPage> {
             tooltip: '',
           )
         ],
-        backgroundColor: Colors.white,
-        currentIndex: tabs.keys.toList().indexOf(_currentPage),
-        selectedItemColor: FlutterFlowTheme.primaryColor,
-        unselectedItemColor: Color(0x8A000000),
-        onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
       ),
     );
   }

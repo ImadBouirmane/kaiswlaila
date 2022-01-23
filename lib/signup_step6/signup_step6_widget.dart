@@ -5,9 +5,8 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../signup_step4/signup_step4_widget.dart';
+import '../signup_step5/signup_step5_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -25,14 +24,7 @@ class _SignupStep6WidgetState extends State<SignupStep6Widget> {
   String choiceChips2Value;
   String choiceChips3Value;
   String choiceChips4Value;
-  TextEditingController bioController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    bioController = TextEditingController();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,55 +78,6 @@ class _SignupStep6WidgetState extends State<SignupStep6Widget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Présentez-vous',
-                          style: FlutterFlowTheme.subtitle1,
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
-                      child: TextFormField(
-                        onChanged: (_) => EasyDebounce.debounce(
-                          'bioController',
-                          Duration(milliseconds: 2000),
-                          () => setState(() {}),
-                        ),
-                        controller: bioController,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: 'Bio',
-                          labelStyle: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.primaryColor,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.primaryColor,
-                              width: 1,
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.primaryColor,
-                              width: 1,
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          filled: true,
-                          fillColor: Color(0xFFFFEAFA),
-                        ),
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          color: FlutterFlowTheme.primaryColor,
-                        ),
-                        maxLines: 5,
-                      ),
-                    ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: Row(
@@ -302,7 +245,6 @@ class _SignupStep6WidgetState extends State<SignupStep6Widget> {
               FFButtonWidget(
                 onPressed: () async {
                   final usersUpdateData = createUsersRecordData(
-                    city: bioController.text,
                     interest1: choiceChips1Value,
                     interest2: choiceChips3Value,
                     interest3: choiceChips3Value,
@@ -315,7 +257,7 @@ class _SignupStep6WidgetState extends State<SignupStep6Widget> {
                       type: PageTransitionType.leftToRight,
                       duration: Duration(milliseconds: 200),
                       reverseDuration: Duration(milliseconds: 200),
-                      child: SignupStep4Widget(),
+                      child: SignupStep5Widget(),
                     ),
                   );
                 },

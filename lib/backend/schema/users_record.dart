@@ -65,9 +65,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   bool get like;
 
   @nullable
-  String get title;
-
-  @nullable
   String get country;
 
   @nullable
@@ -107,6 +104,21 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   bool get qs5c6;
 
   @nullable
+  String get function;
+
+  @nullable
+  String get photo1;
+
+  @nullable
+  String get photo2;
+
+  @nullable
+  String get photo3;
+
+  @nullable
+  String get photo4;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -126,7 +138,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..interest3 = ''
     ..interest4 = ''
     ..like = false
-    ..title = ''
     ..country = ''
     ..isRegistered = false
     ..isNew = false
@@ -139,7 +150,12 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..qs5c3 = false
     ..qs5c4 = false
     ..qs5c5 = false
-    ..qs5c6 = false;
+    ..qs5c6 = false
+    ..function = ''
+    ..photo1 = ''
+    ..photo2 = ''
+    ..photo3 = ''
+    ..photo4 = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -179,7 +195,6 @@ Map<String, dynamic> createUsersRecordData({
   String interest3,
   String interest4,
   bool like,
-  String title,
   String country,
   bool isRegistered,
   bool isNew,
@@ -193,6 +208,11 @@ Map<String, dynamic> createUsersRecordData({
   bool qs5c4,
   bool qs5c5,
   bool qs5c6,
+  String function,
+  String photo1,
+  String photo2,
+  String photo3,
+  String photo4,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -214,7 +234,6 @@ Map<String, dynamic> createUsersRecordData({
           ..interest3 = interest3
           ..interest4 = interest4
           ..like = like
-          ..title = title
           ..country = country
           ..isRegistered = isRegistered
           ..isNew = isNew
@@ -227,4 +246,9 @@ Map<String, dynamic> createUsersRecordData({
           ..qs5c3 = qs5c3
           ..qs5c4 = qs5c4
           ..qs5c5 = qs5c5
-          ..qs5c6 = qs5c6));
+          ..qs5c6 = qs5c6
+          ..function = function
+          ..photo1 = photo1
+          ..photo2 = photo2
+          ..photo3 = photo3
+          ..photo4 = photo4));

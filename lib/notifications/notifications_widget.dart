@@ -23,9 +23,14 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
-      initialOpacity: 0,
-      finalOpacity: 1,
-      slideOffset: Offset(37, 0),
+      initialState: AnimationState(
+        offset: Offset(-37, 0),
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        opacity: 1,
+      ),
     ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();

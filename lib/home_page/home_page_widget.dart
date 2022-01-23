@@ -1,4 +1,6 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
+import '../chat/chat_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -10,7 +12,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key key}) : super(key: key);
+  const HomePageWidget({
+    Key key,
+    this.userChat,
+  }) : super(key: key);
+
+  final UsersRecord userChat;
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
@@ -79,8 +86,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           color: FlutterFlowTheme.primaryColor,
                           size: 30,
                         ),
-                        onPressed: () {
-                          print('IconButton pressed ...');
+                        onPressed: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 0),
+                              reverseDuration: Duration(milliseconds: 0),
+                              child: ChatWidget(
+                                chatUser: widget.userChat,
+                              ),
+                            ),
+                          );
                         },
                       ),
                     ],

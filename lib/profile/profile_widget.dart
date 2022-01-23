@@ -6,6 +6,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -119,7 +120,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -142,7 +143,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               children: [
                                 AuthUserStreamWidget(
                                   child: Text(
-                                    currentUserDocument?.title,
+                                    currentUserDocument?.function,
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                       fontWeight: FontWeight.w500,
@@ -202,7 +203,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       color: FlutterFlowTheme.tertiaryColor,
                     ),
                     child: AuthUserStreamWidget(
-                      child: Text(
+                      child: AutoSizeText(
                         currentUserDocument?.bio
                             .maybeHandleOverflow(maxChars: 400),
                         style: FlutterFlowTheme.bodyText1,
@@ -232,6 +233,123 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     height: 100,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.tertiaryColor,
+                    ),
+                    child: Wrap(
+                      spacing: 0,
+                      runSpacing: 0,
+                      alignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      direction: Axis.horizontal,
+                      runAlignment: WrapAlignment.center,
+                      verticalDirection: VerticalDirection.down,
+                      clipBehavior: Clip.none,
+                      children: [
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: FlutterFlowTheme.primaryColor,
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDocument?.interest1,
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: FlutterFlowTheme.tertiaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: FlutterFlowTheme.secondaryColor,
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDocument?.interest2,
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: FlutterFlowTheme.tertiaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: FlutterFlowTheme.customColor1,
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDocument?.interest3,
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: FlutterFlowTheme.tertiaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: FlutterFlowTheme.customColor2,
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDocument?.interest4,
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: FlutterFlowTheme.tertiaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: FlutterFlowTheme.customColor3,
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDocument?.interest1,
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: FlutterFlowTheme.tertiaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

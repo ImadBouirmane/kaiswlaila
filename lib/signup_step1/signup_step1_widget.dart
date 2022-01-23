@@ -390,8 +390,8 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                         0, 20, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        if (emailController.text.isEmpty ||
-                                            !emailController.text
+                                        if (phoneController.text.isEmpty ||
+                                            !phoneController.text
                                                 .startsWith('+')) {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
@@ -404,7 +404,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                         }
                                         await beginPhoneAuth(
                                           context: context,
-                                          phoneNumber: emailController.text,
+                                          phoneNumber: phoneController.text,
                                           onCodeSent: () async {
                                             await Navigator.pushAndRemoveUntil(
                                               context,

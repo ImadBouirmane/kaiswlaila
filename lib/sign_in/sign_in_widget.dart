@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -16,8 +17,37 @@ class SignInWidget extends StatefulWidget {
   _SignInWidgetState createState() => _SignInWidgetState();
 }
 
-class _SignInWidgetState extends State<SignInWidget> {
+class _SignInWidgetState extends State<SignInWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'circleImageOnPageLoadAnimation': AnimationInfo(
+      curve: Curves.linear,
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 49),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+  };
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    startPageLoadAnimations(
+      animationsMap.values
+          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
+      this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +99,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                       child: Image.asset(
                         'assets/images/KWL_Logo_Removal.png',
                       ),
-                    ),
+                    ).animated(
+                        [animationsMap['circleImageOnPageLoadAnimation']]),
                   ],
                 ),
               ),
