@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>662070689316-pqtoibo52al085uuud1rjsimst18ul34.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.662070689316-pqtoibo52al085uuud1rjsimst18ul34</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>662070689316-ag3ju586hmietpke91rqbebl5pqsf0ig.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDi6uNXAGoL9eBg1Oc3QwCgYZy4bn9JpP0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>662070689316</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gebanalysis.kaiswleila</string>
+	<key>PROJECT_ID</key>
+	<string>kais-w-leila</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kais-w-leila.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:662070689316:ios:6a4120ba34a4e5688ba2b1</string>
+</dict>
+</plist>
