@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "662070689316",
+    "firebase_url": "https://kais-w-leila-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "kais-w-leila",
     "storage_bucket": "kais-w-leila.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "662070689316-91mofk89ll675ni42m5jbkhcv74ess4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gebanalysis.kaiswleila",
+            "certificate_hash": "df8d41e7da9f838793f448867db8be7de2d623e0"
+          }
+        },
         {
           "client_id": "662070689316-ag3ju586hmietpke91rqbebl5pqsf0ig.apps.googleusercontent.com",
           "client_type": 1,

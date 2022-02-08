@@ -56,7 +56,7 @@ class _ChatWidgetState extends State<ChatWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: FlutterFlowTheme.tertiaryColor,
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -78,15 +78,18 @@ class _ChatWidgetState extends State<ChatWidget> {
               Text(
                 widget.chatUser.displayName,
                 style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
+                  fontFamily: 'Arial Black',
                   color: Colors.black,
                   fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
+                  useGoogleFonts: false,
                 ),
               ),
             if (isGroupChat() ?? true)
               Text(
-                'Group Chat',
+                FFLocalizations.of(context).getText(
+                  '3oxma931' /* Group Chat */,
+                ),
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Colors.black,
