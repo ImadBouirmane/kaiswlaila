@@ -1634,13 +1634,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // menu
   {
-    'd0k9pihu': {
+    '88v6ydaw': {
       'fr': 'Modifier le profile',
       'ar': '',
       'en': '',
     },
-    'kwxke2a4': {
+    '3pdmdf00': {
       'fr': 'Modifier les paramètres',
+      'ar': '',
+      'en': '',
+    },
+    'qevy33q4': {
+      'fr': 'Se déconnecter',
       'ar': '',
       'en': '',
     },
