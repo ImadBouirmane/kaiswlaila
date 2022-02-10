@@ -1,16 +1,14 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/navbar_notifications_widget.dart';
+import '../components/navbar_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NotificationsWidget extends StatefulWidget {
@@ -137,17 +135,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                             useGoogleFonts: false,
                           ),
                         ),
-                        FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 30,
-                          borderWidth: 1,
-                          buttonSize: 50,
-                          icon: FaIcon(
-                            FontAwesomeIcons.comments,
-                            color: FlutterFlowTheme.primaryColor,
-                            size: 30,
-                          ),
-                          onPressed: () async {
+                        InkWell(
+                          onTap: () async {
                             await Navigator.push(
                               context,
                               PageTransition(
@@ -158,6 +147,17 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                               ),
                             );
                           },
+                          child: Container(
+                            width: 50,
+                            height: 50,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset(
+                              'assets/images/Asset_13@4x.png',
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -296,7 +296,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                     ),
                   ),
                 ),
-                NavbarNotificationsWidget(),
+                NavbarWidget(),
               ],
             ),
           ),

@@ -1,9 +1,8 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/navbar_home_widget.dart';
+import '../components/navbar_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
@@ -11,7 +10,6 @@ import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -147,17 +145,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   useGoogleFonts: false,
                                 ),
                               ),
-                              FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30,
-                                borderWidth: 1,
-                                buttonSize: 50,
-                                icon: FaIcon(
-                                  FontAwesomeIcons.comments,
-                                  color: FlutterFlowTheme.primaryColor,
-                                  size: 30,
-                                ),
-                                onPressed: () async {
+                              InkWell(
+                                onTap: () async {
                                   await Navigator.push(
                                     context,
                                     PageTransition(
@@ -169,6 +158,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   );
                                 },
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/Asset_13@4x.png',
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -202,18 +202,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           verticalDirection: VerticalDirection.down,
                           clipBehavior: Clip.none,
                           children: [
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 10,
-                              shape: const CircleBorder(),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.customColor9,
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.customColor6,
-                                  ),
+                            Container(
+                              width: 250,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: Image.asset(
+                                    'assets/images/Asset_15@4x.png',
+                                  ).image,
                                 ),
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: FlutterFlowTheme.customColor6,
+                                ),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20, 20, 20, 20),
                                 child: InkWell(
                                   onTap: () async {
                                     await Navigator.push(
@@ -397,16 +403,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         color: FlutterFlowTheme.customColor9,
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Container(
-                                        width: 30,
-                                        height: 30,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/undo_30px.png',
-                                          fit: BoxFit.cover,
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10, 10, 10, 10),
+                                        child: Container(
+                                          width: 120,
+                                          height: 120,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/icons8_undo_100px.png',
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -416,25 +426,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     elevation: 3,
                                     shape: const CircleBorder(),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 120,
+                                      height: 120,
                                       decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.customColor9,
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: Image.asset(
+                                            'assets/images/Asset_8@4x.png',
+                                          ).image,
+                                        ),
                                         shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: FlutterFlowTheme.primaryColor,
-                                        ),
                                       ),
-                                      child: Container(
-                                        width: 120,
-                                        height: 120,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/romance_40px.png',
-                                          fit: BoxFit.none,
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            15, 15, 15, 15),
+                                        child: Container(
+                                          width: 120,
+                                          height: 120,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Asset_9@4x.png',
+                                            fit: BoxFit.contain,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -452,7 +468,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       ),
                                       child: Icon(
                                         Icons.clear,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: FlutterFlowTheme.customColor10,
                                         size: 50,
                                       ),
                                     ),
@@ -465,7 +481,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       },
                     ),
                     Spacer(),
-                    NavbarHomeWidget(),
+                    NavbarWidget(),
                   ],
                 ),
               ),

@@ -3,7 +3,7 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../signup_step13/signup_step13_widget.dart';
+import '../home_page/home_page_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -1405,7 +1405,7 @@ Veui... */
                               type: PageTransitionType.leftToRight,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: SignupStep13Widget(),
+                              child: HomePageWidget(),
                             ),
                           );
                         },

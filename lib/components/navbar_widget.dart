@@ -1,5 +1,9 @@
+import '../all_chat_page/all_chat_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../home_page/home_page_widget.dart';
+import '../matches/matches_widget.dart';
+import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -33,98 +37,127 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Material(
-              color: Colors.transparent,
-              elevation: 5,
-              shape: const CircleBorder(),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  shape: BoxShape.circle,
-                ),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: Duration(milliseconds: 0),
+                    reverseDuration: Duration(milliseconds: 0),
+                    child: HomePageWidget(),
                   ),
-                  child: Image.asset(
-                    'assets/images/icons8_romance_30px_1.png',
+                );
+              },
+              child: Material(
+                color: Colors.transparent,
+                elevation: 5,
+                shape: const CircleBorder(),
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/Asset_10@4x.png',
+                      ).image,
+                    ),
+                    shape: BoxShape.circle,
                   ),
                 ),
               ),
             ),
-            Material(
-              color: Colors.transparent,
-              elevation: 5,
-              shape: const CircleBorder(),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  shape: BoxShape.circle,
-                ),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: Duration(milliseconds: 0),
+                    reverseDuration: Duration(milliseconds: 0),
+                    child: AllChatPageWidget(),
                   ),
-                  child: Image.asset(
-                    'assets/images/icons8_refresh_love_30px_1.png',
+                );
+              },
+              child: Material(
+                color: Colors.transparent,
+                elevation: 5,
+                shape: const CircleBorder(),
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/Asset_11@4x.png',
+                      ).image,
+                    ),
+                    shape: BoxShape.circle,
                   ),
                 ),
               ),
             ),
-            Material(
-              color: Colors.transparent,
-              elevation: 5,
-              shape: const CircleBorder(),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  shape: BoxShape.circle,
-                ),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: Duration(milliseconds: 0),
+                    reverseDuration: Duration(milliseconds: 0),
+                    child: MatchesWidget(),
                   ),
-                  child: Image.asset(
-                    'assets/images/icons8_user_30px_3.png',
+                );
+              },
+              child: Material(
+                color: Colors.transparent,
+                elevation: 5,
+                shape: const CircleBorder(),
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/Asset_12@4x_copie.png',
+                      ).image,
+                    ),
+                    shape: BoxShape.circle,
                   ),
                 ),
               ),
             ),
-            Material(
-              color: Colors.transparent,
-              elevation: 5,
-              shape: const CircleBorder(),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  shape: BoxShape.circle,
-                ),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+            InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: Duration(milliseconds: 0),
+                    reverseDuration: Duration(milliseconds: 0),
+                    child: ProfileWidget(),
                   ),
-                  child: Image.asset(
-                    'assets/images/icons8_settings_30px_1.png',
+                );
+              },
+              child: Material(
+                color: Colors.transparent,
+                elevation: 5,
+                shape: const CircleBorder(),
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.customColor9,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/Asset_12@4x.png',
+                      ).image,
+                    ),
+                    shape: BoxShape.circle,
                   ),
                 ),
               ),

@@ -5,10 +5,9 @@ import '../components/empty_chats_widget.dart';
 import '../components/navbar_widget.dart';
 import '../flutter_flow/chat/index.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../settings/settings_widget.dart';
+import '../profile/profile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -90,28 +89,28 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.primaryColor,
+                    InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            duration: Duration(milliseconds: 0),
+                            reverseDuration: Duration(milliseconds: 0),
+                            child: ProfileWidget(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: FlutterFlowTheme.primaryColor,
+                          ),
                         ),
-                      ),
-                      child: AuthUserStreamWidget(
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 0),
-                                reverseDuration: Duration(milliseconds: 0),
-                                child: SettingsWidget(),
-                              ),
-                            );
-                          },
+                        child: AuthUserStreamWidget(
                           child: Container(
                             width: 50,
                             height: 50,
@@ -136,19 +135,29 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                         useGoogleFonts: false,
                       ),
                     ),
-                    FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 30,
-                      borderWidth: 1,
-                      buttonSize: 60,
-                      icon: FaIcon(
-                        FontAwesomeIcons.solidComments,
-                        color: FlutterFlowTheme.primaryColor,
-                        size: 30,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
+                    InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            duration: Duration(milliseconds: 0),
+                            reverseDuration: Duration(milliseconds: 0),
+                            child: AllChatPageWidget(),
+                          ),
+                        );
                       },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/Asset_13@4x.png',
+                        ),
+                      ),
                     ),
                   ],
                 ),

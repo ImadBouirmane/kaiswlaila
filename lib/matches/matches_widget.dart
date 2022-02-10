@@ -1,9 +1,7 @@
-import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/navbar_matches_widget.dart';
+import '../components/navbar_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -116,27 +114,17 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                           useGoogleFonts: false,
                         ),
                       ),
-                      FlutterFlowIconButton(
-                        borderColor: Colors.transparent,
-                        borderRadius: 30,
-                        borderWidth: 1,
-                        buttonSize: 50,
-                        icon: FaIcon(
-                          FontAwesomeIcons.comments,
-                          color: FlutterFlowTheme.primaryColor,
-                          size: 30,
+                      Container(
+                        width: 50,
+                        height: 50,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
                         ),
-                        onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                              reverseDuration: Duration(milliseconds: 0),
-                              child: AllChatPageWidget(),
-                            ),
-                          );
-                        },
+                        child: Image.asset(
+                          'assets/images/Asset_13@4x.png',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ],
                   ),
@@ -388,7 +376,7 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                     ),
                   ),
                 ),
-                NavbarMatchesWidget(),
+                NavbarWidget(),
               ],
             ),
           ),

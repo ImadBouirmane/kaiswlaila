@@ -68,12 +68,6 @@ class _MyAppState extends State<MyApp> {
         Locale('fr', ''),
         Locale('ar', ''),
         Locale('en', ''),
-        Locale('ru', ''),
-        Locale('es', ''),
-        Locale('zh_Hans', ''),
-        Locale('hi', ''),
-        Locale('tr', ''),
-        Locale('pt', ''),
       ],
       theme: ThemeData(primarySwatch: Colors.blue),
       home: initialUser == null || displaySplashImage

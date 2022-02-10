@@ -100,33 +100,7 @@ class _ChatWidgetState extends State<ChatWidget> {
               ),
           ],
         ),
-        actions: [
-          Visibility(
-            visible: isGroupChat() ?? true,
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
-              child: InkWell(
-                onTap: () async {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'Navigate to add users page!',
-                        style: TextStyle(),
-                      ),
-                      duration: Duration(milliseconds: 4000),
-                      backgroundColor: Color(0x00000000),
-                    ),
-                  );
-                },
-                child: Icon(
-                  Icons.person_add,
-                  color: FlutterFlowTheme.primaryColor,
-                  size: 24,
-                ),
-              ),
-            ),
-          ),
-        ],
+        actions: [],
         centerTitle: false,
         elevation: 2,
       ),
@@ -180,7 +154,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                 ),
                 emptyChatWidget: Center(
                   child: Image.asset(
-                    'assets/images/undraw_Online_dating_re_hu03.png',
+                    'assets/images/Asset_7@4x.png',
+                    width: 100,
+                    fit: BoxFit.contain,
                   ),
                 ),
               )

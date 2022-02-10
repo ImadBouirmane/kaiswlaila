@@ -97,16 +97,17 @@ class _SignInWidgetState extends State<SignInWidget>
                     children: [
                       FlutterFlowLanguageSelector(
                         width: 100,
-                        backgroundColor: FlutterFlowTheme.customColor10,
+                        backgroundColor: FlutterFlowTheme.customColor9,
                         borderColor: FlutterFlowTheme.customColor6,
-                        dropdownIconColor: Color(0xFF14181B),
+                        dropdownColor: FlutterFlowTheme.customColor9,
+                        dropdownIconColor: FlutterFlowTheme.secondaryColor,
                         borderRadius: 20,
                         textStyle: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal,
+                          color: FlutterFlowTheme.secondaryColor,
+                          fontWeight: FontWeight.w600,
                           fontSize: 13,
                         ),
-                        hideFlags: false,
+                        hideFlags: true,
                         flagSize: 24,
                         flagTextGap: 8,
                         currentLanguage:

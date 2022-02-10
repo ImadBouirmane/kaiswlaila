@@ -186,7 +186,7 @@ partenaire idea... */
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20, 0, 20, 0),
                                           child: Image.asset(
-                                            'assets/images/undraw_everywhere_together_bdmn.png',
+                                            'assets/images/Asset_7@4x.png',
                                             width: double.infinity,
                                             height: 300,
                                             fit: BoxFit.contain,
@@ -238,10 +238,10 @@ partenaire idea... */
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20, 0, 20, 0),
                                           child: Image.asset(
-                                            'assets/images/undraw_Love_re_mwbq.png',
+                                            'assets/images/Asset_12@4x.png',
                                             width: double.infinity,
                                             height: 300,
-                                            fit: BoxFit.contain,
+                                            fit: BoxFit.cover,
                                           ),
                                         ),
                                       ),

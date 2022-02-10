@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home_page/home_page_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -60,7 +61,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 30),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -257,16 +258,11 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'tsl6cnsy' /* Kais w Leila */,
-                        ),
-                        style: FlutterFlowTheme.title3.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.tertiaryColor,
-                          fontWeight: FontWeight.bold,
-                          useGoogleFonts: false,
-                        ),
+                      Image.asset(
+                        'assets/images/Asset_10@4x_copie.png',
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.contain,
                       ),
                     ],
                   ),

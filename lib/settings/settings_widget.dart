@@ -1,9 +1,8 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/navbar_settings_widget.dart';
+import '../components/navbar_widget.dart';
 import '../edit_profile/edit_profile_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -11,7 +10,6 @@ import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SettingsWidget extends StatefulWidget {
@@ -57,7 +55,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -113,17 +111,8 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         useGoogleFonts: false,
                       ),
                     ),
-                    FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 30,
-                      borderWidth: 1,
-                      buttonSize: 50,
-                      icon: FaIcon(
-                        FontAwesomeIcons.comments,
-                        color: FlutterFlowTheme.primaryColor,
-                        size: 30,
-                      ),
-                      onPressed: () async {
+                    InkWell(
+                      onTap: () async {
                         await Navigator.push(
                           context,
                           PageTransition(
@@ -134,6 +123,17 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           ),
                         );
                       },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/Asset_13@4x.png',
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -572,7 +572,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 ),
               ),
               Spacer(),
-              NavbarSettingsWidget(),
+              NavbarWidget(),
             ],
           ),
         ),

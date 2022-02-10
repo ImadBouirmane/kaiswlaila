@@ -1,5 +1,5 @@
 import '../auth/auth_util.dart';
-import '../edit_profile/edit_profile_widget.dart';
+import '../components/menu_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -89,19 +89,25 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       borderWidth: 1,
                       buttonSize: 60,
                       icon: Icon(
-                        Icons.edit_rounded,
+                        Icons.more_vert,
                         color: FlutterFlowTheme.primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          PageTransition(
-                            type: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 100),
-                            reverseDuration: Duration(milliseconds: 100),
-                            child: EditProfileWidget(),
-                          ),
+                        await showModalBottomSheet(
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (context) {
+                            return Padding(
+                              padding: MediaQuery.of(context).viewInsets,
+                              child: Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.2,
+                                child: MenuWidget(),
+                              ),
+                            );
+                          },
                         );
                       },
                     ),
@@ -134,7 +140,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.tertiaryColor,
+                                  color: FlutterFlowTheme.customColor10,
                                   shape: BoxShape.circle,
                                   border: Border.all(
                                     color: FlutterFlowTheme.primaryColor,
