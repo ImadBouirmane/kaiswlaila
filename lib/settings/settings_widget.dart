@@ -1,9 +1,14 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
-import '../flutter_flow/flutter_flow_animations.dart';
+import '../backend/backend.dart';
+import '../components/navbar_settings_widget.dart';
+import '../edit_profile/edit_profile_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
+import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../profile/profile_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,36 +21,13 @@ class SettingsWidget extends StatefulWidget {
   _SettingsWidgetState createState() => _SettingsWidgetState();
 }
 
-class _SettingsWidgetState extends State<SettingsWidget>
-    with TickerProviderStateMixin {
-  final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 38),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-  };
+class _SettingsWidgetState extends State<SettingsWidget> {
+  String genderValue;
+  double ageChoiceValue;
+  bool newMatchesValue;
+  bool newLikesValue;
+  bool newMessagesValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    startPageLoadAnimations(
-      animationsMap.values
-          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
-      this,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,28 +68,25 @@ class _SettingsWidgetState extends State<SettingsWidget>
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.primaryColor,
+                    InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProfileWidget(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: FlutterFlowTheme.primaryColor,
+                          ),
                         ),
-                      ),
-                      child: AuthUserStreamWidget(
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 0),
-                                reverseDuration: Duration(milliseconds: 0),
-                                child: SettingsWidget(),
-                              ),
-                            );
-                          },
+                        child: AuthUserStreamWidget(
                           child: Container(
                             width: 50,
                             height: 50,
@@ -115,8 +94,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              currentUserPhoto,
+                            child: CachedNetworkImage(
+                              imageUrl: currentUserPhoto,
                             ),
                           ),
                         ),
@@ -159,11 +138,16 @@ class _SettingsWidgetState extends State<SettingsWidget>
                   ],
                 ),
               ),
-              Expanded(
-                child: Align(
-                  alignment: AlignmentDirectional(0, -0.05),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 10),
+                child: Card(
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  color: FlutterFlowTheme.customColor9,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
                     child: Wrap(
                       spacing: 0,
                       runSpacing: 0,
@@ -174,187 +158,413 @@ class _SettingsWidgetState extends State<SettingsWidget>
                       verticalDirection: VerticalDirection.down,
                       clipBehavior: Clip.none,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                          child: Container(
-                            width: double.infinity,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: FlutterFlowTheme.customColor6,
-                              ),
-                            ),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '217nhv4u' /* Base */,
-                                    ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor3,
-                                      fontWeight: FontWeight.w900,
-                                      useGoogleFonts: false,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(1, 0),
-                                      child: Icon(
-                                        Icons.chevron_right,
-                                        color: FlutterFlowTheme.customColor3,
-                                        size: 30,
+                        SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'mvdu5xao' /* Je recherche: */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.subtitle1.override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.primaryColor,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                          child: Container(
-                            width: double.infinity,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: FlutterFlowTheme.customColor6,
-                              ),
-                            ),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '53h4bu34' /* Notifications */,
-                                    ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor3,
-                                      fontWeight: FontWeight.w900,
-                                      useGoogleFonts: false,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(1, 0),
-                                      child: Icon(
-                                        Icons.chevron_right,
-                                        color: FlutterFlowTheme.customColor3,
-                                        size: 30,
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    AuthUserStreamWidget(
+                                      child: FlutterFlowRadioButton(
+                                        options: [
+                                          FFLocalizations.of(context).getText(
+                                            'lmv5diaj' /* Masculin */,
+                                          ),
+                                          FFLocalizations.of(context).getText(
+                                            'aj7epfo8' /* Feminin */,
+                                          )
+                                        ],
+                                        onChanged: (value) {
+                                          setState(() => genderValue = value);
+                                        },
+                                        optionHeight: 35,
+                                        textStyle:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: Colors.black,
+                                          useGoogleFonts: false,
+                                        ),
+                                        textPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0, 0, 50, 0),
+                                        buttonPosition:
+                                            RadioButtonPosition.left,
+                                        direction: Axis.horizontal,
+                                        radioButtonColor:
+                                            FlutterFlowTheme.primaryColor,
+                                        inactiveRadioButtonColor:
+                                            Color(0x8A000000),
+                                        toggleable: false,
+                                        horizontalAlignment:
+                                            WrapAlignment.start,
+                                        verticalAlignment:
+                                            WrapCrossAlignment.start,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(10, 0, 10, 10),
-                          child: Container(
-                            width: double.infinity,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: FlutterFlowTheme.customColor6,
-                              ),
-                            ),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'oqfwh6xy' /* Sécurité */,
-                                    ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor3,
-                                      fontWeight: FontWeight.w900,
-                                      useGoogleFonts: false,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(1, 0),
-                                      child: Icon(
-                                        Icons.chevron_right,
-                                        color: FlutterFlowTheme.customColor3,
-                                        size: 30,
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'zhp5oi6b' /* Âge Preference */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.subtitle2.override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.customColor5,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                          child: Container(
-                            width: double.infinity,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: FlutterFlowTheme.customColor6,
-                              ),
-                            ),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '5hblhrbe' /* À propos */,
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: AuthUserStreamWidget(
+                                  child: SliderTheme(
+                                    data: SliderThemeData(
+                                      showValueIndicator:
+                                          ShowValueIndicator.always,
                                     ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor3,
-                                      fontWeight: FontWeight.w900,
-                                      useGoogleFonts: false,
+                                    child: Slider.adaptive(
+                                      activeColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      inactiveColor: Color(0xFF9E9E9E),
+                                      min: 0,
+                                      max: 10,
+                                      value: ageChoiceValue ??=
+                                          currentUserDocument?.ageChoice,
+                                      label: ageChoiceValue.toString(),
+                                      onChanged: (newValue) {
+                                        setState(
+                                            () => ageChoiceValue = newValue);
+                                      },
                                     ),
                                   ),
-                                  Expanded(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(1, 0),
-                                      child: Icon(
-                                        Icons.chevron_right,
-                                        color: FlutterFlowTheme.customColor3,
-                                        size: 30,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'dbjee32m' /* Location */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.subtitle2.override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.customColor5,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 100),
+                                        reverseDuration:
+                                            Duration(milliseconds: 100),
+                                        child: EditProfileWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      AuthUserStreamWidget(
+                                        child: Text(
+                                          '${currentUserDocument?.city}, ${currentUserDocument?.country}',
+                                          style: FlutterFlowTheme.subtitle1
+                                              .override(
+                                            fontFamily: 'Avenir Light ',
+                                            fontSize: 16,
+                                            useGoogleFonts: false,
+                                          ),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.chevron_right,
+                                        color: FlutterFlowTheme.primaryColor,
+                                        size: 24,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'yyfgvofr' /* Régler */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.subtitle1.override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.primaryColor,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        'dhzpkhfp' /* Notifications */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.subtitle2.override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.customColor5,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: FutureBuilder<List<NotificationsRecord>>(
+                                  future: queryNotificationsRecordOnce(
+                                    queryBuilder: (notificationsRecord) =>
+                                        notificationsRecord.where('user',
+                                            isEqualTo: currentUserReference),
+                                    singleRecord: true,
+                                  ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 30,
+                                          height: 30,
+                                          child: SpinKitFadingCircle(
+                                            color:
+                                                FlutterFlowTheme.primaryColor,
+                                            size: 30,
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    List<NotificationsRecord>
+                                        newMatchesNotificationsRecordList =
+                                        snapshot.data;
+                                    // Return an empty Container when the document does not exist.
+                                    if (snapshot.data.isEmpty) {
+                                      return Container();
+                                    }
+                                    final newMatchesNotificationsRecord =
+                                        newMatchesNotificationsRecordList
+                                                .isNotEmpty
+                                            ? newMatchesNotificationsRecordList
+                                                .first
+                                            : null;
+                                    return SwitchListTile.adaptive(
+                                      value: newMatchesValue ??=
+                                          !(newMatchesNotificationsRecord
+                                              .newMatches),
+                                      onChanged: (newValue) => setState(
+                                          () => newMatchesValue = newValue),
+                                      title: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '7ns2usao' /* Nouveaux matchs */,
+                                        ),
+                                        style: FlutterFlowTheme.bodyText1,
+                                      ),
+                                      activeColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      activeTrackColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      dense: true,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                    );
+                                  },
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: FutureBuilder<List<NotificationsRecord>>(
+                                  future: queryNotificationsRecordOnce(
+                                    queryBuilder: (notificationsRecord) =>
+                                        notificationsRecord.where('user',
+                                            isEqualTo: currentUserReference),
+                                    singleRecord: true,
+                                  ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 30,
+                                          height: 30,
+                                          child: SpinKitFadingCircle(
+                                            color:
+                                                FlutterFlowTheme.primaryColor,
+                                            size: 30,
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    List<NotificationsRecord>
+                                        newLikesNotificationsRecordList =
+                                        snapshot.data;
+                                    // Return an empty Container when the document does not exist.
+                                    if (snapshot.data.isEmpty) {
+                                      return Container();
+                                    }
+                                    final newLikesNotificationsRecord =
+                                        newLikesNotificationsRecordList
+                                                .isNotEmpty
+                                            ? newLikesNotificationsRecordList
+                                                .first
+                                            : null;
+                                    return SwitchListTile.adaptive(
+                                      value: newLikesValue ??=
+                                          newLikesNotificationsRecord.newLikes,
+                                      onChanged: (newValue) => setState(
+                                          () => newLikesValue = newValue),
+                                      title: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'k8jdlibi' /* Nouveaux J'aime */,
+                                        ),
+                                        style: FlutterFlowTheme.bodyText1,
+                                      ),
+                                      activeColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      activeTrackColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      dense: true,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                    );
+                                  },
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                child: FutureBuilder<List<NotificationsRecord>>(
+                                  future: queryNotificationsRecordOnce(
+                                    queryBuilder: (notificationsRecord) =>
+                                        notificationsRecord.where('user',
+                                            isEqualTo: currentUserReference),
+                                    singleRecord: true,
+                                  ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 30,
+                                          height: 30,
+                                          child: SpinKitFadingCircle(
+                                            color:
+                                                FlutterFlowTheme.primaryColor,
+                                            size: 30,
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    List<NotificationsRecord>
+                                        newMessagesNotificationsRecordList =
+                                        snapshot.data;
+                                    // Return an empty Container when the document does not exist.
+                                    if (snapshot.data.isEmpty) {
+                                      return Container();
+                                    }
+                                    final newMessagesNotificationsRecord =
+                                        newMessagesNotificationsRecordList
+                                                .isNotEmpty
+                                            ? newMessagesNotificationsRecordList
+                                                .first
+                                            : null;
+                                    return SwitchListTile.adaptive(
+                                      value: newMessagesValue ??=
+                                          newMessagesNotificationsRecord
+                                              .newMessages,
+                                      onChanged: (newValue) => setState(
+                                          () => newMessagesValue = newValue),
+                                      title: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'b08p41hz' /* Nouveaux messages */,
+                                        ),
+                                        style: FlutterFlowTheme.bodyText1,
+                                      ),
+                                      activeColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      activeTrackColor:
+                                          FlutterFlowTheme.primaryColor,
+                                      dense: true,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                    );
+                                  },
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        Container(
-                          height: 200,
-                          decoration: BoxDecoration(),
                         ),
                       ],
                     ),
@@ -362,80 +572,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                 ),
               ),
               Spacer(),
-              Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(0),
-                    bottomRight: Radius.circular(0),
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ).animated([animationsMap['containerOnPageLoadAnimation']]),
+              NavbarSettingsWidget(),
             ],
           ),
         ),

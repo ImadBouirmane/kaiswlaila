@@ -1,10 +1,11 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_animations.dart';
+import '../components/navbar_matches_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -26,36 +27,8 @@ class MatchesWidget extends StatefulWidget {
   _MatchesWidgetState createState() => _MatchesWidgetState();
 }
 
-class _MatchesWidgetState extends State<MatchesWidget>
-    with TickerProviderStateMixin {
-  final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 38),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-  };
+class _MatchesWidgetState extends State<MatchesWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    startPageLoadAnimations(
-      animationsMap.values
-          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
-      this,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -183,7 +156,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                             child: SizedBox(
                               width: 30,
                               height: 30,
-                              child: SpinKitRing(
+                              child: SpinKitFadingCircle(
                                 color: FlutterFlowTheme.primaryColor,
                                 size: 30,
                               ),
@@ -317,6 +290,85 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                           ),
                                                         ),
                                                       ),
+                                                      AuthUserStreamWidget(
+                                                        child: FutureBuilder<
+                                                            List<UsersRecord>>(
+                                                          future:
+                                                              queryUsersRecordOnce(
+                                                            queryBuilder: (usersRecord) =>
+                                                                usersRecord.where(
+                                                                    'like',
+                                                                    isEqualTo:
+                                                                        currentUserDocument
+                                                                            ?.like),
+                                                            singleRecord: true,
+                                                          ),
+                                                          builder: (context,
+                                                              snapshot) {
+                                                            // Customize what your widget looks like when it's loading.
+                                                            if (!snapshot
+                                                                .hasData) {
+                                                              return Center(
+                                                                child: SizedBox(
+                                                                  width: 30,
+                                                                  height: 30,
+                                                                  child:
+                                                                      SpinKitFadingCircle(
+                                                                    color: FlutterFlowTheme
+                                                                        .primaryColor,
+                                                                    size: 30,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            }
+                                                            List<UsersRecord>
+                                                                toggleIconUsersRecordList =
+                                                                snapshot.data;
+                                                            // Return an empty Container when the document does not exist.
+                                                            if (snapshot
+                                                                .data.isEmpty) {
+                                                              return Container();
+                                                            }
+                                                            final toggleIconUsersRecord =
+                                                                toggleIconUsersRecordList
+                                                                        .isNotEmpty
+                                                                    ? toggleIconUsersRecordList
+                                                                        .first
+                                                                    : null;
+                                                            return ToggleIcon(
+                                                              onPressed:
+                                                                  () async {
+                                                                final usersUpdateData =
+                                                                    createUsersRecordData(
+                                                                  like:
+                                                                      !toggleIconUsersRecord
+                                                                          .like,
+                                                                );
+                                                                await toggleIconUsersRecord
+                                                                    .reference
+                                                                    .update(
+                                                                        usersUpdateData);
+                                                              },
+                                                              value:
+                                                                  toggleIconUsersRecord
+                                                                      .like,
+                                                              onIcon: Icon(
+                                                                Icons.favorite,
+                                                                color: FlutterFlowTheme
+                                                                    .secondaryColor,
+                                                                size: 25,
+                                                              ),
+                                                              offIcon: Icon(
+                                                                Icons
+                                                                    .favorite_border,
+                                                                color: FlutterFlowTheme
+                                                                    .secondaryColor,
+                                                                size: 25,
+                                                              ),
+                                                            );
+                                                          },
+                                                        ),
+                                                      ),
                                                     ],
                                                   ),
                                                 ],
@@ -336,80 +388,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.customColor9,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.secondaryColor,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ).animated([animationsMap['containerOnPageLoadAnimation']]),
+                NavbarMatchesWidget(),
               ],
             ),
           ),

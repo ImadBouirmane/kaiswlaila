@@ -373,6 +373,12 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   bool get qsQ14C3;
 
   @nullable
+  double get ageChoice;
+
+  @nullable
+  double get distance;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -471,7 +477,9 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..qsQ13R3 = ''
     ..qsQ14C1 = false
     ..qsQ14C2 = false
-    ..qsQ14C3 = false;
+    ..qsQ14C3 = false
+    ..ageChoice = 0.0
+    ..distance = 0.0;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -591,6 +599,8 @@ Map<String, dynamic> createUsersRecordData({
   bool qsQ14C1,
   bool qsQ14C2,
   bool qsQ14C3,
+  double ageChoice,
+  double distance,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -691,4 +701,6 @@ Map<String, dynamic> createUsersRecordData({
           ..qsQ13R3 = qsQ13R3
           ..qsQ14C1 = qsQ14C1
           ..qsQ14C2 = qsQ14C2
-          ..qsQ14C3 = qsQ14C3));
+          ..qsQ14C3 = qsQ14C3
+          ..ageChoice = ageChoice
+          ..distance = distance));

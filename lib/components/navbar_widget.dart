@@ -1,5 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,18 +44,16 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                   color: FlutterFlowTheme.customColor9,
                   shape: BoxShape.circle,
                 ),
-              ),
-            ),
-            Material(
-              color: Colors.transparent,
-              elevation: 5,
-              shape: const CircleBorder(),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  shape: BoxShape.circle,
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/images/icons8_romance_30px_1.png',
+                  ),
                 ),
               ),
             ),
@@ -69,6 +68,17 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                   color: FlutterFlowTheme.customColor9,
                   shape: BoxShape.circle,
                 ),
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/images/icons8_refresh_love_30px_1.png',
+                  ),
+                ),
               ),
             ),
             Material(
@@ -81,6 +91,41 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.customColor9,
                   shape: BoxShape.circle,
+                ),
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/images/icons8_user_30px_3.png',
+                  ),
+                ),
+              ),
+            ),
+            Material(
+              color: Colors.transparent,
+              elevation: 5,
+              shape: const CircleBorder(),
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.customColor9,
+                  shape: BoxShape.circle,
+                ),
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/images/icons8_settings_30px_1.png',
+                  ),
                 ),
               ),
             ),

@@ -1,6 +1,7 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../components/navbar_notifications_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -22,7 +23,7 @@ class NotificationsWidget extends StatefulWidget {
 class _NotificationsWidgetState extends State<NotificationsWidget>
     with TickerProviderStateMixin {
   final animationsMap = {
-    'containerOnPageLoadAnimation1': AnimationInfo(
+    'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
@@ -32,21 +33,6 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
       ),
       finalState: AnimationState(
         offset: Offset(0, 0),
-        opacity: 1,
-      ),
-    ),
-    'containerOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 38),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
         opacity: 1,
       ),
     ),
@@ -189,7 +175,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                             child: SizedBox(
                               width: 30,
                               height: 30,
-                              child: SpinKitRing(
+                              child: SpinKitFadingCircle(
                                 color: FlutterFlowTheme.primaryColor,
                                 size: 30,
                               ),
@@ -301,7 +287,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                   ),
                                 ),
                               ).animated([
-                                animationsMap['containerOnPageLoadAnimation1']
+                                animationsMap['containerOnPageLoadAnimation']
                               ]),
                             );
                           },
@@ -310,80 +296,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.customColor9,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ).animated([animationsMap['containerOnPageLoadAnimation2']]),
+                NavbarNotificationsWidget(),
               ],
             ),
           ),

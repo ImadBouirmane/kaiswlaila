@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home_page/home_page_widget.dart';
 import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -57,21 +58,6 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 45),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-    'containerOnPageLoadAnimation3': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 38),
         scale: 1,
         opacity: 0,
       ),
@@ -156,19 +142,15 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                             ),
                           ),
                           child: AuthUserStreamWidget(
-                            child: Hero(
-                              tag: currentUserPhoto,
-                              transitionOnUserGestures: true,
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.network(
-                                  currentUserPhoto,
-                                ),
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                currentUserPhoto,
                               ),
                             ),
                           ),
@@ -302,8 +284,13 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                                 child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HomePageWidget(),
+                                      ),
+                                    );
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'sdtqzo74' /* Ca suffit pour moi ! */,
@@ -337,80 +324,6 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                     ],
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.customColor9,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.secondaryColor,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: const CircleBorder(),
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ).animated([animationsMap['containerOnPageLoadAnimation3']]),
               ],
             ),
           ),

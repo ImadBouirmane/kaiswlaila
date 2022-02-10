@@ -1212,7 +1212,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           options: FFButtonOptions(
                             width: 200,
                             height: 50,
-                            color: FlutterFlowTheme.customColor9,
+                            color: FlutterFlowTheme.customColor10,
                             textStyle: FlutterFlowTheme.subtitle2.override(
                               fontFamily: 'Avenir Light ',
                               color: FlutterFlowTheme.primaryColor,

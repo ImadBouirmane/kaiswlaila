@@ -1,12 +1,13 @@
 import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_animations.dart';
+import '../components/navbar_home_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
+import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -26,36 +27,8 @@ class HomePageWidget extends StatefulWidget {
   _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget>
-    with TickerProviderStateMixin {
-  final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 38),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-  };
+class _HomePageWidgetState extends State<HomePageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    startPageLoadAnimations(
-      animationsMap.values
-          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
-      this,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +43,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
             child: SizedBox(
               width: 30,
               height: 30,
-              child: SpinKitRing(
+              child: SpinKitFadingCircle(
                 color: FlutterFlowTheme.primaryColor,
                 size: 30,
               ),
@@ -211,7 +184,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             child: SizedBox(
                               width: 30,
                               height: 30,
-                              child: SpinKitRing(
+                              child: SpinKitFadingCircle(
                                 color: FlutterFlowTheme.primaryColor,
                                 size: 30,
                               ),
@@ -314,23 +287,93 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       ),
                                     ),
                                   ),
-                                  Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.customColor9,
-                                    elevation: 5,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                  FutureBuilder<List<ProfilesRecord>>(
+                                    future: queryProfilesRecordOnce(
+                                      queryBuilder: (profilesRecord) =>
+                                          profilesRecord.where('location',
+                                              isEqualTo: currentUserReference),
+                                      singleRecord: true,
                                     ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          5, 5, 5, 5),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'kvaqx1ne' /* Distance */,
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 30,
+                                            height: 30,
+                                            child: SpinKitFadingCircle(
+                                              color:
+                                                  FlutterFlowTheme.primaryColor,
+                                              size: 30,
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      List<ProfilesRecord>
+                                          cardProfilesRecordList =
+                                          snapshot.data;
+                                      // Return an empty Container when the document does not exist.
+                                      if (snapshot.data.isEmpty) {
+                                        return Container();
+                                      }
+                                      final cardProfilesRecord =
+                                          cardProfilesRecordList.isNotEmpty
+                                              ? cardProfilesRecordList.first
+                                              : null;
+                                      return Card(
+                                        clipBehavior:
+                                            Clip.antiAliasWithSaveLayer,
+                                        color: FlutterFlowTheme.customColor9,
+                                        elevation: 5,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
-                                        style: FlutterFlowTheme.bodyText1,
-                                      ),
-                                    ),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 5, 5, 5),
+                                          child: AuthUserStreamWidget(
+                                            child: FutureBuilder<UsersRecord>(
+                                              future:
+                                                  UsersRecord.getDocumentOnce(
+                                                      cardProfilesRecord
+                                                          .location),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 30,
+                                                      height: 30,
+                                                      child:
+                                                          SpinKitFadingCircle(
+                                                        color: FlutterFlowTheme
+                                                            .primaryColor,
+                                                        size: 30,
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+                                                final textUsersRecord =
+                                                    snapshot.data;
+                                                return Text(
+                                                  functions
+                                                      .distance(
+                                                          currentUserDocument
+                                                              ?.location,
+                                                          textUsersRecord
+                                                              .location)
+                                                      .toString(),
+                                                  style: FlutterFlowTheme
+                                                      .bodyText1,
+                                                );
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
                                   ),
                                 ],
                               ),
@@ -422,80 +465,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       },
                     ),
                     Spacer(),
-                    Container(
-                      width: double.infinity,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.customColor9,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(0),
-                          bottomRight: Radius.circular(0),
-                          topLeft: Radius.circular(15),
-                          topRight: Radius.circular(15),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 5,
-                              shape: const CircleBorder(),
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.secondaryColor,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ),
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 5,
-                              shape: const CircleBorder(),
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.customColor9,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ),
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 5,
-                              shape: const CircleBorder(),
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.customColor9,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ),
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 5,
-                              shape: const CircleBorder(),
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.customColor9,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ).animated([animationsMap['containerOnPageLoadAnimation']]),
+                    NavbarHomeWidget(),
                   ],
                 ),
               ),

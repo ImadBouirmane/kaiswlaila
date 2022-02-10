@@ -68,6 +68,12 @@ class _MyAppState extends State<MyApp> {
         Locale('fr', ''),
         Locale('ar', ''),
         Locale('en', ''),
+        Locale('ru', ''),
+        Locale('es', ''),
+        Locale('zh_Hans', ''),
+        Locale('hi', ''),
+        Locale('tr', ''),
+        Locale('pt', ''),
       ],
       theme: ThemeData(primarySwatch: Colors.blue),
       home: initialUser == null || displaySplashImage
@@ -75,7 +81,7 @@ class _MyAppState extends State<MyApp> {
               color: Colors.transparent,
               child: Builder(
                 builder: (context) => Image.asset(
-                  'assets/images/splash.gif',
+                  'assets/images/KWL_Slpash_Screen.gif',
                   fit: BoxFit.cover,
                 ),
               ),

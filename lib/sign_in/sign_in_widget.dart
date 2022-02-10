@@ -1,7 +1,6 @@
 import '../auth/auth_util.dart';
-import '../components/pick_language_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
+import '../flutter_flow/flutter_flow_language_selector.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -96,34 +95,24 @@ class _SignInWidgetState extends State<SignInWidget>
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      FlutterFlowIconButton(
-                        borderColor: Colors.transparent,
-                        borderRadius: 30,
-                        borderWidth: 1,
-                        buttonSize: 60,
-                        fillColor: FlutterFlowTheme.customColor6,
-                        icon: Icon(
-                          Icons.language,
-                          color: FlutterFlowTheme.secondaryColor,
-                          size: 30,
+                      FlutterFlowLanguageSelector(
+                        width: 100,
+                        backgroundColor: FlutterFlowTheme.customColor10,
+                        borderColor: FlutterFlowTheme.customColor6,
+                        dropdownIconColor: Color(0xFF14181B),
+                        borderRadius: 20,
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 13,
                         ),
-                        onPressed: () async {
-                          await showModalBottomSheet(
-                            isScrollControlled: true,
-                            backgroundColor: FlutterFlowTheme.customColor6,
-                            context: context,
-                            builder: (context) {
-                              return Padding(
-                                padding: MediaQuery.of(context).viewInsets,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.3,
-                                  child: PickLanguageWidget(),
-                                ),
-                              );
-                            },
-                          );
-                        },
+                        hideFlags: false,
+                        flagSize: 24,
+                        flagTextGap: 8,
+                        currentLanguage:
+                            FFLocalizations.of(context).languageCode,
+                        languages: FFLocalizations.languages(),
+                        onChanged: (lang) => setAppLanguage(context, lang),
                       ),
                     ],
                   ),
@@ -144,7 +133,7 @@ class _SignInWidgetState extends State<SignInWidget>
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
-                            'assets/images/KWL_Logo_Removal.png',
+                            'assets/images/Asset_8@4x_copie.png',
                           ),
                         ).animated(
                             [animationsMap['circleImageOnPageLoadAnimation']]),

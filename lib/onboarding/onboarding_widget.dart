@@ -106,8 +106,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'd2f68ui3' /* Trouvez votre 
-partenaire idéa... */
+                                              'd2f68ui3' /* KWL est la première
+applicatio... */
                                               ,
                                             ),
                                             style: FlutterFlowTheme.title1
@@ -115,6 +115,7 @@ partenaire idéa... */
                                               fontFamily: 'Arial Black',
                                               color:
                                                   FlutterFlowTheme.customColor7,
+                                              fontSize: 20,
                                               fontWeight: FontWeight.w900,
                                               useGoogleFonts: false,
                                             ),
@@ -131,7 +132,7 @@ partenaire idéa... */
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20, 0, 20, 0),
                                           child: Image.asset(
-                                            'assets/images/undraw_online_dating_yruf.png',
+                                            'assets/images/Asset_16@4x.png',
                                             width: double.infinity,
                                             height: 300,
                                             fit: BoxFit.contain,
@@ -214,9 +215,7 @@ partenaire idea... */
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'u3k7yufq' /* Trouvez votre 
-partenaire idea... */
-                                              ,
+                                              'u3k7yufq' /* Love for Real ! */,
                                             ),
                                             style: FlutterFlowTheme.title1
                                                 .override(

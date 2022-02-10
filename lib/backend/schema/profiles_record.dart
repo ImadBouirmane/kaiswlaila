@@ -15,6 +15,9 @@ abstract class ProfilesRecord
   BuiltList<DocumentReference> get users;
 
   @nullable
+  DocumentReference get location;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -42,5 +45,11 @@ abstract class ProfilesRecord
           {...mapFromFirestore(data), kDocumentReferenceField: reference});
 }
 
-Map<String, dynamic> createProfilesRecordData() => serializers.toFirestore(
-    ProfilesRecord.serializer, ProfilesRecord((p) => p..users = null));
+Map<String, dynamic> createProfilesRecordData({
+  DocumentReference location,
+}) =>
+    serializers.toFirestore(
+        ProfilesRecord.serializer,
+        ProfilesRecord((p) => p
+          ..users = null
+          ..location = location));

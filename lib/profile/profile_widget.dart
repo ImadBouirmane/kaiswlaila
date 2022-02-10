@@ -98,8 +98,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                           context,
                           PageTransition(
                             type: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                            reverseDuration: Duration(milliseconds: 0),
+                            duration: Duration(milliseconds: 100),
+                            reverseDuration: Duration(milliseconds: 100),
                             child: EditProfileWidget(),
                           ),
                         );

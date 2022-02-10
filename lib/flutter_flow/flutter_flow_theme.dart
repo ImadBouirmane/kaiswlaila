@@ -46,7 +46,7 @@ class FlutterFlowTheme {
       );
   static TextStyle get subtitle2 => TextStyle(
         fontFamily: 'Avenir Light ',
-        color: Color(0xFF616161),
+        color: customColor3,
         fontWeight: FontWeight.normal,
         fontSize: 16,
       );

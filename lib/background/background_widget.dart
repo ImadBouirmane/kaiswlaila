@@ -47,7 +47,7 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -95,7 +95,7 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        'b5wvpplb' /* Rencontres */,
+                        'b5wvpplb' /*  */,
                       ),
                       style: FlutterFlowTheme.title1.override(
                         fontFamily: 'Avenir Light ',
@@ -126,80 +126,6 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                       },
                     ),
                   ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(0),
-                    bottomRight: Radius.circular(0),
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.secondaryColor,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.customColor9,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
               ),
             ],
