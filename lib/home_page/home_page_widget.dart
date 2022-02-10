@@ -461,7 +461,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             ),
                                           ),
                                           duration:
-                                              Duration(milliseconds: 4000),
+                                              Duration(milliseconds: 2500),
                                           backgroundColor:
                                               FlutterFlowTheme.secondaryColor,
                                         ),
@@ -520,7 +520,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               .showSnackBar(
                                             SnackBar(
                                               content: Text(
-                                                'There\'s any new user just you. You have no right to ignore!',
+                                                'Il n\'y a aucun nouvel utilisateur juste vous. Vous n\'avez pas le droit d\'ignorer !',
                                                 style: TextStyle(
                                                   fontFamily: 'Avenir Light ',
                                                   color: FlutterFlowTheme
