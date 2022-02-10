@@ -210,7 +210,10 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                             if (codeController.text.isEmpty) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: Text('Enter SMS verification code.'),
+                                  content:
+                                      Text(FFLocalizations.of(context).getText(
+                                    'xndhofbj' /* Entrez le code de vérification... */,
+                                  )),
                                 ),
                               );
                               return;

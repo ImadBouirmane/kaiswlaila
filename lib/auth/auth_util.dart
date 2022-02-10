@@ -24,7 +24,10 @@ Future<User> signInOrCreateAccount(
   } on FirebaseAuthException catch (e) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Error: ${e.message}')),
+      SnackBar(
+          content: Text(FFLocalizations.of(context).getText(
+        '7api57zb' /* Erreur : [Il y a un problème d... */,
+      ))),
     );
     return null;
   }
@@ -41,12 +44,18 @@ Future resetPassword({String email, BuildContext context}) async {
   } on FirebaseAuthException catch (e) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Error: ${e.message}')),
+      SnackBar(
+          content: Text(FFLocalizations.of(context).getText(
+        '7api57zb' /* Erreur : [Il y a un problème d... */,
+      ))),
     );
     return null;
   }
   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text('Password reset email sent')),
+    SnackBar(
+        content: Text(FFLocalizations.of(context).getText(
+      '1vgkh9hn' /* E-mail de réinitialisation du ... */,
+    ))),
   );
 }
 
@@ -119,7 +128,9 @@ Future beginPhoneAuth({
     },
     verificationFailed: (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text('Error: ${e.message}'),
+        content: Text(FFLocalizations.of(context).getText(
+          '7api57zb' /* Erreur : [Il y a un problème d... */,
+        )),
       ));
     },
     codeSent: (verificationId, _) {

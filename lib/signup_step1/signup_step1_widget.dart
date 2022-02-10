@@ -342,7 +342,10 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                                   .showSnackBar(
                                                 SnackBar(
                                                   content: Text(
-                                                    'Passwords don\'t match!',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'yv11bv53' /* Le mots de passe ne correspond... */,
+                                                    ),
                                                   ),
                                                 ),
                                               );
@@ -480,7 +483,11 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                                   .showSnackBar(
                                                 SnackBar(
                                                   content: Text(
-                                                      'Phone Number is required and has to start with +.'),
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                    'ztpxnq81' /* Numéro de téléphone obligatoir... */,
+                                                  )),
                                                 ),
                                               );
                                               return;

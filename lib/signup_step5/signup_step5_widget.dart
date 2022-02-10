@@ -138,7 +138,9 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                   selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
-                              'Uploading file...',
+                              FFLocalizations.of(context).getText(
+                                'vrwld95g' /* Téléchargement du fichier... */,
+                              ),
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
@@ -148,12 +150,16 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               setState(() => uploadedFileUrl1 = downloadUrl);
                               showUploadMessage(
                                 context,
-                                'Success!',
+                                FFLocalizations.of(context).getText(
+                                  '2x0ests4' /* Succès! */,
+                                ),
                               );
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload media',
+                                FFLocalizations.of(context).getText(
+                                  'ejhzf9lt' /* Échec du téléchargement du méd... */,
+                                ),
                               );
                               return;
                             }
@@ -204,7 +210,9 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                   selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
-                              'Uploading file...',
+                              FFLocalizations.of(context).getText(
+                                'vrwld95g' /* Téléchargement du fichier... */,
+                              ),
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
@@ -214,12 +222,16 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               setState(() => uploadedFileUrl2 = downloadUrl);
                               showUploadMessage(
                                 context,
-                                'Success!',
+                                FFLocalizations.of(context).getText(
+                                  '2x0ests4' /* Succès! */,
+                                ),
                               );
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload media',
+                                FFLocalizations.of(context).getText(
+                                  'ejhzf9lt' /* Échec du téléchargement du méd... */,
+                                ),
                               );
                               return;
                             }
@@ -270,7 +282,9 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                   selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
-                              'Uploading file...',
+                              FFLocalizations.of(context).getText(
+                                'vrwld95g' /* Téléchargement du fichier... */,
+                              ),
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
@@ -280,12 +294,16 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               setState(() => uploadedFileUrl3 = downloadUrl);
                               showUploadMessage(
                                 context,
-                                'Success!',
+                                FFLocalizations.of(context).getText(
+                                  '2x0ests4' /* Succès! */,
+                                ),
                               );
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload media',
+                                FFLocalizations.of(context).getText(
+                                  'ejhzf9lt' /* Échec du téléchargement du méd... */,
+                                ),
                               );
                               return;
                             }
@@ -336,7 +354,9 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                   selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
-                              'Uploading file...',
+                              FFLocalizations.of(context).getText(
+                                'vrwld95g' /* Téléchargement du fichier... */,
+                              ),
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
@@ -346,12 +366,16 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               setState(() => uploadedFileUrl4 = downloadUrl);
                               showUploadMessage(
                                 context,
-                                'Success!',
+                                FFLocalizations.of(context).getText(
+                                  '2x0ests4' /* Succès! */,
+                                ),
                               );
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload media',
+                                FFLocalizations.of(context).getText(
+                                  'ejhzf9lt' /* Échec du téléchargement du méd... */,
+                                ),
                               );
                               return;
                             }

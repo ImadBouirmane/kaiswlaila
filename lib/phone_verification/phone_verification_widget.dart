@@ -165,7 +165,10 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                           if (codeController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('Enter SMS verification code.'),
+                                content:
+                                    Text(FFLocalizations.of(context).getText(
+                                  'xndhofbj' /* Entrez le code de vérification... */,
+                                )),
                               ),
                             );
                             return;
@@ -213,7 +216,10 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                           if (codeController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('Enter SMS verification code.'),
+                                content:
+                                    Text(FFLocalizations.of(context).getText(
+                                  'xndhofbj' /* Entrez le code de vérification... */,
+                                )),
                               ),
                             );
                             return;
