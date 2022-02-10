@@ -1636,86 +1636,93 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'q4ae3no9': {
       'fr': 'Modifier le profile',
-      'ar': '',
-      'en': '',
+      'ar': 'تعديل الملف الشخصي',
+      'en': 'Modify the profile',
     },
     'qx0b29dx': {
       'fr': 'Modifier les paramètres',
-      'ar': '',
-      'en': '',
+      'ar': 'قم بتعديل المعلمات',
+      'en': 'Modify the settings',
     },
     'gid5fjk8': {
       'fr': 'Se déconnecter',
-      'ar': '',
-      'en': '',
+      'ar': 'تسجيل الخروج',
+      'en': 'Sign out',
     },
   },
   // Miscellaneous
   {
     'z6sa2e22': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr':
+          'Pour prendre une photo ou une vidéo, cette application nécessite l\'autorisation d\'accéder à l\'appareil photo.',
+      'ar':
+          'من أجل التقاط صورة أو مقطع فيديو ، يتطلب هذا التطبيق إذنًا للوصول إلى الكاميرا.',
+      'en':
+          'In order to take a picture or video, this app requires permission to access the camera.',
     },
     'bwt9iwlk': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr':
+          'Afin de télécharger des médias, cette application nécessite l\'autorisation d\'accéder à la photothèque.',
+      'ar': 'لتحميل الوسائط ، يتطلب هذا التطبيق إذنًا للوصول إلى مكتبة الصور.',
+      'en':
+          'In order to upload media, this app requires permission to access the photo library.',
     },
     '7api57zb': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr':
+          'Erreur : [Il y a un problème d\'authentification !Nous allons résoudre ce problème]',
+      'ar': 'خطأ: ]هناك مشكلة في الدخول!سنصلح هذه المشكلة[',
+      'en':
+          'Error: [There\'s a problem on Authentication! We will fix this problem]',
     },
     '1vgkh9hn': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'E-mail de réinitialisation du mot de passe envoyé !',
+      'ar': 'تم إرسال بريد إلكتروني لإعادة تعيين كلمة المرور!',
+      'en': 'Password reset email sent!',
     },
     'p7g1hpbb': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Email (requis)',
+      'ar': 'البريد الإلكتروني )مطلوب(',
+      'en': 'Email (required)',
     },
     'ztpxnq81': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Numéro de téléphone obligatoire et doit commencer par +.',
+      'ar': ' رقم الهاتف مطلوب ويجب أن يبدأ بـ  + .',
+      'en': 'Phone number required and has to start with +.',
     },
     'yv11bv53': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Le mots de passe ne correspondent pas',
+      'ar': 'كلمة المرور غير متطابقة',
+      'en': 'Password don\'t match',
     },
     'xndhofbj': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Entrez le code de vérification par SMS',
+      'ar': 'أدخل رمز التحقق عبر الرسائل القصيرة',
+      'en': 'Enter SMS verification code',
     },
     'qwjoggxn': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Format de fichier invalide',
+      'ar': 'تنسيق ملف غير صالح',
+      'en': 'Invalid file format',
     },
     'vrwld95g': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Téléchargement du fichier...',
+      'ar': 'تحميل الملف ...',
+      'en': 'Uploading file...',
     },
     '2x0ests4': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Succès!',
+      'ar': 'نجاح!',
+      'en': 'Success!',
     },
     'ejhzf9lt': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Échec du téléchargement du média',
+      'ar': 'فشل تحميل الوسائط',
+      'en': 'Failed to upload media',
     },
     'pjtu4eg2': {
-      'fr': '',
-      'ar': '',
-      'en': '',
+      'fr': 'Envoi photo',
+      'ar': 'جارٍ إرسال الصورة',
+      'en': 'Sending photo',
     },
     '9mjte96b': {
       'fr': '',

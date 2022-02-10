@@ -145,7 +145,9 @@ bool validateFileFormat(String filePath, BuildContext context) {
   ScaffoldMessenger.of(context)
     ..hideCurrentSnackBar()
     ..showSnackBar(SnackBar(
-      content: Text('Invalid file format: ${mime(filePath)}'),
+      content: Text(FFLocalizations.of(context).getText(
+        'qwjoggxn' /* Format de fichier invalide */,
+      )),
     ));
   return false;
 }
