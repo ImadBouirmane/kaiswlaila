@@ -392,64 +392,112 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Material(
-                                    color: Colors.transparent,
-                                    elevation: 1,
-                                    shape: const CircleBorder(),
-                                    child: Container(
-                                      width: 70,
-                                      height: 70,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.customColor9,
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 10, 10, 10),
-                                        child: Container(
-                                          width: 120,
-                                          height: 120,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
+                                  InkWell(
+                                    onTap: () async {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            'Vous devez avoir au moins un utilisateur que vous avez  glissé avant !',
+                                            style: TextStyle(
+                                              fontFamily: 'Avenir Light ',
+                                              color: FlutterFlowTheme
+                                                  .tertiaryColor,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 20,
+                                            ),
                                           ),
-                                          child: Image.asset(
-                                            'assets/images/icons8_undo_100px.png',
+                                          duration:
+                                              Duration(milliseconds: 4000),
+                                          backgroundColor:
+                                              FlutterFlowTheme.secondaryColor,
+                                        ),
+                                      );
+                                    },
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      elevation: 1,
+                                      shape: const CircleBorder(),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.customColor9,
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10, 10, 10, 10),
+                                          child: Container(
+                                            width: 120,
+                                            height: 120,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/icons8_undo_100px.png',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () async {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            'Il n\'y a aucun nouvel utilisateur juste vous. Vous n\'avez pas le droit de Glisser !',
+                                            style: TextStyle(
+                                              fontFamily: 'Avenir Light ',
+                                              color: FlutterFlowTheme
+                                                  .tertiaryColor,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                          duration:
+                                              Duration(milliseconds: 4000),
+                                          backgroundColor:
+                                              FlutterFlowTheme.secondaryColor,
+                                        ),
+                                      );
+                                    },
+                                    child: Material(
+                                      color: Colors.transparent,
+                                      elevation: 3,
+                                      shape: const CircleBorder(),
+                                      child: Container(
+                                        width: 120,
+                                        height: 120,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
                                             fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/Asset_8@4x.png',
+                                            ).image,
                                           ),
+                                          shape: BoxShape.circle,
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                  Material(
-                                    color: Colors.transparent,
-                                    elevation: 3,
-                                    shape: const CircleBorder(),
-                                    child: Container(
-                                      width: 120,
-                                      height: 120,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/Asset_8@4x.png',
-                                          ).image,
-                                        ),
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            15, 15, 15, 15),
-                                        child: Container(
-                                          width: 120,
-                                          height: 120,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/images/Asset_9@4x.png',
-                                            fit: BoxFit.contain,
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15, 15, 15, 15),
+                                          child: Container(
+                                            width: 120,
+                                            height: 120,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/Asset_9@4x.png',
+                                              fit: BoxFit.contain,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -466,10 +514,33 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         color: FlutterFlowTheme.customColor9,
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Icon(
-                                        Icons.clear,
-                                        color: FlutterFlowTheme.customColor10,
-                                        size: 50,
+                                      child: InkWell(
+                                        onTap: () async {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                'There\'s any new user just you. You have no right to ignore!',
+                                                style: TextStyle(
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme
+                                                      .tertiaryColor,
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 20,
+                                                ),
+                                              ),
+                                              duration:
+                                                  Duration(milliseconds: 4000),
+                                              backgroundColor: FlutterFlowTheme
+                                                  .secondaryColor,
+                                            ),
+                                          );
+                                        },
+                                        child: Icon(
+                                          Icons.clear,
+                                          color: FlutterFlowTheme.customColor10,
+                                          size: 50,
+                                        ),
                                       ),
                                     ),
                                   ),
