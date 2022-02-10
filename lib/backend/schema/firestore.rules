@@ -1,36 +1,47 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    function userDoc() {
-      return /databases/$(database)/documents/users/$(request.auth.uid);
-    }
-
-    match /users/{userId} {
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
       allow read: if true;
-      allow create, update: if request.auth.uid == userId;
+      allow write: if request.auth.uid == document;
+      allow delete: if false;
     }
 
-    match /chats/{id} {
-      allow read, update: if userDoc() in resource.data.users;
-      allow create: if userDoc() in request.resource.data.users;
+    match /matches/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
-    match /chat_messages/{id} {
-      allow read: if userDoc() in get(resource.data.chat).data.users;
-      allow create: if userDoc() in get(request.resource.data.chat).data.users &&
-                       userDoc() == request.resource.data.user;
+    match /notifications/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
-    // WARNING! ONLY FOR TEST MODE: Make sure you properly configure the
-    // security rules for this collection before publishing your app.
-    match /matches/{id} {
-      allow read, write: if true;
+    match /chats/{document} {
+      allow create: if /databases/$(database)/documents/users/$(request.auth.uid) in request.resource.data.users;
+      allow read: if /databases/$(database)/documents/users/$(request.auth.uid) in resource.data.users;
+      allow write: if /databases/$(database)/documents/users/$(request.auth.uid) in resource.data.users;
+      allow delete: if false;
     }
 
-    // WARNING! ONLY FOR TEST MODE: Make sure you properly configure the
-    // security rules for this collection before publishing your app.
-    match /notifications/{id} {
-      allow read, write: if true;
+    match /chat_messages/{document} {
+      allow create: if /databases/$(database)/documents/users/$(request.auth.uid) in get(request.resource.data.chat).data.users
+&& /databases/$(database)/documents/users/$(request.auth.uid) == request.resource.data.user;
+      allow read: if /databases/$(database)/documents/users/$(request.auth.uid) in get(resource.data.chat).data.users;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /profiles/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
     }
   }
 }

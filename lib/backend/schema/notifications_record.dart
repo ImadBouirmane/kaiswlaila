@@ -12,14 +12,25 @@ abstract class NotificationsRecord
       _$notificationsRecordSerializer;
 
   @nullable
-  String get title;
+  bool get newMatches;
+
+  @nullable
+  bool get newLikes;
+
+  @nullable
+  bool get newMessages;
+
+  @nullable
+  DocumentReference get user;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
-  static void _initializeBuilder(NotificationsRecordBuilder builder) =>
-      builder..title = '';
+  static void _initializeBuilder(NotificationsRecordBuilder builder) => builder
+    ..newMatches = false
+    ..newLikes = false
+    ..newMessages = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('notifications');
@@ -44,7 +55,15 @@ abstract class NotificationsRecord
 }
 
 Map<String, dynamic> createNotificationsRecordData({
-  String title,
+  bool newMatches,
+  bool newLikes,
+  bool newMessages,
+  DocumentReference user,
 }) =>
-    serializers.toFirestore(NotificationsRecord.serializer,
-        NotificationsRecord((n) => n..title = title));
+    serializers.toFirestore(
+        NotificationsRecord.serializer,
+        NotificationsRecord((n) => n
+          ..newMatches = newMatches
+          ..newLikes = newLikes
+          ..newMessages = newMessages
+          ..user = user));
