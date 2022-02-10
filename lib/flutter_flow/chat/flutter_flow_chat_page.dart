@@ -172,7 +172,9 @@ class _FFChatPageState extends State<FFChatPage> {
               }
               showUploadMessage(
                 context,
-                'Sending photo',
+                FFLocalizations.of(context).getText(
+                  'pjtu4eg2' /* Envoi photo */,
+                ),
                 showLoading: true,
               );
               final downloadUrl = await uploadData(

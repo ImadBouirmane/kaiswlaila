@@ -181,7 +181,9 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                                   selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
-                              'Uploading file...',
+                              FFLocalizations.of(context).getText(
+                                'vrwld95g' /* Téléchargement du fichier... */,
+                              ),
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
@@ -191,12 +193,16 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                               setState(() => uploadedFileUrl = downloadUrl);
                               showUploadMessage(
                                 context,
-                                'Success!',
+                                FFLocalizations.of(context).getText(
+                                  '2x0ests4' /* Succès! */,
+                                ),
                               );
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload media',
+                                FFLocalizations.of(context).getText(
+                                  'ejhzf9lt' /* Échec du téléchargement du méd... */,
+                                ),
                               );
                               return;
                             }
