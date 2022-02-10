@@ -85,12 +85,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar':
           'KWL هو أول تطبيق صممه فريق من خبراء علم النفس وأخصائيي العلاقات الزوجية.',
       'en':
-          'KWL is the first application designed by a team of psychology experts and couple relationship specialists.',
+          'KWL is the first application\ndesigned by a team of \npsychology experts and \ncouple relationship \nspecialists.',
     },
     's11ixzl1': {
       'fr': 'Trouvez votre \npartenaire ideal\navec nous,',
       'ar': 'ابحث عن شريكك المثالي معنا ،',
-      'en': 'Find your ideal partner with us,',
+      'en': 'Find your ideal \npartner with us,',
     },
     'u3k7yufq': {
       'fr': 'Love for Real !',
@@ -133,7 +133,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'syi85ic2': {
       'fr': 'Créer',
       'ar': 'لنصنع او لنبتكر',
-      'en': 'To create',
+      'en': 'Create',
     },
     '4frrvv2y': {
       'fr': 'Par Téléphone',
@@ -148,7 +148,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jfb6a30q': {
       'fr': 'Créer',
       'ar': 'لنصنع او لنبتكر',
-      'en': 'To create',
+      'en': 'Create',
     },
   },
   // signupStep2
@@ -430,7 +430,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '0te595dk': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep7
@@ -507,7 +507,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jykvnlpp': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep8
@@ -570,7 +570,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yikvi26f': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep9
@@ -681,7 +681,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hezcwizb': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep10
@@ -749,7 +749,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '8fppswdf': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep11
@@ -839,7 +839,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xejecw3g': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep12
@@ -990,7 +990,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qh5slkof': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep13
@@ -1063,7 +1063,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1ppdc30w': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep14
@@ -1092,7 +1092,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yowkqpii': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // signupStep15
@@ -1250,8 +1250,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ixqmo3vn': {
       'fr': 'Rencontres',
-      'ar': 'التقى',
-      'en': 'Met',
+      'ar': 'ملتقى',
+      'en': 'Matchs',
     },
   },
   // isMatch
@@ -1263,8 +1263,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fsc9pzu7': {
       'fr': 'C\'est un match, ',
-      'ar': 'انها لعبة،',
-      'en': 'It&#39;s a game,',
+      'ar': 'إنها مواعدة !',
+      'en': 'It\'s a Match',
     },
     'jyzfvoju': {
       'fr': 'Démarrer une conversation maintenant',
@@ -1279,7 +1279,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uoiyf18y': {
       'fr': 'Ca suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
     },
   },
   // Profile
@@ -1561,8 +1561,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'aoawbg0t': {
       'fr': 'Chats',
-      'ar': 'القطط',
-      'en': 'Cats',
+      'ar': 'الدردشات',
+      'en': 'Chats',
     },
   },
   // PhoneVerification
@@ -1634,17 +1634,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // menu
   {
-    '88v6ydaw': {
+    'q4ae3no9': {
       'fr': 'Modifier le profile',
       'ar': '',
       'en': '',
     },
-    '3pdmdf00': {
+    'qx0b29dx': {
       'fr': 'Modifier les paramètres',
       'ar': '',
       'en': '',
     },
-    'qevy33q4': {
+    'gid5fjk8': {
       'fr': 'Se déconnecter',
       'ar': '',
       'en': '',

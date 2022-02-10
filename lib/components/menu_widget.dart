@@ -79,7 +79,9 @@ class _MenuWidgetState extends State<MenuWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Modifier le profile',
+                                FFLocalizations.of(context).getText(
+                                  'q4ae3no9' /* Modifier le profile */,
+                                ),
                                 style: FlutterFlowTheme.subtitle2.override(
                                   fontFamily: 'Avenir Light ',
                                   color: FlutterFlowTheme.customColor7,
@@ -142,7 +144,9 @@ class _MenuWidgetState extends State<MenuWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Modifier les paramètres',
+                                FFLocalizations.of(context).getText(
+                                  'qx0b29dx' /* Modifier les paramètres */,
+                                ),
                                 style: FlutterFlowTheme.subtitle2.override(
                                   fontFamily: 'Avenir Light ',
                                   color: FlutterFlowTheme.customColor7,
@@ -204,7 +208,9 @@ class _MenuWidgetState extends State<MenuWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Se déconnecter',
+                                FFLocalizations.of(context).getText(
+                                  'gid5fjk8' /* Se déconnecter */,
+                                ),
                                 style: FlutterFlowTheme.subtitle2.override(
                                   fontFamily: 'Avenir Light ',
                                   color: FlutterFlowTheme.customColor7,
