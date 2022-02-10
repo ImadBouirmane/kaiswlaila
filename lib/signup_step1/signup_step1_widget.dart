@@ -393,7 +393,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             width: 200,
                                             height: 50,
                                             color:
-                                                FlutterFlowTheme.customColor10,
+                                                FlutterFlowTheme.customColor8,
                                             textStyle: FlutterFlowTheme
                                                 .subtitle2
                                                 .override(
@@ -516,7 +516,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             width: 200,
                                             height: 50,
                                             color:
-                                                FlutterFlowTheme.customColor9,
+                                                FlutterFlowTheme.customColor8,
                                             textStyle: FlutterFlowTheme
                                                 .subtitle2
                                                 .override(
