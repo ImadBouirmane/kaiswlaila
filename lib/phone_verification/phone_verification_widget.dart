@@ -3,7 +3,8 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
+import '../home_page/home_page_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,10 +35,31 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
       autovalidateMode: AutovalidateMode.always,
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.tertiaryColor,
-        body: SafeArea(
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: FlutterFlowTheme.primaryColor,
+                offset: Offset(100, 100),
+                spreadRadius: 100,
+              )
+            ],
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFFE7E2B0),
+                Color(0xFFE6C8DD),
+                FlutterFlowTheme.customColor2,
+                FlutterFlowTheme.secondaryColor
+              ],
+              stops: [0.2, 0.4, 0.6, 0.8],
+              begin: AlignmentDirectional(0.87, -1),
+              end: AlignmentDirectional(-0.87, 1),
+            ),
+          ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 30),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -67,7 +89,9 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Code de vérification',
+                        FFLocalizations.of(context).getText(
+                          '4hck5ne8' /* Code de vérification */,
+                        ),
                         style: FlutterFlowTheme.subtitle1,
                       ),
                     ],
@@ -84,10 +108,8 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                           controller: codeController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: '_ _ _ _',
-                            hintStyle: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                              color: FlutterFlowTheme.primaryColor,
+                            hintText: FFLocalizations.of(context).getText(
+                              'sr70wzuc' /* _ _ _ _ */,
                             ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -104,15 +126,16 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             filled: true,
-                            fillColor: Color(0xFFFFEAFA),
+                            fillColor: FlutterFlowTheme.customColor9,
                             prefixIcon: Icon(
                               Icons.content_paste,
                               color: FlutterFlowTheme.primaryColor,
                             ),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.primaryColor,
+                            fontFamily: 'Avenir Light ',
+                            fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
                           ),
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
@@ -157,17 +180,19 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                           await Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  NavBarPage(initialPage: 'HomePage'),
+                              builder: (context) => HomePageWidget(),
                             ),
                             (r) => false,
                           );
                         },
                         child: Text(
-                          'Renvoyez',
+                          FFLocalizations.of(context).getText(
+                            'zpaazf5z' /* Renvoyez */,
+                          ),
                           style: FlutterFlowTheme.subtitle1.override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Avenir Light ',
                             color: FlutterFlowTheme.primaryColor,
+                            useGoogleFonts: false,
                           ),
                         ),
                       ),
@@ -203,20 +228,22 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                           await Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  NavBarPage(initialPage: 'HomePage'),
+                              builder: (context) => HomePageWidget(),
                             ),
                             (r) => false,
                           );
                         },
-                        text: 'Valider',
+                        text: FFLocalizations.of(context).getText(
+                          'qadgfgve' /* Valider */,
+                        ),
                         options: FFButtonOptions(
                           width: 150,
                           height: 40,
                           color: FlutterFlowTheme.primaryColor,
                           textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Avenir Light ',
                             color: Colors.white,
+                            useGoogleFonts: false,
                           ),
                           elevation: 5,
                           borderSide: BorderSide(
@@ -234,13 +261,11 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Kais w Leila',
-                      style: FlutterFlowTheme.title3.override(
-                        fontFamily: 'Poppins',
-                        color: FlutterFlowTheme.primaryColor,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Image.asset(
+                      'assets/images/Asset_10@4x_copie.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.contain,
                     ),
                   ],
                 ),

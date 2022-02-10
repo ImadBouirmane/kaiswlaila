@@ -21,3 +21,23 @@ String dateOfBirth(
   int age = diff.inDays ~/ 365;
   return '$age ans';
 }
+
+double distance(
+  LatLng latlon1,
+  LatLng latlon2,
+) {
+  double lat1 = latlon1.latitude;
+  double lon1 = latlon1.longitude;
+  double lat2 = latlon2.latitude;
+  double lon2 = latlon2.longitude;
+  var p = 0.017453292519943295;
+  var c = math.cos;
+  var a = 0.5 -
+      c((lat2 - lat1) * p) / 2 +
+      c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p)) / 2;
+  // Returns distance in Kilo-meters
+  var d = (12742 * math.asin(math.sqrt(a)));
+  String inString = d.toStringAsFixed(2); // '2.35'
+  double inDouble = double.parse(inString);
+  return inDouble;
+}

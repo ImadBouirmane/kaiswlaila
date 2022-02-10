@@ -35,10 +35,31 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.tertiaryColor,
-      body: SafeArea(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: FlutterFlowTheme.primaryColor,
+              offset: Offset(100, 100),
+              spreadRadius: 100,
+            )
+          ],
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFFE7E2B0),
+              Color(0xFFE6C8DD),
+              FlutterFlowTheme.customColor2,
+              FlutterFlowTheme.secondaryColor
+            ],
+            stops: [0.2, 0.4, 0.6, 0.8],
+            begin: AlignmentDirectional(0.87, -1),
+            end: AlignmentDirectional(-0.87, 1),
+          ),
+        ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -61,22 +82,6 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                         print('IconButton pressed ...');
                       },
                     ),
-                    Expanded(
-                      child: Align(
-                        alignment: AlignmentDirectional(-0.2, 0),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset(
-                            'assets/images/ufpbn_1.jpg',
-                          ),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -86,8 +91,14 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      'Base',
-                      style: FlutterFlowTheme.subtitle1,
+                      FFLocalizations.of(context).getText(
+                        'e4oxhcn1' /* Base */,
+                      ),
+                      style: FlutterFlowTheme.title1.override(
+                        fontFamily: 'Avenir Light ',
+                        color: FlutterFlowTheme.customColor3,
+                        useGoogleFonts: false,
+                      ),
                     ),
                   ],
                 ),
@@ -110,10 +121,8 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                         controller: fullNameController,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Nom Complet',
-                          labelStyle: FlutterFlowTheme.subtitle1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 16,
+                          labelText: FFLocalizations.of(context).getText(
+                            '9vdcx824' /* Nom Complet */,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -129,10 +138,14 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                             ),
                             borderRadius: BorderRadius.circular(15),
                           ),
+                          filled: true,
+                          fillColor: FlutterFlowTheme.customColor9,
                         ),
                         style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Avenir Light ',
+                          color: FlutterFlowTheme.customColor5,
                           fontSize: 16,
+                          useGoogleFonts: false,
                         ),
                       ),
                     ),
@@ -142,10 +155,8 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                         controller: jobTitleController,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Fonction',
-                          labelStyle: FlutterFlowTheme.subtitle1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 16,
+                          labelText: FFLocalizations.of(context).getText(
+                            'ht2oa9j3' /* Fonction */,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -161,10 +172,14 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                             ),
                             borderRadius: BorderRadius.circular(15),
                           ),
+                          filled: true,
+                          fillColor: FlutterFlowTheme.customColor9,
                         ),
                         style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Avenir Light ',
+                          color: FlutterFlowTheme.customColor5,
                           fontSize: 16,
+                          useGoogleFonts: false,
                         ),
                       ),
                     ),
@@ -174,10 +189,8 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                         controller: bioController,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Présentez-vous !',
-                          labelStyle: FlutterFlowTheme.subtitle1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 16,
+                          labelText: FFLocalizations.of(context).getText(
+                            '5j9y9uqq' /* Présentez-vous ! */,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -193,10 +206,14 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                             ),
                             borderRadius: BorderRadius.circular(15),
                           ),
+                          filled: true,
+                          fillColor: FlutterFlowTheme.customColor9,
                         ),
                         style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Avenir Light ',
+                          color: FlutterFlowTheme.customColor5,
                           fontSize: 16,
+                          useGoogleFonts: false,
                         ),
                         maxLines: 5,
                       ),
@@ -223,15 +240,18 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                     ),
                   );
                 },
-                text: 'Continuez',
+                text: FFLocalizations.of(context).getText(
+                  'kh7tjb9c' /* Continuez */,
+                ),
                 options: FFButtonOptions(
                   width: 200,
                   height: 50,
-                  color: FlutterFlowTheme.primaryColor,
+                  color: FlutterFlowTheme.customColor9,
                   textStyle: FlutterFlowTheme.subtitle2.override(
-                    fontFamily: 'Poppins',
-                    color: Colors.white,
+                    fontFamily: 'Avenir Light ',
+                    color: FlutterFlowTheme.secondaryColor,
                     fontWeight: FontWeight.w600,
+                    useGoogleFonts: false,
                   ),
                   elevation: 5,
                   borderSide: BorderSide(
