@@ -75,11 +75,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يسجل',
       'en': 'Register',
     },
-    'az11zdfg': {
-      'fr': 'Continuer en tant qu\'invité',
-      'ar': 'تواصل كضيف',
-      'en': 'Continue as guest',
-    },
   },
   // PhoneSignIn
   {

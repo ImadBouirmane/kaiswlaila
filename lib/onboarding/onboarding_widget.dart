@@ -238,7 +238,7 @@ partenaire idea... */
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20, 0, 20, 0),
                                           child: Image.asset(
-                                            'assets/images/Asset_12@4x.png',
+                                            'assets/images/Asset_8@4x_copie.png',
                                             width: double.infinity,
                                             height: 300,
                                             fit: BoxFit.cover,

@@ -273,7 +273,7 @@ class _SignInWidgetState extends State<SignInWidget>
                       options: FFButtonOptions(
                         width: 160,
                         height: 50,
-                        color: FlutterFlowTheme.customColor9,
+                        color: FlutterFlowTheme.customColor10,
                         textStyle: FlutterFlowTheme.subtitle2.override(
                           fontFamily: 'Avenir Light ',
                           color: FlutterFlowTheme.primaryColor,
@@ -420,6 +420,37 @@ class _SignInWidgetState extends State<SignInWidget>
                           },
                         ),
                       ),
+                      Card(
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: FlutterFlowTheme.customColor9,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30,
+                          borderWidth: 1,
+                          buttonSize: 60,
+                          icon: Icon(
+                            Icons.person_outlined,
+                            color: FlutterFlowTheme.secondaryColor,
+                            size: 30,
+                          ),
+                          onPressed: () async {
+                            final user = await signInAnonymously(context);
+                            if (user == null) {
+                              return;
+                            }
+                            await Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePageWidget(),
+                              ),
+                              (r) => false,
+                            );
+                          },
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -465,43 +496,6 @@ class _SignInWidgetState extends State<SignInWidget>
                         ),
                       ),
                     ],
-                  ),
-                ),
-                Spacer(),
-                InkWell(
-                  onTap: () async {
-                    final user = await signInAnonymously(context);
-                    if (user == null) {
-                      return;
-                    }
-                    await Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomePageWidget(),
-                      ),
-                      (r) => false,
-                    );
-                  },
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: FlutterFlowTheme.customColor9,
-                    elevation: 1,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                      child: Text(
-                        FFLocalizations.of(context).getText(
-                          'az11zdfg' /* Continuer en tant qu'invité */,
-                        ),
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          useGoogleFonts: false,
-                        ),
-                      ),
-                    ),
                   ),
                 ),
               ],
