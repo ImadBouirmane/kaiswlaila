@@ -45,26 +45,25 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // SignIn
   {
-    'jgtruzax': {
-      'fr': 'Trouver un partenaire',
-      'ar': 'ابحث عن شريك',
-      'en': 'Find a partner',
+    'ehobpuwl': {
+      'fr': 'Email',
+      'ar': 'بريد الالكتروني',
+      'en': 'E-mail',
     },
-    'iuxqzaus': {
-      'fr':
-          'Le partenaire que vous cherchez avec la maniere que vous preferez !',
-      'ar': 'الشريك الذي تبحث عنه بالطريقة التي تفضلها!',
-      'en': 'The partner you are looking for with the way you prefer!',
+    'ppwkq56k': {
+      'fr': 'Mot de passe',
+      'ar': 'كلمة السر',
+      'en': 'Password',
     },
-    '5jjrerod': {
-      'fr': 'Connectez-vous via Google',
-      'ar': 'تسجيل الدخول عبر جوجل',
-      'en': 'Login via Google',
+    'nxdkxn3l': {
+      'fr': 'Connectez-vous',
+      'ar': 'تسجيل الدخول',
+      'en': 'Login',
     },
-    'u8ceqrn1': {
-      'fr': 'Connectez-vous via Apple',
-      'ar': 'سجّل الدخول من خلال Apple',
-      'en': 'Sign in through Apple',
+    'li21rn5t': {
+      'fr': 'Mot de pass oublié!',
+      'ar': 'هل نسيت كلمة السر!',
+      'en': 'Forgot password!',
     },
     'n3vpdygg': {
       'fr': 'Vous n\'avez pas de compte?',
@@ -75,6 +74,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'S\'inscrire',
       'ar': 'يسجل',
       'en': 'Register',
+    },
+    'az11zdfg': {
+      'fr': 'Continuer en tant qu\'invité',
+      'ar': 'تواصل كضيف',
+      'en': 'Continue as guest',
+    },
+  },
+  // PhoneSignIn
+  {
+    'kalzg6nj': {
+      'fr': 'Connectez-vous par Téléphone',
+      'ar': 'تواصل عن طريق الهاتف',
+      'en': 'Connect by Phone',
+    },
+    'fsn22r60': {
+      'fr': 'Numéro de téléphone',
+      'ar': 'رقم التليفون',
+      'en': 'Phone Number',
     },
   },
   // Onboarding
@@ -1614,6 +1631,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Valider',
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
+    },
+  },
+  // PasswordReset
+  {
+    'nnk5zqv0': {
+      'fr': 'Réinitialiser votre mot de passe',
+      'ar': 'اعد ضبط كلمه السر',
+      'en': 'Reset your password',
+    },
+    'mjgdwdyh': {
+      'fr': 'Nouveau Mot de pass',
+      'ar': 'كلمة السر الجديدة',
+      'en': 'New Password',
+    },
+    'l7ftc8ur': {
+      'fr': 'Confirmer le mot de pass',
+      'ar': 'تأكيد كلمة المرور',
+      'en': 'Confirm Password',
+    },
+    '9rsctwyn': {
+      'fr': 'Enregistrer',
+      'ar': 'سجل',
+      'en': 'Record',
     },
   },
   // background
