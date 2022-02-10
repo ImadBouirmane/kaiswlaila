@@ -152,6 +152,7 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                                 ),
                                 child: Image.network(
                                   uploadedFileUrl,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),

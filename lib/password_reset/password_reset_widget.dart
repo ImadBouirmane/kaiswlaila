@@ -217,7 +217,6 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                             onPressed: () async {
                               final usersUpdateData = createUsersRecordData(
                                 pwd: pwdNewController.text,
-                                gender: '',
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
