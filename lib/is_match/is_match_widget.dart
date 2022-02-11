@@ -118,7 +118,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
               width: 30,
               height: 30,
               child: SpinKitFadingCircle(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 size: 30,
               ),
             ),
@@ -138,7 +138,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: FlutterFlowTheme.primaryColor,
+                    color: FlutterFlowTheme.of(context).primaryColor,
                     offset: Offset(100, 100),
                     spreadRadius: 100,
                   )
@@ -147,8 +147,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                   colors: [
                     Color(0xFFE7E2B0),
                     Color(0xFFE6C8DD),
-                    FlutterFlowTheme.customColor2,
-                    FlutterFlowTheme.secondaryColor
+                    FlutterFlowTheme.of(context).customColor2,
+                    FlutterFlowTheme.of(context).secondaryColor
                   ],
                   stops: [0.2, 0.4, 0.6, 0.8],
                   begin: AlignmentDirectional(0.87, -1),
@@ -184,7 +184,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                 ),
                               ),
                               child: AuthUserStreamWidget(
@@ -209,11 +210,13 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 FFLocalizations.of(context).getText(
                                   'uz3611e0' /* Rencontres */,
                                 ),
-                                style: FlutterFlowTheme.title1.override(
-                                  fontFamily: 'Arial Black',
-                                  fontSize: 22,
-                                  useGoogleFonts: false,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .title1
+                                    .override(
+                                      fontFamily: 'Arial Black',
+                                      fontSize: 22,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ),
                           ),
@@ -335,9 +338,9 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                         height: 30,
                                                         child:
                                                             SpinKitFadingCircle(
-                                                          color:
-                                                              FlutterFlowTheme
-                                                                  .primaryColor,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryColor,
                                                           size: 30,
                                                         ),
                                                       ),
@@ -397,11 +400,13 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                     FFLocalizations.of(context).getText(
                                       'fsc9pzu7' /* C'est un match,  */,
                                     ),
-                                    style: FlutterFlowTheme.title1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      fontSize: 22,
-                                      useGoogleFonts: false,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .title1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          fontSize: 22,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                                 Padding(
@@ -410,7 +415,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDisplayName,
-                                      style: FlutterFlowTheme.subtitle1,
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1,
                                     ),
                                   ),
                                 ),
@@ -418,12 +424,14 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                   FFLocalizations.of(context).getText(
                                     'jyzfvoju' /* Démarrer une conversation main... */,
                                   ),
-                                  style: FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Avenir Light ',
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
-                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Avenir Light ',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -467,7 +475,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                     FFLocalizations.of(context).getText(
                                       'fh5z1igs' /* ou : */,
                                     ),
-                                    style: FlutterFlowTheme.subtitle1,
+                                    style:
+                                        FlutterFlowTheme.of(context).subtitle1,
                                   ),
                                 ),
                                 Padding(
@@ -492,14 +501,17 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                     options: FFButtonOptions(
                                       width: 200,
                                       height: 50,
-                                      color: FlutterFlowTheme.customColor9,
-                                      textStyle:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor9,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .subtitle2
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                       elevation: 5,
                                       borderSide: BorderSide(
                                         color: Colors.transparent,

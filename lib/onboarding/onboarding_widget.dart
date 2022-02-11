@@ -31,7 +31,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -40,8 +40,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -65,7 +65,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         buttonSize: 60,
                         icon: Icon(
                           Icons.chevron_left_outlined,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           size: 30,
                         ),
                         onPressed: () async {
@@ -110,15 +110,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
 applicatio... */
                                               ,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Arial Black',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Arial Black',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -165,14 +167,16 @@ applicatio... */
 partenaire idea... */
                                               ,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Arial Black',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Arial Black',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -217,14 +221,16 @@ partenaire idea... */
                                             FFLocalizations.of(context).getText(
                                               'u3k7yufq' /* Love for Real ! */,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -275,8 +281,8 @@ partenaire idea... */
                                   dotWidth: 20,
                                   dotHeight: 12,
                                   dotColor: Color(0xFFB4B4B4),
-                                  activeDotColor:
-                                      FlutterFlowTheme.tertiaryColor,
+                                  activeDotColor: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
                                   paintStyle: PaintingStyle.fill,
                                 ),
                               ),
@@ -309,13 +315,16 @@ partenaire idea... */
                       options: FFButtonOptions(
                         width: 200,
                         height: 50,
-                        color: FlutterFlowTheme.customColor9,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.secondaryColor,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Avenir Light ',
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
                         elevation: 10,
                         borderSide: BorderSide(
                           color: Colors.transparent,

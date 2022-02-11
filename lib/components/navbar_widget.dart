@@ -1,4 +1,5 @@
 import '../all_chat_page/all_chat_page_widget.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
@@ -16,14 +17,43 @@ class NavbarWidget extends StatefulWidget {
   _NavbarWidgetState createState() => _NavbarWidgetState();
 }
 
-class _NavbarWidgetState extends State<NavbarWidget> {
+class _NavbarWidgetState extends State<NavbarWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'containerOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 60),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+  };
+
+  @override
+  void initState() {
+    super.initState();
+    startPageLoadAnimations(
+      animationsMap.values
+          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
+      this,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 60,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.customColor9,
+        color: FlutterFlowTheme.of(context).customColor9,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0),
           bottomRight: Radius.circular(0),
@@ -150,7 +180,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                   width: 50,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.customColor9,
+                    color: FlutterFlowTheme.of(context).customColor9,
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: Image.asset(
@@ -165,6 +195,6 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           ],
         ),
       ),
-    );
+    ).animated([animationsMap['containerOnPageLoadAnimation']]);
   }
 }

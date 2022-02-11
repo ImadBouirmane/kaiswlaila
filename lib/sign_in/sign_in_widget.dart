@@ -65,7 +65,7 @@ class _SignInWidgetState extends State<SignInWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.tertiaryColor,
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Visibility(
         visible: responsiveVisibility(
           context: context,
@@ -77,7 +77,7 @@ class _SignInWidgetState extends State<SignInWidget>
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -86,8 +86,8 @@ class _SignInWidgetState extends State<SignInWidget>
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -108,13 +108,17 @@ class _SignInWidgetState extends State<SignInWidget>
                     children: [
                       FlutterFlowLanguageSelector(
                         width: 100,
-                        backgroundColor: FlutterFlowTheme.tertiaryColor,
-                        borderColor: FlutterFlowTheme.customColor6,
-                        dropdownColor: FlutterFlowTheme.tertiaryColor,
-                        dropdownIconColor: FlutterFlowTheme.secondaryColor,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).customColor6,
+                        borderColor: FlutterFlowTheme.of(context).customColor6,
+                        dropdownColor:
+                            FlutterFlowTheme.of(context).customColor6,
+                        dropdownIconColor:
+                            FlutterFlowTheme.of(context).secondaryColor,
                         borderRadius: 20,
                         textStyle: TextStyle(
-                          color: FlutterFlowTheme.secondaryColor,
+                          fontFamily: 'Arial Black',
+                          color: FlutterFlowTheme.of(context).secondaryColor,
                           fontWeight: FontWeight.w600,
                           fontSize: 13,
                         ),
@@ -180,15 +184,15 @@ class _SignInWidgetState extends State<SignInWidget>
                       fillColor: Color(0x7DFFFFFF),
                       prefixIcon: Icon(
                         Icons.email_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                       ),
                     ),
-                    style: FlutterFlowTheme.subtitle1.override(
-                      fontFamily: 'Avenir Light ',
-                      color: FlutterFlowTheme.customColor3,
-                      fontSize: 18,
-                      useGoogleFonts: false,
-                    ),
+                    style: FlutterFlowTheme.of(context).subtitle1.override(
+                          fontFamily: 'Avenir Light ',
+                          color: FlutterFlowTheme.of(context).customColor3,
+                          fontSize: 18,
+                          useGoogleFonts: false,
+                        ),
                     keyboardType: TextInputType.emailAddress,
                   ),
                 ),
@@ -208,20 +212,20 @@ class _SignInWidgetState extends State<SignInWidget>
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       filled: true,
-                      fillColor: FlutterFlowTheme.customColor9,
+                      fillColor: FlutterFlowTheme.of(context).customColor9,
                       suffixIcon: InkWell(
                         onTap: () => setState(
                           () => pwdVisibility = !pwdVisibility,
@@ -230,17 +234,17 @@ class _SignInWidgetState extends State<SignInWidget>
                           pwdVisibility
                               ? Icons.visibility_outlined
                               : Icons.visibility_off_outlined,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           size: 22,
                         ),
                       ),
                     ),
-                    style: FlutterFlowTheme.subtitle1.override(
-                      fontFamily: 'Avenir Light ',
-                      color: FlutterFlowTheme.customColor5,
-                      fontSize: 18,
-                      useGoogleFonts: false,
-                    ),
+                    style: FlutterFlowTheme.of(context).subtitle1.override(
+                          fontFamily: 'Avenir Light ',
+                          color: FlutterFlowTheme.of(context).customColor5,
+                          fontSize: 18,
+                          useGoogleFonts: false,
+                        ),
                     keyboardType: TextInputType.visiblePassword,
                   ),
                 ),
@@ -273,16 +277,19 @@ class _SignInWidgetState extends State<SignInWidget>
                       options: FFButtonOptions(
                         width: 160,
                         height: 50,
-                        color: FlutterFlowTheme.customColor10,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
+                        elevation: 3,
                         borderSide: BorderSide(
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           width: 1,
                         ),
                         borderRadius: 20,
@@ -306,11 +313,14 @@ class _SignInWidgetState extends State<SignInWidget>
                           FFLocalizations.of(context).getText(
                             'li21rn5t' /* Mot de pass oublié! */,
                           ),
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.customColor4,
-                            useGoogleFonts: false,
-                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).customColor4,
+                                useGoogleFonts: false,
+                              ),
                         ),
                       ),
                     ),
@@ -326,7 +336,7 @@ class _SignInWidgetState extends State<SignInWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
                         child: Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: FlutterFlowTheme.customColor9,
+                          color: FlutterFlowTheme.of(context).customColor6,
                           elevation: 3,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
@@ -338,7 +348,7 @@ class _SignInWidgetState extends State<SignInWidget>
                             buttonSize: 60,
                             icon: Icon(
                               Icons.phone_rounded,
-                              color: FlutterFlowTheme.secondaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                               size: 30,
                             ),
                             onPressed: () async {
@@ -359,7 +369,8 @@ class _SignInWidgetState extends State<SignInWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
                         child: Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: FlutterFlowTheme.customColor9,
+                          color: FlutterFlowTheme.of(context).customColor6,
+                          elevation: 3,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
                           ),
@@ -370,7 +381,7 @@ class _SignInWidgetState extends State<SignInWidget>
                             buttonSize: 60,
                             icon: FaIcon(
                               FontAwesomeIcons.google,
-                              color: FlutterFlowTheme.secondaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                               size: 30,
                             ),
                             onPressed: () async {
@@ -391,7 +402,8 @@ class _SignInWidgetState extends State<SignInWidget>
                       ),
                       Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.customColor9,
+                        color: FlutterFlowTheme.of(context).customColor6,
+                        elevation: 3,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
                         ),
@@ -402,7 +414,7 @@ class _SignInWidgetState extends State<SignInWidget>
                           buttonSize: 60,
                           icon: FaIcon(
                             FontAwesomeIcons.apple,
-                            color: FlutterFlowTheme.secondaryColor,
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 30,
                           ),
                           onPressed: () async {
@@ -422,7 +434,8 @@ class _SignInWidgetState extends State<SignInWidget>
                       ),
                       Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.customColor9,
+                        color: FlutterFlowTheme.of(context).customColor6,
+                        elevation: 3,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
                         ),
@@ -433,7 +446,7 @@ class _SignInWidgetState extends State<SignInWidget>
                           buttonSize: 60,
                           icon: Icon(
                             Icons.person_outlined,
-                            color: FlutterFlowTheme.secondaryColor,
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 30,
                           ),
                           onPressed: () async {
@@ -464,12 +477,12 @@ class _SignInWidgetState extends State<SignInWidget>
                         FFLocalizations.of(context).getText(
                           'n3vpdygg' /* Vous n'avez pas de compte? */,
                         ),
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.tertiaryColor,
-                          fontWeight: FontWeight.w500,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
                       ),
                       InkWell(
                         onTap: () async {
@@ -487,12 +500,13 @@ class _SignInWidgetState extends State<SignInWidget>
                           FFLocalizations.of(context).getText(
                             'tjs7xgjs' /* S'inscrire */,
                           ),
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Avenir Light ',
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            useGoogleFonts: false,
-                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
+                                  ),
                         ),
                       ),
                     ],

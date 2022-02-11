@@ -39,7 +39,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -48,8 +48,8 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -71,7 +71,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -90,7 +90,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                           FFLocalizations.of(context).getText(
                             'jqgzv7gq' /* Vos Photos */,
                           ),
-                          style: FlutterFlowTheme.title1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
                       ),
                     ],
@@ -106,7 +106,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                           FFLocalizations.of(context).getText(
                             'fmsmx7ba' /* veuillez télécharger au moins ... */,
                           ),
-                          style: FlutterFlowTheme.bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyText1,
                         ),
                       ),
                     ],
@@ -130,7 +130,8 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               await selectMediaWithSourceBottomSheet(
                             context: context,
                             allowPhoto: true,
-                            textColor: FlutterFlowTheme.primaryColor,
+                            textColor:
+                                FlutterFlowTheme.of(context).primaryColor,
                             pickerFontFamily: 'Poppins',
                           );
                           if (selectedMedia != null &&
@@ -175,7 +176,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                             width: 160,
                             height: 160,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
+                              color: FlutterFlowTheme.of(context).customColor9,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: Image.asset(
@@ -202,7 +203,8 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               await selectMediaWithSourceBottomSheet(
                             context: context,
                             allowPhoto: true,
-                            textColor: FlutterFlowTheme.primaryColor,
+                            textColor:
+                                FlutterFlowTheme.of(context).primaryColor,
                             pickerFontFamily: 'Poppins',
                           );
                           if (selectedMedia != null &&
@@ -247,7 +249,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                             width: 160,
                             height: 160,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
+                              color: FlutterFlowTheme.of(context).customColor9,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: Image.asset(
@@ -274,7 +276,8 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               await selectMediaWithSourceBottomSheet(
                             context: context,
                             allowPhoto: true,
-                            textColor: FlutterFlowTheme.primaryColor,
+                            textColor:
+                                FlutterFlowTheme.of(context).primaryColor,
                             pickerFontFamily: 'Poppins',
                           );
                           if (selectedMedia != null &&
@@ -319,7 +322,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                             width: 160,
                             height: 160,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
+                              color: FlutterFlowTheme.of(context).customColor9,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: Image.asset(
@@ -346,7 +349,8 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                               await selectMediaWithSourceBottomSheet(
                             context: context,
                             allowPhoto: true,
-                            textColor: FlutterFlowTheme.primaryColor,
+                            textColor:
+                                FlutterFlowTheme.of(context).primaryColor,
                             pickerFontFamily: 'Poppins',
                           );
                           if (selectedMedia != null &&
@@ -391,7 +395,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                             width: 160,
                             height: 160,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.customColor9,
+                              color: FlutterFlowTheme.of(context).customColor9,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: Image.asset(
@@ -452,13 +456,16 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                             options: FFButtonOptions(
                               width: 200,
                               height: 50,
-                              color: FlutterFlowTheme.customColor10,
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Avenir Light ',
-                                color: FlutterFlowTheme.secondaryColor,
-                                fontWeight: FontWeight.w600,
-                                useGoogleFonts: false,
-                              ),
+                              color: FlutterFlowTheme.of(context).customColor10,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
+                                    fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
+                                  ),
                               elevation: 5,
                               borderSide: BorderSide(
                                 color: Colors.transparent,

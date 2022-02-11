@@ -21,7 +21,7 @@ class _EmptyChatsWidgetState extends State<EmptyChatsWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.customColor10,
+          color: FlutterFlowTheme.of(context).customColor10,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -37,13 +37,13 @@ class _EmptyChatsWidgetState extends State<EmptyChatsWidget> {
                     'fh8476sw' /* Il n'y a pas des messages ! */,
                   ),
                   textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.title1.override(
-                    fontFamily: 'Avenir Light ',
-                    color: FlutterFlowTheme.customColor4,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    useGoogleFonts: false,
-                  ),
+                  style: FlutterFlowTheme.of(context).title1.override(
+                        fontFamily: 'Avenir Light ',
+                        color: FlutterFlowTheme.of(context).customColor4,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        useGoogleFonts: false,
+                      ),
                 ),
               ],
             ),

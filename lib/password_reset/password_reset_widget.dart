@@ -43,7 +43,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -52,8 +52,8 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -78,7 +78,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -94,7 +94,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                   FFLocalizations.of(context).getText(
                     'nnk5zqv0' /* Réinitialiser votre mot de pas... */,
                   ),
-                  style: FlutterFlowTheme.subtitle1,
+                  style: FlutterFlowTheme.of(context).subtitle1,
                 ),
               ),
               Expanded(
@@ -123,20 +123,23 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               filled: true,
-                              fillColor: FlutterFlowTheme.customColor9,
+                              fillColor:
+                                  FlutterFlowTheme.of(context).customColor9,
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => pwdNewVisibility = !pwdNewVisibility,
@@ -145,16 +148,20 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                                   pwdNewVisibility
                                       ? Icons.visibility_outlined
                                       : Icons.visibility_off_outlined,
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   size: 22,
                                 ),
                               ),
                             ),
-                            style: FlutterFlowTheme.subtitle1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor5,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .subtitle1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor5,
+                                  useGoogleFonts: false,
+                                ),
                             keyboardType: TextInputType.visiblePassword,
                           ),
                         ),
@@ -172,20 +179,23 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               filled: true,
-                              fillColor: FlutterFlowTheme.customColor9,
+                              fillColor:
+                                  FlutterFlowTheme.of(context).customColor9,
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => pwdConfirmVisibility =
@@ -195,16 +205,20 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                                   pwdConfirmVisibility
                                       ? Icons.visibility_outlined
                                       : Icons.visibility_off_outlined,
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   size: 22,
                                 ),
                               ),
                             ),
-                            style: FlutterFlowTheme.subtitle1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor5,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .subtitle1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor5,
+                                  useGoogleFonts: false,
+                                ),
                             keyboardType: TextInputType.visiblePassword,
                           ),
                         ),
@@ -227,16 +241,20 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                             options: FFButtonOptions(
                               width: 160,
                               height: 50,
-                              color: FlutterFlowTheme.customColor9,
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Avenir Light ',
-                                color: FlutterFlowTheme.primaryColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                useGoogleFonts: false,
-                              ),
+                              color: FlutterFlowTheme.of(context).customColor9,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
+                                  ),
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 width: 1,
                               ),
                               borderRadius: 20,

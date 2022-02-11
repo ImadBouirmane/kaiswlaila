@@ -40,7 +40,7 @@ class _MatchesWidgetState extends State<MatchesWidget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -49,8 +49,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -86,7 +86,7 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                             ),
                           ),
                           child: AuthUserStreamWidget(
@@ -108,11 +108,11 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                         FFLocalizations.of(context).getText(
                           'ixqmo3vn' /* Rencontres */,
                         ),
-                        style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Avenir Light ',
-                          fontSize: 22,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Avenir Light ',
+                              fontSize: 22,
+                              useGoogleFonts: false,
+                            ),
                       ),
                       Container(
                         width: 50,
@@ -145,7 +145,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                               width: 30,
                               height: 30,
                               child: SpinKitFadingCircle(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 30,
                               ),
                             ),
@@ -180,7 +181,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                                   width: 100,
                                   height: 100,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.customColor9,
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor9,
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: Stack(
@@ -233,7 +235,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                                               gradient: LinearGradient(
                                                 colors: [
                                                   Color(0xD3000000),
-                                                  FlutterFlowTheme.customColor6
+                                                  FlutterFlowTheme.of(context)
+                                                      .customColor6
                                                 ],
                                                 stops: [0, 1],
                                                 begin:
@@ -265,17 +268,18 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                                                       AuthUserStreamWidget(
                                                         child: Text(
                                                           currentUserDisplayName,
-                                                          style:
-                                                              FlutterFlowTheme
-                                                                  .subtitle1
-                                                                  .override(
-                                                            fontFamily:
-                                                                'Avenir Light ',
-                                                            color: FlutterFlowTheme
-                                                                .tertiaryColor,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .subtitle1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Avenir Light ',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .tertiaryColor,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
                                                       ),
                                                       AuthUserStreamWidget(
@@ -302,7 +306,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                                                                   height: 30,
                                                                   child:
                                                                       SpinKitFadingCircle(
-                                                                    color: FlutterFlowTheme
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
                                                                         .primaryColor,
                                                                     size: 30,
                                                                   ),
@@ -342,14 +347,16 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                                                                       .like,
                                                               onIcon: Icon(
                                                                 Icons.favorite,
-                                                                color: FlutterFlowTheme
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
                                                                     .secondaryColor,
                                                                 size: 25,
                                                               ),
                                                               offIcon: Icon(
                                                                 Icons
                                                                     .favorite_border,
-                                                                color: FlutterFlowTheme
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
                                                                     .secondaryColor,
                                                                 size: 25,
                                                               ),

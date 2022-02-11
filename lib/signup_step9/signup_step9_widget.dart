@@ -52,7 +52,7 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -61,8 +61,8 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -75,7 +75,7 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: FlutterFlowTheme.customColor9,
+                color: FlutterFlowTheme.of(context).customColor9,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
@@ -91,7 +91,7 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                           FFLocalizations.of(context).getText(
                             '4wkntniv' /* Questionnaire */,
                           ),
-                          style: FlutterFlowTheme.title1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
                       ],
                     ),
@@ -102,18 +102,22 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                           width: MediaQuery.of(context).size.width * 0.7,
                           lineHeight: 24,
                           animation: true,
-                          progressColor: FlutterFlowTheme.primaryColor,
+                          progressColor:
+                              FlutterFlowTheme.of(context).primaryColor,
                           backgroundColor: Color(0xFFF1F4F8),
                           center: Text(
                             FFLocalizations.of(context).getText(
                               'qedasp3n' /* 30% */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.primaryColor,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  useGoogleFonts: false,
+                                ),
                           ),
                           barRadius: Radius.circular(10)),
                     ),
@@ -130,12 +134,13 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                               '4zinrync' /* Qu’est-ce qui est important po... */,
                             ),
                             textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
                         ),
                       ),
@@ -186,22 +191,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'ane0kc7c' /* Ses valeurs */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -233,22 +244,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'tf1lja61' /* Son énergie */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -280,22 +297,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'zw15di46' /* L’attachement */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -327,22 +350,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'la2d6xdw' /* Les habitudes */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -374,22 +403,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'k2v86djq' /* Le plaisir et la détente */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -421,22 +456,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'cslhflul' /* Etre à deux */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -468,22 +509,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'rns6d86d' /* Ma confiance en elle (lui) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -515,22 +562,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'ppoaq5g0' /* Son sex-appeal */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -575,22 +628,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 '1b3jsrqr' /* Son amour pour les enfants */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -622,22 +681,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'xmtwodpr' /* Le partage */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -669,22 +734,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'lotlreau' /* Ses convictions */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -716,22 +787,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'kofa4d5x' /* La passion */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -763,22 +840,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'df1hj2s2' /* Sa joie de vivre */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -810,22 +893,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'nkyeva9d' /* Son apparence physique  */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -857,22 +946,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'hvwozygw' /* Notre attirance réciproque  */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -904,22 +999,28 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                                   .getText(
                                                 'hkgwkzgl' /* Nos similitudes  */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -958,9 +1059,10 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                                     radius: 16,
                                     dotWidth: 16,
                                     dotHeight: 16,
-                                    dotColor: FlutterFlowTheme.customColor9,
-                                    activeDotColor:
-                                        FlutterFlowTheme.primaryColor,
+                                    dotColor: FlutterFlowTheme.of(context)
+                                        .customColor9,
+                                    activeDotColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     paintStyle: PaintingStyle.fill,
                                   ),
                                 ),
@@ -1011,13 +1113,16 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,
@@ -1066,13 +1171,16 @@ class _SignupStep9WidgetState extends State<SignupStep9Widget> {
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,

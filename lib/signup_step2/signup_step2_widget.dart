@@ -38,7 +38,7 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -47,8 +47,8 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -73,7 +73,7 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                         buttonSize: 60,
                         icon: Icon(
                           Icons.chevron_left_outlined,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           size: 30,
                         ),
                         onPressed: () async {
@@ -93,11 +93,11 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                         FFLocalizations.of(context).getText(
                           'oeoe3l6k' /* Avatar */,
                         ),
-                        style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor3,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor3,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -119,7 +119,7 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                             color: Color(0x00EEEEEE),
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                             ),
                           ),
                           child: InkWell(
@@ -174,7 +174,8 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                               await selectMediaWithSourceBottomSheet(
                             context: context,
                             allowPhoto: true,
-                            textColor: FlutterFlowTheme.primaryColor,
+                            textColor:
+                                FlutterFlowTheme.of(context).primaryColor,
                             pickerFontFamily: 'Lato',
                           );
                           if (selectedMedia != null &&
@@ -215,15 +216,18 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                         options: FFButtonOptions(
                           width: 170,
                           height: 35,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.primaryColor,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor6,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: 12,
@@ -264,13 +268,16 @@ class _SignupStep2WidgetState extends State<SignupStep2Widget> {
                             options: FFButtonOptions(
                               width: 200,
                               height: 50,
-                              color: FlutterFlowTheme.customColor9,
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Avenir Light ',
-                                color: FlutterFlowTheme.secondaryColor,
-                                fontWeight: FontWeight.w600,
-                                useGoogleFonts: false,
-                              ),
+                              color: FlutterFlowTheme.of(context).customColor9,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
+                                    fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
+                                  ),
                               elevation: 5,
                               borderSide: BorderSide(
                                 color: Colors.transparent,

@@ -59,7 +59,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -68,8 +68,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -107,7 +107,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
                             ),
                             child: AuthUserStreamWidget(
@@ -129,11 +130,11 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                           FFLocalizations.of(context).getText(
                             'asafhaon' /* Notifications */,
                           ),
-                          style: FlutterFlowTheme.title1.override(
-                            fontFamily: 'Avenir Light ',
-                            fontSize: 22,
-                            useGoogleFonts: false,
-                          ),
+                          style: FlutterFlowTheme.of(context).title1.override(
+                                fontFamily: 'Avenir Light ',
+                                fontSize: 22,
+                                useGoogleFonts: false,
+                              ),
                         ),
                         InkWell(
                           onTap: () async {
@@ -176,7 +177,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                               width: 30,
                               height: 30,
                               child: SpinKitFadingCircle(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 30,
                               ),
                             ),
@@ -201,7 +203,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                 ),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: FlutterFlowTheme.customColor9,
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor9,
                                   elevation: 2,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
@@ -222,14 +225,16 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                                     .getText(
                                                   'hmqazb5b' /* Issam a vu votre profile ! */,
                                                 ),
-                                                style: FlutterFlowTheme
+                                                style: FlutterFlowTheme.of(
+                                                        context)
                                                     .subtitle2
                                                     .override(
-                                                  fontFamily: 'Montserrat',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFF15212B),
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
                                               ),
                                             ),
                                             Align(
@@ -240,14 +245,18 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                                     .getText(
                                                   '8ft00scz' /* Dec. 19, 1:30pm - 2:00pm */,
                                                 ),
-                                                style: FlutterFlowTheme
+                                                style: FlutterFlowTheme.of(
+                                                        context)
                                                     .bodyText2
                                                     .override(
-                                                  fontFamily: 'Montserrat',
-                                                  color: FlutterFlowTheme
-                                                      .primaryColor,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                      fontFamily: 'Montserrat',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryColor,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
                                               ),
                                             ),
                                           ],
@@ -277,8 +286,8 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                               AlignmentDirectional(0.05, 0),
                                           child: Icon(
                                             Icons.arrow_right,
-                                            color:
-                                                FlutterFlowTheme.primaryColor,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryColor,
                                             size: 28,
                                           ),
                                         ),

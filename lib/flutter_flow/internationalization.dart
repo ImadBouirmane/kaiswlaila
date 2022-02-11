@@ -81,7 +81,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kalzg6nj': {
       'fr': 'Connectez-vous par Téléphone',
       'ar': 'تواصل عن طريق الهاتف',
-      'en': 'Connect by Phone',
+      'en': 'Connect by Phone Number',
     },
     'fsn22r60': {
       'fr': 'Numéro de téléphone',
@@ -118,7 +118,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // signupStep1
   {
     '8k6ie3sk': {
-      'fr': 'Création du votre compte',
+      'fr': 'Création de votre compte',
       'ar': 'انشاء حسابك',
       'en': 'Creation of your account',
     },
@@ -1297,7 +1297,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Profile
   {
     '13jgokol': {
-      'fr': 'Profile',
+      'fr': 'Profil',
       'ar': 'الملف الشخصي',
       'en': 'Profile',
     },
@@ -1325,9 +1325,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Edit your profile',
     },
     '2efprkqz': {
-      'fr': 'Base',
-      'ar': 'قائم على',
-      'en': 'Based',
+      'fr': 'Mon Profil',
+      'ar': 'ملفي الشخصي',
+      'en': 'My profile',
     },
     't9i89j5t': {
       'fr': 'Nom Complet',
@@ -1335,14 +1335,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Full Name',
     },
     'boqifj1x': {
-      'fr': 'Fonction',
-      'ar': 'دور',
-      'en': 'Function',
+      'fr': 'Métier',
+      'ar': 'مهنة',
+      'en': 'Job',
     },
     'wd9vpqh6': {
-      'fr': 'Bio',
-      'ar': 'عضوي',
-      'en': 'Organic',
+      'fr': 'Biographie',
+      'ar': 'سيرة شخصية',
+      'en': 'Biography',
     },
     'foi3lff4': {
       'fr': 'Sexe',
@@ -1350,14 +1350,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Sex',
     },
     'l6m6ng3p': {
-      'fr': 'Masculin',
+      'fr': 'Homme',
       'ar': 'ذكر',
       'en': 'Male',
     },
     'baim5lij': {
-      'fr': 'Feminin',
-      'ar': 'المؤنث',
-      'en': 'Feminine',
+      'fr': 'Femme',
+      'ar': 'امرأة',
+      'en': 'Women',
     },
     '5bponwwp': {
       'fr': 'Date de naissance',
@@ -1526,14 +1526,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Feminine',
     },
     'zhp5oi6b': {
-      'fr': 'Âge Preference',
-      'ar': 'تفضيل العمر',
-      'en': 'Age Preference',
+      'fr': 'Tranche d’âge',
+      'ar': 'الفئة العمرية',
+      'en': 'Age range',
     },
     'dbjee32m': {
-      'fr': 'Location',
-      'ar': 'تأجير',
-      'en': 'Rental',
+      'fr': 'Localisation',
+      'ar': 'موقع',
+      'en': 'Location',
     },
     'yyfgvofr': {
       'fr': 'Régler',
@@ -1546,9 +1546,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Notifications',
     },
     '7ns2usao': {
-      'fr': 'Nouveaux matchs',
-      'ar': 'مباريات جديدة',
-      'en': 'New matches',
+      'fr': 'Nouveaux Matchs',
+      'ar': 'مواعدات جديدة',
+      'en': 'New Matches',
     },
     'k8jdlibi': {
       'fr': 'Nouveaux J\'aime',
@@ -1556,9 +1556,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'New Likes',
     },
     'b08p41hz': {
-      'fr': 'Nouveaux messages',
-      'ar': 'مشاركات جديدة',
-      'en': 'New posts',
+      'fr': 'Nouveaux Messages',
+      'ar': 'محادثات جديدة',
+      'en': 'New Messages',
     },
   },
   // chat
@@ -1590,7 +1590,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '_ _ _ _',
     },
     'zpaazf5z': {
-      'fr': 'Renvoyez',
+      'fr': 'Renvoyer',
       'ar': 'إعادة إرسال',
       'en': 'Resend',
     },
@@ -1670,9 +1670,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // menu
   {
     'q4ae3no9': {
-      'fr': 'Modifier le profile',
+      'fr': 'Modifier le profil',
       'ar': 'تعديل الملف الشخصي',
-      'en': 'Modify the profile',
+      'en': 'modify the profile',
     },
     'qx0b29dx': {
       'fr': 'Modifier les paramètres',

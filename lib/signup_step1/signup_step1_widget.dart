@@ -48,7 +48,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -57,8 +57,8 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -83,7 +83,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -101,14 +101,14 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        '8k6ie3sk' /* Création du votre compte */,
+                        '8k6ie3sk' /* Création de votre compte */,
                       ),
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor3,
-                        fontSize: 22,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor3,
+                            fontSize: 22,
+                            useGoogleFonts: false,
+                          ),
                     ),
                   ],
                 ),
@@ -125,13 +125,16 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                         children: [
                           TabBar(
                             isScrollable: true,
-                            labelColor: FlutterFlowTheme.tertiaryColor,
-                            labelStyle: FlutterFlowTheme.subtitle1.override(
-                              fontFamily: 'Avenir Light ',
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
-                            indicatorColor: FlutterFlowTheme.tertiaryColor,
+                            labelColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                            labelStyle:
+                                FlutterFlowTheme.of(context).subtitle1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
+                            indicatorColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
                             indicatorWeight: 2,
                             tabs: [
                               Tab(
@@ -188,17 +191,20 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             prefixIcon: Icon(
                                               Icons.email_outlined,
                                               color:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.subtitle1
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle1
                                               .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color:
-                                                FlutterFlowTheme.customColor3,
-                                            fontSize: 18,
-                                            useGoogleFonts: false,
-                                          ),
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .customColor3,
+                                                fontSize: 18,
+                                                useGoogleFonts: false,
+                                              ),
                                           keyboardType:
                                               TextInputType.emailAddress,
                                         ),
@@ -223,8 +229,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -232,8 +239,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -241,7 +249,8 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             filled: true,
                                             fillColor:
-                                                FlutterFlowTheme.customColor9,
+                                                FlutterFlowTheme.of(context)
+                                                    .customColor9,
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => pwdVisibility =
@@ -252,20 +261,23 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                                     ? Icons.visibility_outlined
                                                     : Icons
                                                         .visibility_off_outlined,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 22,
                                               ),
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.subtitle1
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle1
                                               .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color:
-                                                FlutterFlowTheme.customColor5,
-                                            fontSize: 18,
-                                            useGoogleFonts: false,
-                                          ),
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .customColor5,
+                                                fontSize: 18,
+                                                useGoogleFonts: false,
+                                              ),
                                           keyboardType:
                                               TextInputType.visiblePassword,
                                         ),
@@ -284,8 +296,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -293,8 +306,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -302,7 +316,8 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             filled: true,
                                             fillColor:
-                                                FlutterFlowTheme.customColor9,
+                                                FlutterFlowTheme.of(context)
+                                                    .customColor9,
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => pwdConfirmVisibility =
@@ -313,20 +328,23 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                                     ? Icons.visibility_outlined
                                                     : Icons
                                                         .visibility_off_outlined,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 22,
                                               ),
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.subtitle1
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle1
                                               .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color:
-                                                FlutterFlowTheme.customColor3,
-                                            fontSize: 18,
-                                            useGoogleFonts: false,
-                                          ),
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .customColor3,
+                                                fontSize: 18,
+                                                useGoogleFonts: false,
+                                              ),
                                           keyboardType:
                                               TextInputType.visiblePassword,
                                         ),
@@ -392,21 +410,24 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                           options: FFButtonOptions(
                                             width: 200,
                                             height: 50,
-                                            color:
-                                                FlutterFlowTheme.customColor8,
-                                            textStyle: FlutterFlowTheme
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor6,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
                                                 .subtitle2
                                                 .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.primaryColor,
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiaryColor,
+                                                  fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
+                                                ),
                                             elevation: 5,
                                             borderSide: BorderSide(
                                               color:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                               width: 1,
                                             ),
                                             borderRadius: 20,
@@ -436,8 +457,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -445,8 +467,9 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 width: 1,
                                               ),
                                               borderRadius:
@@ -454,20 +477,24 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                             ),
                                             filled: true,
                                             fillColor:
-                                                FlutterFlowTheme.customColor9,
+                                                FlutterFlowTheme.of(context)
+                                                    .customColor9,
                                             prefixIcon: Icon(
                                               Icons.phone_rounded,
                                               color:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
-                                          style: FlutterFlowTheme.subtitle1
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle1
                                               .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color:
-                                                FlutterFlowTheme.customColor5,
-                                            useGoogleFonts: false,
-                                          ),
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .customColor5,
+                                                useGoogleFonts: false,
+                                              ),
                                           keyboardType: TextInputType.phone,
                                         ),
                                       ),
@@ -515,21 +542,24 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget> {
                                           options: FFButtonOptions(
                                             width: 200,
                                             height: 50,
-                                            color:
-                                                FlutterFlowTheme.customColor8,
-                                            textStyle: FlutterFlowTheme
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor6,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
                                                 .subtitle2
                                                 .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.primaryColor,
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiaryColor,
+                                                  fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
+                                                ),
                                             elevation: 5,
                                             borderSide: BorderSide(
                                               color:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                               width: 1,
                                             ),
                                             borderRadius: 20,

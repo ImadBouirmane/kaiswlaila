@@ -58,14 +58,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.tertiaryColor,
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Container(
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -74,8 +74,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -103,7 +103,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           buttonSize: 60,
                           icon: Icon(
                             Icons.chevron_left,
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             size: 30,
                           ),
                           onPressed: () async {
@@ -115,11 +115,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           'l3uatqmy' /* Éditez votre profile */,
                         ),
-                        style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Avenir Light ',
-                          fontSize: 22,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Avenir Light ',
+                              fontSize: 22,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -146,7 +146,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                   ),
                                 ),
                                 child: InkWell(
@@ -193,7 +194,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 await selectMediaWithSourceBottomSheet(
                               context: context,
                               allowPhoto: true,
-                              textColor: FlutterFlowTheme.primaryColor,
+                              textColor:
+                                  FlutterFlowTheme.of(context).primaryColor,
                               pickerFontFamily: 'Lato',
                             );
                             if (selectedMedia != null &&
@@ -243,7 +245,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               children: [
                                 Icon(
                                   Icons.edit_outlined,
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   size: 30,
                                 ),
                               ],
@@ -261,14 +264,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '2efprkqz' /* Base */,
+                          '2efprkqz' /* Mon Profil */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -285,27 +288,27 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.customColor9,
+                        fillColor: FlutterFlowTheme.of(context).customColor9,
                       ),
-                      style: FlutterFlowTheme.subtitle1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor5,
-                        fontSize: 18,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor5,
+                            fontSize: 18,
+                            useGoogleFonts: false,
+                          ),
                       keyboardType: TextInputType.visiblePassword,
                     ),
                   ),
@@ -318,31 +321,31 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: FFLocalizations.of(context).getText(
-                          'boqifj1x' /* Fonction */,
+                          'boqifj1x' /* Métier */,
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.customColor9,
+                        fillColor: FlutterFlowTheme.of(context).customColor9,
                       ),
-                      style: FlutterFlowTheme.subtitle1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor5,
-                        fontSize: 16,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor5,
+                            fontSize: 16,
+                            useGoogleFonts: false,
+                          ),
                     ),
                   ),
                 ),
@@ -354,31 +357,31 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: FFLocalizations.of(context).getText(
-                          'wd9vpqh6' /* Bio */,
+                          'wd9vpqh6' /* Biographie */,
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.customColor9,
+                        fillColor: FlutterFlowTheme.of(context).customColor9,
                       ),
-                      style: FlutterFlowTheme.subtitle1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor5,
-                        fontSize: 16,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor5,
+                            fontSize: 16,
+                            useGoogleFonts: false,
+                          ),
                       maxLines: 5,
                     ),
                   ),
@@ -392,12 +395,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           'foi3lff4' /* Sexe */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -410,42 +413,51 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                       child: AuthUserStreamWidget(
                         child: FlutterFlowChoiceChips(
-                          initialOption: genderValue ??=
-                              currentUserDocument?.gender,
+                          initiallySelected: genderValue != null
+                              ? [genderValue]
+                              : [currentUserDocument?.gender],
                           options: [
                             ChipData(FFLocalizations.of(context).getText(
-                              'l6m6ng3p' /* Masculin */,
+                              'l6m6ng3p' /* Homme */,
                             )),
                             ChipData(FFLocalizations.of(context).getText(
-                              'baim5lij' /* Feminin */,
+                              'baim5lij' /* Femme */,
                             ))
                           ],
-                          onChanged: (val) => setState(() => genderValue = val),
+                          onChanged: (val) =>
+                              setState(() => genderValue = val.first),
                           selectedChipStyle: ChipStyle(
-                            backgroundColor: FlutterFlowTheme.primaryColor,
-                            textStyle: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
+                            backgroundColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                             iconColor: Colors.white,
                             iconSize: 18,
                             elevation: 4,
                           ),
                           unselectedChipStyle: ChipStyle(
-                            backgroundColor: FlutterFlowTheme.customColor9,
-                            textStyle: FlutterFlowTheme.bodyText2.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor5,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
+                            backgroundColor:
+                                FlutterFlowTheme.of(context).customColor9,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .bodyText2
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor5,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
+                                ),
                             iconColor: Color(0x00000000),
                             iconSize: 18,
                             elevation: 4,
                           ),
                           chipSpacing: 20,
+                          multiselect: false,
                         ),
                       ),
                     ),
@@ -460,12 +472,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           '5bponwwp' /* Date de naissance */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -489,26 +501,32 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 filled: true,
-                                fillColor: FlutterFlowTheme.customColor9,
+                                fillColor:
+                                    FlutterFlowTheme.of(context).customColor9,
                               ),
-                              style: FlutterFlowTheme.subtitle1.override(
-                                fontFamily: 'Avenir Light ',
-                                color: FlutterFlowTheme.customColor5,
-                                useGoogleFonts: false,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle1
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor5,
+                                    useGoogleFonts: false,
+                                  ),
                               keyboardType: TextInputType.number,
                             ),
                           ),
@@ -527,26 +545,32 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 filled: true,
-                                fillColor: FlutterFlowTheme.customColor9,
+                                fillColor:
+                                    FlutterFlowTheme.of(context).customColor9,
                               ),
-                              style: FlutterFlowTheme.subtitle1.override(
-                                fontFamily: 'Avenir Light ',
-                                color: FlutterFlowTheme.customColor5,
-                                useGoogleFonts: false,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle1
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor5,
+                                    useGoogleFonts: false,
+                                  ),
                               keyboardType: TextInputType.number,
                             ),
                           ),
@@ -563,26 +587,32 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               filled: true,
-                              fillColor: FlutterFlowTheme.customColor9,
+                              fillColor:
+                                  FlutterFlowTheme.of(context).customColor9,
                             ),
-                            style: FlutterFlowTheme.subtitle1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor5,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .subtitle1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor5,
+                                  useGoogleFonts: false,
+                                ),
                             keyboardType: TextInputType.number,
                           ),
                         ),
@@ -599,12 +629,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           'ca4lzles' /* Votre Ville: */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -623,27 +653,27 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                               width: 1,
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                               width: 1,
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           filled: true,
-                          fillColor: FlutterFlowTheme.customColor9,
+                          fillColor: FlutterFlowTheme.of(context).customColor9,
                         ),
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor5,
-                          fontSize: 18,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor5,
+                              fontSize: 18,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ),
                   ),
@@ -657,12 +687,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           '0jbfg6p4' /* Sélectionnez votre pays: */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -726,18 +756,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       onChanged: (val) => setState(() => countryValue = val),
                       width: double.infinity,
                       height: 50,
-                      textStyle: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor5,
-                        fontSize: 18,
-                        useGoogleFonts: false,
-                      ),
+                      textStyle: FlutterFlowTheme.of(context)
+                          .bodyText1
+                          .override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor5,
+                            fontSize: 18,
+                            useGoogleFonts: false,
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         '0kai99ke' /* Pays */,
                       ),
-                      fillColor: FlutterFlowTheme.customColor9,
+                      fillColor: FlutterFlowTheme.of(context).customColor9,
                       elevation: 2,
-                      borderColor: FlutterFlowTheme.primaryColor,
+                      borderColor: FlutterFlowTheme.of(context).primaryColor,
                       borderWidth: 0,
                       borderRadius: 20,
                       margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
@@ -754,12 +786,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFLocalizations.of(context).getText(
                           '51j0jlpg' /* Photos */,
                         ),
-                        style: FlutterFlowTheme.subtitle1.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.customColor4,
-                          fontSize: 20,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1.override(
+                              fontFamily: 'Avenir Light ',
+                              color: FlutterFlowTheme.of(context).customColor4,
+                              fontSize: 20,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ],
                   ),
@@ -816,7 +848,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     allowPhoto: true,
-                                    textColor: FlutterFlowTheme.primaryColor,
+                                    textColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     pickerFontFamily: 'Lato',
                                   );
                                   if (selectedMedia != null &&
@@ -858,7 +891,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -867,7 +901,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     children: [
                                       Icon(
                                         Icons.edit_outlined,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
                                         size: 30,
                                       ),
                                     ],
@@ -922,7 +957,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     allowPhoto: true,
-                                    textColor: FlutterFlowTheme.primaryColor,
+                                    textColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     pickerFontFamily: 'Lato',
                                   );
                                   if (selectedMedia != null &&
@@ -964,7 +1000,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -973,7 +1010,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     children: [
                                       Icon(
                                         Icons.edit_outlined,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
                                         size: 30,
                                       ),
                                     ],
@@ -1028,7 +1066,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     allowPhoto: true,
-                                    textColor: FlutterFlowTheme.primaryColor,
+                                    textColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     pickerFontFamily: 'Lato',
                                   );
                                   if (selectedMedia != null &&
@@ -1070,7 +1109,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -1079,7 +1119,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     children: [
                                       Icon(
                                         Icons.edit_outlined,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
                                         size: 30,
                                       ),
                                     ],
@@ -1134,7 +1175,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     allowPhoto: true,
-                                    textColor: FlutterFlowTheme.primaryColor,
+                                    textColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     pickerFontFamily: 'Lato',
                                   );
                                   if (selectedMedia != null &&
@@ -1176,7 +1218,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -1185,7 +1228,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     children: [
                                       Icon(
                                         Icons.edit_outlined,
-                                        color: FlutterFlowTheme.tertiaryColor,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
                                         size: 30,
                                       ),
                                     ],
@@ -1242,16 +1286,19 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           options: FFButtonOptions(
                             width: 200,
                             height: 50,
-                            color: FlutterFlowTheme.customColor10,
-                            textStyle: FlutterFlowTheme.subtitle2.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.primaryColor,
-                              fontWeight: FontWeight.bold,
-                              useGoogleFonts: false,
-                            ),
+                            color: FlutterFlowTheme.of(context).customColor10,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .subtitle2
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
+                                ),
                             elevation: 5,
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                               width: 1,
                             ),
                             borderRadius: 20,

@@ -43,7 +43,7 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -52,8 +52,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -66,7 +66,7 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: FlutterFlowTheme.customColor9,
+                color: FlutterFlowTheme.of(context).customColor9,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
@@ -82,7 +82,7 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                           FFLocalizations.of(context).getText(
                             'ppu4s2x0' /* Questionnaire */,
                           ),
-                          style: FlutterFlowTheme.title1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
                       ],
                     ),
@@ -93,18 +93,22 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                           width: MediaQuery.of(context).size.width * 0.7,
                           lineHeight: 24,
                           animation: true,
-                          progressColor: FlutterFlowTheme.primaryColor,
+                          progressColor:
+                              FlutterFlowTheme.of(context).primaryColor,
                           backgroundColor: Color(0xFFF1F4F8),
                           center: Text(
                             FFLocalizations.of(context).getText(
                               '7682nbj1' /* 40% */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.primaryColor,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  useGoogleFonts: false,
+                                ),
                           ),
                           barRadius: Radius.circular(10)),
                     ),
@@ -153,15 +157,19 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                   'dek18ama' /* Vos Besoins */,
                                                 ),
                                                 textAlign: TextAlign.start,
-                                                style: FlutterFlowTheme
-                                                    .subtitle1
-                                                    .override(
-                                                  fontFamily: 'Avenir Light ',
-                                                  color: FlutterFlowTheme
-                                                      .customColor7,
-                                                  fontWeight: FontWeight.w600,
-                                                  useGoogleFonts: false,
-                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .subtitle1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Avenir Light ',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .customColor7,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ),
                                           ),
@@ -179,7 +187,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                   'b88wrl3j' /* De 1 à 5 (1 pas très important... */,
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.bodyText1,
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1,
                                               ),
                                             ],
                                           ),
@@ -193,8 +202,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                             children: [
                                               Icon(
                                                 Icons.looks_one,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 24,
                                               ),
                                               Padding(
@@ -205,7 +215,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                       .getText(
                                                     'ulzkksko' /* Affection */,
                                                   ),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 ),
                                               ),
@@ -225,8 +236,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemBuilder: (context, index) =>
                                                   Icon(
                                                 Icons.star_rounded,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                               direction: Axis.horizontal,
                                               initialRating: ratingBar1Value ??=
@@ -235,7 +247,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemCount: 5,
                                               itemSize: 30,
                                               glowColor:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
                                         ),
@@ -248,8 +261,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                             children: [
                                               Icon(
                                                 Icons.looks_two,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 24,
                                               ),
                                               Padding(
@@ -260,7 +274,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                       .getText(
                                                     'z18sn5vq' /* Indépendance */,
                                                   ),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 ),
                                               ),
@@ -280,8 +295,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemBuilder: (context, index) =>
                                                   Icon(
                                                 Icons.star_rounded,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                               direction: Axis.horizontal,
                                               initialRating: ratingBar2Value ??=
@@ -290,7 +306,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemCount: 5,
                                               itemSize: 30,
                                               glowColor:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
                                         ),
@@ -303,8 +320,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                             children: [
                                               Icon(
                                                 Icons.looks_3,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 24,
                                               ),
                                               Padding(
@@ -315,7 +333,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                       .getText(
                                                     'yflj2fva' /* Liberté */,
                                                   ),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 ),
                                               ),
@@ -335,8 +354,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemBuilder: (context, index) =>
                                                   Icon(
                                                 Icons.star_rounded,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                               direction: Axis.horizontal,
                                               initialRating: ratingBar3Value ??=
@@ -345,7 +365,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemCount: 5,
                                               itemSize: 30,
                                               glowColor:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
                                         ),
@@ -358,8 +379,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                             children: [
                                               Icon(
                                                 Icons.looks_4,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                                 size: 24,
                                               ),
                                               Padding(
@@ -370,7 +392,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                       .getText(
                                                     'wouevk5m' /* Reconnaissance */,
                                                   ),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 ),
                                               ),
@@ -390,8 +413,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemBuilder: (context, index) =>
                                                   Icon(
                                                 Icons.star_rounded,
-                                                color: FlutterFlowTheme
-                                                    .primaryColor,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                               direction: Axis.horizontal,
                                               initialRating: ratingBar4Value ??=
@@ -400,7 +424,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               itemCount: 5,
                                               itemSize: 30,
                                               glowColor:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                             ),
                                           ),
                                         ),
@@ -436,7 +461,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                       .getText(
                                                     'ysmqc5y7' /* De 1 à 5 (1 pas très important... */,
                                                   ),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 ),
                                               ],
@@ -451,7 +477,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               children: [
                                                 Icon(
                                                   Icons.looks_5,
-                                                  color: FlutterFlowTheme
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .primaryColor,
                                                   size: 24,
                                                 ),
@@ -463,7 +490,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                         .getText(
                                                       'g6vr4fu1' /* Admiration  */,
                                                     ),
-                                                    style: FlutterFlowTheme
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1,
                                                   ),
                                                 ),
@@ -483,7 +511,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                 itemBuilder: (context, index) =>
                                                     Icon(
                                                   Icons.star_rounded,
-                                                  color: FlutterFlowTheme
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .primaryColor,
                                                 ),
                                                 direction: Axis.horizontal,
@@ -494,8 +523,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                 unratedColor: Color(0xFF9E9E9E),
                                                 itemCount: 5,
                                                 itemSize: 30,
-                                                glowColor: FlutterFlowTheme
-                                                    .primaryColor,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                             ),
                                           ),
@@ -508,7 +538,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                               children: [
                                                 Icon(
                                                   Icons.looks_6,
-                                                  color: FlutterFlowTheme
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .primaryColor,
                                                   size: 24,
                                                 ),
@@ -520,7 +551,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                         .getText(
                                                       'ljkxmklp' /* Fonder une famille */,
                                                     ),
-                                                    style: FlutterFlowTheme
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1,
                                                   ),
                                                 ),
@@ -540,7 +572,8 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                 itemBuilder: (context, index) =>
                                                     Icon(
                                                   Icons.star_rounded,
-                                                  color: FlutterFlowTheme
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .primaryColor,
                                                 ),
                                                 direction: Axis.horizontal,
@@ -551,8 +584,9 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                                 unratedColor: Color(0xFF9E9E9E),
                                                 itemCount: 5,
                                                 itemSize: 30,
-                                                glowColor: FlutterFlowTheme
-                                                    .primaryColor,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
                                               ),
                                             ),
                                           ),
@@ -586,9 +620,10 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                                     radius: 16,
                                     dotWidth: 16,
                                     dotHeight: 16,
-                                    dotColor: FlutterFlowTheme.customColor9,
-                                    activeDotColor:
-                                        FlutterFlowTheme.primaryColor,
+                                    dotColor: FlutterFlowTheme.of(context)
+                                        .customColor9,
+                                    activeDotColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     paintStyle: PaintingStyle.fill,
                                   ),
                                 ),
@@ -629,13 +664,16 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,
@@ -674,13 +712,16 @@ class _SignupStep10WidgetState extends State<SignupStep10Widget> {
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,

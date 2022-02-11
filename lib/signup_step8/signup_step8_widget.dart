@@ -41,7 +41,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -50,8 +50,8 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -64,7 +64,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: FlutterFlowTheme.customColor9,
+                color: FlutterFlowTheme.of(context).customColor9,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
@@ -80,7 +80,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                           FFLocalizations.of(context).getText(
                             'mc942bqj' /* Questionnaire */,
                           ),
-                          style: FlutterFlowTheme.title1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
                       ],
                     ),
@@ -91,18 +91,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                           width: MediaQuery.of(context).size.width * 0.7,
                           lineHeight: 24,
                           animation: true,
-                          progressColor: FlutterFlowTheme.primaryColor,
+                          progressColor:
+                              FlutterFlowTheme.of(context).primaryColor,
                           backgroundColor: Color(0xFFF1F4F8),
                           center: Text(
                             FFLocalizations.of(context).getText(
                               'pe7k4a3w' /* 20% */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.primaryColor,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  useGoogleFonts: false,
+                                ),
                           ),
                           barRadius: Radius.circular(10)),
                     ),
@@ -119,12 +123,13 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               'jz9ayuiz' /* Le plus important dans une rel... */,
                             ),
                             textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
                         ),
                       ),
@@ -147,17 +152,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               'uewjmka5' /* La passion */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -183,17 +193,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               '48uoxjm9' /* L'amour */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -219,17 +234,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               'h4lxd1oe' /* La complicité */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -255,17 +275,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               '6h8fr3jl' /* La loyauté */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -291,17 +316,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               'ei7fal8z' /* La fidélité */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -327,17 +357,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               'ekxocbzk' /* La transparence */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -363,17 +398,22 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                             FFLocalizations.of(context).getText(
                               '41hacv6d' /* l’authenticité  */,
                             ),
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          tileColor: FlutterFlowTheme.primaryColor,
-                          activeColor: FlutterFlowTheme.primaryColor,
-                          checkColor: FlutterFlowTheme.tertiaryColor,
+                          tileColor: FlutterFlowTheme.of(context).primaryColor,
+                          activeColor:
+                              FlutterFlowTheme.of(context).primaryColor,
+                          checkColor:
+                              FlutterFlowTheme.of(context).tertiaryColor,
                           dense: true,
                           controlAffinity: ListTileControlAffinity.trailing,
                           contentPadding:
@@ -412,13 +452,16 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                       options: FFButtonOptions(
                         width: 200,
                         height: 50,
-                        color: FlutterFlowTheme.customColor9,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.secondaryColor,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Avenir Light ',
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
                         elevation: 5,
                         borderSide: BorderSide(
                           color: Colors.transparent,
@@ -457,13 +500,16 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,

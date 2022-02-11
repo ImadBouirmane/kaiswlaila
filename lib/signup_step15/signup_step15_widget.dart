@@ -59,7 +59,7 @@ class _SignupStep15WidgetState extends State<SignupStep15Widget> {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 offset: Offset(100, 100),
                 spreadRadius: 100,
               )
@@ -68,8 +68,8 @@ class _SignupStep15WidgetState extends State<SignupStep15Widget> {
               colors: [
                 Color(0xFFE7E2B0),
                 Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
+                FlutterFlowTheme.of(context).customColor2,
+                FlutterFlowTheme.of(context).secondaryColor
               ],
               stops: [0.2, 0.4, 0.6, 0.8],
               begin: AlignmentDirectional(0.87, -1),
@@ -82,7 +82,7 @@ class _SignupStep15WidgetState extends State<SignupStep15Widget> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: FlutterFlowTheme.customColor9,
+                color: FlutterFlowTheme.of(context).customColor9,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
@@ -98,7 +98,7 @@ class _SignupStep15WidgetState extends State<SignupStep15Widget> {
                           FFLocalizations.of(context).getText(
                             'f7d52jsx' /* Questionnaire */,
                           ),
-                          style: FlutterFlowTheme.title1,
+                          style: FlutterFlowTheme.of(context).title1,
                         ),
                       ],
                     ),
@@ -109,18 +109,21 @@ class _SignupStep15WidgetState extends State<SignupStep15Widget> {
                           width: MediaQuery.of(context).size.width * 0.7,
                           lineHeight: 24,
                           animation: true,
-                          progressColor: FlutterFlowTheme.primaryColor,
+                          progressColor:
+                              FlutterFlowTheme.of(context).primaryColor,
                           backgroundColor: Color(0xFFF1F4F8),
                           center: Text(
                             FFLocalizations.of(context).getText(
                               'wap37wq3' /* 100% */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.tertiaryColor,
-                              useGoogleFonts: false,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
                           barRadius: Radius.circular(10)),
                     ),
@@ -138,13 +141,16 @@ Veui... */
                               ,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.subtitle1.override(
-                              fontFamily: 'Avenir Light ',
-                              color: FlutterFlowTheme.customColor7,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: false,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .subtitle1
+                                .override(
+                                  fontFamily: 'Avenir Light ',
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor7,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
+                                ),
                           ),
                         ),
                       ),
@@ -195,22 +201,28 @@ Veui... */
                                                   .getText(
                                                 'bcriaovm' /* A l’écoute */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -242,22 +254,28 @@ Veui... */
                                                   .getText(
                                                 '1b69xkeh' /* Spontané(e) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -289,22 +307,28 @@ Veui... */
                                                   .getText(
                                                 'o8g72l2a' /* Optimiste */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -336,22 +360,28 @@ Veui... */
                                                   .getText(
                                                 '9mmobbwo' /* Lunatique */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -383,22 +413,28 @@ Veui... */
                                                   .getText(
                                                 '6zuig7ie' /* Rêveur(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -430,22 +466,28 @@ Veui... */
                                                   .getText(
                                                 'v5qn3fub' /* Calme */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -477,22 +519,28 @@ Veui... */
                                                   .getText(
                                                 'kvcpiopt' /* Empatique */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -524,22 +572,28 @@ Veui... */
                                                   .getText(
                                                 'mpczer9p' /* Fidèle  */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -584,22 +638,28 @@ Veui... */
                                                   .getText(
                                                 '9tg8y4mt' /* Logique */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -631,22 +691,28 @@ Veui... */
                                                   .getText(
                                                 'e9b53ogp' /* Joyeux(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -678,22 +744,28 @@ Veui... */
                                                   .getText(
                                                 'fq14vgiq' /* Sensible */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -725,22 +797,28 @@ Veui... */
                                                   .getText(
                                                 'nfxkmeyr' /* Engagé(e) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -772,22 +850,28 @@ Veui... */
                                                   .getText(
                                                 'ufngl24j' /* Travailleur(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -819,22 +903,28 @@ Veui... */
                                                   .getText(
                                                 'nmuj304q' /* Charmeur(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -866,22 +956,28 @@ Veui... */
                                                   .getText(
                                                 '2m9ua26w' /* Energique */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -913,22 +1009,28 @@ Veui... */
                                                   .getText(
                                                 'g4j102fc' /* Rebel(le) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -973,22 +1075,28 @@ Veui... */
                                                   .getText(
                                                 '6bxnkp8e' /* Enthousiaste */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1020,22 +1128,28 @@ Veui... */
                                                   .getText(
                                                 'ow6h3s22' /* Consciencieux(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1067,22 +1181,28 @@ Veui... */
                                                   .getText(
                                                 'nz2aay4c' /* Chaleureux(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1114,22 +1234,28 @@ Veui... */
                                                   .getText(
                                                 '7ydot8ax' /* Prend des risques */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1161,22 +1287,28 @@ Veui... */
                                                   .getText(
                                                 '9j9gwgp1' /* Respectueux(se) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1208,22 +1340,28 @@ Veui... */
                                                   .getText(
                                                 'vrhk6bbq' /* En bonne forme physique */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1255,22 +1393,28 @@ Veui... */
                                                   .getText(
                                                 'ygouqb4k' /* Digne de confiance */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1302,22 +1446,28 @@ Veui... */
                                                   .getText(
                                                 '8iv2y19p' /* Compatissant(e) */,
                                               ),
-                                              style: FlutterFlowTheme.bodyText1
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
                                                   .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color: FlutterFlowTheme
-                                                    .customColor7,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .customColor7,
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
                                             tileColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             activeColor:
-                                                FlutterFlowTheme.primaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
                                             checkColor:
-                                                FlutterFlowTheme.tertiaryColor,
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
                                             dense: true,
                                             controlAffinity:
                                                 ListTileControlAffinity
@@ -1356,9 +1506,10 @@ Veui... */
                                     radius: 16,
                                     dotWidth: 16,
                                     dotHeight: 16,
-                                    dotColor: FlutterFlowTheme.customColor9,
-                                    activeDotColor:
-                                        FlutterFlowTheme.primaryColor,
+                                    dotColor: FlutterFlowTheme.of(context)
+                                        .customColor9,
+                                    activeDotColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                     paintStyle: PaintingStyle.fill,
                                   ),
                                 ),
@@ -1417,13 +1568,16 @@ Veui... */
                         options: FFButtonOptions(
                           width: 200,
                           height: 50,
-                          color: FlutterFlowTheme.customColor9,
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.secondaryColor,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          color: FlutterFlowTheme.of(context).customColor9,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,

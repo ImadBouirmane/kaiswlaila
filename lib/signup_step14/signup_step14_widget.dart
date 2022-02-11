@@ -43,7 +43,7 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -52,8 +52,8 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -66,7 +66,7 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
             width: 100,
             height: 100,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.customColor9,
+              color: FlutterFlowTheme.of(context).customColor9,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Padding(
@@ -82,7 +82,7 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                         FFLocalizations.of(context).getText(
                           'ryh79sof' /* Questionnaire */,
                         ),
-                        style: FlutterFlowTheme.title1,
+                        style: FlutterFlowTheme.of(context).title1,
                       ),
                     ],
                   ),
@@ -93,18 +93,22 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                         width: MediaQuery.of(context).size.width * 0.7,
                         lineHeight: 24,
                         animation: true,
-                        progressColor: FlutterFlowTheme.primaryColor,
+                        progressColor:
+                            FlutterFlowTheme.of(context).primaryColor,
                         backgroundColor: Color(0xFFF1F4F8),
                         center: Text(
                           FFLocalizations.of(context).getText(
                             'vz0jw1ce' /* 90% */,
                           ),
                           textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.tertiaryColor,
-                            useGoogleFonts: false,
-                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                useGoogleFonts: false,
+                              ),
                         ),
                         barRadius: Radius.circular(10)),
                   ),
@@ -121,12 +125,15 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                             '98yt7fto' /* Quels seraient les 3 points qu... */,
                           ),
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.subtitle1.override(
-                            fontFamily: 'Avenir Light ',
-                            color: FlutterFlowTheme.customColor7,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
-                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .subtitle1
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).customColor7,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
                         ),
                       ),
                     ),
@@ -150,7 +157,8 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                             children: [
                               Icon(
                                 Icons.looks_one_rounded,
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 24,
                               ),
                               Expanded(
@@ -163,25 +171,30 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                                     decoration: InputDecoration(
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor5,
-                                      fontSize: 16,
-                                      useGoogleFonts: false,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor5,
+                                          fontSize: 16,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -195,7 +208,8 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                             children: [
                               Icon(
                                 Icons.looks_two,
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 24,
                               ),
                               Expanded(
@@ -208,25 +222,30 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                                     decoration: InputDecoration(
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor5,
-                                      fontSize: 16,
-                                      useGoogleFonts: false,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor5,
+                                          fontSize: 16,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -240,7 +259,8 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                             children: [
                               Icon(
                                 Icons.looks_3,
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 24,
                               ),
                               Expanded(
@@ -253,25 +273,30 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                                     decoration: InputDecoration(
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.primaryColor,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                           width: 1.5,
                                         ),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.customColor5,
-                                      fontSize: 16,
-                                      useGoogleFonts: false,
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor5,
+                                          fontSize: 16,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -308,13 +333,15 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                     options: FFButtonOptions(
                       width: 200,
                       height: 50,
-                      color: FlutterFlowTheme.customColor9,
-                      textStyle: FlutterFlowTheme.subtitle2.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.secondaryColor,
-                        fontWeight: FontWeight.w600,
-                        useGoogleFonts: false,
-                      ),
+                      color: FlutterFlowTheme.of(context).customColor9,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .subtitle2
+                          .override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
+                          ),
                       elevation: 5,
                       borderSide: BorderSide(
                         color: Colors.transparent,
@@ -349,13 +376,16 @@ class _SignupStep14WidgetState extends State<SignupStep14Widget> {
                       options: FFButtonOptions(
                         width: 200,
                         height: 50,
-                        color: FlutterFlowTheme.customColor9,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.secondaryColor,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Avenir Light ',
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
                         elevation: 5,
                         borderSide: BorderSide(
                           color: Colors.transparent,

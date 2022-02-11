@@ -27,7 +27,7 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -36,8 +36,8 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -70,7 +70,7 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                           ),
                         ),
                         child: AuthUserStreamWidget(
@@ -92,11 +92,11 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                       FFLocalizations.of(context).getText(
                         'b5wvpplb' /*  */,
                       ),
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Avenir Light ',
-                        fontSize: 22,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Avenir Light ',
+                            fontSize: 22,
+                            useGoogleFonts: false,
+                          ),
                     ),
                     InkWell(
                       onTap: () async {

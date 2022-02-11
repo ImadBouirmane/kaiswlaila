@@ -31,7 +31,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -40,8 +40,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -65,7 +65,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -74,14 +74,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        '13jgokol' /* Profile */,
+                        '13jgokol' /* Profil */,
                       ),
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Avenir Light ',
-                        fontSize: 22,
-                        fontWeight: FontWeight.w900,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Avenir Light ',
+                            fontSize: 22,
+                            fontWeight: FontWeight.w900,
+                            useGoogleFonts: false,
+                          ),
                     ),
                     FlutterFlowIconButton(
                       borderColor: Colors.transparent,
@@ -90,7 +90,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.more_vert,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -140,10 +140,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.customColor10,
+                                  color: FlutterFlowTheme.of(context)
+                                      .customColor10,
                                   shape: BoxShape.circle,
                                   border: Border.all(
-                                    color: FlutterFlowTheme.primaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                   ),
                                 ),
                                 child: Container(
@@ -172,13 +174,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     AuthUserStreamWidget(
                                       child: Text(
                                         currentUserDisplayName,
-                                        style:
-                                            FlutterFlowTheme.subtitle1.override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                          useGoogleFonts: false,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -189,12 +192,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     AuthUserStreamWidget(
                                       child: Text(
                                         currentUserDocument?.dateOfBirth,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Avenir Light ',
-                                          fontWeight: FontWeight.w500,
-                                          useGoogleFonts: false,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -205,7 +209,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     AuthUserStreamWidget(
                                       child: Text(
                                         '${currentUserDocument?.city}, ${currentUserDocument?.country}',
-                                        style: FlutterFlowTheme.bodyText1,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1,
                                       ),
                                     ),
                                   ],
@@ -224,11 +229,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               FFLocalizations.of(context).getText(
                                 '0olwx22j' /* À propos de moi */,
                               ),
-                              style: FlutterFlowTheme.subtitle1.override(
-                                fontFamily: 'Avenir Light ',
-                                fontSize: 20,
-                                useGoogleFonts: false,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle1
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    fontSize: 20,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
                           ],
                         ),
@@ -243,7 +250,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             child: AutoSizeText(
                               currentUserDocument?.bio
                                   .maybeHandleOverflow(maxChars: 400),
-                              style: FlutterFlowTheme.bodyText1,
+                              style: FlutterFlowTheme.of(context).bodyText1,
                             ),
                           ),
                         ),
@@ -257,11 +264,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               FFLocalizations.of(context).getText(
                                 'mmsr5n79' /* Intérêts */,
                               ),
-                              style: FlutterFlowTheme.subtitle1.override(
-                                fontFamily: 'Avenir Light ',
-                                fontSize: 20,
-                                useGoogleFonts: false,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle1
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    fontSize: 20,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
                           ],
                         ),
@@ -284,7 +293,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             children: [
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.customColor9,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor9,
                                 elevation: 5,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -295,20 +305,23 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest1,
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
                               ),
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.customColor9,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor9,
                                 elevation: 5,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -319,20 +332,23 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest2,
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
                               ),
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.customColor9,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor9,
                                 elevation: 5,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -343,20 +359,23 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest3,
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
                               ),
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.customColor9,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor9,
                                 elevation: 5,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -367,20 +386,23 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest4,
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
                               ),
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.customColor9,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor9,
                                 elevation: 5,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -391,13 +413,15 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest1,
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Avenir Light ',
-                                        color: FlutterFlowTheme.customColor7,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -415,11 +439,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               FFLocalizations.of(context).getText(
                                 '25o6rp5o' /* Photos */,
                               ),
-                              style: FlutterFlowTheme.subtitle1.override(
-                                fontFamily: 'Avenir Light ',
-                                fontSize: 20,
-                                useGoogleFonts: false,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle1
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    fontSize: 20,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
                           ],
                         ),

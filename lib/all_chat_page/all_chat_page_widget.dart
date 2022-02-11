@@ -61,7 +61,7 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
+              color: FlutterFlowTheme.of(context).primaryColor,
               offset: Offset(100, 100),
               spreadRadius: 100,
             )
@@ -70,8 +70,8 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
             colors: [
               Color(0xFFE7E2B0),
               Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).customColor2,
+              FlutterFlowTheme.of(context).secondaryColor
             ],
             stops: [0.2, 0.4, 0.6, 0.8],
             begin: AlignmentDirectional(0.87, -1),
@@ -107,7 +107,7 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                           ),
                         ),
                         child: AuthUserStreamWidget(
@@ -129,11 +129,11 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                       FFLocalizations.of(context).getText(
                         'aoawbg0t' /* Chats */,
                       ),
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Avenir Light ',
-                        fontSize: 22,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Avenir Light ',
+                            fontSize: 22,
+                            useGoogleFonts: false,
+                          ),
                     ),
                     InkWell(
                       onTap: () async {
@@ -179,7 +179,7 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                             width: 30,
                             height: 30,
                             child: SpinKitFadingCircle(
-                              color: FlutterFlowTheme.primaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                               size: 30,
                             ),
                           ),
@@ -230,8 +230,10 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                       .contains(currentUserReference),
                                   title: chatInfo.chatPreviewTitle(),
                                   userProfilePic: chatInfo.chatPreviewPic(),
-                                  color: FlutterFlowTheme.customColor9,
-                                  unreadColor: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor9,
+                                  unreadColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                   titleTextStyle: TextStyle(
                                     fontFamily: 'Arial Black',
                                     color: Colors.black,
@@ -240,13 +242,15 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                   ),
                                   dateTextStyle: TextStyle(
                                     fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.secondaryColor,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
                                     fontWeight: FontWeight.normal,
                                     fontSize: 14,
                                   ),
                                   previewTextStyle: TextStyle(
                                     fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.customColor3,
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor3,
                                     fontWeight: FontWeight.w600,
                                     fontSize: 14,
                                   ),

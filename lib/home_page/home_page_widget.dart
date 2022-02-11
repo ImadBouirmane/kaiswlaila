@@ -2,9 +2,11 @@ import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../is_match/is_match_widget.dart';
 import '../profile/profile_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -25,8 +27,111 @@ class HomePageWidget extends StatefulWidget {
   _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _HomePageWidgetState extends State<HomePageWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'containerOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, -59),
+        scale: 1,
+        opacity: 0.27,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-60, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(60, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'containerOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-60, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'containerOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 70),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'containerOnPageLoadAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(60, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+  };
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    startPageLoadAnimations(
+      animationsMap.values
+          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
+      this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +147,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               width: 30,
               height: 30,
               child: SpinKitFadingCircle(
-                color: FlutterFlowTheme.primaryColor,
+                color: FlutterFlowTheme.of(context).primaryColor,
                 size: 30,
               ),
             ),
@@ -66,7 +171,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: FlutterFlowTheme.primaryColor,
+                    color: FlutterFlowTheme.of(context).primaryColor,
                     offset: Offset(100, 100),
                     spreadRadius: 100,
                   )
@@ -75,8 +180,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   colors: [
                     Color(0xFFE7E2B0),
                     Color(0xFFE6C8DD),
-                    FlutterFlowTheme.customColor2,
-                    FlutterFlowTheme.secondaryColor
+                    FlutterFlowTheme.of(context).customColor2,
+                    FlutterFlowTheme.of(context).secondaryColor
                   ],
                   stops: [0.2, 0.4, 0.6, 0.8],
                   begin: AlignmentDirectional(0.87, -1),
@@ -117,7 +222,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     border: Border.all(
-                                      color: FlutterFlowTheme.primaryColor,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
                                     ),
                                   ),
                                   child: AuthUserStreamWidget(
@@ -139,11 +245,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 FFLocalizations.of(context).getText(
                                   'i35bbnpu' /* Découvrir */,
                                 ),
-                                style: FlutterFlowTheme.title1.override(
-                                  fontFamily: 'Avenir Light ',
-                                  fontSize: 22,
-                                  useGoogleFonts: false,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .title1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      fontSize: 22,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                               InkWell(
                                 onTap: () async {
@@ -185,7 +293,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               width: 30,
                               height: 30,
                               child: SpinKitFadingCircle(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 30,
                               ),
                             ),
@@ -214,7 +323,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: FlutterFlowTheme.customColor6,
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor6,
                                 ),
                               ),
                               child: Padding(
@@ -255,7 +365,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 ),
                               ),
-                            ),
+                            ).animated([
+                              animationsMap['containerOnPageLoadAnimation1']
+                            ]),
                             Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
@@ -265,7 +377,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 children: [
                                   Text(
                                     wrapUsersRecord.displayName,
-                                    style: FlutterFlowTheme.title1,
+                                    style: FlutterFlowTheme.of(context).title1,
                                   ),
                                 ],
                               ),
@@ -279,7 +391,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 children: [
                                   Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.customColor9,
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor9,
                                     elevation: 5,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10),
@@ -289,10 +402,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           5, 5, 5, 5),
                                       child: Text(
                                         wrapUsersRecord.country,
-                                        style: FlutterFlowTheme.bodyText1,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1,
                                       ),
                                     ),
-                                  ),
+                                  ).animated([
+                                    animationsMap['cardOnPageLoadAnimation1']
+                                  ]),
                                   FutureBuilder<List<ProfilesRecord>>(
                                     future: queryProfilesRecordOnce(
                                       queryBuilder: (profilesRecord) =>
@@ -309,7 +425,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             height: 30,
                                             child: SpinKitFadingCircle(
                                               color:
-                                                  FlutterFlowTheme.primaryColor,
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
                                               size: 30,
                                             ),
                                           ),
@@ -329,7 +446,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       return Card(
                                         clipBehavior:
                                             Clip.antiAliasWithSaveLayer,
-                                        color: FlutterFlowTheme.customColor9,
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor9,
                                         elevation: 5,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -354,8 +472,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       height: 30,
                                                       child:
                                                           SpinKitFadingCircle(
-                                                        color: FlutterFlowTheme
-                                                            .primaryColor,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryColor,
                                                         size: 30,
                                                       ),
                                                     ),
@@ -371,14 +491,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           textUsersRecord
                                                               .location)
                                                       .toString(),
-                                                  style: FlutterFlowTheme
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
                                                       .bodyText1,
                                                 );
                                               },
                                             ),
                                           ),
                                         ),
-                                      );
+                                      ).animated([
+                                        animationsMap[
+                                            'cardOnPageLoadAnimation2']
+                                      ]);
                                     },
                                   ),
                                 ],
@@ -401,8 +525,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             'Vous devez avoir au moins un utilisateur que vous avez  glissé avant !',
                                             style: TextStyle(
                                               fontFamily: 'Avenir Light ',
-                                              color: FlutterFlowTheme
-                                                  .tertiaryColor,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiaryColor,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 20,
                                             ),
@@ -410,7 +535,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           duration:
                                               Duration(milliseconds: 4000),
                                           backgroundColor:
-                                              FlutterFlowTheme.secondaryColor,
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryColor,
                                         ),
                                       );
                                     },
@@ -422,7 +548,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         width: 70,
                                         height: 70,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.customColor9,
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor9,
                                           shape: BoxShape.circle,
                                         ),
                                         child: Padding(
@@ -444,7 +571,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ).animated([
+                                    animationsMap[
+                                        'containerOnPageLoadAnimation2']
+                                  ]),
                                   InkWell(
                                     onTap: () async {
                                       ScaffoldMessenger.of(context)
@@ -454,16 +584,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             'Il n\'y a aucun nouvel utilisateur juste vous. Vous n\'avez pas le droit de Glisser !',
                                             style: TextStyle(
                                               fontFamily: 'Avenir Light ',
-                                              color: FlutterFlowTheme
-                                                  .tertiaryColor,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiaryColor,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 20,
                                             ),
                                           ),
                                           duration:
-                                              Duration(milliseconds: 2500),
+                                              Duration(milliseconds: 3500),
                                           backgroundColor:
-                                              FlutterFlowTheme.secondaryColor,
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryColor,
+                                          action: SnackBarAction(
+                                            label: 'Cliquez ici!',
+                                            textColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .tertiaryColor,
+                                            onPressed: () async {
+                                              await Navigator.push(
+                                                context,
+                                                PageTransition(
+                                                  type: PageTransitionType.fade,
+                                                  duration:
+                                                      Duration(milliseconds: 0),
+                                                  reverseDuration:
+                                                      Duration(milliseconds: 0),
+                                                  child: IsMatchWidget(),
+                                                ),
+                                              );
+                                            },
+                                          ),
                                         ),
                                       );
                                     },
@@ -502,7 +653,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ).animated([
+                                    animationsMap[
+                                        'containerOnPageLoadAnimation3']
+                                  ]),
                                   Material(
                                     color: Colors.transparent,
                                     elevation: 3,
@@ -511,7 +665,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       width: 70,
                                       height: 70,
                                       decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.customColor9,
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor9,
                                         shape: BoxShape.circle,
                                       ),
                                       child: InkWell(
@@ -523,7 +678,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 'Il n\'y a aucun nouvel utilisateur juste vous. Vous n\'avez pas le droit d\'ignorer !',
                                                 style: TextStyle(
                                                   fontFamily: 'Avenir Light ',
-                                                  color: FlutterFlowTheme
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
                                                       .tertiaryColor,
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: 20,
@@ -531,19 +687,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               ),
                                               duration:
                                                   Duration(milliseconds: 4000),
-                                              backgroundColor: FlutterFlowTheme
-                                                  .secondaryColor,
+                                              backgroundColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
                                             ),
                                           );
                                         },
                                         child: Icon(
                                           Icons.clear,
-                                          color: FlutterFlowTheme.customColor10,
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor10,
                                           size: 50,
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ).animated([
+                                    animationsMap[
+                                        'containerOnPageLoadAnimation4']
+                                  ]),
                                 ],
                               ),
                             ),
