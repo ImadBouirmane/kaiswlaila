@@ -142,6 +142,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton1Value ??=
@@ -183,6 +184,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton2Value ??=
@@ -224,6 +226,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton3Value ??=
@@ -265,6 +268,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton4Value ??=
@@ -306,6 +310,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton5Value ??=
@@ -347,6 +352,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton6Value ??=
@@ -388,6 +394,7 @@ class _SignupStep8WidgetState extends State<SignupStep8Widget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
+                          unselectedWidgetColor: Color(0xFF707070),
                         ),
                         child: CheckboxListTile(
                           value: checkButton7Value ??=

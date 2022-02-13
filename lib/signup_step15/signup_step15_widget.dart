@@ -189,6 +189,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton1Value ??=
@@ -242,6 +244,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton2Value ??=
@@ -295,6 +299,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton3Value ??=
@@ -348,6 +354,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton4Value ??=
@@ -401,6 +409,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton5Value ??=
@@ -454,6 +464,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton6Value ??=
@@ -507,6 +519,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton7Value ??=
@@ -560,6 +574,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton8Value ??=
@@ -626,6 +642,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton9Value ??=
@@ -679,6 +697,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton10Value ??=
@@ -732,6 +752,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton11Value ??=
@@ -785,6 +807,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton12Value ??=
@@ -838,6 +862,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton13Value ??=
@@ -891,6 +917,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton14Value ??=
@@ -944,6 +972,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton15Value ??=
@@ -997,6 +1027,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton16Value ??=
@@ -1063,6 +1095,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton17Value ??=
@@ -1116,6 +1150,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton18Value ??=
@@ -1169,6 +1205,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton19Value ??=
@@ -1222,6 +1260,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton20Value ??=
@@ -1275,6 +1315,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton21Value ??=
@@ -1328,6 +1370,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton22Value ??=
@@ -1381,6 +1425,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton23Value ??=
@@ -1434,6 +1480,8 @@ Veui... */
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton24Value ??=

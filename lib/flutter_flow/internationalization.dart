@@ -75,6 +75,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يسجل',
       'en': 'Register',
     },
+    'kfvpgnxp': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // PhoneSignIn
   {
@@ -87,6 +92,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Numéro de téléphone',
       'ar': 'رقم التليفون',
       'en': 'Phone Number',
+    },
+    '9mw81hl1': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // Onboarding
@@ -113,6 +123,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Commerncer',
       'ar': 'بداية',
       'en': 'start',
+    },
+    'njno8obd': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep1
@@ -162,6 +177,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'لنصنع او لنبتكر',
       'en': 'Create',
     },
+    'lv8fm6np': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep2
   {
@@ -179,6 +199,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuez',
       'ar': 'يكمل',
       'en': 'Continue',
+    },
+    'jm8tnfgv': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep3
@@ -207,6 +232,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuez',
       'ar': 'يكمل',
       'en': 'Continue',
+    },
+    '07bqg8ee': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep4
@@ -351,6 +381,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
+    'uz5nuu1l': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep5
   {
@@ -368,6 +403,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuez\n',
       'ar': 'يكمل',
       'en': 'Continue',
+    },
+    '6ctb7ite': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep6
@@ -443,6 +483,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
+    },
+    'i679rmmd': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep7
@@ -521,6 +566,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
+    'qnbe4irk': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep8
   {
@@ -583,6 +633,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
+    },
+    'gokkec5c': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep9
@@ -695,6 +750,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
+    'vz4obnnt': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep10
   {
@@ -762,6 +822,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
+    },
+    'udb5qvr0': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep11
@@ -852,6 +917,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
+    },
+    'ispn63r8': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep12
@@ -1004,6 +1074,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
+    'vf11efz4': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep13
   {
@@ -1077,6 +1152,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
+    'qyo1vydv': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // signupStep14
   {
@@ -1105,6 +1185,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
+    },
+    'kclptzxm': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // signupStep15
@@ -1249,6 +1334,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
+    'froddh3c': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // HomePage
   {
@@ -1257,6 +1347,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'إكتشف',
       'en': 'Discover',
     },
+    'j6u99olj': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // matches
   {
@@ -1264,6 +1359,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Rencontres',
       'ar': 'ملتقى',
       'en': 'Matchs',
+    },
+    'qndsd76o': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // isMatch
@@ -1293,6 +1393,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
+    'a90iqdoq': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // Profile
   {
@@ -1315,6 +1420,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Photos',
       'ar': 'الصور',
       'en': 'Pictures',
+    },
+    'mf6ngsf6': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // editProfile
@@ -1484,6 +1594,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يسجل',
       'en': 'Register',
     },
+    '29ud7hre': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // notifications
   {
@@ -1501,6 +1616,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Dec. 19, 1:30pm - 2:00pm',
       'ar': '19 ديسمبر ، 1:30 مساءً - 2:00 مساءً',
       'en': 'Dec. 19, 1:30pm - 2:00pm',
+    },
+    'ytw0pa0h': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // Settings
@@ -1560,6 +1680,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'محادثات جديدة',
       'en': 'New Messages',
     },
+    'l4w7pch9': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // chat
   {
@@ -1568,6 +1693,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'مجموعة محادثة',
       'en': 'Group Chat',
     },
+    'sdtmyqn5': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // allChatPage
   {
@@ -1575,6 +1705,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Chats',
       'ar': 'الدردشات',
       'en': 'Chats',
+    },
+    'l5xvne0m': {
+      'fr': 'Chats',
+      'ar': '',
+      'en': '',
     },
   },
   // PhoneVerification
@@ -1598,6 +1733,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Valider',
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
+    },
+    'zabcp7xp': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
     },
   },
   // EmailVerification
@@ -1627,6 +1767,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
     },
+    't0hbk7ms': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // PasswordReset
   {
@@ -1650,11 +1795,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'سجل',
       'en': 'Record',
     },
+    '5ff54n8e': {
+      'fr': 'Home',
+      'ar': '',
+      'en': '',
+    },
   },
   // background
   {
     'b5wvpplb': {
       'fr': '',
+      'ar': '',
+      'en': '',
+    },
+    'gvxm1lta': {
+      'fr': 'Home',
       'ar': '',
       'en': '',
     },

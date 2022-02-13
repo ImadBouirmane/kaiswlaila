@@ -188,6 +188,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton1Value ??=
@@ -241,6 +243,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton2Value ??=
@@ -294,6 +298,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton3Value ??=
@@ -347,6 +353,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton4Value ??=
@@ -400,6 +408,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton5Value ??=
@@ -453,6 +463,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton6Value ??=
@@ -506,6 +518,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton7Value ??=
@@ -559,6 +573,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton8Value ??=
@@ -625,6 +641,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton9Value ??=
@@ -678,6 +696,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton10Value ??=
@@ -731,6 +751,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton11Value ??=
@@ -784,6 +806,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton12Value ??=
@@ -837,6 +861,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton13Value ??=
@@ -890,6 +916,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton14Value ??=
@@ -943,6 +971,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton15Value ??=
@@ -996,6 +1026,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton16Value ??=
@@ -1062,6 +1094,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton17Value ??=
@@ -1115,6 +1149,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton18Value ??=
@@ -1168,6 +1204,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton19Value ??=
@@ -1221,6 +1259,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton20Value ??=
@@ -1274,6 +1314,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton21Value ??=
@@ -1327,6 +1369,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton22Value ??=
@@ -1380,6 +1424,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton23Value ??=
@@ -1433,6 +1479,8 @@ class _SignupStep12WidgetState extends State<SignupStep12Widget> {
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
+                                            unselectedWidgetColor:
+                                                Color(0xFF707070),
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton24Value ??=
