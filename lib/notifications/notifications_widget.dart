@@ -57,23 +57,11 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: FlutterFlowTheme.of(context).primaryColor,
-                offset: Offset(100, 100),
-                spreadRadius: 100,
-              )
-            ],
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFFE7E2B0),
-                Color(0xFFE6C8DD),
-                FlutterFlowTheme.of(context).customColor2,
-                FlutterFlowTheme.of(context).secondaryColor
-              ],
-              stops: [0.2, 0.4, 0.6, 0.8],
-              begin: AlignmentDirectional(0.87, -1),
-              end: AlignmentDirectional(-0.87, 1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_5@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -101,26 +89,31 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                               ),
                             );
                           },
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                              ),
-                            ),
-                            child: AuthUserStreamWidget(
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 3,
+                            shape: const CircleBorder(),
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                 ),
-                                child: Image.network(
-                                  currentUserPhoto,
+                              ),
+                              child: AuthUserStreamWidget(
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.network(
+                                    currentUserPhoto,
+                                  ),
                                 ),
                               ),
                             ),
@@ -223,7 +216,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'hmqazb5b' /* Issam a vu votre profile ! */,
+                                                  'hmqazb5b' /* Issam a vu votre profil ! */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)

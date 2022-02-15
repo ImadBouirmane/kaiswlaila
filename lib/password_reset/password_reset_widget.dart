@@ -41,23 +41,11 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.of(context).primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.of(context).customColor2,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_5@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -78,7 +66,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).customColor10,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -92,7 +80,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                 decoration: BoxDecoration(),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'nnk5zqv0' /* Réinitialiser votre mot de pas... */,
+                    'nnk5zqv0' /* Réinitialisez votre mot de pas... */,
                   ),
                   style: FlutterFlowTheme.of(context).subtitle1,
                 ),
@@ -119,7 +107,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                             obscureText: !pwdNewVisibility,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'mjgdwdyh' /* Nouveau Mot de pass */,
+                                'mjgdwdyh' /* Nouveau mot de passe */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -175,7 +163,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                             obscureText: !pwdConfirmVisibility,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'l7ftc8ur' /* Confirmer le mot de pass */,
+                                'l7ftc8ur' /* Confirmer le mot de passe */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(

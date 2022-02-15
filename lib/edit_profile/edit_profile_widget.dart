@@ -63,23 +63,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.of(context).primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.of(context).customColor2,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_2@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -103,7 +91,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           buttonSize: 60,
                           icon: Icon(
                             Icons.chevron_left,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: FlutterFlowTheme.of(context).customColor10,
                             size: 30,
                           ),
                           onPressed: () async {
@@ -113,7 +101,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'l3uatqmy' /* Éditez votre profile */,
+                          'l3uatqmy' /* Éditez votre profil */,
                         ),
                         style: FlutterFlowTheme.of(context).title1.override(
                               fontFamily: 'Avenir Light ',
@@ -236,7 +224,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             width: 40,
                             height: 40,
                             decoration: BoxDecoration(
-                              color: Color(0x3FFF97C0),
+                              color: Color(0x5AFFFFFF),
                               shape: BoxShape.circle,
                             ),
                             child: Row(
@@ -264,7 +252,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '2efprkqz' /* Mon Profil */,
+                          '2efprkqz' /* Mon Profil: */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily: 'Avenir Light ',
@@ -393,7 +381,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'foi3lff4' /* Sexe */,
+                          'foi3lff4' /* Sexe: */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily: 'Avenir Light ',
@@ -470,7 +458,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '5bponwwp' /* Date de naissance */,
+                          '5bponwwp' /* Date de naissance: */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily: 'Avenir Light ',
@@ -627,7 +615,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'ca4lzles' /* Votre Ville: */,
+                          'ca4lzles' /* Sélectionnez  votre ville: */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily: 'Avenir Light ',
@@ -784,7 +772,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '51j0jlpg' /* Photos */,
+                          '51j0jlpg' /* Photos: */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily: 'Avenir Light ',
@@ -891,8 +879,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: Color(0xAAFDB0BB),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -1000,8 +987,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: Color(0xAAFDB0BB),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -1109,8 +1095,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: Color(0xAAFDB0BB),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(
@@ -1218,8 +1203,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: Color(0xAAFDB0BB),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Row(

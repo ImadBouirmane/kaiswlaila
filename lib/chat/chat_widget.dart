@@ -57,7 +57,7 @@ class _ChatWidgetState extends State<ChatWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
+        backgroundColor: FlutterFlowTheme.of(context).customColor10,
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -79,23 +79,11 @@ class _ChatWidgetState extends State<ChatWidget> {
               Text(
                 widget.chatUser.displayName,
                 style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Arial Black',
+                      fontFamily: 'Avenir Light ',
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w900,
                       useGoogleFonts: false,
-                    ),
-              ),
-            if (isGroupChat() ?? true)
-              Text(
-                FFLocalizations.of(context).getText(
-                  '3oxma931' /* Group Chat */,
-                ),
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Lexend Deca',
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
                     ),
               ),
           ],
@@ -114,14 +102,14 @@ class _ChatWidgetState extends State<ChatWidget> {
             ? FFChatPage(
                 chatInfo: snapshot.data,
                 allowImages: true,
-                backgroundColor: FlutterFlowTheme.of(context).customColor9,
+                backgroundColor: FlutterFlowTheme.of(context).customColor10,
                 timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
                 currentUserBoxDecoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).customColor9,
+                  color: FlutterFlowTheme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 otherUsersBoxDecoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primaryColor,
+                  color: FlutterFlowTheme.of(context).customColor9,
                   border: Border.all(
                     color: Colors.transparent,
                   ),
@@ -129,14 +117,14 @@ class _ChatWidgetState extends State<ChatWidget> {
                 ),
                 currentUserTextStyle: TextStyle(
                   fontFamily: 'Avenir Light ',
-                  color: FlutterFlowTheme.of(context).customColor7,
+                  color: FlutterFlowTheme.of(context).tertiaryColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
                   fontStyle: FontStyle.normal,
                 ),
                 otherUsersTextStyle: TextStyle(
                   fontFamily: 'Avenir Light ',
-                  color: Colors.white,
+                  color: FlutterFlowTheme.of(context).customColor7,
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
                 ),

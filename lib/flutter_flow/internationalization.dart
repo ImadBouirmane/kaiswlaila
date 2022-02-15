@@ -61,7 +61,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Login',
     },
     'li21rn5t': {
-      'fr': 'Mot de pass oublié!',
+      'fr': 'Mot de passe oublié!',
       'ar': 'هل نسيت كلمة السر!',
       'en': 'Forgot password!',
     },
@@ -75,7 +75,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يسجل',
       'en': 'Register',
     },
-    'kfvpgnxp': {
+    'ed8hdv6r': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -93,7 +93,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'رقم التليفون',
       'en': 'Phone Number',
     },
-    '9mw81hl1': {
+    'rwb90mku': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -124,16 +124,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'بداية',
       'en': 'start',
     },
-    'njno8obd': {
+    'lmckg3ku': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep1
+  // signUp
   {
     '8k6ie3sk': {
-      'fr': 'Création de votre compte',
+      'fr': 'Créez votre compte',
       'ar': 'انشاء حسابك',
       'en': 'Creation of your account',
     },
@@ -177,16 +177,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'لنصنع او لنبتكر',
       'en': 'Create',
     },
-    'lv8fm6np': {
+    'uxtc8q7f': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep2
+  // photoProfile
   {
     'oeoe3l6k': {
-      'fr': 'Avatar',
+      'fr': 'Photo de profil',
       'ar': 'الصورة الرمزية',
       'en': 'Avatar',
     },
@@ -200,13 +200,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'jm8tnfgv': {
+    'evcfpeyr': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep3
+  // baseInfo1
   {
     'e4oxhcn1': {
       'fr': 'Base',
@@ -233,31 +233,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    '07bqg8ee': {
+    'eb73lqdc': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep4
+  // baseInfo2
   {
     'nlcf25gn': {
-      'fr': 'Sexe',
+      'fr': 'Sexe:',
       'ar': 'الجنس',
       'en': 'Sex',
     },
     'tb24brgs': {
-      'fr': 'Masculin',
+      'fr': 'Homme',
       'ar': 'ذكر',
       'en': 'Male',
     },
     'ozp4v9m5': {
-      'fr': 'Feminin',
+      'fr': 'Femme',
       'ar': 'المؤنث',
       'en': 'Feminine',
     },
     'djgnn95q': {
-      'fr': 'Date de naissance',
+      'fr': 'Date de naissance:',
       'ar': 'تاريخ الميلاد',
       'en': 'Date of Birth',
     },
@@ -277,7 +277,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Year',
     },
     'vdfau4s7': {
-      'fr': 'Votre Ville:',
+      'fr': 'Sélectionnez votre ville:',
       'ar': 'مدينتك:',
       'en': 'Your City:',
     },
@@ -381,13 +381,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'uz5nuu1l': {
+    'byiry6u3': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep5
+  // photos
   {
     'jqgzv7gq': {
       'fr': 'Vos Photos',
@@ -395,7 +395,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Your pictures',
     },
     'fmsmx7ba': {
-      'fr': 'veuillez télécharger au moins une de vos photos...',
+      'fr': 'Veuillez télécharger au moins une de vos photos...',
       'ar': 'يرجى تحميل واحدة على الأقل من صورك ...',
       'en': 'please upload at least one of your photos...',
     },
@@ -404,17 +404,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    '6ctb7ite': {
+    '2xbe9ynp': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep6
+  // Qs1
   {
     'c5ye6u7t': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'vksprlxx': {
@@ -424,7 +424,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'x8q1d0fx': {
       'fr':
-          'Il est important pour moi de maintenir les valeurs\nou les croyances traditionnelles ',
+          'Il est important pour moi de maintenir les valeursou les croyances traditionnelles ',
       'ar': 'من المهم بالنسبة لي الحفاظ على القيم أو المعتقدات التقليدية',
       'en': 'It is important to me to maintain traditional values or beliefs',
     },
@@ -450,7 +450,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7x6cdcsf': {
       'fr':
-          'Il est important pour moi de prendre mes propres\ndécisions en ce qui concerne ma vie ',
+          'Il est important pour moi de prendre mes propresdécisions en ce qui concerne ma vie ',
       'ar': 'من المهم بالنسبة لي أن أتخذ قراراتي الخاصة فيما يتعلق بحياتي',
       'en': 'It is important for me to make my own decisions regarding my life',
     },
@@ -479,22 +479,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    '0te595dk': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'i679rmmd': {
+    'e5zj2gls': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep7
+  // Qs2
   {
     'yj7oaw5w': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'gglth7yf': {
@@ -504,7 +499,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ksllz08d': {
       'fr':
-          'Il est important pour moi d’être la personne la plus\ninfluente dans un couple ',
+          'Il est important pour moi d’être la personne la plus influente dans un couple ',
       'ar': 'من المهم بالنسبة لي أن أكون الشخص الأكثر نفوذاً بين الزوجين',
       'en':
           'It is important for me to be the most influential person in a couple',
@@ -531,7 +526,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     't42rf8ef': {
       'fr':
-          'Il est important pour moi de suivre les règles même\nquand personne ne surveille ',
+          'Il est important pour moi de suivre les règles même quand personne ne surveille ',
       'ar': 'من المهم بالنسبة لي اتباع القواعد حتى عندما لا يراقبها أحد',
       'en':
           'It is important for me to follow the rules even when no one is watching',
@@ -561,22 +556,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'jykvnlpp': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'qnbe4irk': {
+    '71kc94p9': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep8
+  // Qs3
   {
     'mc942bqj': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'pe7k4a3w': {
@@ -620,7 +610,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Transparency',
     },
     '41hacv6d': {
-      'fr': 'l’authenticité ',
+      'fr': 'L’authenticité ',
       'ar': 'أصالة',
       'en': 'authenticity',
     },
@@ -629,22 +619,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'yikvi26f': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'gokkec5c': {
+    'u0ruarh6': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep9
+  // Qs4
   {
     '4wkntniv': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'qedasp3n': {
@@ -745,22 +730,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'hezcwizb': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'vz4obnnt': {
+    'aaf74r8g': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep10
+  // Qs5
   {
     'ppu4s2x0': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     '7682nbj1': {
@@ -768,8 +748,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '40٪',
       'en': '40%',
     },
-    'dek18ama': {
-      'fr': 'Vos Besoins',
+    'il0hvrhc': {
+      'fr': 'Vos besoins',
       'ar': 'احتياجاتك',
       'en': 'Your needs',
     },
@@ -818,22 +798,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    '8fppswdf': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'udb5qvr0': {
+    'o978kh7p': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep11
+  // Qs6
   {
     '268nm25r': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     '8tb2kgag': {
@@ -913,22 +888,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'xejecw3g': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'ispn63r8': {
+    '4nhyhv0h': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep12
+  // Qs7
   {
     'mwt2fa5y': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     '6gmg1s8i': {
@@ -938,7 +908,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'rcn30c2m': {
       'fr':
-          'Imaginez que vos amis devaient vous décrire, quels seraient les adjectifs qui vous correspondraient ? ( choisir 9 adjectifs)',
+          'Imaginez que vos amis devaient vous décrire, quels seraient les adjectifs qui vous correspondraient ?\n(Choisir 9 adjectifs)',
       'ar':
           'تخيل أن على أصدقائك أن يصفوك ، ما هي الصفات التي تناسبك؟ (اختر 9 صفات)',
       'en':
@@ -1069,22 +1039,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'qh5slkof': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-    },
-    'vf11efz4': {
+    'o5zfgh4f': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep13
+  // Qs8
   {
     'hob5p3op': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'wobh1re8': {
@@ -1152,17 +1117,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
-    'qyo1vydv': {
+    'f3dhdl1s': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep14
+  // Qs9
   {
     'ryh79sof': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'vz0jw1ce': {
@@ -1172,7 +1137,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '98yt7fto': {
       'fr':
-          'Quels seraient les 3 points qui pourraient vous rendre heureux(se) ?\nOuverte ',
+          'Quels seraient les 3 points qui pourraient vous rendre heureux(se) ?',
       'ar': 'ما هي النقاط الثلاث التي يمكن أن تجعلك سعيدًا؟ افتتح',
       'en': 'What would be the 3 points that could make you happy? Opened',
     },
@@ -1186,17 +1151,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
-    'kclptzxm': {
+    '1k6hs9mf': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // signupStep15
+  // Qs10
   {
     'f7d52jsx': {
       'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
+      'ar': 'إستطلاع',
       'en': 'Survey',
     },
     'wap37wq3': {
@@ -1205,7 +1170,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '100%',
     },
     'fvjwmkyq': {
-      'fr': 'Vos centres d’intérêts ? \nVeuillez choisir au moins 3 élément.',
+      'fr': 'Vos centres d’intérêts ? \nVeuillez choisir au moins 3 éléments',
       'ar': 'مجالات اهتمامك؟ الرجاء اختيار 3 عناصر على الأقل.',
       'en': 'Your areas of interest? Please choose at least 3 items.',
     },
@@ -1334,20 +1299,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يكمل',
       'en': 'Continue',
     },
-    'froddh3c': {
+    'vqzb9gso': {
       'fr': 'Home',
       'ar': '',
       'en': '',
     },
   },
-  // HomePage
+  // homePage
   {
-    'i35bbnpu': {
+    'sczr27se': {
       'fr': 'Découvrir',
-      'ar': 'إكتشف',
-      'en': 'Discover',
+      'ar': 'لاكتشاف',
+      'en': 'To discover',
     },
-    'j6u99olj': {
+    'zsigavqq': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1360,7 +1325,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'ملتقى',
       'en': 'Matchs',
     },
-    'qndsd76o': {
+    '5cfo1suo': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1374,17 +1339,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Met',
     },
     'fsc9pzu7': {
-      'fr': 'C\'est un match, ',
+      'fr': 'C\'est un match !',
       'ar': 'إنها مواعدة !',
       'en': 'It\'s a Match',
     },
-    'jyzfvoju': {
-      'fr': 'Démarrer une conversation maintenant',
-      'ar': 'ابدأ محادثة الآن',
-      'en': 'Start a conversation now',
+    'iig5dopn': {
+      'fr': 'Démarrez une conversation maintenant ',
+      'ar': '',
+      'en': '',
     },
     'fh5z1igs': {
-      'fr': 'ou :',
+      'fr': '',
       'ar': 'أين :',
       'en': 'Where :',
     },
@@ -1393,7 +1358,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
     },
-    'a90iqdoq': {
+    'zah6clms': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1421,7 +1386,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الصور',
       'en': 'Pictures',
     },
-    'mf6ngsf6': {
+    'qryw0bxh': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1430,12 +1395,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // editProfile
   {
     'l3uatqmy': {
-      'fr': 'Éditez votre profile',
+      'fr': 'Éditez votre profil',
       'ar': 'عدل ملفك الشخصي',
       'en': 'Edit your profile',
     },
     '2efprkqz': {
-      'fr': 'Mon Profil',
+      'fr': 'Mon Profil:',
       'ar': 'ملفي الشخصي',
       'en': 'My profile',
     },
@@ -1455,7 +1420,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Biography',
     },
     'foi3lff4': {
-      'fr': 'Sexe',
+      'fr': 'Sexe:',
       'ar': 'الجنس',
       'en': 'Sex',
     },
@@ -1470,7 +1435,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Women',
     },
     '5bponwwp': {
-      'fr': 'Date de naissance',
+      'fr': 'Date de naissance:',
       'ar': 'تاريخ الميلاد',
       'en': 'Date of Birth',
     },
@@ -1490,7 +1455,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Year',
     },
     'ca4lzles': {
-      'fr': 'Votre Ville:',
+      'fr': 'Sélectionnez  votre ville:',
       'ar': 'مدينتك:',
       'en': 'Your City:',
     },
@@ -1585,7 +1550,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Turkey',
     },
     '51j0jlpg': {
-      'fr': 'Photos',
+      'fr': 'Photos:',
       'ar': 'الصور',
       'en': 'Pictures',
     },
@@ -1594,7 +1559,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'يسجل',
       'en': 'Register',
     },
-    '29ud7hre': {
+    '9s60moyv': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1608,7 +1573,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Notifications',
     },
     'hmqazb5b': {
-      'fr': 'Issam a vu votre profile !',
+      'fr': 'Issam a vu votre profil !',
       'ar': 'شاهد عصام ملفك الشخصي!',
       'en': 'Issam saw your profile!',
     },
@@ -1617,7 +1582,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '19 ديسمبر ، 1:30 مساءً - 2:00 مساءً',
       'en': 'Dec. 19, 1:30pm - 2:00pm',
     },
-    'ytw0pa0h': {
+    'xqtso8ef': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1631,17 +1596,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Settings',
     },
     'mvdu5xao': {
-      'fr': 'Je recherche:',
+      'fr': 'Je recherche un(e):',
       'ar': 'أبحث عن:',
       'en': 'I research:',
     },
     'lmv5diaj': {
-      'fr': 'Masculin',
+      'fr': 'Homme',
       'ar': 'ذكر',
       'en': 'Male',
     },
     'aj7epfo8': {
-      'fr': 'Feminin',
+      'fr': 'Femme',
       'ar': 'المؤنث',
       'en': 'Feminine',
     },
@@ -1656,14 +1621,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Location',
     },
     'yyfgvofr': {
-      'fr': 'Régler',
+      'fr': 'Recevoir les notifications suivantes:',
       'ar': 'يعدل',
       'en': 'Adjust',
-    },
-    'dhzpkhfp': {
-      'fr': 'Notifications',
-      'ar': 'إشعارات',
-      'en': 'Notifications',
     },
     '7ns2usao': {
       'fr': 'Nouveaux Matchs',
@@ -1680,7 +1640,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'محادثات جديدة',
       'en': 'New Messages',
     },
-    'l4w7pch9': {
+    '6kmw5qvn': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1688,12 +1648,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // chat
   {
-    '3oxma931': {
-      'fr': 'Group Chat',
-      'ar': 'مجموعة محادثة',
-      'en': 'Group Chat',
-    },
-    'sdtmyqn5': {
+    'ofufx9x2': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1706,7 +1661,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الدردشات',
       'en': 'Chats',
     },
-    'l5xvne0m': {
+    'vyzjlaau': {
       'fr': 'Chats',
       'ar': '',
       'en': '',
@@ -1725,7 +1680,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '_ _ _ _',
     },
     'zpaazf5z': {
-      'fr': 'Renvoyer',
+      'fr': 'Renvoyer !',
       'ar': 'إعادة إرسال',
       'en': 'Resend',
     },
@@ -1734,7 +1689,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
     },
-    'zabcp7xp': {
+    'xcukd75w': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1758,7 +1713,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '_ _ _ _',
     },
     'khkfrltb': {
-      'fr': 'Renvoyez !',
+      'fr': 'Renvoyer !',
       'ar': 'إعادة إرسال!',
       'en': 'Resend!',
     },
@@ -1767,7 +1722,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
     },
-    't0hbk7ms': {
+    'i3g5wa3y': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1776,17 +1731,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // PasswordReset
   {
     'nnk5zqv0': {
-      'fr': 'Réinitialiser votre mot de passe',
+      'fr': 'Réinitialisez votre mot de passe',
       'ar': 'اعد ضبط كلمه السر',
       'en': 'Reset your password',
     },
     'mjgdwdyh': {
-      'fr': 'Nouveau Mot de pass',
+      'fr': 'Nouveau mot de passe',
       'ar': 'كلمة السر الجديدة',
       'en': 'New Password',
     },
     'l7ftc8ur': {
-      'fr': 'Confirmer le mot de pass',
+      'fr': 'Confirmer le mot de passe',
       'ar': 'تأكيد كلمة المرور',
       'en': 'Confirm Password',
     },
@@ -1795,7 +1750,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'سجل',
       'en': 'Record',
     },
-    '5ff54n8e': {
+    '254chuf0': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -1808,7 +1763,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
       'en': '',
     },
-    'gvxm1lta': {
+    'rj8jbrgo': {
       'fr': 'Home',
       'ar': '',
       'en': '',

@@ -64,23 +64,11 @@ class _SettingsWidgetState extends State<SettingsWidget>
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.of(context).primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.of(context).customColor2,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_5@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -104,25 +92,30 @@ class _SettingsWidgetState extends State<SettingsWidget>
                           ),
                         );
                       },
-                      child: Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                          ),
-                        ),
-                        child: AuthUserStreamWidget(
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
+                      child: Material(
+                        color: Colors.transparent,
+                        elevation: 3,
+                        shape: const CircleBorder(),
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: FlutterFlowTheme.of(context).primaryColor,
                             ),
-                            child: CachedNetworkImage(
-                              imageUrl: currentUserPhoto,
+                          ),
+                          child: AuthUserStreamWidget(
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: CachedNetworkImage(
+                                imageUrl: currentUserPhoto,
+                              ),
                             ),
                           ),
                         ),
@@ -199,7 +192,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'mvdu5xao' /* Je recherche: */,
+                                        'mvdu5xao' /* Je recherche un(e): */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .subtitle1
@@ -225,10 +218,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                       child: FlutterFlowRadioButton(
                                         options: [
                                           FFLocalizations.of(context).getText(
-                                            'lmv5diaj' /* Masculin */,
+                                            'lmv5diaj' /* Homme */,
                                           ),
                                           FFLocalizations.of(context).getText(
-                                            'aj7epfo8' /* Feminin */,
+                                            'aj7epfo8' /* Femme */,
                                           )
                                         ],
                                         onChanged: (value) {
@@ -386,7 +379,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'yyfgvofr' /* Régler */,
+                                        'yyfgvofr' /* Recevoir les notifications sui... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .subtitle1
@@ -394,29 +387,6 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                             fontFamily: 'Avenir Light ',
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryColor,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'dhzpkhfp' /* Notifications */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .customColor5,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),

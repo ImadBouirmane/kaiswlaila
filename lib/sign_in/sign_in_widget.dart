@@ -65,7 +65,6 @@ class _SignInWidgetState extends State<SignInWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Visibility(
         visible: responsiveVisibility(
           context: context,
@@ -75,23 +74,11 @@ class _SignInWidgetState extends State<SignInWidget>
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: FlutterFlowTheme.of(context).primaryColor,
-                offset: Offset(100, 100),
-                spreadRadius: 100,
-              )
-            ],
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFFE7E2B0),
-                Color(0xFFE6C8DD),
-                FlutterFlowTheme.of(context).customColor2,
-                FlutterFlowTheme.of(context).secondaryColor
-              ],
-              stops: [0.2, 0.4, 0.6, 0.8],
-              begin: AlignmentDirectional(0.87, -1),
-              end: AlignmentDirectional(-0.87, 1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_2@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -114,11 +101,11 @@ class _SignInWidgetState extends State<SignInWidget>
                         dropdownColor:
                             FlutterFlowTheme.of(context).customColor6,
                         dropdownIconColor:
-                            FlutterFlowTheme.of(context).secondaryColor,
+                            FlutterFlowTheme.of(context).tertiaryColor,
                         borderRadius: 20,
                         textStyle: TextStyle(
                           fontFamily: 'Arial Black',
-                          color: FlutterFlowTheme.of(context).secondaryColor,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
                           fontWeight: FontWeight.w600,
                           fontSize: 13,
                         ),
@@ -311,7 +298,7 @@ class _SignInWidgetState extends State<SignInWidget>
                         },
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'li21rn5t' /* Mot de pass oublié! */,
+                            'li21rn5t' /* Mot de passe oublié! */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .bodyText1

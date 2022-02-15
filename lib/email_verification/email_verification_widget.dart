@@ -41,23 +41,11 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: FlutterFlowTheme.of(context).primaryColor,
-                  offset: Offset(100, 100),
-                  spreadRadius: 100,
-                )
-              ],
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xFFE7E2B0),
-                  Color(0xFFE6C8DD),
-                  FlutterFlowTheme.of(context).customColor2,
-                  FlutterFlowTheme.of(context).secondaryColor
-                ],
-                stops: [0.2, 0.4, 0.6, 0.8],
-                begin: AlignmentDirectional(0.87, -1),
-                end: AlignmentDirectional(-0.87, 1),
+              image: DecorationImage(
+                fit: BoxFit.none,
+                image: Image.asset(
+                  'assets/images/Asset_3@4x.png',
+                ).image,
               ),
             ),
             child: Padding(
@@ -75,7 +63,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                         buttonSize: 60,
                         icon: Icon(
                           Icons.chevron_left,
-                          color: FlutterFlowTheme.of(context).primaryColor,
+                          color: FlutterFlowTheme.of(context).customColor10,
                           size: 30,
                         ),
                         onPressed: () async {
@@ -180,18 +168,17 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                           },
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'khkfrltb' /* Renvoyez ! */,
+                              'khkfrltb' /* Renvoyer ! */,
                             ),
-                            style: FlutterFlowTheme.of(context)
-                                .subtitle1
-                                .override(
-                                  fontFamily: 'Avenir Light ',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  useGoogleFonts: false,
-                                ),
+                            style:
+                                FlutterFlowTheme.of(context).subtitle1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor10,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
                         ),
                       ],

@@ -29,23 +29,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.of(context).primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.of(context).customColor2,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_2@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -65,7 +53,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).customColor10,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -90,7 +78,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.more_vert,
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).customColor10,
                         size: 30,
                       ),
                       onPressed: () async {

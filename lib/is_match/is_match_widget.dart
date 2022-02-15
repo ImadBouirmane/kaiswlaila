@@ -1,6 +1,6 @@
+import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../chat/chat_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -136,23 +136,11 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    offset: Offset(100, 100),
-                    spreadRadius: 100,
-                  )
-                ],
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFFE7E2B0),
-                    Color(0xFFE6C8DD),
-                    FlutterFlowTheme.of(context).customColor2,
-                    FlutterFlowTheme.of(context).secondaryColor
-                  ],
-                  stops: [0.2, 0.4, 0.6, 0.8],
-                  begin: AlignmentDirectional(0.87, -1),
-                  end: AlignmentDirectional(-0.87, 1),
+                image: DecorationImage(
+                  fit: BoxFit.none,
+                  image: Image.asset(
+                    'assets/images/Asset_3@4x.png',
+                  ).image,
                 ),
               ),
               child: Padding(
@@ -178,26 +166,31 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 ),
                               );
                             },
-                            child: Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                ),
-                              ),
-                              child: AuthUserStreamWidget(
-                                child: Container(
-                                  width: 50,
-                                  height: 50,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
+                            child: Material(
+                              color: Colors.transparent,
+                              elevation: 3,
+                              shape: const CircleBorder(),
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
                                   ),
-                                  child: Image.network(
-                                    currentUserPhoto,
+                                ),
+                                child: AuthUserStreamWidget(
+                                  child: Container(
+                                    width: 50,
+                                    height: 50,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      currentUserPhoto,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -398,7 +391,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       0, 0, 0, 10),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'fsc9pzu7' /* C'est un match,  */,
+                                      'fsc9pzu7' /* C'est un match ! */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .title1
@@ -412,55 +405,65 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 0, 0, 30),
-                                  child: AuthUserStreamWidget(
-                                    child: Text(
-                                      currentUserDisplayName,
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1,
-                                    ),
+                                  child: Text(
+                                    '',
+                                    style:
+                                        FlutterFlowTheme.of(context).subtitle1,
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'jyzfvoju' /* Démarrer une conversation main... */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Avenir Light ',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
+                                Stack(
+                                  children: [
+                                    FFButtonWidget(
+                                      onPressed: () async {
+                                        await Navigator.push(
+                                          context,
+                                          PageTransition(
+                                            type: PageTransitionType.fade,
+                                            duration: Duration(milliseconds: 0),
+                                            reverseDuration:
+                                                Duration(milliseconds: 0),
+                                            child: AllChatPageWidget(),
+                                          ),
+                                        );
+                                      },
+                                      text:
+                                          'Démarrez une conversation maintenant ',
+                                      options: FFButtonOptions(
+                                        width: 300,
+                                        height: 40,
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor10,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .customColor7,
+                                              useGoogleFonts: false,
+                                            ),
+                                        elevation: 3,
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1,
+                                        ),
+                                        borderRadius: 20,
                                       ),
+                                    ),
+                                  ],
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      30, 20, 30, 0),
-                                  child: InkWell(
-                                    onTap: () async {
-                                      await Navigator.push(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
-                                          reverseDuration:
-                                              Duration(milliseconds: 0),
-                                          child: ChatWidget(
-                                            chatUser: widget.user,
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                    child: Container(
-                                      width: double.infinity,
-                                      height: 150,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.contain,
-                                          image: Image.asset(
-                                            'assets/images/Asset_16@4x.png',
-                                          ).image,
-                                        ),
+                                      30, 10, 30, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        fit: BoxFit.contain,
+                                        image: Image.asset(
+                                          'assets/images/Asset_16@4x.png',
+                                        ).image,
                                       ),
                                     ),
                                   ).animated([
@@ -473,7 +476,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       0, 10, 0, 0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'fh5z1igs' /* ou : */,
+                                      'fh5z1igs' /*  */,
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
@@ -481,7 +484,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 30, 0, 20),
+                                      0, 20, 0, 20),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       await Navigator.push(

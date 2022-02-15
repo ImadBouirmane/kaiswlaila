@@ -39,23 +39,11 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: FlutterFlowTheme.of(context).primaryColor,
-                offset: Offset(100, 100),
-                spreadRadius: 100,
-              )
-            ],
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFFE7E2B0),
-                Color(0xFFE6C8DD),
-                FlutterFlowTheme.of(context).customColor2,
-                FlutterFlowTheme.of(context).secondaryColor
-              ],
-              stops: [0.2, 0.4, 0.6, 0.8],
-              begin: AlignmentDirectional(0.87, -1),
-              end: AlignmentDirectional(-0.87, 1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_2@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -73,7 +61,7 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left,
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).customColor10,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -182,14 +170,14 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                         },
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'zpaazf5z' /* Renvoyer */,
+                            'zpaazf5z' /* Renvoyer ! */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .subtitle1
                               .override(
                                 fontFamily: 'Avenir Light ',
                                 color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                    FlutterFlowTheme.of(context).customColor10,
                                 useGoogleFonts: false,
                               ),
                         ),
