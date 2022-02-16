@@ -519,7 +519,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       0, 10, 0, 0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'fh5z1igs' /*  */,
+                                      'fh5z1igs' /* Ou */,
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,

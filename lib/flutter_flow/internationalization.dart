@@ -210,8 +210,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'e4oxhcn1': {
       'fr': 'Base',
-      'ar': 'قائم على',
-      'en': 'Based',
+      'ar': 'معلومات أساسية',
+      'en': 'Base',
     },
     '9vdcx824': {
       'fr': 'Nom Complet',
@@ -220,8 +220,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ht2oa9j3': {
       'fr': 'Fonction',
-      'ar': 'دور',
-      'en': 'Function',
+      'ar': 'المهنة',
+      'en': 'Job',
     },
     '5j9y9uqq': {
       'fr': 'Présentez-vous !',
@@ -1309,7 +1309,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'sczr27se': {
       'fr': 'Découvrir',
-      'ar': 'لاكتشاف',
+      'ar': 'الاكتشاف',
       'en': 'To discover',
     },
     'zsigavqq': {
@@ -1322,7 +1322,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ixqmo3vn': {
       'fr': 'Rencontres',
-      'ar': 'ملتقى',
+      'ar': 'مواعدات',
       'en': 'Matchs',
     },
     '5cfo1suo': {
@@ -1335,8 +1335,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'uz3611e0': {
       'fr': 'Rencontres',
-      'ar': 'التقى',
-      'en': 'Met',
+      'ar': 'مواعدات',
+      'en': 'Matchs',
     },
     'fsc9pzu7': {
       'fr': 'C\'est un match !',
@@ -1345,13 +1345,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mpxwk6ui': {
       'fr': 'Démarrez une conversation maintenant ',
-      'ar': '',
-      'en': '',
+      'ar': 'ابدأ محادثة الآن',
+      'en': 'Start a conversation now',
     },
     'fh5z1igs': {
-      'fr': '',
-      'ar': 'أين :',
-      'en': 'Where :',
+      'fr': 'Ou',
+      'ar': 'أو',
+      'en': 'Or',
     },
     'uoiyf18y': {
       'fr': 'Ca suffit pour moi !',
@@ -1368,7 +1368,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '13jgokol': {
       'fr': 'Profil',
-      'ar': 'الملف الشخصي',
+      'ar': 'ملفي الشخصي',
       'en': 'Profile',
     },
     '0olwx22j': {
@@ -1378,7 +1378,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mmsr5n79': {
       'fr': 'Intérêts',
-      'ar': 'المصالح',
+      'ar': 'الإهتمامات',
       'en': 'Interests',
     },
     '25o6rp5o': {
@@ -1793,6 +1793,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Se déconnecter',
       'ar': 'تسجيل الخروج',
       'en': 'Sign out',
+    },
+  },
+  // noMatch
+  {
+    '01nbmcsk': {
+      'fr': 'Il n\'y a pas des Matchs !',
+      'ar': 'لا توجد مواعدات !',
+      'en': 'There are no Matches!',
     },
   },
   // Miscellaneous
