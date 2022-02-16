@@ -207,14 +207,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              FlutterFlowTheme.of(context).customColor1,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0, 1],
-            begin: AlignmentDirectional(0, 1),
-            end: AlignmentDirectional(0, -1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_2@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -326,7 +323,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         snapshot.data;
                     if (pageViewProfilesRecordList.isEmpty) {
                       return Center(
-                        child: NoSwipeWidget(),
+                        child: Container(
+                          height: 300,
+                          child: NoSwipeWidget(),
+                        ),
                       );
                     }
                     final pageViewProfilesRecord =
@@ -340,7 +340,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 [];
                         if (profiles.isEmpty) {
                           return Center(
-                            child: NoSwipeWidget(),
+                            child: Container(
+                              height: 300,
+                              child: NoSwipeWidget(),
+                            ),
                           );
                         }
                         return Container(

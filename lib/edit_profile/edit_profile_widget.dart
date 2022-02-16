@@ -63,14 +63,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              FlutterFlowTheme.of(context).customColor1,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0, 1],
-            begin: AlignmentDirectional(0, 1),
-            end: AlignmentDirectional(0, -1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_4@4x.png',
+            ).image,
           ),
         ),
         child: Padding(

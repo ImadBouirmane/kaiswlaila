@@ -49,14 +49,11 @@ class _SignInWidgetState extends State<SignInWidget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                FlutterFlowTheme.of(context).primaryColor,
-                FlutterFlowTheme.of(context).secondaryColor
-              ],
-              stops: [0, 1],
-              begin: AlignmentDirectional(0, 1),
-              end: AlignmentDirectional(0, -1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_2@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -127,14 +124,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Color(0x7DFFFFFF),
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Color(0x7DFFFFFF),
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(20),

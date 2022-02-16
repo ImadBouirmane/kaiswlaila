@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../components/menu_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -12,7 +13,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
 class ProfileWidget extends StatefulWidget {
-  const ProfileWidget({Key key}) : super(key: key);
+  const ProfileWidget({
+    Key key,
+    this.user,
+  }) : super(key: key);
+
+  final UsersRecord user;
 
   @override
   _ProfileWidgetState createState() => _ProfileWidgetState();
@@ -29,14 +35,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              FlutterFlowTheme.of(context).customColor1,
-              FlutterFlowTheme.of(context).secondaryColor
-            ],
-            stops: [0, 1],
-            begin: AlignmentDirectional(0, 1),
-            end: AlignmentDirectional(0, -1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_5@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
