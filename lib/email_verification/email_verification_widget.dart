@@ -19,7 +19,6 @@ class EmailVerificationWidget extends StatefulWidget {
 
 class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
   TextEditingController codeController;
-  final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -34,229 +33,228 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
       key: scaffoldKey,
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
-        child: Form(
-          key: formKey,
-          autovalidateMode: AutovalidateMode.always,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.none,
-                image: Image.asset(
-                  'assets/images/Asset_3@4x.png',
-                ).image,
-              ),
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).primaryColor,
+                Color(0x5FFFFF00)
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 30),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      FlutterFlowIconButton(
-                        borderColor: Colors.transparent,
-                        borderRadius: 30,
-                        borderWidth: 1,
-                        buttonSize: 60,
-                        icon: Icon(
-                          Icons.chevron_left,
-                          color: FlutterFlowTheme.of(context).customColor10,
-                          size: 30,
-                        ),
-                        onPressed: () async {
-                          Navigator.pop(context);
-                        },
+          ),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 30),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left,
+                        color: FlutterFlowTheme.of(context).customColor10,
+                        size: 30,
                       ),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            '8ns4unkm' /* Vérifiez votre boîte de récept... */,
-                          ),
-                          style: FlutterFlowTheme.of(context).subtitle1,
-                        ),
-                      ],
+                      onPressed: () async {
+                        Navigator.pop(context);
+                      },
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'f4eu791m' /* Confirmez votre email */,
-                          ),
-                          style: FlutterFlowTheme.of(context).subtitle1,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Row(
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 10),
+                  child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(65, 0, 65, 0),
-                          child: TextFormField(
-                            controller: codeController,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              hintText: FFLocalizations.of(context).getText(
-                                'ryc80yfx' /* _ _ _ _ */,
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'ruv8hhve' /* Vérifiez votre boîte de récept... */,
+                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1,
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'gz3kanoo' /* Confirmez votre email */,
+                        ),
+                        style: FlutterFlowTheme.of(context).subtitle1,
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(65, 0, 65, 0),
+                        child: TextFormField(
+                          controller: codeController,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            hintText: FFLocalizations.of(context).getText(
+                              'j0bvpgiu' /* _ _ _ _ */,
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
                               ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
                               ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              filled: true,
-                              fillColor:
-                                  FlutterFlowTheme.of(context).customColor9,
-                              prefixIcon: Icon(
-                                Icons.content_paste,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            filled: true,
+                            fillColor:
+                                FlutterFlowTheme.of(context).customColor9,
+                            prefixIcon: Icon(
+                              Icons.content_paste,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                            ),
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Avenir Light ',
                                 color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                    FlutterFlowTheme.of(context).customColor7,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
                               ),
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText1
-                                .override(
-                                  fontFamily: 'Avenir Light ',
-                                  color:
-                                      FlutterFlowTheme.of(context).customColor7,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
-                                ),
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                          ),
+                          textAlign: TextAlign.center,
+                          keyboardType: TextInputType.number,
                         ),
                       ),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        InkWell(
-                          onTap: () async {
-                            await sendEmailVerification();
-                          },
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'khkfrltb' /* Renvoyer ! */,
-                            ),
-                            style:
-                                FlutterFlowTheme.of(context).subtitle1.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.of(context)
-                                          .customColor10,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      useGoogleFonts: false,
-                                    ),
-                          ),
-                        ),
-                      ],
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        FFButtonWidget(
-                          onPressed: () async {
-                            if (codeController.text.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content:
-                                      Text(FFLocalizations.of(context).getText(
-                                    'xndhofbj' /* Entrez le code de vérification... */,
-                                  )),
-                                ),
-                              );
-                              return;
-                            }
-                            final phoneVerifiedUser = await verifySmsCode(
-                              context: context,
-                              smsCode: codeController.text,
-                            );
-                            if (phoneVerifiedUser == null) {
-                              return;
-                            }
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageWidget(),
-                              ),
-                              (r) => false,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'p6n1s25t' /* Valider */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 150,
-                            height: 40,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            textStyle:
-                                FlutterFlowTheme.of(context).subtitle2.override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: Colors.white,
-                                      useGoogleFonts: false,
-                                    ),
-                            elevation: 5,
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1,
-                            ),
-                            borderRadius: 20,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Spacer(),
-                  Row(
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
+                  child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        'assets/images/Asset_10@4x_copie.png',
-                        width: 100,
-                        height: 100,
-                        fit: BoxFit.contain,
+                      InkWell(
+                        onTap: () async {
+                          await sendEmailVerification();
+                        },
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'ibtmur5n' /* Renvoyer ! */,
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .subtitle1
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).customColor10,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: false,
+                              ),
+                        ),
                       ),
                     ],
                   ),
-                ],
-              ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FFButtonWidget(
+                        onPressed: () async {
+                          if (codeController.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content:
+                                    Text(FFLocalizations.of(context).getText(
+                                  'xndhofbj' /* Entrez le code de vérification... */,
+                                )),
+                              ),
+                            );
+                            return;
+                          }
+                          final phoneVerifiedUser = await verifySmsCode(
+                            context: context,
+                            smsCode: codeController.text,
+                          );
+                          if (phoneVerifiedUser == null) {
+                            return;
+                          }
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePageWidget(),
+                            ),
+                            (r) => false,
+                          );
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'nx9v570x' /* Valider */,
+                        ),
+                        options: FFButtonOptions(
+                          width: 150,
+                          height: 40,
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                          textStyle:
+                              FlutterFlowTheme.of(context).subtitle2.override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: Colors.white,
+                                    useGoogleFonts: false,
+                                  ),
+                          elevation: 5,
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
+                          ),
+                          borderRadius: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/Asset_10@4x_copie.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.contain,
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),

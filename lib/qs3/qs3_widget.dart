@@ -39,11 +39,14 @@ class _Qs3WidgetState extends State<Qs3Widget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.none,
-              image: Image.asset(
-                'assets/images/Asset_3@4x.png',
-              ).image,
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).primaryColor,
+                FlutterFlowTheme.of(context).customColor2
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
           ),
           child: Padding(

@@ -41,11 +41,14 @@ class _Qs5WidgetState extends State<Qs5Widget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.none,
-              image: Image.asset(
-                'assets/images/Asset_5@4x.png',
-              ).image,
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).primaryColor,
+                FlutterFlowTheme.of(context).customColor2
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
           ),
           child: Padding(
@@ -208,13 +211,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Icon(
-                                                Icons.looks_one,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 24,
-                                              ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(10, 0, 0, 0),
@@ -267,13 +263,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Icon(
-                                                Icons.looks_two,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 24,
-                                              ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(10, 0, 0, 0),
@@ -326,13 +315,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Icon(
-                                                Icons.looks_3,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 24,
-                                              ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(10, 0, 0, 0),
@@ -385,13 +367,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Icon(
-                                                Icons.looks_4,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                size: 24,
-                                              ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(10, 0, 0, 0),
@@ -441,7 +416,7 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, 0),
+                                    alignment: AlignmentDirectional(0, -0.8),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           10, 0, 10, 0),
@@ -483,13 +458,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Icon(
-                                                  Icons.looks_5,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
-                                                  size: 24,
-                                                ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(10, 0, 0, 0),
@@ -544,13 +512,6 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Icon(
-                                                  Icons.looks_6,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
-                                                  size: 24,
-                                                ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(10, 0, 0, 0),

@@ -33,11 +33,14 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.none,
-            image: Image.asset(
-              'assets/images/Asset_4@4x.png',
-            ).image,
+          gradient: LinearGradient(
+            colors: [
+              FlutterFlowTheme.of(context).customColor1,
+              FlutterFlowTheme.of(context).customColor2
+            ],
+            stops: [0, 1],
+            begin: AlignmentDirectional(0, 1),
+            end: AlignmentDirectional(0, -1),
           ),
         ),
         child: Padding(

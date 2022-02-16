@@ -29,11 +29,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.none,
-            image: Image.asset(
-              'assets/images/Asset_2@4x.png',
-            ).image,
+          gradient: LinearGradient(
+            colors: [
+              FlutterFlowTheme.of(context).customColor1,
+              FlutterFlowTheme.of(context).secondaryColor
+            ],
+            stops: [0, 1],
+            begin: AlignmentDirectional(0, 1),
+            end: AlignmentDirectional(0, -1),
           ),
         ),
         child: Padding(
@@ -136,15 +139,17 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         .primaryColor,
                                   ),
                                 ),
-                                child: Container(
-                                  width: 120,
-                                  height: 120,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/843/600',
+                                child: AuthUserStreamWidget(
+                                  child: Container(
+                                    width: 120,
+                                    height: 120,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: CachedNetworkImage(
+                                      imageUrl: currentUserPhoto,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -270,12 +275,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                           height: 100,
                           decoration: BoxDecoration(),
                           child: Wrap(
-                            spacing: 0,
-                            runSpacing: 0,
-                            alignment: WrapAlignment.start,
+                            spacing: 2,
+                            runSpacing: 2,
+                            alignment: WrapAlignment.center,
                             crossAxisAlignment: WrapCrossAlignment.center,
-                            direction: Axis.vertical,
-                            runAlignment: WrapAlignment.start,
+                            direction: Axis.horizontal,
+                            runAlignment: WrapAlignment.center,
                             verticalDirection: VerticalDirection.down,
                             clipBehavior: Clip.none,
                             children: [

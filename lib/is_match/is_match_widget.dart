@@ -1,6 +1,6 @@
-import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../chat/chat_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -43,6 +43,23 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
         opacity: 1,
       ),
     ),
+    'circleImageOnPageLoadAnimation1': AnimationInfo(
+      curve: Curves.bounceOut,
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      delay: 550,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(46, 46),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
     'containerOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
@@ -52,6 +69,23 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
         offset: Offset(59, 59),
         scale: 1,
         opacity: 0.125,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'circleImageOnPageLoadAnimation2': AnimationInfo(
+      curve: Curves.bounceOut,
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      delay: 550,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(46, 46),
+        scale: 1,
+        opacity: 0,
       ),
       finalState: AnimationState(
         offset: Offset(0, 0),
@@ -136,11 +170,14 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.none,
-                  image: Image.asset(
-                    'assets/images/Asset_3@4x.png',
-                  ).image,
+                gradient: LinearGradient(
+                  colors: [
+                    FlutterFlowTheme.of(context).customColor2,
+                    FlutterFlowTheme.of(context).primaryColor
+                  ],
+                  stops: [0, 1],
+                  begin: AlignmentDirectional(0, 1),
+                  end: AlignmentDirectional(0, -1),
                 ),
               ),
               child: Padding(
@@ -283,7 +320,10 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                           child: Image.asset(
                                             'assets/images/Asset_9@4x.png',
                                           ),
-                                        ),
+                                        ).animated([
+                                          animationsMap[
+                                              'circleImageOnPageLoadAnimation1']
+                                        ]),
                                       ],
                                     ),
                                   ),
@@ -367,7 +407,10 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             child: Image.asset(
                                               'assets/images/Asset_9@4x.png',
                                             ),
-                                          ),
+                                          ).animated([
+                                            animationsMap[
+                                                'circleImageOnPageLoadAnimation2']
+                                          ]),
                                         ],
                                       ),
                                     ),
@@ -422,12 +465,15 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             duration: Duration(milliseconds: 0),
                                             reverseDuration:
                                                 Duration(milliseconds: 0),
-                                            child: AllChatPageWidget(),
+                                            child: ChatWidget(
+                                              chatUser: widget.user,
+                                            ),
                                           ),
                                         );
                                       },
-                                      text:
-                                          'Démarrez une conversation maintenant ',
+                                      text: FFLocalizations.of(context).getText(
+                                        'mpxwk6ui' /* Démarrez une conversation main... */,
+                                      ),
                                       options: FFButtonOptions(
                                         width: 300,
                                         height: 40,

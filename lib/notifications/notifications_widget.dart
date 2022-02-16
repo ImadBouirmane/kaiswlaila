@@ -57,11 +57,14 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.none,
-              image: Image.asset(
-                'assets/images/Asset_5@4x.png',
-              ).image,
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).secondaryColor,
+                Color(0xFFFFFF00)
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
           ),
           child: Padding(

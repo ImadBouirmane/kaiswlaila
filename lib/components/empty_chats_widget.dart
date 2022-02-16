@@ -34,7 +34,7 @@ class _EmptyChatsWidgetState extends State<EmptyChatsWidget> {
               children: [
                 AutoSizeText(
                   FFLocalizations.of(context).getText(
-                    'fh8476sw' /* Il n'y a pas des messages ! */,
+                    'fh8476sw' /* Vous n’avez pas de messages ! */,
                   ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).title1.override(

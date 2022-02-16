@@ -30,11 +30,14 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.none,
-              image: Image.asset(
-                'assets/images/Asset_4@4x.png',
-              ).image,
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).primaryColor,
+                FlutterFlowTheme.of(context).customColor2
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
           ),
           child: Padding(
@@ -54,7 +57,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         buttonSize: 60,
                         icon: Icon(
                           Icons.chevron_left_outlined,
-                          color: FlutterFlowTheme.of(context).primaryColor,
+                          color: FlutterFlowTheme.of(context).customColor10,
                           size: 30,
                         ),
                         onPressed: () async {
@@ -299,7 +302,7 @@ partenaire idea... */
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'p911bmit' /* Commerncer */,
+                        'p911bmit' /* Commencer */,
                       ),
                       options: FFButtonOptions(
                         width: 200,

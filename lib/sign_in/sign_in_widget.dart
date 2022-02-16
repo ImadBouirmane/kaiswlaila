@@ -1,5 +1,4 @@
 import '../auth/auth_util.dart';
-import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_language_selector.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -9,6 +8,7 @@ import '../home_page/home_page_widget.dart';
 import '../onboarding/onboarding_widget.dart';
 import '../password_reset/password_reset_widget.dart';
 import '../phone_sign_in/phone_sign_in_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -22,40 +22,15 @@ class SignInWidget extends StatefulWidget {
   _SignInWidgetState createState() => _SignInWidgetState();
 }
 
-class _SignInWidgetState extends State<SignInWidget>
-    with TickerProviderStateMixin {
+class _SignInWidgetState extends State<SignInWidget> {
   TextEditingController emailController;
   TextEditingController pwdController;
   bool pwdVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final animationsMap = {
-    'circleImageOnPageLoadAnimation': AnimationInfo(
-      curve: Curves.linear,
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 49),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-  };
 
   @override
   void initState() {
     super.initState();
-    startPageLoadAnimations(
-      animationsMap.values
-          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
-      this,
-    );
-
     emailController = TextEditingController();
     pwdController = TextEditingController();
     pwdVisibility = false;
@@ -74,11 +49,14 @@ class _SignInWidgetState extends State<SignInWidget>
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.none,
-              image: Image.asset(
-                'assets/images/Asset_2@4x.png',
-              ).image,
+            gradient: LinearGradient(
+              colors: [
+                FlutterFlowTheme.of(context).primaryColor,
+                FlutterFlowTheme.of(context).secondaryColor
+              ],
+              stops: [0, 1],
+              begin: AlignmentDirectional(0, 1),
+              end: AlignmentDirectional(0, -1),
             ),
           ),
           child: Padding(
@@ -128,18 +106,12 @@ class _SignInWidgetState extends State<SignInWidget>
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset(
-                            'assets/images/Asset_8@4x_copie.png',
-                          ),
-                        ).animated(
-                            [animationsMap['circleImageOnPageLoadAnimation']]),
+                        Image.asset(
+                          'assets/images/Asset_10@4x_copie.png',
+                          width: 150,
+                          height: 150,
+                          fit: BoxFit.contain,
+                        ),
                       ],
                     ),
                   ),
@@ -213,6 +185,10 @@ class _SignInWidgetState extends State<SignInWidget>
                       ),
                       filled: true,
                       fillColor: FlutterFlowTheme.of(context).customColor9,
+                      prefixIcon: Icon(
+                        Icons.lock_outlined,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                      ),
                       suffixIcon: InkWell(
                         onTap: () => setState(
                           () => pwdVisibility = !pwdVisibility,
@@ -259,7 +235,7 @@ class _SignInWidgetState extends State<SignInWidget>
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'nxdkxn3l' /* Connectez-vous */,
+                        'nxdkxn3l' /* Se connecter */,
                       ),
                       options: FFButtonOptions(
                         width: 160,
@@ -298,7 +274,7 @@ class _SignInWidgetState extends State<SignInWidget>
                         },
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'li21rn5t' /* Mot de passe oublié! */,
+                            'li21rn5t' /* Mot de passe oublié ? */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .bodyText1
@@ -458,7 +434,7 @@ class _SignInWidgetState extends State<SignInWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
@@ -471,29 +447,32 @@ class _SignInWidgetState extends State<SignInWidget>
                               useGoogleFonts: false,
                             ),
                       ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                              reverseDuration: Duration(milliseconds: 0),
-                              child: OnboardingWidget(),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              PageTransition(
+                                type: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 0),
+                                reverseDuration: Duration(milliseconds: 0),
+                                child: OnboardingWidget(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'tjs7xgjs' /* Inscrivez-vous */,
                             ),
-                          );
-                        },
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'tjs7xgjs' /* S'inscrire */,
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: false,
-                                  ),
                         ),
                       ),
                     ],

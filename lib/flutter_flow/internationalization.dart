@@ -56,14 +56,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Password',
     },
     'nxdkxn3l': {
-      'fr': 'Connectez-vous',
+      'fr': 'Se connecter',
       'ar': 'تسجيل الدخول',
       'en': 'Login',
     },
     'li21rn5t': {
-      'fr': 'Mot de passe oublié!',
-      'ar': 'هل نسيت كلمة السر!',
-      'en': 'Forgot password!',
+      'fr': 'Mot de passe oublié ?',
+      'ar': 'نسيت رقمك السري ؟',
+      'en': 'Forgot your password ?',
     },
     'n3vpdygg': {
       'fr': 'Vous n\'avez pas de compte?',
@@ -71,8 +71,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'You do not have an account?',
     },
     'tjs7xgjs': {
-      'fr': 'S\'inscrire',
-      'ar': 'يسجل',
+      'fr': 'Inscrivez-vous',
+      'ar': 'تسجل',
       'en': 'Register',
     },
     'ed8hdv6r': {
@@ -120,9 +120,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Love for Real!',
     },
     'p911bmit': {
-      'fr': 'Commerncer',
+      'fr': 'Commencer',
       'ar': 'بداية',
-      'en': 'start',
+      'en': 'Start',
     },
     'lmckg3ku': {
       'fr': 'Home',
@@ -754,7 +754,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Your needs',
     },
     'b88wrl3j': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très important)',
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
       'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
       'en': 'From 1 to 5 (1 not very important, 10 very important)',
     },
@@ -779,7 +779,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Acknowledgement',
     },
     'ysmqc5y7': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très important)',
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
       'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
       'en': 'From 1 to 5 (1 not very important, 10 very important)',
     },
@@ -1343,7 +1343,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'إنها مواعدة !',
       'en': 'It\'s a Match',
     },
-    'iig5dopn': {
+    'mpxwk6ui': {
       'fr': 'Démarrez une conversation maintenant ',
       'ar': '',
       'en': '',
@@ -1669,22 +1669,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // PhoneVerification
   {
-    '4hck5ne8': {
+    '862lr1au': {
       'fr': 'Code de vérification',
       'ar': 'رمز التحقق',
       'en': 'Verification code',
     },
-    'sr70wzuc': {
+    '16dato64': {
       'fr': '_ _ _ _',
       'ar': '_ _ _ _',
       'en': '_ _ _ _',
     },
-    'zpaazf5z': {
+    '0bhf2xu5': {
       'fr': 'Renvoyer !',
       'ar': 'إعادة إرسال',
       'en': 'Resend',
     },
-    'qadgfgve': {
+    'yl44qel1': {
       'fr': 'Valider',
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
@@ -1697,27 +1697,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // EmailVerification
   {
-    '8ns4unkm': {
+    'ruv8hhve': {
       'fr': 'Vérifiez votre boîte de réception.',
       'ar': 'تحقق من بريدك الوارد.',
       'en': 'Check your inbox.',
     },
-    'f4eu791m': {
+    'gz3kanoo': {
       'fr': 'Confirmez votre email',
       'ar': 'تأكيد عنوان البريد الإلكتروني',
       'en': 'Confirm Email',
     },
-    'ryc80yfx': {
+    'j0bvpgiu': {
       'fr': '_ _ _ _',
       'ar': '_ _ _ _',
       'en': '_ _ _ _',
     },
-    'khkfrltb': {
+    'ibtmur5n': {
       'fr': 'Renvoyer !',
       'ar': 'إعادة إرسال!',
       'en': 'Resend!',
     },
-    'p6n1s25t': {
+    'nx9v570x': {
       'fr': 'Valider',
       'ar': 'للتحقق من صحة',
       'en': 'To validate',
@@ -1772,9 +1772,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // EmptyChats
   {
     'fh8476sw': {
-      'fr': 'Il n\'y a pas des messages !',
-      'ar': 'لا توجد رسائل!',
-      'en': 'There are no messages!',
+      'fr': 'Vous n’avez pas de messages !',
+      'ar': 'ليس لديك رسائل!',
+      'en': 'You have no messages!',
     },
   },
   // menu

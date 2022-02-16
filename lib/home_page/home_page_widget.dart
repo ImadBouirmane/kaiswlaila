@@ -10,6 +10,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -136,6 +137,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
         opacity: 1,
       ),
     ),
+    'circleImageOnActionTriggerAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      duration: 600,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 3,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
@@ -152,7 +167,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
         opacity: 1,
       ),
     ),
-    'circleImageOnActionTriggerAnimation2': AnimationInfo(
+    'circleImageOnActionTriggerAnimation3': AnimationInfo(
       curve: Curves.bounceOut,
       trigger: AnimationTrigger.onActionTrigger,
       duration: 600,
@@ -192,11 +207,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.none,
-            image: Image.asset(
-              'assets/images/Asset_2@4x.png',
-            ).image,
+          gradient: LinearGradient(
+            colors: [
+              FlutterFlowTheme.of(context).customColor1,
+              FlutterFlowTheme.of(context).secondaryColor
+            ],
+            stops: [0, 1],
+            begin: AlignmentDirectional(0, 1),
+            end: AlignmentDirectional(0, -1),
           ),
         ),
         child: Padding(
@@ -562,161 +580,195 @@ class _HomePageWidgetState extends State<HomePageWidget>
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InkWell(
-                      onTap: () async {
-                        await pageViewController.previousPage(
-                          duration: Duration(milliseconds: 300),
-                          curve: Curves.ease,
-                        );
-                      },
-                      child: Material(
-                        color: Colors.transparent,
-                        elevation: 3,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).customColor10,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 10,
+                child: FutureBuilder<List<MatchesRecord>>(
+                  future: queryMatchesRecordOnce(
+                    singleRecord: true,
+                  ),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 30,
+                          height: 30,
+                          child: SpinKitFadingCircle(
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            size: 30,
+                          ),
+                        ),
+                      );
+                    }
+                    List<MatchesRecord> swipeButtonMatchesRecordList =
+                        snapshot.data;
+                    final swipeButtonMatchesRecord =
+                        swipeButtonMatchesRecordList.isNotEmpty
+                            ? swipeButtonMatchesRecordList.first
+                            : null;
+                    return Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: () async {
+                            await pageViewController.previousPage(
+                              duration: Duration(milliseconds: 300),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 3,
+                            shape: const CircleBorder(),
+                            child: Container(
+                              width: 80,
+                              height: 80,
+                              decoration: BoxDecoration(
                                 color:
-                                    FlutterFlowTheme.of(context).customColor6,
-                              )
-                            ],
-                            shape: BoxShape.circle,
-                          ),
-                          child: Stack(
-                            alignment:
-                                AlignmentDirectional(-0.050000000000000044, 0),
-                            children: [
-                              Container(
-                                width: 50,
-                                height: 50,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/icons8_undo_100px_1.png',
-                                  fit: BoxFit.contain,
-                                ),
-                              ).animated([
-                                animationsMap[
-                                    'circleImageOnActionTriggerAnimation1']
-                              ]),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ).animated(
-                        [animationsMap['containerOnPageLoadAnimation1']]),
-                    InkWell(
-                      onTap: () async {
-                        await pageViewController.nextPage(
-                          duration: Duration(milliseconds: 300),
-                          curve: Curves.ease,
-                        );
-                      },
-                      child: Material(
-                        color: Colors.transparent,
-                        elevation: 5,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 120,
-                          height: 120,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Stack(
-                            alignment: AlignmentDirectional(0, 0),
-                            children: [
-                              InkWell(
-                                onTap: () async {
-                                  await pageViewController.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: Container(
-                                  width: 120,
-                                  height: 120,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/Asset_8@4x.png',
-                                  ),
-                                ),
+                                    FlutterFlowTheme.of(context).customColor10,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 10,
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor6,
+                                  )
+                                ],
+                                shape: BoxShape.circle,
                               ),
-                              Container(
-                                width: 100,
-                                height: 100,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/Asset_9@4x.png',
-                                ),
-                              ).animated([
-                                animationsMap['circleImageOnPageLoadAnimation']
-                              ]),
-                            ],
+                              child: Stack(
+                                alignment: AlignmentDirectional(
+                                    -0.050000000000000044, 0),
+                                children: [
+                                  Container(
+                                    width: 50,
+                                    height: 50,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/icons8_undo_100px_1.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ).animated([
+                                    animationsMap[
+                                        'circleImageOnActionTriggerAnimation1']
+                                  ]),
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ).animated(
-                        [animationsMap['containerOnPageLoadAnimation2']]),
-                    InkWell(
-                      onTap: () async {
-                        await pageViewController.nextPage(
-                          duration: Duration(milliseconds: 300),
-                          curve: Curves.ease,
-                        );
-                      },
-                      child: Material(
-                        color: Colors.transparent,
-                        elevation: 3,
-                        shape: const CircleBorder(),
-                        child: Container(
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).customColor10,
-                            shape: BoxShape.circle,
+                        ).animated(
+                            [animationsMap['containerOnPageLoadAnimation1']]),
+                        InkWell(
+                          onTap: () async {
+                            final matchesCreateData = createMatchesRecordData(
+                              like: !(currentUserDocument?.like),
+                            );
+                            await MatchesRecord.collection
+                                .doc()
+                                .set(matchesCreateData);
+                            await (animationsMap[
+                                        'circleImageOnActionTriggerAnimation2']
+                                    .curvedAnimation
+                                    .parent as AnimationController)
+                                .forward(from: 0.0);
+                            await pageViewController.nextPage(
+                              duration: Duration(milliseconds: 300),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 5,
+                            shape: const CircleBorder(),
+                            child: Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Stack(
+                                alignment: AlignmentDirectional(0, 0),
+                                children: [
+                                  Container(
+                                    width: 120,
+                                    height: 120,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Asset_8@4x.png',
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 100,
+                                    height: 100,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Asset_9@4x.png',
+                                    ),
+                                  ).animated([
+                                    animationsMap[
+                                        'circleImageOnPageLoadAnimation'],
+                                    animationsMap[
+                                        'circleImageOnActionTriggerAnimation2']
+                                  ]),
+                                ],
+                              ),
+                            ),
                           ),
-                          child: Stack(
-                            alignment:
-                                AlignmentDirectional(-0.050000000000000044, 0),
-                            children: [
-                              Container(
-                                width: 50,
-                                height: 50,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/icons8_Close_100px.png',
-                                ),
-                              ).animated([
-                                animationsMap[
-                                    'circleImageOnActionTriggerAnimation2']
-                              ]),
-                            ],
+                        ).animated(
+                            [animationsMap['containerOnPageLoadAnimation2']]),
+                        InkWell(
+                          onTap: () async {
+                            await pageViewController.nextPage(
+                              duration: Duration(milliseconds: 300),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 3,
+                            shape: const CircleBorder(),
+                            child: Container(
+                              width: 80,
+                              height: 80,
+                              decoration: BoxDecoration(
+                                color:
+                                    FlutterFlowTheme.of(context).customColor10,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Stack(
+                                alignment: AlignmentDirectional(
+                                    -0.050000000000000044, 0),
+                                children: [
+                                  Container(
+                                    width: 50,
+                                    height: 50,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/icons8_Close_100px.png',
+                                    ),
+                                  ).animated([
+                                    animationsMap[
+                                        'circleImageOnActionTriggerAnimation3']
+                                  ]),
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ).animated(
-                        [animationsMap['containerOnPageLoadAnimation3']]),
-                  ],
+                        ).animated(
+                            [animationsMap['containerOnPageLoadAnimation3']]),
+                      ],
+                    );
+                  },
                 ),
               ),
               NavbarWidget(),

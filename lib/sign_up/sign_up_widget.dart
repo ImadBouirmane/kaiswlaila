@@ -6,7 +6,6 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../phone_verification/phone_verification_widget.dart';
 import '../photo_profile/photo_profile_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -47,11 +46,14 @@ class _SignUpWidgetState extends State<SignUpWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.none,
-            image: Image.asset(
-              'assets/images/Asset_2@4x.png',
-            ).image,
+          gradient: LinearGradient(
+            colors: [
+              FlutterFlowTheme.of(context).secondaryColor,
+              Color(0xFFFFFF00)
+            ],
+            stops: [0, 1],
+            begin: AlignmentDirectional(0, 1),
+            end: AlignmentDirectional(0, -1),
           ),
         ),
         child: Padding(
@@ -240,6 +242,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             fillColor:
                                                 FlutterFlowTheme.of(context)
                                                     .customColor9,
+                                            prefixIcon: Icon(
+                                              Icons.lock_outlined,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                            ),
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => pwdVisibility =
@@ -307,6 +315,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             fillColor:
                                                 FlutterFlowTheme.of(context)
                                                     .customColor9,
+                                            prefixIcon: Icon(
+                                              Icons.lock_outlined,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                            ),
                                             suffixIcon: InkWell(
                                               onTap: () => setState(
                                                 () => pwdConfirmVisibility =
