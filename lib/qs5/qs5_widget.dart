@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -64,13 +65,32 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'ppu4s2x0' /* Questionnaire */,
+                        FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30,
+                          borderWidth: 1,
+                          buttonSize: 60,
+                          icon: Icon(
+                            Icons.chevron_left,
+                            color: Colors.black,
+                            size: 30,
                           ),
-                          style: FlutterFlowTheme.of(context).title1,
+                          onPressed: () async {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(-0.5, 0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'ppu4s2x0' /* Questionnaire */,
+                              ),
+                              style: FlutterFlowTheme.of(context).title1,
+                            ),
+                          ),
                         ),
                       ],
                     ),

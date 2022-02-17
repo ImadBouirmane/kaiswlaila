@@ -1,10 +1,10 @@
 import '../auth/auth_util.dart';
-import '../backend/backend.dart';
 import '../components/menu_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
 class ProfileWidget extends StatefulWidget {
-  const ProfileWidget({
-    Key key,
-    this.user,
-  }) : super(key: key);
-
-  final UsersRecord user;
+  const ProfileWidget({Key key}) : super(key: key);
 
   @override
   _ProfileWidgetState createState() => _ProfileWidgetState();
@@ -187,7 +182,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   children: [
                                     AuthUserStreamWidget(
                                       child: Text(
-                                        currentUserDocument?.dateOfBirth,
+                                        functions.dateOfBirth(
+                                            currentUserDocument?.day,
+                                            currentUserDocument?.month,
+                                            currentUserDocument?.year),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1
                                             .override(
@@ -382,33 +380,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   child: AuthUserStreamWidget(
                                     child: Text(
                                       currentUserDocument?.interest4,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .customColor7,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Card(
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color:
-                                    FlutterFlowTheme.of(context).customColor9,
-                                elevation: 5,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 5, 5, 5),
-                                  child: AuthUserStreamWidget(
-                                    child: Text(
-                                      currentUserDocument?.interest1,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(

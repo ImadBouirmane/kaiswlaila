@@ -435,7 +435,7 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                       hintText: FFLocalizations.of(context).getText(
                         'a4tlfb4j' /* Pays */,
                       ),
-                      fillColor: FlutterFlowTheme.of(context).customColor9,
+                      fillColor: FlutterFlowTheme.of(context).tertiaryColor,
                       elevation: 2,
                       borderColor: FlutterFlowTheme.of(context).primaryColor,
                       borderWidth: 0,

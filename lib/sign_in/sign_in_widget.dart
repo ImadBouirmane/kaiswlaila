@@ -145,7 +145,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).subtitle1.override(
                           fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.of(context).customColor3,
+                          color: FlutterFlowTheme.of(context).customColor5,
                           fontSize: 18,
                           useGoogleFonts: false,
                         ),
@@ -409,18 +409,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                             color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 30,
                           ),
-                          onPressed: () async {
-                            final user = await signInAnonymously(context);
-                            if (user == null) {
-                              return;
-                            }
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageWidget(),
-                              ),
-                              (r) => false,
-                            );
+                          onPressed: () {
+                            print('IconButton pressed ...');
                           },
                         ),
                       ),

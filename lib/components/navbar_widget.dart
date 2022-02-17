@@ -1,10 +1,10 @@
 import '../all_chat_page/all_chat_page_widget.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
 import '../matches/matches_widget.dart';
-import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -63,136 +63,147 @@ class _NavbarWidgetState extends State<NavbarWidget>
       ),
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            InkWell(
-              onTap: () async {
-                await Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    duration: Duration(milliseconds: 0),
-                    reverseDuration: Duration(milliseconds: 0),
-                    child: HomePageWidget(),
-                  ),
-                );
-              },
-              child: Material(
-                color: Colors.transparent,
-                elevation: 5,
-                shape: const CircleBorder(),
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/Asset_10@4x.png',
-                      ).image,
-                    ),
-                    shape: BoxShape.circle,
+        child: FutureBuilder<List<UsersRecord>>(
+          future: queryUsersRecordOnce(
+            singleRecord: true,
+          ),
+          builder: (context, snapshot) {
+            // Customize what your widget looks like when it's loading.
+            if (!snapshot.hasData) {
+              return Center(
+                child: SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: SpinKitFadingCircle(
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    size: 30,
                   ),
                 ),
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                await Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    duration: Duration(milliseconds: 0),
-                    reverseDuration: Duration(milliseconds: 0),
-                    child: AllChatPageWidget(),
-                  ),
-                );
-              },
-              child: Material(
-                color: Colors.transparent,
-                elevation: 5,
-                shape: const CircleBorder(),
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/Asset_11@4x.png',
-                      ).image,
+              );
+            }
+            List<UsersRecord> navbarUsersRecordList = snapshot.data;
+            final navbarUsersRecord = navbarUsersRecordList.isNotEmpty
+                ? navbarUsersRecordList.first
+                : null;
+            return Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 0),
+                        reverseDuration: Duration(milliseconds: 0),
+                        child: HomePageWidget(),
+                      ),
+                    );
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    elevation: 5,
+                    shape: const CircleBorder(),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: Image.asset(
+                            'assets/images/Asset_10@4x.png',
+                          ).image,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                    shape: BoxShape.circle,
                   ),
                 ),
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                await Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    duration: Duration(milliseconds: 0),
-                    reverseDuration: Duration(milliseconds: 0),
-                    child: MatchesWidget(),
-                  ),
-                );
-              },
-              child: Material(
-                color: Colors.transparent,
-                elevation: 5,
-                shape: const CircleBorder(),
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/Asset_12@4x_copie.png',
-                      ).image,
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 0),
+                        reverseDuration: Duration(milliseconds: 0),
+                        child: AllChatPageWidget(),
+                      ),
+                    );
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    elevation: 5,
+                    shape: const CircleBorder(),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: Image.asset(
+                            'assets/images/Asset_11@4x.png',
+                          ).image,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                    shape: BoxShape.circle,
                   ),
                 ),
-              ),
-            ),
-            InkWell(
-              onTap: () async {
-                await Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    duration: Duration(milliseconds: 0),
-                    reverseDuration: Duration(milliseconds: 0),
-                    child: ProfileWidget(),
-                  ),
-                );
-              },
-              child: Material(
-                color: Colors.transparent,
-                elevation: 5,
-                shape: const CircleBorder(),
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).customColor9,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/Asset_12@4x.png',
-                      ).image,
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 0),
+                        reverseDuration: Duration(milliseconds: 0),
+                        child: MatchesWidget(),
+                      ),
+                    );
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    elevation: 5,
+                    shape: const CircleBorder(),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: Image.asset(
+                            'assets/images/Asset_12@4x_copie.png',
+                          ).image,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                    shape: BoxShape.circle,
                   ),
                 ),
-              ),
-            ),
-          ],
+                Material(
+                  color: Colors.transparent,
+                  elevation: 5,
+                  shape: const CircleBorder(),
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).customColor9,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.asset(
+                          'assets/images/Asset_12@4x.png',
+                        ).image,
+                      ),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     ).animated([animationsMap['containerOnPageLoadAnimation']]);
