@@ -2,7 +2,8 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../signup_step1/signup_step1_widget.dart';
+import '../sign_up/sign_up_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,23 +30,11 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
-                offset: Offset(100, 100),
-                spreadRadius: 100,
-              )
-            ],
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFFE7E2B0),
-                Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
-              ],
-              stops: [0.2, 0.4, 0.6, 0.8],
-              begin: AlignmentDirectional(0.87, -1),
-              end: AlignmentDirectional(-0.87, 1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_6@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -65,7 +54,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         buttonSize: 60,
                         icon: Icon(
                           Icons.chevron_left_outlined,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).customColor10,
                           size: 30,
                         ),
                         onPressed: () async {
@@ -110,15 +99,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
 applicatio... */
                                               ,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Arial Black',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Arial Black',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -165,14 +156,16 @@ applicatio... */
 partenaire idea... */
                                               ,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Arial Black',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Arial Black',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -217,14 +210,16 @@ partenaire idea... */
                                             FFLocalizations.of(context).getText(
                                               'u3k7yufq' /* Love for Real ! */,
                                             ),
-                                            style: FlutterFlowTheme.title1
+                                            style: FlutterFlowTheme.of(context)
+                                                .title1
                                                 .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.customColor7,
-                                              fontWeight: FontWeight.w900,
-                                              useGoogleFonts: false,
-                                            ),
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w900,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -238,10 +233,10 @@ partenaire idea... */
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20, 0, 20, 0),
                                           child: Image.asset(
-                                            'assets/images/Asset_12@4x.png',
+                                            'assets/images/Asset_8@4x_copie.png',
                                             width: double.infinity,
                                             height: 300,
-                                            fit: BoxFit.cover,
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
                                       ),
@@ -275,8 +270,8 @@ partenaire idea... */
                                   dotWidth: 20,
                                   dotHeight: 12,
                                   dotColor: Color(0xFFB4B4B4),
-                                  activeDotColor:
-                                      FlutterFlowTheme.tertiaryColor,
+                                  activeDotColor: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
                                   paintStyle: PaintingStyle.fill,
                                 ),
                               ),
@@ -299,23 +294,26 @@ partenaire idea... */
                             type: PageTransitionType.fade,
                             duration: Duration(milliseconds: 200),
                             reverseDuration: Duration(milliseconds: 200),
-                            child: SignupStep1Widget(),
+                            child: SignUpWidget(),
                           ),
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'p911bmit' /* Commerncer */,
+                        'p911bmit' /* Commencer */,
                       ),
                       options: FFButtonOptions(
                         width: 200,
                         height: 50,
-                        color: FlutterFlowTheme.customColor9,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Avenir Light ',
-                          color: FlutterFlowTheme.secondaryColor,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Avenir Light ',
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
                         elevation: 10,
                         borderSide: BorderSide(
                           color: Colors.transparent,

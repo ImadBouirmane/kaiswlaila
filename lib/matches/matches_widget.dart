@@ -1,6 +1,8 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
+import '../components/no_match_widget.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_toggle_icon.dart';
@@ -25,8 +27,37 @@ class MatchesWidget extends StatefulWidget {
   _MatchesWidgetState createState() => _MatchesWidgetState();
 }
 
-class _MatchesWidgetState extends State<MatchesWidget> {
+class _MatchesWidgetState extends State<MatchesWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'containerOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      delay: 100,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 60),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+  };
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    startPageLoadAnimations(
+      animationsMap.values
+          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
+      this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,23 +69,11 @@ class _MatchesWidgetState extends State<MatchesWidget> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: FlutterFlowTheme.primaryColor,
-                offset: Offset(100, 100),
-                spreadRadius: 100,
-              )
-            ],
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFFE7E2B0),
-                Color(0xFFE6C8DD),
-                FlutterFlowTheme.customColor2,
-                FlutterFlowTheme.secondaryColor
-              ],
-              stops: [0.2, 0.4, 0.6, 0.8],
-              begin: AlignmentDirectional(0.87, -1),
-              end: AlignmentDirectional(-0.87, 1),
+            image: DecorationImage(
+              fit: BoxFit.none,
+              image: Image.asset(
+                'assets/images/Asset_2@4x.png',
+              ).image,
             ),
           ),
           child: Padding(
@@ -80,25 +99,31 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                             ),
                           );
                         },
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: FlutterFlowTheme.primaryColor,
-                            ),
-                          ),
-                          child: AuthUserStreamWidget(
-                            child: Container(
-                              width: 50,
-                              height: 50,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
+                        child: Material(
+                          color: Colors.transparent,
+                          elevation: 3,
+                          shape: const CircleBorder(),
+                          child: Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
-                              child: Image.network(
-                                currentUserPhoto,
+                            ),
+                            child: AuthUserStreamWidget(
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.network(
+                                  currentUserPhoto,
+                                ),
                               ),
                             ),
                           ),
@@ -108,11 +133,11 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                         FFLocalizations.of(context).getText(
                           'ixqmo3vn' /* Rencontres */,
                         ),
-                        style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Avenir Light ',
-                          fontSize: 22,
-                          useGoogleFonts: false,
-                        ),
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Avenir Light ',
+                              fontSize: 22,
+                              useGoogleFonts: false,
+                            ),
                       ),
                       Container(
                         width: 50,
@@ -145,7 +170,8 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                               width: 30,
                               height: 30,
                               child: SpinKitFadingCircle(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 size: 30,
                               ),
                             ),
@@ -153,6 +179,11 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                         }
                         List<MatchesRecord> gridViewMatchesRecordList =
                             snapshot.data;
+                        if (gridViewMatchesRecordList.isEmpty) {
+                          return Center(
+                            child: NoMatchWidget(),
+                          );
+                        }
                         return GridView.builder(
                           padding: EdgeInsets.zero,
                           gridDelegate:
@@ -170,204 +201,243 @@ class _MatchesWidgetState extends State<MatchesWidget> {
                             return Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Container(
-                                  width: 100,
-                                  height: 100,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.customColor9,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Stack(
-                                    children: [
-                                      AuthUserStreamWidget(
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              PageTransition(
-                                                type: PageTransitionType.fade,
-                                                child:
-                                                    FlutterFlowExpandedImageView(
-                                                  image: CachedNetworkImage(
-                                                    imageUrl: currentUserPhoto,
-                                                    fit: BoxFit.contain,
+                              child: FutureBuilder<UsersRecord>(
+                                future: UsersRecord.getDocumentOnce(
+                                    gridViewMatchesRecord.user),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 30,
+                                        height: 30,
+                                        child: SpinKitFadingCircle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          size: 30,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  final containerUsersRecord = snapshot.data;
+                                  return Material(
+                                    color: Colors.transparent,
+                                    elevation: 3,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Container(
+                                      width: 100,
+                                      height: 100,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor9,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      child: Stack(
+                                        children: [
+                                          InkWell(
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                PageTransition(
+                                                  type: PageTransitionType.fade,
+                                                  child:
+                                                      FlutterFlowExpandedImageView(
+                                                    image: CachedNetworkImage(
+                                                      imageUrl:
+                                                          widget.user.photoUrl,
+                                                      fit: BoxFit.contain,
+                                                    ),
+                                                    allowRotation: false,
+                                                    tag: widget.user.photoUrl,
+                                                    useHeroAnimation: true,
                                                   ),
-                                                  allowRotation: false,
-                                                  tag: currentUserPhoto,
-                                                  useHeroAnimation: true,
                                                 ),
-                                              ),
-                                            );
-                                          },
-                                          child: Hero(
-                                            tag: currentUserPhoto,
-                                            transitionOnUserGestures: true,
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(15),
-                                              child: CachedNetworkImage(
-                                                imageUrl: currentUserPhoto,
-                                                width: double.infinity,
-                                                height: double.infinity,
-                                                fit: BoxFit.cover,
+                                              );
+                                            },
+                                            child: Hero(
+                                              tag: widget.user.photoUrl,
+                                              transitionOnUserGestures: true,
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                child: CachedNetworkImage(
+                                                  imageUrl:
+                                                      widget.user.photoUrl,
+                                                  width: double.infinity,
+                                                  height: double.infinity,
+                                                  fit: BoxFit.cover,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Container(
-                                            width: double.infinity,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Color(0xD3000000),
-                                                  FlutterFlowTheme.customColor6
-                                                ],
-                                                stops: [0, 1],
-                                                begin:
-                                                    AlignmentDirectional(0, 1),
-                                                end:
-                                                    AlignmentDirectional(0, -1),
-                                              ),
-                                              borderRadius: BorderRadius.only(
-                                                bottomLeft: Radius.circular(15),
-                                                bottomRight:
-                                                    Radius.circular(15),
-                                                topLeft: Radius.circular(0),
-                                                topRight: Radius.circular(0),
-                                              ),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(10, 10, 10, 10),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Row(
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              Container(
+                                                width: double.infinity,
+                                                height: 70,
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Color(0xD3000000),
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .customColor6
+                                                    ],
+                                                    stops: [0, 1],
+                                                    begin: AlignmentDirectional(
+                                                        0, 1),
+                                                    end: AlignmentDirectional(
+                                                        0, -1),
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                    bottomLeft:
+                                                        Radius.circular(15),
+                                                    bottomRight:
+                                                        Radius.circular(15),
+                                                    topLeft: Radius.circular(0),
+                                                    topRight:
+                                                        Radius.circular(0),
+                                                  ),
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(10, 10, 10, 10),
+                                                  child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
                                                     children: [
-                                                      AuthUserStreamWidget(
-                                                        child: Text(
-                                                          currentUserDisplayName,
-                                                          style:
-                                                              FlutterFlowTheme
-                                                                  .subtitle1
-                                                                  .override(
-                                                            fontFamily:
-                                                                'Avenir Light ',
-                                                            color: FlutterFlowTheme
-                                                                .tertiaryColor,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      AuthUserStreamWidget(
-                                                        child: FutureBuilder<
-                                                            List<UsersRecord>>(
-                                                          future:
-                                                              queryUsersRecordOnce(
-                                                            queryBuilder: (usersRecord) =>
-                                                                usersRecord.where(
-                                                                    'like',
-                                                                    isEqualTo:
-                                                                        currentUserDocument
-                                                                            ?.like),
-                                                            singleRecord: true,
-                                                          ),
-                                                          builder: (context,
-                                                              snapshot) {
-                                                            // Customize what your widget looks like when it's loading.
-                                                            if (!snapshot
-                                                                .hasData) {
-                                                              return Center(
-                                                                child: SizedBox(
-                                                                  width: 30,
-                                                                  height: 30,
-                                                                  child:
-                                                                      SpinKitFadingCircle(
-                                                                    color: FlutterFlowTheme
-                                                                        .primaryColor,
-                                                                    size: 30,
-                                                                  ),
+                                                      Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Text(
+                                                            widget.user
+                                                                .displayName,
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .subtitle1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Avenir Light ',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .tertiaryColor,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
-                                                              );
-                                                            }
-                                                            List<UsersRecord>
-                                                                toggleIconUsersRecordList =
-                                                                snapshot.data;
-                                                            // Return an empty Container when the document does not exist.
-                                                            if (snapshot
-                                                                .data.isEmpty) {
-                                                              return Container();
-                                                            }
-                                                            final toggleIconUsersRecord =
-                                                                toggleIconUsersRecordList
-                                                                        .isNotEmpty
-                                                                    ? toggleIconUsersRecordList
-                                                                        .first
-                                                                    : null;
-                                                            return ToggleIcon(
-                                                              onPressed:
-                                                                  () async {
-                                                                final usersUpdateData =
-                                                                    createUsersRecordData(
-                                                                  like:
-                                                                      !toggleIconUsersRecord
+                                                          ),
+                                                          AuthUserStreamWidget(
+                                                            child: FutureBuilder<
+                                                                List<
+                                                                    UsersRecord>>(
+                                                              future:
+                                                                  queryUsersRecordOnce(
+                                                                queryBuilder: (usersRecord) =>
+                                                                    usersRecord.where(
+                                                                        'like',
+                                                                        isEqualTo:
+                                                                            currentUserDocument?.like),
+                                                                singleRecord:
+                                                                    true,
+                                                              ),
+                                                              builder: (context,
+                                                                  snapshot) {
+                                                                // Customize what your widget looks like when it's loading.
+                                                                if (!snapshot
+                                                                    .hasData) {
+                                                                  return Center(
+                                                                    child:
+                                                                        SizedBox(
+                                                                      width: 30,
+                                                                      height:
+                                                                          30,
+                                                                      child:
+                                                                          SpinKitFadingCircle(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primaryColor,
+                                                                        size:
+                                                                            30,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                }
+                                                                List<UsersRecord>
+                                                                    toggleIconUsersRecordList =
+                                                                    snapshot
+                                                                        .data;
+                                                                // Return an empty Container when the document does not exist.
+                                                                if (snapshot
+                                                                    .data
+                                                                    .isEmpty) {
+                                                                  return Container();
+                                                                }
+                                                                final toggleIconUsersRecord =
+                                                                    toggleIconUsersRecordList
+                                                                            .isNotEmpty
+                                                                        ? toggleIconUsersRecordList
+                                                                            .first
+                                                                        : null;
+                                                                return ToggleIcon(
+                                                                  onPressed:
+                                                                      () async {
+                                                                    final usersUpdateData =
+                                                                        createUsersRecordData(
+                                                                      like: !toggleIconUsersRecord
                                                                           .like,
+                                                                    );
+                                                                    await toggleIconUsersRecord
+                                                                        .reference
+                                                                        .update(
+                                                                            usersUpdateData);
+                                                                  },
+                                                                  value:
+                                                                      toggleIconUsersRecord
+                                                                          .like,
+                                                                  onIcon: Icon(
+                                                                    Icons
+                                                                        .favorite,
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryColor,
+                                                                    size: 25,
+                                                                  ),
+                                                                  offIcon: Icon(
+                                                                    Icons
+                                                                        .favorite_border,
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryColor,
+                                                                    size: 25,
+                                                                  ),
                                                                 );
-                                                                await toggleIconUsersRecord
-                                                                    .reference
-                                                                    .update(
-                                                                        usersUpdateData);
                                                               },
-                                                              value:
-                                                                  toggleIconUsersRecord
-                                                                      .like,
-                                                              onIcon: Icon(
-                                                                Icons.favorite,
-                                                                color: FlutterFlowTheme
-                                                                    .secondaryColor,
-                                                                size: 25,
-                                                              ),
-                                                              offIcon: Icon(
-                                                                Icons
-                                                                    .favorite_border,
-                                                                color: FlutterFlowTheme
-                                                                    .secondaryColor,
-                                                                size: 25,
-                                                              ),
-                                                            );
-                                                          },
-                                                        ),
+                                                            ),
+                                                          ),
+                                                        ],
                                                       ),
                                                     ],
                                                   ),
-                                                ],
+                                                ),
                                               ),
-                                            ),
+                                            ],
                                           ),
                                         ],
                                       ),
-                                    ],
-                                  ),
-                                ),
+                                    ),
+                                  ).animated([
+                                    animationsMap[
+                                        'containerOnPageLoadAnimation']
+                                  ]);
+                                },
                               ),
                             );
                           },

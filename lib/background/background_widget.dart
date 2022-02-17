@@ -25,23 +25,14 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
           gradient: LinearGradient(
             colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
+              FlutterFlowTheme.of(context).secondaryColor,
+              FlutterFlowTheme.of(context).primaryColor
             ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+            stops: [0, 1],
+            begin: AlignmentDirectional(0, 1),
+            end: AlignmentDirectional(0, -1),
           ),
         ),
         child: Padding(
@@ -70,7 +61,7 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                           ),
                         ),
                         child: AuthUserStreamWidget(
@@ -92,11 +83,11 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                       FFLocalizations.of(context).getText(
                         'b5wvpplb' /*  */,
                       ),
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Avenir Light ',
-                        fontSize: 22,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Avenir Light ',
+                            fontSize: 22,
+                            useGoogleFonts: false,
+                          ),
                     ),
                     InkWell(
                       onTap: () async {

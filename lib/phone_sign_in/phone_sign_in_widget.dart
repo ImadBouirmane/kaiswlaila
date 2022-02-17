@@ -33,23 +33,11 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: FlutterFlowTheme.primaryColor,
-              offset: Offset(100, 100),
-              spreadRadius: 100,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFE7E2B0),
-              Color(0xFFE6C8DD),
-              FlutterFlowTheme.customColor2,
-              FlutterFlowTheme.secondaryColor
-            ],
-            stops: [0.2, 0.4, 0.6, 0.8],
-            begin: AlignmentDirectional(0.87, -1),
-            end: AlignmentDirectional(-0.87, 1),
+          image: DecorationImage(
+            fit: BoxFit.none,
+            image: Image.asset(
+              'assets/images/Asset_5@4x.png',
+            ).image,
           ),
         ),
         child: Padding(
@@ -70,7 +58,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                       buttonSize: 60,
                       icon: Icon(
                         Icons.chevron_left_outlined,
-                        color: FlutterFlowTheme.primaryColor,
+                        color: FlutterFlowTheme.of(context).customColor10,
                         size: 30,
                       ),
                       onPressed: () async {
@@ -86,7 +74,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                   FFLocalizations.of(context).getText(
                     'kalzg6nj' /* Connectez-vous par Téléphone */,
                   ),
-                  style: FlutterFlowTheme.subtitle1,
+                  style: FlutterFlowTheme.of(context).subtitle1,
                 ),
               ),
               Expanded(
@@ -129,30 +117,30 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.primaryColor,
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         filled: true,
-                        fillColor: FlutterFlowTheme.customColor9,
+                        fillColor: FlutterFlowTheme.of(context).customColor9,
                         prefixIcon: Icon(
                           Icons.phone_rounded,
-                          color: FlutterFlowTheme.primaryColor,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                         ),
                       ),
-                      style: FlutterFlowTheme.subtitle1.override(
-                        fontFamily: 'Avenir Light ',
-                        color: FlutterFlowTheme.customColor5,
-                        useGoogleFonts: false,
-                      ),
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Avenir Light ',
+                            color: FlutterFlowTheme.of(context).customColor5,
+                            useGoogleFonts: false,
+                          ),
                       keyboardType: TextInputType.phone,
                     ),
                   ),

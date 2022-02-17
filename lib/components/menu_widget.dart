@@ -21,7 +21,7 @@ class _MenuWidgetState extends State<MenuWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.tertiaryColor,
+        color: FlutterFlowTheme.of(context).tertiaryColor,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0),
           bottomRight: Radius.circular(0),
@@ -57,7 +57,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                     children: [
                       Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.secondaryColor,
+                        color: FlutterFlowTheme.of(context).secondaryColor,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
@@ -66,7 +66,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                           child: Icon(
                             Icons.edit_outlined,
-                            color: FlutterFlowTheme.tertiaryColor,
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 20,
                           ),
                         ),
@@ -80,15 +80,18 @@ class _MenuWidgetState extends State<MenuWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'q4ae3no9' /* Modifier le profile */,
+                                  'q4ae3no9' /* Modifier le profil */,
                                 ),
-                                style: FlutterFlowTheme.subtitle2.override(
-                                  fontFamily: 'Avenir Light ',
-                                  color: FlutterFlowTheme.customColor7,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ],
                           ),
@@ -122,7 +125,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                     children: [
                       Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.secondaryColor,
+                        color: FlutterFlowTheme.of(context).secondaryColor,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
@@ -131,7 +134,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                           child: Icon(
                             Icons.settings,
-                            color: FlutterFlowTheme.tertiaryColor,
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 20,
                           ),
                         ),
@@ -147,13 +150,16 @@ class _MenuWidgetState extends State<MenuWidget> {
                                 FFLocalizations.of(context).getText(
                                   'qx0b29dx' /* Modifier les paramètres */,
                                 ),
-                                style: FlutterFlowTheme.subtitle2.override(
-                                  fontFamily: 'Avenir Light ',
-                                  color: FlutterFlowTheme.customColor7,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ],
                           ),
@@ -195,7 +201,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                           child: Icon(
                             Icons.login,
-                            color: FlutterFlowTheme.tertiaryColor,
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
                             size: 20,
                           ),
                         ),
@@ -211,13 +217,16 @@ class _MenuWidgetState extends State<MenuWidget> {
                                 FFLocalizations.of(context).getText(
                                   'gid5fjk8' /* Se déconnecter */,
                                 ),
-                                style: FlutterFlowTheme.subtitle2.override(
-                                  fontFamily: 'Avenir Light ',
-                                  color: FlutterFlowTheme.customColor7,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: false,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ],
                           ),

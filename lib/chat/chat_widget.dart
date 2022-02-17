@@ -57,7 +57,7 @@ class _ChatWidgetState extends State<ChatWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.tertiaryColor,
+        backgroundColor: FlutterFlowTheme.of(context).customColor10,
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -66,7 +66,7 @@ class _ChatWidgetState extends State<ChatWidget> {
           buttonSize: 60,
           icon: Icon(
             Icons.chevron_left,
-            color: FlutterFlowTheme.primaryColor,
+            color: FlutterFlowTheme.of(context).primaryColor,
             size: 24,
           ),
           onPressed: () async {
@@ -78,25 +78,13 @@ class _ChatWidgetState extends State<ChatWidget> {
             if (!(isGroupChat()) ?? true)
               Text(
                 widget.chatUser.displayName,
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Arial Black',
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w900,
-                  useGoogleFonts: false,
-                ),
-              ),
-            if (isGroupChat() ?? true)
-              Text(
-                FFLocalizations.of(context).getText(
-                  '3oxma931' /* Group Chat */,
-                ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Avenir Light ',
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      useGoogleFonts: false,
+                    ),
               ),
           ],
         ),
@@ -104,7 +92,7 @@ class _ChatWidgetState extends State<ChatWidget> {
         centerTitle: false,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.customColor9,
+      backgroundColor: FlutterFlowTheme.of(context).customColor9,
       body: StreamBuilder<FFChatInfo>(
         stream: FFChatManager.instance.getChatInfo(
           otherUserRecord: widget.chatUser,
@@ -114,14 +102,14 @@ class _ChatWidgetState extends State<ChatWidget> {
             ? FFChatPage(
                 chatInfo: snapshot.data,
                 allowImages: true,
-                backgroundColor: FlutterFlowTheme.customColor9,
+                backgroundColor: FlutterFlowTheme.of(context).customColor10,
                 timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
                 currentUserBoxDecoration: BoxDecoration(
-                  color: FlutterFlowTheme.customColor9,
+                  color: FlutterFlowTheme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 otherUsersBoxDecoration: BoxDecoration(
-                  color: FlutterFlowTheme.primaryColor,
+                  color: FlutterFlowTheme.of(context).customColor9,
                   border: Border.all(
                     color: Colors.transparent,
                   ),
@@ -129,14 +117,14 @@ class _ChatWidgetState extends State<ChatWidget> {
                 ),
                 currentUserTextStyle: TextStyle(
                   fontFamily: 'Avenir Light ',
-                  color: FlutterFlowTheme.customColor7,
+                  color: FlutterFlowTheme.of(context).tertiaryColor,
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
                   fontStyle: FontStyle.normal,
                 ),
                 otherUsersTextStyle: TextStyle(
                   fontFamily: 'Avenir Light ',
-                  color: Colors.white,
+                  color: FlutterFlowTheme.of(context).customColor7,
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
                 ),
@@ -160,12 +148,12 @@ class _ChatWidgetState extends State<ChatWidget> {
                   ),
                 ),
               )
-            : const Center(
+            : Center(
                 child: SizedBox(
                   width: 30,
                   height: 30,
                   child: SpinKitFadingCircle(
-                    color: FlutterFlowTheme.primaryColor,
+                    color: FlutterFlowTheme.of(context).primaryColor,
                     size: 30,
                   ),
                 ),
