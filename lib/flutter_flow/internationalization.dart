@@ -84,7 +84,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // PhoneSignIn
   {
     'kalzg6nj': {
-      'fr': 'Connectez-vous par Téléphone',
+      'fr': 'Connectez-vous par téléphone',
       'ar': 'تواصل عن طريق الهاتف',
       'en': 'Connect by Phone Number',
     },
@@ -196,7 +196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Insert your photo',
     },
     'wo9oaq4u': {
-      'fr': 'Continuez',
+      'fr': 'Continuer',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -229,7 +229,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Introduce yourself !',
     },
     'kh7tjb9c': {
-      'fr': 'Continuez',
+      'fr': 'Continuer',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -377,7 +377,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Country',
     },
     'hwte74bp': {
-      'fr': 'Continuez',
+      'fr': 'Continuer',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -400,7 +400,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'please upload at least one of your photos...',
     },
     'c78disd1': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -424,7 +424,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'x8q1d0fx': {
       'fr':
-          'Il est important pour moi de maintenir les valeursou les croyances traditionnelles ',
+          'Il est important pour moi de maintenir les valeurs ou les croyances traditionnelles ',
       'ar': 'من المهم بالنسبة لي الحفاظ على القيم أو المعتقدات التقليدية',
       'en': 'It is important to me to maintain traditional values or beliefs',
     },
@@ -450,7 +450,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7x6cdcsf': {
       'fr':
-          'Il est important pour moi de prendre mes propresdécisions en ce qui concerne ma vie ',
+          'Il est important pour moi de prendre mes propres décisions en ce qui concerne ma vie ',
       'ar': 'من المهم بالنسبة لي أن أتخذ قراراتي الخاصة فيما يتعلق بحياتي',
       'en': 'It is important for me to make my own decisions regarding my life',
     },
@@ -475,7 +475,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Absolutely',
     },
     '4g9k36gl': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -552,7 +552,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Absolutely',
     },
     '6daytfl0': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -615,7 +615,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'authenticity',
     },
     'fqmnws25': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -726,7 +726,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Our similarities',
     },
     'ugei4ejz': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -794,7 +794,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'start a family',
     },
     '5ehrybj4': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -884,7 +884,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'really important',
     },
     '2kw6o9vt': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -1035,7 +1035,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Compassionate',
     },
     'd48ohd78': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -1058,7 +1058,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '80%',
     },
     'sueikj41': {
-      'fr': 'Je suis spontané(e).',
+      'fr': 'Je suis spontané(e)',
       'ar': 'أنا عفوي.',
       'en': 'I am spontaneous.',
     },
@@ -1083,7 +1083,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Absolutely',
     },
     'aqx0bpe8': {
-      'fr': 'Il est facile pour moi de discuter avec de nouvelles personnes.',
+      'fr': 'Il est facile pour moi de discuter avec de nouvelles personnes',
       'ar': 'من السهل بالنسبة لي الدردشة مع أشخاص جدد.',
       'en': 'It is easy for me to chat with new people.',
     },
@@ -1108,7 +1108,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Absolutely',
     },
     'hhhhcaip': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -1142,7 +1142,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'What would be the 3 points that could make you happy? Opened',
     },
     'sds7x7o4': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -1175,127 +1175,117 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Your areas of interest? Please choose at least 3 items.',
     },
     'bcriaovm': {
-      'fr': 'A l’écoute',
-      'ar': 'في الاستماع',
-      'en': 'listening',
+      'fr': 'Les concerts',
+      'ar': 'الحفلات',
+      'en': 'Concerts',
     },
     '1b69xkeh': {
-      'fr': 'Spontané(e)',
-      'ar': 'من تلقاء نفسها',
-      'en': 'Spontaneous',
+      'fr': 'Sports équestres',
+      'ar': 'رياضة الفروسية',
+      'en': 'Equestrian sports',
+    },
+    '1lati54c': {
+      'fr': '',
+      'ar': 'رياضة الفروسية',
+      'en': 'Equestrian sports',
     },
     'o8g72l2a': {
-      'fr': 'Optimiste',
-      'ar': 'مستبشر',
-      'en': 'Optimistic',
+      'fr': 'Gastronomie et restaurants',
+      'ar': 'فن الطهو والمطاعم',
+      'en': 'Gastronomy and restaurants',
     },
     '9mmobbwo': {
-      'fr': 'Lunatique',
-      'ar': 'مرح',
-      'en': 'whimsical',
+      'fr': 'Théâtre /Danse/Opéra/Ballet',
+      'ar': 'مسرح / رقص / أوبرا / باليه',
+      'en': 'Theatre/Dance/Opera/Ballet',
     },
     '6zuig7ie': {
-      'fr': 'Rêveur(se)',
-      'ar': 'حالم',
-      'en': 'Dreamer',
+      'fr': 'Nature/Jardinage',
+      'ar': 'الطبيعة / البستنة',
+      'en': 'Nature/Gardening',
     },
     'v5qn3fub': {
-      'fr': 'Calme',
-      'ar': 'هدأت',
-      'en': 'Calmed down',
+      'fr': 'Sorties/Soirées',
+      'ar': 'نزهات / أمسيات',
+      'en': 'Outings/Evenings',
     },
     'kvcpiopt': {
-      'fr': 'Empatique',
-      'ar': 'متعاطف',
-      'en': 'Empathetic',
+      'fr': 'Diner au restaurant',
+      'ar': 'عشاء في مطعم',
+      'en': 'Dinner at the restaurant',
     },
     'mpczer9p': {
-      'fr': 'Fidèle ',
-      'ar': 'مخلص',
-      'en': 'Loyal',
+      'fr': 'Sports d’hiver',
+      'ar': 'الرياضات الشتوية',
+      'en': 'Winter sports',
     },
     '9tg8y4mt': {
-      'fr': 'Logique',
-      'ar': 'منطق',
-      'en': 'Logic',
+      'fr': 'L’art',
+      'ar': 'فن',
+      'en': 'Art',
     },
     'e9b53ogp': {
-      'fr': 'Joyeux(se)',
-      'ar': 'سعيد',
-      'en': 'Happy',
+      'fr': 'Science / technologie',
+      'ar': 'علوم تكنولوجيا',
+      'en': 'Science Technology',
     },
     'fq14vgiq': {
-      'fr': 'Sensible',
-      'ar': 'حساس',
-      'en': 'Sensitive',
+      'fr': 'Photographie',
+      'ar': 'التصوير',
+      'en': 'Photography',
     },
     'nfxkmeyr': {
-      'fr': 'Engagé(e)',
-      'ar': 'ملتزم',
-      'en': 'Committed',
+      'fr': 'Voile/Planche à voile/Sports nautiques',
+      'ar': 'الإبحار / ركوب الأمواج / الرياضات المائية',
+      'en': 'Sailing/Windsurfing/Water sports',
     },
     'ufngl24j': {
-      'fr': 'Travailleur(se)',
-      'ar': 'عامل',
-      'en': 'Worker',
+      'fr': 'Littérature/Lecture',
+      'ar': 'أدب / قراءة',
+      'en': 'Literature/Reading',
     },
     'nmuj304q': {
-      'fr': 'Charmeur(se)',
-      'ar': 'ساحر',
-      'en': 'charmer',
+      'fr': 'La Chasse',
+      'ar': 'الصيد',
+      'en': 'The hunt',
     },
     '2m9ua26w': {
-      'fr': 'Energique',
-      'ar': 'نشيط',
-      'en': 'Energetic',
+      'fr': 'Randonnée/Escalade',
+      'ar': 'المشي لمسافات طويلة / التسلق',
+      'en': 'Hiking/Climbing',
     },
     'g4j102fc': {
-      'fr': 'Rebel(le)',
-      'ar': 'المتمردين)',
-      'en': 'Rebel)',
+      'fr': 'Sports collectifs  (Football, Rugby, Handball…)',
+      'ar': 'الرياضات الجماعية (كرة القدم ، الرجبي ، كرة اليد ...)',
+      'en': 'Team sports (Football, Rugby, Handball…)',
     },
     '6bxnkp8e': {
-      'fr': 'Enthousiaste',
-      'ar': 'متحمس',
-      'en': 'Enthusiastic',
+      'fr': 'La famille',
+      'ar': 'العائلة',
+      'en': 'Family',
     },
     'ow6h3s22': {
-      'fr': 'Consciencieux(se)',
-      'ar': 'منجز وفقا لما يمليه الضمير',
-      'en': 'conscientious',
+      'fr': 'Parler avec des amis',
+      'ar': 'تحدث مع الأصدقاء',
+      'en': 'Talk with friends',
     },
     'nz2aay4c': {
-      'fr': 'Chaleureux(se)',
-      'ar': 'دافئ',
-      'en': 'Warm',
+      'fr': 'Films/Cinéma',
+      'ar': 'أفلام / سينما',
+      'en': 'Movies/Cinema',
     },
     '7ydot8ax': {
-      'fr': 'Prend des risques',
-      'ar': 'يخاطر',
-      'en': 'take risks',
+      'fr': 'Les voyages',
+      'ar': 'الرحلات',
+      'en': 'The trips',
     },
-    '9j9gwgp1': {
-      'fr': 'Respectueux(se)',
-      'ar': 'محترم',
-      'en': 'Respectful',
-    },
-    'vrhk6bbq': {
-      'fr': 'En bonne forme physique',
-      'ar': 'في حالة بدنية جيدة',
-      'en': 'In good physical shape',
-    },
-    'ygouqb4k': {
-      'fr': 'Digne de confiance',
-      'ar': 'جدير بالثقة',
-      'en': 'Worth of trust',
-    },
-    '8iv2y19p': {
-      'fr': 'Compatissant(e)',
-      'ar': 'عطوف',
-      'en': 'Compassionate',
+    'zyg16ld4': {
+      'fr': 'La randonnée',
+      'ar': 'التنزه',
+      'en': 'Hiking',
     },
     'e4kbt0wy': {
-      'fr': 'Continuez\n',
+      'fr': 'Continuer',
       'ar': 'يكمل',
       'en': 'Continue',
     },
@@ -1698,12 +1688,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // EmailVerification
   {
     'ruv8hhve': {
-      'fr': 'Vérifiez votre boîte de réception.',
+      'fr': 'Vérifiez votre boîte de réception',
       'ar': 'تحقق من بريدك الوارد.',
       'en': 'Check your inbox.',
     },
     'gz3kanoo': {
-      'fr': 'Confirmez votre email',
+      'fr': 'pour confirmez votre email',
       'ar': 'تأكيد عنوان البريد الإلكتروني',
       'en': 'Confirm Email',
     },
@@ -1798,7 +1788,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // noMatch
   {
     '01nbmcsk': {
-      'fr': 'Il n\'y a pas des Matchs !',
+      'fr': 'Vous n\'avez de Matchs !',
       'ar': 'لا توجد مواعدات !',
       'en': 'There are no Matches!',
     },

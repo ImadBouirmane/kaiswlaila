@@ -483,6 +483,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .customColor7,
+                                              fontSize: 15,
                                               useGoogleFonts: false,
                                             ),
                                         elevation: 3,

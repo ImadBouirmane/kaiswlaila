@@ -475,7 +475,7 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          'hwte74bp' /* Continuez */,
+                          'hwte74bp' /* Continuer */,
                         ),
                         options: FFButtonOptions(
                           width: 200,

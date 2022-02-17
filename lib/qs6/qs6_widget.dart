@@ -98,7 +98,7 @@ class _Qs6WidgetState extends State<Qs6Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -207,7 +207,7 @@ class _Qs6WidgetState extends State<Qs6Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 19),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -330,7 +330,7 @@ class _Qs6WidgetState extends State<Qs6Widget> {
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        '2kw6o9vt' /* Continuez
+                        '2kw6o9vt' /* Continuer
  */
                         ,
                       ),

@@ -106,7 +106,7 @@ class _Qs9WidgetState extends State<Qs9Widget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 48),
                         child: Container(
                           width: 30,
                           height: 30,
@@ -126,21 +126,25 @@ class _Qs9WidgetState extends State<Qs9Widget> {
                             width: double.infinity,
                             height: 70,
                             decoration: BoxDecoration(),
-                            child: AutoSizeText(
-                              FFLocalizations.of(context).getText(
-                                '98yt7fto' /* Quels seraient les 3 points qu... */,
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: AutoSizeText(
+                                FFLocalizations.of(context).getText(
+                                  '98yt7fto' /* Quels seraient les 3 points qu... */,
+                                ),
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .subtitle1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor7,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
-                                  ),
                             ),
                           ),
                         ),
@@ -335,7 +339,7 @@ class _Qs9WidgetState extends State<Qs9Widget> {
                       );
                     },
                     text: FFLocalizations.of(context).getText(
-                      'sds7x7o4' /* Continuez
+                      'sds7x7o4' /* Continuer
  */
                       ,
                     ),

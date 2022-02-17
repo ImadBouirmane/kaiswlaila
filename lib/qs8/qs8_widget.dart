@@ -99,7 +99,7 @@ class _Qs8WidgetState extends State<Qs8Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 18),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -125,7 +125,7 @@ class _Qs8WidgetState extends State<Qs8Widget> {
                                     EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                 child: AutoSizeText(
                                   FFLocalizations.of(context).getText(
-                                    'sueikj41' /* Je suis spontané(e). */,
+                                    'sueikj41' /* Je suis spontané(e) */,
                                   ),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
@@ -202,7 +202,7 @@ class _Qs8WidgetState extends State<Qs8Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -320,7 +320,7 @@ class _Qs8WidgetState extends State<Qs8Widget> {
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'hhhhcaip' /* Continuez
+                        'hhhhcaip' /* Continuer
  */
                         ,
                       ),

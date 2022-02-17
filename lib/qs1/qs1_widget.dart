@@ -200,7 +200,7 @@ class _Qs1WidgetState extends State<Qs1Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 22),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -318,7 +318,7 @@ class _Qs1WidgetState extends State<Qs1Widget> {
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          '4g9k36gl' /* Continuez
+                          '4g9k36gl' /* Continuer
  */
                           ,
                         ),

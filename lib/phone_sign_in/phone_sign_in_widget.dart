@@ -72,7 +72,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                 decoration: BoxDecoration(),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'kalzg6nj' /* Connectez-vous par Téléphone */,
+                    'kalzg6nj' /* Connectez-vous par téléphone */,
                   ),
                   style: FlutterFlowTheme.of(context).subtitle1,
                 ),

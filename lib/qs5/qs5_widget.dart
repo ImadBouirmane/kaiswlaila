@@ -105,7 +105,7 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -623,9 +623,7 @@ class _Qs5WidgetState extends State<Qs5Widget> {
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          '5ehrybj4' /* Continuez
- */
-                          ,
+                          '5ehrybj4' /* Continuer */,
                         ),
                         options: FFButtonOptions(
                           width: 200,

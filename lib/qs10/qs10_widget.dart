@@ -43,9 +43,6 @@ class _Qs10WidgetState extends State<Qs10Widget> {
   bool checkButton19Value;
   bool checkButton20Value;
   bool checkButton21Value;
-  bool checkButton22Value;
-  bool checkButton23Value;
-  bool checkButton24Value;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -121,7 +118,7 @@ class _Qs10WidgetState extends State<Qs10Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 42),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -150,7 +147,7 @@ class _Qs10WidgetState extends State<Qs10Widget> {
 Veui... */
                                     ,
                                   ),
-                                  textAlign: TextAlign.center,
+                                  textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .subtitle1
                                       .override(
@@ -214,7 +211,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'bcriaovm' /* A l’écoute */,
+                                                'bcriaovm' /* Les concerts */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -269,7 +266,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '1b69xkeh' /* Spontané(e) */,
+                                                '1b69xkeh' /* Sports équestres */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -324,7 +321,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'o8g72l2a' /* Optimiste */,
+                                                'o8g72l2a' /* Gastronomie et restaurants */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -379,7 +376,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '9mmobbwo' /* Lunatique */,
+                                                '9mmobbwo' /* Théâtre /Danse/Opéra/Ballet */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -434,7 +431,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '6zuig7ie' /* Rêveur(se) */,
+                                                '6zuig7ie' /* Nature/Jardinage */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -489,7 +486,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'v5qn3fub' /* Calme */,
+                                                'v5qn3fub' /* Sorties/Soirées */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -544,7 +541,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'kvcpiopt' /* Empatique */,
+                                                'kvcpiopt' /* Diner au restaurant */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -599,7 +596,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'mpczer9p' /* Fidèle  */,
+                                                'mpczer9p' /* Sports d’hiver */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -667,7 +664,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '9tg8y4mt' /* Logique */,
+                                                '9tg8y4mt' /* L’art */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -722,7 +719,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'e9b53ogp' /* Joyeux(se) */,
+                                                'e9b53ogp' /* Science / technologie */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -777,7 +774,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'fq14vgiq' /* Sensible */,
+                                                'fq14vgiq' /* Photographie */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -832,7 +829,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'nfxkmeyr' /* Engagé(e) */,
+                                                'nfxkmeyr' /* Voile/Planche à voile/Sports n... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -887,7 +884,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'ufngl24j' /* Travailleur(se) */,
+                                                'ufngl24j' /* Littérature/Lecture */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -942,7 +939,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'nmuj304q' /* Charmeur(se) */,
+                                                'nmuj304q' /* La Chasse */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -997,7 +994,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '2m9ua26w' /* Energique */,
+                                                '2m9ua26w' /* Randonnée/Escalade */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1052,7 +1049,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'g4j102fc' /* Rebel(le) */,
+                                                'g4j102fc' /* Sports collectifs  (Football, ... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1120,7 +1117,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '6bxnkp8e' /* Enthousiaste */,
+                                                '6bxnkp8e' /* La famille */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1175,7 +1172,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'ow6h3s22' /* Consciencieux(se) */,
+                                                'ow6h3s22' /* Parler avec des amis */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1230,7 +1227,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'nz2aay4c' /* Chaleureux(se) */,
+                                                'nz2aay4c' /* Films/Cinéma */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1285,7 +1282,7 @@ Veui... */
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '7ydot8ax' /* Prend des risques */,
+                                                '7ydot8ax' /* Les voyages */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1333,179 +1330,14 @@ Veui... */
                                           ),
                                           child: CheckboxListTile(
                                             value: checkButton21Value ??=
-                                                currentUserDocument?.qsQ10C21,
+                                                currentUserDocument?.qsQ10C20,
                                             onChanged: (newValue) => setState(
                                                 () => checkButton21Value =
                                                     newValue),
                                             title: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '9j9gwgp1' /* Respectueux(se) */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Avenir Light ',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor7,
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                            ),
-                                            tileColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            activeColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            checkColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .tertiaryColor,
-                                            dense: true,
-                                            controlAffinity:
-                                                ListTileControlAffinity
-                                                    .trailing,
-                                            contentPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    40, 0, 40, 0),
-                                          ),
-                                        ),
-                                      ),
-                                      AuthUserStreamWidget(
-                                        child: Theme(
-                                          data: ThemeData(
-                                            checkboxTheme: CheckboxThemeData(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(25),
-                                              ),
-                                            ),
-                                            unselectedWidgetColor:
-                                                Color(0xFF707070),
-                                          ),
-                                          child: CheckboxListTile(
-                                            value: checkButton22Value ??=
-                                                currentUserDocument?.qsQ10C22,
-                                            onChanged: (newValue) => setState(
-                                                () => checkButton22Value =
-                                                    newValue),
-                                            title: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'vrhk6bbq' /* En bonne forme physique */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Avenir Light ',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor7,
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                            ),
-                                            tileColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            activeColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            checkColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .tertiaryColor,
-                                            dense: true,
-                                            controlAffinity:
-                                                ListTileControlAffinity
-                                                    .trailing,
-                                            contentPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    40, 0, 40, 0),
-                                          ),
-                                        ),
-                                      ),
-                                      AuthUserStreamWidget(
-                                        child: Theme(
-                                          data: ThemeData(
-                                            checkboxTheme: CheckboxThemeData(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(25),
-                                              ),
-                                            ),
-                                            unselectedWidgetColor:
-                                                Color(0xFF707070),
-                                          ),
-                                          child: CheckboxListTile(
-                                            value: checkButton23Value ??=
-                                                currentUserDocument?.qsQ10C23,
-                                            onChanged: (newValue) => setState(
-                                                () => checkButton23Value =
-                                                    newValue),
-                                            title: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'ygouqb4k' /* Digne de confiance */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Avenir Light ',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor7,
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                            ),
-                                            tileColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            activeColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryColor,
-                                            checkColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .tertiaryColor,
-                                            dense: true,
-                                            controlAffinity:
-                                                ListTileControlAffinity
-                                                    .trailing,
-                                            contentPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    40, 0, 40, 0),
-                                          ),
-                                        ),
-                                      ),
-                                      AuthUserStreamWidget(
-                                        child: Theme(
-                                          data: ThemeData(
-                                            checkboxTheme: CheckboxThemeData(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(25),
-                                              ),
-                                            ),
-                                            unselectedWidgetColor:
-                                                Color(0xFF707070),
-                                          ),
-                                          child: CheckboxListTile(
-                                            value: checkButton24Value ??=
-                                                currentUserDocument?.qsQ10C24,
-                                            onChanged: (newValue) => setState(
-                                                () => checkButton24Value =
-                                                    newValue),
-                                            title: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '8iv2y19p' /* Compatissant(e) */,
+                                                'zyg16ld4' /* La randonnée */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1606,9 +1438,6 @@ Veui... */
                             qsQ10C19: checkButton19Value,
                             qsQ10C20: checkButton20Value,
                             qsQ10C21: checkButton21Value,
-                            qsQ10C22: checkButton22Value,
-                            qsQ10C23: checkButton23Value,
-                            qsQ10C24: checkButton24Value,
                           );
                           await currentUserReference.update(usersUpdateData);
                           await Navigator.push(
@@ -1622,9 +1451,7 @@ Veui... */
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          'e4kbt0wy' /* Continuez
- */
-                          ,
+                          'e4kbt0wy' /* Continuer */,
                         ),
                         options: FFButtonOptions(
                           width: 200,

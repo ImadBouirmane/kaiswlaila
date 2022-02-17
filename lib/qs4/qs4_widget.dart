@@ -114,7 +114,7 @@ class _Qs4WidgetState extends State<Qs4Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 22),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -1151,7 +1151,7 @@ class _Qs4WidgetState extends State<Qs4Widget> {
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          'ugei4ejz' /* Continuez
+                          'ugei4ejz' /* Continuer
  */
                           ,
                         ),

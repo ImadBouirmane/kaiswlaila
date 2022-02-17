@@ -121,7 +121,7 @@ class _Qs7WidgetState extends State<Qs7Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
                           child: Container(
                             width: 30,
                             height: 30,
@@ -145,14 +145,14 @@ class _Qs7WidgetState extends State<Qs7Widget> {
                                 FFLocalizations.of(context).getText(
                                   'rcn30c2m' /* Imaginez que vos amis devaient... */,
                                 ),
-                                textAlign: TextAlign.center,
+                                textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .subtitle1
                                     .override(
                                       fontFamily: 'Avenir Light ',
                                       color: FlutterFlowTheme.of(context)
                                           .customColor7,
-                                      fontSize: 16,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -1616,7 +1616,7 @@ class _Qs7WidgetState extends State<Qs7Widget> {
                           );
                         },
                         text: FFLocalizations.of(context).getText(
-                          'd48ohd78' /* Continuez
+                          'd48ohd78' /* Continuer
  */
                           ,
                         ),

@@ -437,7 +437,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                               );
                             },
                             text: FFLocalizations.of(context).getText(
-                              'c78disd1' /* Continuez
+                              'c78disd1' /* Continuer
  */
                               ,
                             ),

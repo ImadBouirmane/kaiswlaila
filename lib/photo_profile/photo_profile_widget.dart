@@ -251,7 +251,7 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                               );
                             },
                             text: FFLocalizations.of(context).getText(
-                              'wo9oaq4u' /* Continuez */,
+                              'wo9oaq4u' /* Continuer */,
                             ),
                             options: FFButtonOptions(
                               width: 200,

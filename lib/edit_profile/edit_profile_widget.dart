@@ -99,15 +99,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           },
                         ),
                       ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'l3uatqmy' /* Éditez votre profil */,
-                        ),
-                        style: FlutterFlowTheme.of(context).title1.override(
-                              fontFamily: 'Avenir Light ',
-                              fontSize: 22,
-                              useGoogleFonts: false,
+                      Expanded(
+                        child: Align(
+                          alignment: AlignmentDirectional(-0.5, 0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'l3uatqmy' /* Éditez votre profil */,
                             ),
+                            style: FlutterFlowTheme.of(context).title1.override(
+                                  fontFamily: 'Avenir Light ',
+                                  fontSize: 22,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ),
                       ),
                     ],
                   ),

@@ -465,7 +465,7 @@ class _Qs3WidgetState extends State<Qs3Widget> {
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'fqmnws25' /* Continuez
+                        'fqmnws25' /* Continuer
  */
                         ,
                       ),

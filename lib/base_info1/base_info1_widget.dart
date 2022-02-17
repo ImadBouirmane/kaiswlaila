@@ -230,7 +230,7 @@ class _BaseInfo1WidgetState extends State<BaseInfo1Widget> {
                   );
                 },
                 text: FFLocalizations.of(context).getText(
-                  'kh7tjb9c' /* Continuez */,
+                  'kh7tjb9c' /* Continuer */,
                 ),
                 options: FFButtonOptions(
                   width: 200,

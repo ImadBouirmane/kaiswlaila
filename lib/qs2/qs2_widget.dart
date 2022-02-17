@@ -316,7 +316,7 @@ class _Qs2WidgetState extends State<Qs2Widget> {
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        '6daytfl0' /* Continuez
+                        '6daytfl0' /* Continuer
  */
                         ,
                       ),

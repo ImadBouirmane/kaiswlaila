@@ -91,7 +91,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'gz3kanoo' /* Confirmez votre email */,
+                          'gz3kanoo' /* pour confirmez votre email */,
                         ),
                         style: FlutterFlowTheme.of(context).subtitle1,
                       ),
