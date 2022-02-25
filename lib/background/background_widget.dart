@@ -35,36 +35,81 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
             end: AlignmentDirectional(0, -1),
           ),
         ),
-        child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProfileWidget(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: FlutterFlowTheme.of(context).primaryColor,
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/Asset_3@4x.png',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.scaleDown,
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfileWidget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                              ),
+                            ),
+                            child: AuthUserStreamWidget(
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.network(
+                                  currentUserPhoto,
+                                ),
+                              ),
+                            ),
                           ),
                         ),
-                        child: AuthUserStreamWidget(
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'b5wvpplb' /*  */,
+                          ),
+                          style: FlutterFlowTheme.of(context).title1.override(
+                                fontFamily: 'Avenir Light ',
+                                fontSize: 22,
+                                useGoogleFonts: false,
+                              ),
+                        ),
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              PageTransition(
+                                type: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 0),
+                                reverseDuration: Duration(milliseconds: 0),
+                                child: AllChatPageWidget(),
+                              ),
+                            );
+                          },
                           child: Container(
                             width: 50,
                             height: 50,
@@ -72,52 +117,18 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              currentUserPhoto,
+                            child: Image.asset(
+                              'assets/images/Asset_13@4x.png',
                             ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'b5wvpplb' /*  */,
-                      ),
-                      style: FlutterFlowTheme.of(context).title1.override(
-                            fontFamily: 'Avenir Light ',
-                            fontSize: 22,
-                            useGoogleFonts: false,
-                          ),
-                    ),
-                    InkWell(
-                      onTap: () async {
-                        await Navigator.push(
-                          context,
-                          PageTransition(
-                            type: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                            reverseDuration: Duration(milliseconds: 0),
-                            child: AllChatPageWidget(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: 50,
-                        height: 50,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.asset(
-                          'assets/images/Asset_13@4x.png',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -33,7 +33,7 @@ class _NoMatchWidgetState extends State<NoMatchWidget> {
           children: [
             Text(
               FFLocalizations.of(context).getText(
-                '01nbmcsk' /* Il n'y a pas des Matchs ! */,
+                '01nbmcsk' /* Vous n'avez de Matchs ! */,
               ),
               style: FlutterFlowTheme.of(context).title1.override(
                     fontFamily: 'Avenir Light ',

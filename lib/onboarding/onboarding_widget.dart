@@ -153,7 +153,7 @@ applicatio... */
                                           Text(
                                             FFLocalizations.of(context).getText(
                                               's11ixzl1' /* Trouvez votre 
-partenaire idea... */
+partenaire idéa... */
                                               ,
                                             ),
                                             style: FlutterFlowTheme.of(context)
@@ -269,7 +269,8 @@ partenaire idea... */
                                   radius: 16,
                                   dotWidth: 20,
                                   dotHeight: 12,
-                                  dotColor: Color(0xFFB4B4B4),
+                                  dotColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
                                   activeDotColor: FlutterFlowTheme.of(context)
                                       .tertiaryColor,
                                   paintStyle: PaintingStyle.fill,
@@ -304,14 +305,13 @@ partenaire idea... */
                       options: FFButtonOptions(
                         width: 200,
                         height: 50,
-                        color: FlutterFlowTheme.of(context).customColor9,
+                        color: FlutterFlowTheme.of(context).customColor8,
                         textStyle: FlutterFlowTheme.of(context)
                             .subtitle2
                             .override(
                               fontFamily: 'Avenir Light ',
-                              color:
-                                  FlutterFlowTheme.of(context).secondaryColor,
-                              fontWeight: FontWeight.w600,
+                              color: FlutterFlowTheme.of(context).customColor7,
+                              fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
                         elevation: 10,

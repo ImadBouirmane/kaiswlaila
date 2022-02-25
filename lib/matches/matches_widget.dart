@@ -1,3 +1,4 @@
+import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
@@ -121,8 +122,8 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
-                                  currentUserPhoto,
+                                child: CachedNetworkImage(
+                                  imageUrl: currentUserPhoto,
                                 ),
                               ),
                             ),
@@ -139,16 +140,29 @@ class _MatchesWidgetState extends State<MatchesWidget>
                               useGoogleFonts: false,
                             ),
                       ),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.asset(
-                          'assets/images/Asset_13@4x.png',
-                          fit: BoxFit.contain,
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 0),
+                              reverseDuration: Duration(milliseconds: 0),
+                              child: AllChatPageWidget(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image.asset(
+                            'assets/images/Asset_13@4x.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ),
                     ],
@@ -158,10 +172,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 10),
                     child: FutureBuilder<List<MatchesRecord>>(
-                      future: queryMatchesRecordOnce(
-                        queryBuilder: (matchesRecord) =>
-                            matchesRecord.orderBy('user', descending: true),
-                      ),
+                      future: queryMatchesRecordOnce(),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
                         if (!snapshot.hasData) {
@@ -246,28 +257,31 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                       FlutterFlowExpandedImageView(
                                                     image: CachedNetworkImage(
                                                       imageUrl:
-                                                          widget.user.photoUrl,
+                                                          containerUsersRecord
+                                                              .photoUrl,
                                                       fit: BoxFit.contain,
                                                     ),
-                                                    allowRotation: false,
-                                                    tag: widget.user.photoUrl,
+                                                    allowRotation: true,
+                                                    tag: containerUsersRecord
+                                                        .photoUrl,
                                                     useHeroAnimation: true,
                                                   ),
                                                 ),
                                               );
                                             },
                                             child: Hero(
-                                              tag: widget.user.photoUrl,
+                                              tag:
+                                                  containerUsersRecord.photoUrl,
                                               transitionOnUserGestures: true,
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(15),
                                                 child: CachedNetworkImage(
-                                                  imageUrl:
-                                                      widget.user.photoUrl,
+                                                  imageUrl: containerUsersRecord
+                                                      .photoUrl,
                                                   width: double.infinity,
                                                   height: double.infinity,
-                                                  fit: BoxFit.cover,
+                                                  fit: BoxFit.fill,
                                                 ),
                                               ),
                                             ),
@@ -320,7 +334,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            widget.user
+                                                            containerUsersRecord
                                                                 .displayName,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -391,8 +405,8 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                                       () async {
                                                                     final usersUpdateData =
                                                                         createUsersRecordData(
-                                                                      like: !toggleIconUsersRecord
-                                                                          .like,
+                                                                      like: !!(toggleIconUsersRecord
+                                                                          .like),
                                                                     );
                                                                     await toggleIconUsersRecord
                                                                         .reference
@@ -400,8 +414,8 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                                             usersUpdateData);
                                                                   },
                                                                   value:
-                                                                      toggleIconUsersRecord
-                                                                          .like,
+                                                                      !(toggleIconUsersRecord
+                                                                          .like),
                                                                   onIcon: Icon(
                                                                     Icons
                                                                         .favorite,

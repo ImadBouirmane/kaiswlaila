@@ -21,7 +21,7 @@ class _MenuWidgetState extends State<MenuWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).tertiaryColor,
+        color: FlutterFlowTheme.of(context).customColor10,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0),
           bottomRight: Radius.circular(0),

@@ -216,7 +216,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'hmqazb5b' /* Issam a vu votre profil ! */,
+                                                  'hmqazb5b' /*  */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
@@ -236,7 +236,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '8ft00scz' /* Dec. 19, 1:30pm - 2:00pm */,
+                                                  '8ft00scz' /*  */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
@@ -266,8 +266,9 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
-                                            child: Image.network(
-                                              'https://picsum.photos/seed/913/400',
+                                            child: Image.asset(
+                                              'assets/images/stepan-kulyk-mWdR1jF4DEg-unsplash.jpg',
+                                              fit: BoxFit.fill,
                                             ),
                                           ),
                                         ),
