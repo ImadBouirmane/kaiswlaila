@@ -92,7 +92,7 @@ class _ChatWidgetState extends State<ChatWidget> {
         centerTitle: false,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).customColor9,
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: StreamBuilder<FFChatInfo>(
         stream: FFChatManager.instance.getChatInfo(
           otherUserRecord: widget.chatUser,
@@ -102,7 +102,7 @@ class _ChatWidgetState extends State<ChatWidget> {
             ? FFChatPage(
                 chatInfo: snapshot.data,
                 allowImages: true,
-                backgroundColor: FlutterFlowTheme.of(context).customColor10,
+                backgroundColor: FlutterFlowTheme.of(context).customColor8,
                 timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
                 currentUserBoxDecoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryColor,

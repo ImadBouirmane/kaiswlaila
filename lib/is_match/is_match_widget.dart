@@ -16,9 +16,11 @@ class IsMatchWidget extends StatefulWidget {
   const IsMatchWidget({
     Key key,
     this.user,
+    this.userMatch,
   }) : super(key: key);
 
   final UsersRecord user;
+  final MatchesRecord userMatch;
 
   @override
   _IsMatchWidgetState createState() => _IsMatchWidgetState();
@@ -93,6 +95,23 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
         opacity: 1,
       ),
     ),
+    'textOnPageLoadAnimation': AnimationInfo(
+      curve: Curves.bounceOut,
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      delay: 180,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 5,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
@@ -138,12 +157,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<MatchesRecord>>(
-      future: queryMatchesRecordOnce(
-        queryBuilder: (matchesRecord) =>
-            matchesRecord.where('user', isEqualTo: currentUserReference),
-        singleRecord: true,
-      ),
+    return FutureBuilder<UsersRecord>(
+      future: UsersRecord.getDocumentOnce(currentUserReference),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -158,10 +173,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
             ),
           );
         }
-        List<MatchesRecord> isMatchMatchesRecordList = snapshot.data;
-        final isMatchMatchesRecord = isMatchMatchesRecordList.isNotEmpty
-            ? isMatchMatchesRecordList.first
-            : null;
+        final isMatchUsersRecord = snapshot.data;
         return Scaffold(
           key: scaffoldKey,
           body: GestureDetector(
@@ -214,17 +226,15 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                         .primaryColor,
                                   ),
                                 ),
-                                child: AuthUserStreamWidget(
-                                  child: Container(
-                                    width: 50,
-                                    height: 50,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      currentUserPhoto,
-                                    ),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: CachedNetworkImage(
+                                    imageUrl: isMatchUsersRecord.photoUrl,
                                   ),
                                 ),
                               ),
@@ -294,15 +304,14 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 10, 0, 5),
-                                            child: AuthUserStreamWidget(
-                                              child: Container(
-                                                clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: CachedNetworkImage(
-                                                  imageUrl: currentUserPhoto,
-                                                ),
+                                            child: Container(
+                                              clipBehavior: Clip.antiAlias,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: CachedNetworkImage(
+                                                imageUrl:
+                                                    isMatchUsersRecord.photoUrl,
                                               ),
                                             ),
                                           ),
@@ -354,43 +363,17 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0, 10, 0, 5),
-                                              child: FutureBuilder<UsersRecord>(
-                                                future:
-                                                    UsersRecord.getDocumentOnce(
-                                                        isMatchMatchesRecord
-                                                            .user),
-                                                builder: (context, snapshot) {
-                                                  // Customize what your widget looks like when it's loading.
-                                                  if (!snapshot.hasData) {
-                                                    return Center(
-                                                      child: SizedBox(
-                                                        width: 30,
-                                                        height: 30,
-                                                        child:
-                                                            SpinKitFadingCircle(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryColor,
-                                                          size: 30,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  }
-                                                  final circleImageUsersRecord =
-                                                      snapshot.data;
-                                                  return Container(
-                                                    clipBehavior:
-                                                        Clip.antiAlias,
-                                                    decoration: BoxDecoration(
-                                                      shape: BoxShape.circle,
-                                                    ),
-                                                    child: CachedNetworkImage(
-                                                      imageUrl:
-                                                          circleImageUsersRecord
-                                                              .photoUrl,
-                                                    ),
-                                                  );
-                                                },
+                                              child: Container(
+                                                width: 150,
+                                                height: 150,
+                                                clipBehavior: Clip.antiAlias,
+                                                decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: CachedNetworkImage(
+                                                  imageUrl: '',
+                                                  fit: BoxFit.cover,
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -444,11 +427,49 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 30),
-                                  child: Text(
-                                    '',
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
+                                      0, 0, 0, 20),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 3, 0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'ywjrqe02' /* Avec un pourcentage de  */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle1
+                                              .override(
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryColor,
+                                                fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ).animated([
+                                          animationsMap[
+                                              'textOnPageLoadAnimation']
+                                        ]),
+                                      ),
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          '6go3cgq3' /* -- */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .title1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              fontSize: 19,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 Stack(
@@ -463,7 +484,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             reverseDuration:
                                                 Duration(milliseconds: 0),
                                             child: ChatWidget(
-                                              chatUser: widget.user,
+                                              chatUser: isMatchUsersRecord,
                                             ),
                                           ),
                                         );

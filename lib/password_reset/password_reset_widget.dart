@@ -1,11 +1,9 @@
 import '../auth/auth_util.dart';
-import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,19 +16,13 @@ class PasswordResetWidget extends StatefulWidget {
 }
 
 class _PasswordResetWidgetState extends State<PasswordResetWidget> {
-  TextEditingController pwdConfirmController;
-  bool pwdConfirmVisibility;
-  TextEditingController pwdNewController;
-  bool pwdNewVisibility;
+  TextEditingController emailController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    pwdConfirmController = TextEditingController();
-    pwdConfirmVisibility = false;
-    pwdNewController = TextEditingController();
-    pwdNewVisibility = false;
+    emailController = TextEditingController();
   }
 
   @override
@@ -103,11 +95,11 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                           child: TextFormField(
-                            controller: pwdNewController,
-                            obscureText: !pwdNewVisibility,
+                            controller: emailController,
+                            obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'mjgdwdyh' /* Nouveau mot de passe */,
+                                'mjgdwdyh' /* Votre email */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -128,18 +120,10 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                               filled: true,
                               fillColor:
                                   FlutterFlowTheme.of(context).customColor9,
-                              suffixIcon: InkWell(
-                                onTap: () => setState(
-                                  () => pwdNewVisibility = !pwdNewVisibility,
-                                ),
-                                child: Icon(
-                                  pwdNewVisibility
-                                      ? Icons.visibility_outlined
-                                      : Icons.visibility_off_outlined,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  size: 22,
-                                ),
+                              prefixIcon: Icon(
+                                Icons.email_outlined,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -150,64 +134,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                                       FlutterFlowTheme.of(context).customColor5,
                                   useGoogleFonts: false,
                                 ),
-                            keyboardType: TextInputType.visiblePassword,
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, -0.6),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                          child: TextFormField(
-                            controller: pwdConfirmController,
-                            obscureText: !pwdConfirmVisibility,
-                            decoration: InputDecoration(
-                              labelText: FFLocalizations.of(context).getText(
-                                'l7ftc8ur' /* Confirmer le mot de passe */,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              filled: true,
-                              fillColor:
-                                  FlutterFlowTheme.of(context).customColor9,
-                              suffixIcon: InkWell(
-                                onTap: () => setState(
-                                  () => pwdConfirmVisibility =
-                                      !pwdConfirmVisibility,
-                                ),
-                                child: Icon(
-                                  pwdConfirmVisibility
-                                      ? Icons.visibility_outlined
-                                      : Icons.visibility_off_outlined,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  size: 22,
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .subtitle1
-                                .override(
-                                  fontFamily: 'Avenir Light ',
-                                  color:
-                                      FlutterFlowTheme.of(context).customColor5,
-                                  useGoogleFonts: false,
-                                ),
-                            keyboardType: TextInputType.visiblePassword,
+                            keyboardType: TextInputType.emailAddress,
                           ),
                         ),
                       ),
@@ -217,11 +144,22 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
-                              final usersUpdateData = createUsersRecordData(
-                                pwd: pwdNewController.text,
+                              if (emailController.text.isEmpty) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'p7g1hpbb' /* Email (requis) */,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                                return;
+                              }
+                              await resetPassword(
+                                email: emailController.text,
+                                context: context,
                               );
-                              await currentUserReference
-                                  .update(usersUpdateData);
                             },
                             text: FFLocalizations.of(context).getText(
                               '9rsctwyn' /* Enregistrer */,
@@ -229,20 +167,20 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                             options: FFButtonOptions(
                               width: 160,
                               height: 50,
-                              color: FlutterFlowTheme.of(context).customColor9,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                               textStyle: FlutterFlowTheme.of(context)
                                   .subtitle2
                                   .override(
                                     fontFamily: 'Avenir Light ',
                                     color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                        .customColor7,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
                               borderSide: BorderSide(
                                 color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                    FlutterFlowTheme.of(context).customColor6,
                                 width: 1,
                               ),
                               borderRadius: 20,

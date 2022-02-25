@@ -4,9 +4,9 @@ import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
 import '../components/no_swipe_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../is_match/is_match_widget.dart';
 import '../profile/profile_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -14,7 +14,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key key}) : super(key: key);
@@ -35,21 +35,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
       initialState: AnimationState(
         offset: Offset(0, 0),
         scale: 1,
-        opacity: 0.235,
+        opacity: 0,
       ),
       finalState: AnimationState(
         offset: Offset(0, 0),
         scale: 1,
-        opacity: 0.805,
+        opacity: 0.925,
       ),
     ),
     'cardOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
-      delay: 200,
       fadeIn: true,
       initialState: AnimationState(
-        offset: Offset(-58, 0),
+        offset: Offset(-40, 0),
         scale: 1,
         opacity: 0,
       ),
@@ -62,10 +61,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
-      delay: 200,
       fadeIn: true,
       initialState: AnimationState(
-        offset: Offset(58, 0),
+        offset: Offset(40, 0),
         scale: 1,
         opacity: 0,
       ),
@@ -78,25 +76,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
-      delay: 200,
       fadeIn: true,
       initialState: AnimationState(
-        offset: Offset(-58, 0),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-    'circleImageOnActionTriggerAnimation1': AnimationInfo(
-      curve: Curves.bounceOut,
-      trigger: AnimationTrigger.onActionTrigger,
-      duration: 600,
-      initialState: AnimationState(
-        offset: Offset(-42.00000000000001, 0),
+        offset: Offset(-40, 0),
         scale: 1,
         opacity: 0,
       ),
@@ -108,11 +90,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
     ),
     'containerOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      delay: 200,
+      duration: 810,
+      delay: 170,
       fadeIn: true,
       initialState: AnimationState(
-        offset: Offset(0, 58),
+        offset: Offset(0, 50),
         scale: 1,
         opacity: 0,
       ),
@@ -122,24 +104,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
         opacity: 1,
       ),
     ),
-    'circleImageOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      fadeIn: true,
-      initialState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 2,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-    'circleImageOnActionTriggerAnimation2': AnimationInfo(
+    'circleImageOnActionTriggerAnimation': AnimationInfo(
       trigger: AnimationTrigger.onActionTrigger,
       duration: 600,
+      delay: 150,
       initialState: AnimationState(
         offset: Offset(0, 0),
         scale: 3,
@@ -154,25 +122,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
-      delay: 200,
       fadeIn: true,
       initialState: AnimationState(
-        offset: Offset(58, 0),
-        scale: 1,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        offset: Offset(0, 0),
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
-    'circleImageOnActionTriggerAnimation3': AnimationInfo(
-      curve: Curves.bounceOut,
-      trigger: AnimationTrigger.onActionTrigger,
-      duration: 600,
-      initialState: AnimationState(
-        offset: Offset(42, 0),
+        offset: Offset(40, 0),
         scale: 1,
         opacity: 0,
       ),
@@ -220,653 +172,623 @@ class _HomePageWidgetState extends State<HomePageWidget>
           );
         }
         List<UsersRecord> homePageUsersRecordList = snapshot.data;
+        // Return an empty Container when the document does not exist.
+        if (snapshot.data.isEmpty) {
+          return Container();
+        }
         final homePageUsersRecord = homePageUsersRecordList.isNotEmpty
             ? homePageUsersRecordList.first
             : null;
         return Scaffold(
           key: scaffoldKey,
-          body: Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.none,
-                image: Image.asset(
-                  'assets/images/Asset_2@4x.png',
-                ).image,
-              ),
-            ),
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 50),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ProfileWidget(),
-                              ),
-                            );
-                          },
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 3,
-                            shape: const CircleBorder(),
-                            child: Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                ),
-                              ),
-                              child: AuthUserStreamWidget(
-                                child: Container(
-                                  width: 50,
-                                  height: 50,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    currentUserPhoto,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'sczr27se' /* Découvrir */,
-                          ),
-                          style: FlutterFlowTheme.of(context).title1.override(
-                                fontFamily: 'Avenir Light ',
-                                fontSize: 22,
-                                useGoogleFonts: false,
-                              ),
-                        ),
-                        InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 0),
-                                reverseDuration: Duration(milliseconds: 0),
-                                child: AllChatPageWidget(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.asset(
-                              'assets/images/Asset_13@4x.png',
-                            ),
-                          ),
-                        ),
-                      ],
+          body: FutureBuilder<UsersRecord>(
+            future: UsersRecord.getDocumentOnce(homePageUsersRecord.reference),
+            builder: (context, snapshot) {
+              // Customize what your widget looks like when it's loading.
+              if (!snapshot.hasData) {
+                return Center(
+                  child: SizedBox(
+                    width: 30,
+                    height: 30,
+                    child: SpinKitFadingCircle(
+                      color: FlutterFlowTheme.of(context).primaryColor,
+                      size: 30,
                     ),
                   ),
-                  Expanded(
-                    child: FutureBuilder<List<ProfilesRecord>>(
-                      future: queryProfilesRecordOnce(
-                        singleRecord: true,
-                      ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 30,
-                              height: 30,
-                              child: SpinKitFadingCircle(
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 30,
-                              ),
-                            ),
-                          );
-                        }
-                        List<ProfilesRecord> pageViewProfilesRecordList =
-                            snapshot.data;
-                        if (pageViewProfilesRecordList.isEmpty) {
-                          return Center(
-                            child: Container(
-                              height: 300,
-                              child: NoSwipeWidget(),
-                            ),
-                          );
-                        }
-                        final pageViewProfilesRecord =
-                            pageViewProfilesRecordList.isNotEmpty
-                                ? pageViewProfilesRecordList.first
-                                : null;
-                        return Builder(
-                          builder: (context) {
-                            final profiles = pageViewProfilesRecord.users
-                                    .toList()
-                                    ?.toList() ??
-                                [];
-                            if (profiles.isEmpty) {
-                              return Center(
-                                child: Container(
-                                  height: 300,
-                                  child: NoSwipeWidget(),
-                                ),
-                              );
-                            }
-                            return Container(
-                              width: double.infinity,
-                              child: PageView.builder(
-                                controller: pageViewController ??=
-                                    PageController(
-                                        initialPage: min(profiles.length,
-                                            profiles.length - 1)),
-                                scrollDirection: Axis.horizontal,
-                                itemCount: profiles.length,
-                                itemBuilder: (context, profilesIndex) {
-                                  final profilesItem = profiles[profilesIndex];
-                                  return SingleChildScrollView(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Stack(
-                                          children: [
-                                            Align(
-                                              alignment: AlignmentDirectional(
-                                                  0.55, -1),
-                                              child: Container(
-                                                width: 300,
-                                                height: 300,
-                                                clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: Image.asset(
-                                                  'assets/images/Asset_15@4x.png',
-                                                ),
-                                              ),
-                                            ),
-                                            Align(
-                                              alignment: AlignmentDirectional(
-                                                  -0.5, 0.05),
-                                              child: Container(
-                                                width: 300,
-                                                height: 300,
-                                                clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: Image.asset(
-                                                  'assets/images/Asset_15@4x.png',
-                                                ),
-                                              ),
-                                            ),
-                                            Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0.1),
-                                              child: FutureBuilder<UsersRecord>(
-                                                future:
-                                                    UsersRecord.getDocumentOnce(
-                                                        pageViewProfilesRecord
-                                                            .user),
-                                                builder: (context, snapshot) {
-                                                  // Customize what your widget looks like when it's loading.
-                                                  if (!snapshot.hasData) {
-                                                    return Center(
-                                                      child: SizedBox(
-                                                        width: 30,
-                                                        height: 30,
-                                                        child:
-                                                            SpinKitFadingCircle(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryColor,
-                                                          size: 30,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  }
-                                                  final circleImageUsersRecord =
-                                                      snapshot.data;
-                                                  return InkWell(
-                                                    onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          child:
-                                                              FlutterFlowExpandedImageView(
-                                                            image:
-                                                                CachedNetworkImage(
-                                                              imageUrl:
-                                                                  circleImageUsersRecord
-                                                                      .photoUrl,
-                                                              fit: BoxFit
-                                                                  .contain,
-                                                            ),
-                                                            allowRotation:
-                                                                false,
-                                                            tag:
-                                                                circleImageUsersRecord
-                                                                    .photoUrl,
-                                                            useHeroAnimation:
-                                                                true,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Hero(
-                                                      tag:
-                                                          circleImageUsersRecord
-                                                              .photoUrl,
-                                                      transitionOnUserGestures:
-                                                          true,
-                                                      child: Container(
-                                                        width: 300,
-                                                        height: 300,
-                                                        clipBehavior:
-                                                            Clip.antiAlias,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          shape:
-                                                              BoxShape.circle,
-                                                        ),
-                                                        child:
-                                                            CachedNetworkImage(
-                                                          imageUrl:
-                                                              circleImageUsersRecord
-                                                                  .photoUrl,
-                                                          fit: BoxFit.contain,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  );
-                                                },
-                                              ),
-                                            ),
-                                          ],
+                );
+              }
+              final containerUsersRecord = snapshot.data;
+              return Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.none,
+                    image: Image.asset(
+                      'assets/images/Asset_2@4x.png',
+                    ).image,
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'assets/images/Asset_12@4x.png',
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ProfileWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 3,
+                                    shape: const CircleBorder(),
+                                    child: Container(
+                                      width: 50,
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                         ),
-                                        Padding(
+                                      ),
+                                      child: AuthUserStreamWidget(
+                                        child: Container(
+                                          width: 50,
+                                          height: 50,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: CachedNetworkImage(
+                                            imageUrl: currentUserPhoto,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'kk1wnohh' /* Découvrir */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .title1
+                                      .override(
+                                        fontFamily: 'Avenir Light ',
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor4,
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w900,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 0),
+                                        reverseDuration:
+                                            Duration(milliseconds: 0),
+                                        child: AllChatPageWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    width: 50,
+                                    height: 50,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Asset_13@4x.png',
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Builder(
+                              builder: (context) {
+                                final usersProfiles = containerUsersRecord.users
+                                        .toList()
+                                        ?.toList() ??
+                                    [];
+                                if (usersProfiles.isEmpty) {
+                                  return Center(
+                                    child: NoSwipeWidget(),
+                                  );
+                                }
+                                return Container(
+                                  width: double.infinity,
+                                  height: 500,
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 0, 50),
+                                    child: PageView.builder(
+                                      controller: pageViewController ??=
+                                          PageController(
+                                              initialPage: min(
+                                                  0, usersProfiles.length - 1)),
+                                      scrollDirection: Axis.horizontal,
+                                      itemCount: usersProfiles.length,
+                                      itemBuilder:
+                                          (context, usersProfilesIndex) {
+                                        final usersProfilesItem =
+                                            usersProfiles[usersProfilesIndex];
+                                        return Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0, 30, 0, 0),
-                                          child: FutureBuilder<UsersRecord>(
-                                            future: UsersRecord.getDocumentOnce(
-                                                pageViewProfilesRecord.user),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 30,
-                                                    height: 30,
-                                                    child: SpinKitFadingCircle(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryColor,
-                                                      size: 30,
-                                                    ),
+                                          child: Container(
+                                            decoration: BoxDecoration(),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Container(
+                                                  width: double.infinity,
+                                                  decoration: BoxDecoration(),
+                                                  child: Stack(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0, 0),
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.2, 0),
+                                                        child: Container(
+                                                          width: 250,
+                                                          height: 250,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                          ),
+                                                          child: Image.asset(
+                                                            'assets/images/Asset_15@4x.png',
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                -0.2, 0),
+                                                        child: Container(
+                                                          width: 250,
+                                                          height: 250,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
+                                                          ),
+                                                          child: Image.asset(
+                                                            'assets/images/Asset_15@4x.png',
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: Stack(
+                                                          children: [
+                                                            Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child:
+                                                                  CircularPercentIndicator(
+                                                                percent:
+                                                                    containerUsersRecord
+                                                                        .progressBar,
+                                                                radius: 115,
+                                                                lineWidth: 10,
+                                                                animation: true,
+                                                                progressColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primaryColor,
+                                                                backgroundColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .customColor6,
+                                                              ),
+                                                            ),
+                                                            Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child: Container(
+                                                                width: 220,
+                                                                height: 220,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                ),
+                                                                child:
+                                                                    CachedNetworkImage(
+                                                                  imageUrl:
+                                                                      containerUsersRecord
+                                                                          .photoUrl,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
-                                                );
-                                              }
-                                              final rowUsersRecord =
-                                                  snapshot.data;
-                                              return Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    rowUsersRecord.displayName,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .title1,
-                                                  ).animated([
-                                                    animationsMap[
-                                                        'textOnPageLoadAnimation']
-                                                  ]),
-                                                ],
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 10, 0, 0),
-                                          child: FutureBuilder<UsersRecord>(
-                                            future: UsersRecord.getDocumentOnce(
-                                                pageViewProfilesRecord.user),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 30,
-                                                    height: 30,
-                                                    child: SpinKitFadingCircle(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryColor,
-                                                      size: 30,
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              final rowUsersRecord =
-                                                  snapshot.data;
-                                              return Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Card(
-                                                    clipBehavior: Clip
-                                                        .antiAliasWithSaveLayer,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor10,
-                                                    elevation: 5,
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20),
-                                                    ),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  5, 5, 5, 5),
-                                                      child: Text(
-                                                        rowUsersRecord.country,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 20, 0, 0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        containerUsersRecord
+                                                            .displayName
+                                                            .maybeHandleOverflow(
+                                                                maxChars: 25),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyText1,
-                                                      ),
-                                                    ),
-                                                  ).animated([
-                                                    animationsMap[
-                                                        'cardOnPageLoadAnimation1']
-                                                  ]),
-                                                  Card(
-                                                    clipBehavior: Clip
-                                                        .antiAliasWithSaveLayer,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .customColor10,
-                                                    elevation: 5,
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20),
-                                                    ),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  5, 5, 5, 5),
-                                                      child:
-                                                          AuthUserStreamWidget(
-                                                        child: Text(
-                                                          functions
-                                                              .distance(
-                                                                  rowUsersRecord
-                                                                      .location,
-                                                                  currentUserDocument
-                                                                      ?.location)
-                                                              .toString(),
-                                                          style: FlutterFlowTheme
+                                                                .title1,
+                                                      ).animated([
+                                                        animationsMap[
+                                                            'textOnPageLoadAnimation']
+                                                      ]),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 10, 0, 0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(0, 0,
+                                                                    10, 0),
+                                                        child: Card(
+                                                          clipBehavior: Clip
+                                                              .antiAliasWithSaveLayer,
+                                                          color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .bodyText1,
-                                                        ),
+                                                              .customColor10,
+                                                          elevation: 2,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20),
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        10,
+                                                                        10,
+                                                                        10,
+                                                                        10),
+                                                            child: Text(
+                                                              containerUsersRecord
+                                                                  .city,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyText1,
+                                                            ),
+                                                          ),
+                                                        ).animated([
+                                                          animationsMap[
+                                                              'cardOnPageLoadAnimation1']
+                                                        ]),
                                                       ),
-                                                    ),
-                                                  ).animated([
-                                                    animationsMap[
-                                                        'cardOnPageLoadAnimation2']
-                                                  ]),
-                                                ],
-                                              );
-                                            },
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(0, 0,
+                                                                    10, 0),
+                                                        child: Card(
+                                                          clipBehavior: Clip
+                                                              .antiAliasWithSaveLayer,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .customColor10,
+                                                          elevation: 2,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20),
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        10,
+                                                                        10,
+                                                                        10,
+                                                                        10),
+                                                            child:
+                                                                AuthUserStreamWidget(
+                                                              child: Text(
+                                                                functions
+                                                                    .distance(
+                                                                        containerUsersRecord
+                                                                            .location,
+                                                                        currentUserDocument
+                                                                            ?.location)
+                                                                    .toString(),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ).animated([
+                                                          animationsMap[
+                                                              'cardOnPageLoadAnimation2']
+                                                        ]),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        );
+                                      },
                                     ),
-                                  );
-                                },
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                    child: FutureBuilder<List<MatchesRecord>>(
-                      future: queryMatchesRecordOnce(
-                        singleRecord: true,
-                      ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 30,
-                              height: 30,
-                              child: SpinKitFadingCircle(
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 30,
-                              ),
+                                  ),
+                                );
+                              },
                             ),
-                          );
-                        }
-                        List<MatchesRecord> swipeButtonMatchesRecordList =
-                            snapshot.data;
-                        final swipeButtonMatchesRecord =
-                            swipeButtonMatchesRecordList.isNotEmpty
-                                ? swipeButtonMatchesRecordList.first
-                                : null;
-                        return Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            InkWell(
-                              onTap: () async {
-                                await pageViewController.previousPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: const CircleBorder(),
-                                child: Container(
-                                  width: 80,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor10,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 10,
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                InkWell(
+                                  onTap: () async {
+                                    await pageViewController.previousPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
+                                    );
+                                  },
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 3,
+                                    shape: const CircleBorder(),
+                                    child: Container(
+                                      width: 80,
+                                      height: 80,
+                                      decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .customColor6,
-                                      )
-                                    ],
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Stack(
-                                    alignment: AlignmentDirectional(
-                                        -0.050000000000000044, 0),
-                                    children: [
-                                      Container(
-                                        width: 50,
-                                        height: 50,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/icons8_undo_100px_1.png',
-                                          fit: BoxFit.contain,
-                                        ),
-                                      ).animated([
-                                        animationsMap[
-                                            'circleImageOnActionTriggerAnimation1']
-                                      ]),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ).animated([
-                              animationsMap['containerOnPageLoadAnimation1']
-                            ]),
-                            InkWell(
-                              onTap: () async {
-                                final matchesCreateData =
-                                    createMatchesRecordData(
-                                  like: !(currentUserDocument?.like),
-                                );
-                                await MatchesRecord.collection
-                                    .doc()
-                                    .set(matchesCreateData);
-                                await (animationsMap[
-                                            'circleImageOnActionTriggerAnimation2']
-                                        .curvedAnimation
-                                        .parent as AnimationController)
-                                    .forward(from: 0.0);
-                                await pageViewController.nextPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 5,
-                                shape: const CircleBorder(),
-                                child: Container(
-                                  width: 120,
-                                  height: 120,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Stack(
-                                    alignment: AlignmentDirectional(0, 0),
-                                    children: [
-                                      Container(
-                                        width: 120,
-                                        height: 120,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/Asset_8@4x.png',
+                                            .customColor10,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 10,
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor6,
+                                            spreadRadius: 10,
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor6,
                                         ),
                                       ),
-                                      Container(
-                                        width: 100,
-                                        height: 100,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10, 10, 10, 10),
+                                        child: Container(
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/icons8_undo_100px_1.png',
+                                            fit: BoxFit.fill,
+                                          ),
                                         ),
-                                        child: Image.asset(
-                                          'assets/images/Asset_9@4x.png',
-                                        ),
-                                      ).animated([
-                                        animationsMap[
-                                            'circleImageOnPageLoadAnimation'],
-                                        animationsMap[
-                                            'circleImageOnActionTriggerAnimation2']
-                                      ]),
-                                    ],
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                            ).animated([
-                              animationsMap['containerOnPageLoadAnimation2']
-                            ]),
-                            InkWell(
-                              onTap: () async {
-                                await pageViewController.nextPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: const CircleBorder(),
-                                child: Container(
-                                  width: 80,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor10,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Stack(
-                                    alignment: AlignmentDirectional(
-                                        -0.050000000000000044, 0),
-                                    children: [
-                                      Container(
-                                        width: 50,
-                                        height: 50,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
+                                ).animated([
+                                  animationsMap['containerOnPageLoadAnimation1']
+                                ]),
+                                InkWell(
+                                  onTap: () async {
+                                    await pageViewController.nextPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
+                                    );
+                                    await pageViewController.nextPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
+                                    );
+                                    final matchesCreateData =
+                                        createMatchesRecordData(
+                                      user: homePageUsersRecord.reference,
+                                    );
+                                    await MatchesRecord.collection
+                                        .doc()
+                                        .set(matchesCreateData);
+                                    await Future.delayed(
+                                      Duration(
+                                        milliseconds: animationsMap[
+                                                'circleImageOnActionTriggerAnimation']
+                                            .delay
+                                            .toInt(),
+                                      ),
+                                      () => (animationsMap[
+                                                  'circleImageOnActionTriggerAnimation']
+                                              .curvedAnimation
+                                              .parent as AnimationController)
+                                          .forward(from: 0.0),
+                                    );
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.bottomToTop,
+                                        duration: Duration(milliseconds: 200),
+                                        reverseDuration:
+                                            Duration(milliseconds: 200),
+                                        child: IsMatchWidget(
+                                          user: homePageUsersRecord,
                                         ),
-                                        child: Image.asset(
-                                          'assets/images/icons8_Close_100px.png',
+                                      ),
+                                    );
+                                  },
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 3,
+                                    shape: const CircleBorder(),
+                                    child: Container(
+                                      width: 120,
+                                      height: 120,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: Image.asset(
+                                            'assets/images/Asset_8@4x.png',
+                                          ).image,
                                         ),
-                                      ).animated([
-                                        animationsMap[
-                                            'circleImageOnActionTriggerAnimation3']
-                                      ]),
-                                    ],
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10, 10, 10, 10),
+                                        child: Container(
+                                          width: 80,
+                                          height: 80,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/Asset_9@4x.png',
+                                            fit: BoxFit.contain,
+                                          ),
+                                        ).animated([
+                                          animationsMap[
+                                              'circleImageOnActionTriggerAnimation']
+                                        ]),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                            ).animated([
-                              animationsMap['containerOnPageLoadAnimation3']
-                            ]),
-                          ],
-                        );
-                      },
+                                ).animated([
+                                  animationsMap['containerOnPageLoadAnimation2']
+                                ]),
+                                InkWell(
+                                  onTap: () async {
+                                    await pageViewController.nextPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
+                                    );
+                                  },
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 3,
+                                    shape: const CircleBorder(),
+                                    child: Container(
+                                      width: 80,
+                                      height: 80,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .customColor10,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 10,
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor6,
+                                            spreadRadius: 10,
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor6,
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10, 10, 10, 10),
+                                        child: Container(
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/icons8_Close_100px.png',
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ).animated([
+                                  animationsMap['containerOnPageLoadAnimation3']
+                                ]),
+                              ],
+                            ),
+                          ),
+                          NavbarWidget(),
+                        ],
+                      ),
                     ),
-                  ),
-                  NavbarWidget(),
-                ],
-              ),
-            ),
+                  ],
+                ),
+              );
+            },
           ),
         );
       },

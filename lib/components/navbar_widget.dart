@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
 import '../matches/matches_widget.dart';
+import '../profile/profile_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -182,22 +183,35 @@ class _NavbarWidgetState extends State<NavbarWidget>
                     ),
                   ),
                 ),
-                Material(
-                  color: Colors.transparent,
-                  elevation: 5,
-                  shape: const CircleBorder(),
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).customColor9,
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: Image.asset(
-                          'assets/images/Asset_12@4x.png',
-                        ).image,
+                InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 0),
+                        reverseDuration: Duration(milliseconds: 0),
+                        child: ProfileWidget(),
                       ),
-                      shape: BoxShape.circle,
+                    );
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    elevation: 5,
+                    shape: const CircleBorder(),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).customColor9,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: Image.asset(
+                            'assets/images/Asset_12@4x.png',
+                          ).image,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
                 ),

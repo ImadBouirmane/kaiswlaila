@@ -219,14 +219,17 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                         ),
                         options: FFButtonOptions(
                           width: 150,
-                          height: 40,
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.white,
-                                    useGoogleFonts: false,
-                                  ),
+                          height: 50,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).customColor7,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: false,
+                              ),
                           elevation: 5,
                           borderSide: BorderSide(
                             color: Colors.transparent,

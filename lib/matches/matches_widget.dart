@@ -122,8 +122,8 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
-                                  currentUserPhoto,
+                                child: CachedNetworkImage(
+                                  imageUrl: currentUserPhoto,
                                 ),
                               ),
                             ),
@@ -172,10 +172,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 10),
                     child: FutureBuilder<List<MatchesRecord>>(
-                      future: queryMatchesRecordOnce(
-                        queryBuilder: (matchesRecord) =>
-                            matchesRecord.orderBy('user', descending: true),
-                      ),
+                      future: queryMatchesRecordOnce(),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
                         if (!snapshot.hasData) {
@@ -284,7 +281,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                       .photoUrl,
                                                   width: double.infinity,
                                                   height: double.infinity,
-                                                  fit: BoxFit.cover,
+                                                  fit: BoxFit.fill,
                                                 ),
                                               ),
                                             ),
@@ -337,7 +334,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            widget.user
+                                                            containerUsersRecord
                                                                 .displayName,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
