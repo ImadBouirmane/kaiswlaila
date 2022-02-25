@@ -36,7 +36,7 @@ class _ConditionsUtilisationWidgetState
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 80),
+              padding: EdgeInsetsDirectional.fromSTEB(10, 40, 10, 80),
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -56,7 +56,7 @@ class _ConditionsUtilisationWidgetState
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(30, 30, 30, 30),
+                      padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 20),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -277,7 +277,6 @@ class _ConditionsUtilisationWidgetState
                               ),
                             ],
                           ),
-                          Spacer(),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                             child: Row(
