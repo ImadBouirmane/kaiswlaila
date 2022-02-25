@@ -3037,7 +3037,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // progressbarImage
   {
-    'olrg4cdo': {
+    'uw1m01bo': {
       'fr': 'Home',
       'ar': '',
       'en': '',
@@ -3052,19 +3052,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Discover',
       'tr': 'Keşfetmek',
     },
-    '5ovhats5': {
+    'f5myzcgf': {
       'fr': 'Hello World',
       'ar': '',
       'en': '',
       'tr': '',
     },
-    'fp7orvm8': {
+    'n935r6yy': {
       'fr': 'Hello World',
       'ar': '',
       'en': '',
       'tr': '',
     },
-    '20zoq66c': {
+    'a8gnpd7q': {
       'fr': 'Hello World',
       'ar': '',
       'en': '',
