@@ -20,12 +20,12 @@ class FFLocalizations {
       (kTranslationsMap[key] ?? {})[locale.languageCode] ?? '';
 
   String getVariableText({
-    String fr = '',
-    String ar = '',
-    String en = '',
-    String tr = '',
+    String frText = '',
+    String arText = '',
+    String enText = '',
+    String trText = '',
   }) =>
-      [fr, ar, en, tr][languageIndex] ?? '';
+      [frText, arText, enText, trText][languageIndex] ?? '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -109,44 +109,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Phone Number',
       'tr': 'Telefon numarası',
     },
+    '36gt66mz': {
+      'fr': 'Créer',
+      'ar': 'إنشاء',
+      'en': 'Create',
+      'tr': 'Yaratmak',
+    },
     'n8a0ygiq': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ana sayfa',
-    },
-  },
-  // Onboarding
-  {
-    'd2f68ui3': {
-      'fr':
-          'KWL est la première\napplication conçue \npar une équipe d’experts \nen psychologie et \nspécialistes des relations \nde couple. ',
-      'ar':
-          'KWL هو أول تطبيق صممه فريق من خبراء \nعلم النفس وأخصائيي العلاقات الزوجية.',
-      'en':
-          'KWL is the first application\ndesigned by a team of \npsychology experts and \ncouple relationship \nspecialists.',
-      'tr':
-          'KWL ilk\nuygulama tasarlanmış\nuzman bir ekip tarafından\npsikolojide ve\nilişki uzmanları\ntork.',
-    },
-    's11ixzl1': {
-      'fr': 'Trouvez votre \npartenaire idéal\navec nous,',
-      'ar': 'ابحث عن شريكك المثالي معنا ،',
-      'en': 'Find your ideal \npartner with us,',
-      'tr': 'seninkini bul\nideal eş\nbizimle,',
-    },
-    'u3k7yufq': {
-      'fr': 'Love for Real !',
-      'ar': 'الحب الحقيقي!',
-      'en': 'Love for Real!',
-      'tr': 'Gerçek Aşk!',
-    },
-    'p911bmit': {
-      'fr': 'Commencer',
-      'ar': 'بداية',
-      'en': 'Start',
-      'tr': 'Başlamak',
-    },
-    'lmckg3ku': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
@@ -214,6 +183,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
+    },
+  },
+  // Onboarding
+  {
+    'd2f68ui3': {
+      'fr':
+          'KWL est la première\napplication conçue \npar une équipe d’experts \nen psychologie et \nspécialistes des relations \nde couple. ',
+      'ar':
+          'KWL هو أول تطبيق صممه فريق من خبراء \nعلم النفس وأخصائيي العلاقات الزوجية.',
+      'en':
+          'KWL is the first application\ndesigned by a team of \npsychology experts and \ncouple relationship \nspecialists.',
+      'tr':
+          'KWL ilk\nuygulama tasarlanmış\nuzman bir ekip tarafından\npsikolojide ve\nilişki uzmanları\ntork.',
+    },
+    's11ixzl1': {
+      'fr': 'Trouvez votre \npartenaire idéal\navec nous,',
+      'ar': 'ابحث عن شريكك المثالي معنا ،',
+      'en': 'Find your ideal \npartner with us,',
+      'tr': 'seninkini bul\nideal eş\nbizimle,',
+    },
+    'u3k7yufq': {
+      'fr': 'Love for Real !',
+      'ar': 'الحب الحقيقي!',
+      'en': 'Love for Real!',
+      'tr': 'Gerçek Aşk!',
+    },
+    'p911bmit': {
+      'fr': 'Commencer',
+      'ar': 'بداية',
+      'en': 'Start',
+      'tr': 'Başlamak',
+    },
+    'lmckg3ku': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ana sayfa',
     },
   },
   // conditionsUtilisation
@@ -606,7 +612,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hwte74bp': {
       'fr': 'Continuer',
       'ar': 'الإستكمال',
-      'en': 'To continue',
+      'en': 'Continue',
       'tr': 'Devam etmek',
     },
     'byiry6u3': {
@@ -899,87 +905,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // QsPage4
-  {
-    'ppu4s2x0': {
-      'fr': 'Questionnaire',
-      'ar': 'إستطلاع',
-      'en': 'Survey',
-      'tr': 'Anket',
-    },
-    '7682nbj1': {
-      'fr': '40%',
-      'ar': '40٪',
-      'en': '40%',
-      'tr': '40%',
-    },
-    'il0hvrhc': {
-      'fr': 'Vos besoins',
-      'ar': 'احتياجاتك',
-      'en': 'Your needs',
-      'tr': 'İhtiyaçlarınız',
-    },
-    'b88wrl3j': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
-      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
-      'en': 'From 1 to 5 (1 not very important, 10 very important)',
-      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
-    },
-    'ulzkksko': {
-      'fr': 'Affection',
-      'ar': 'عاطفة',
-      'en': 'Affection',
-      'tr': 'Alaka',
-    },
-    'z18sn5vq': {
-      'fr': 'Indépendance',
-      'ar': 'استقلال',
-      'en': 'Independence',
-      'tr': 'Bağımsızlık',
-    },
-    'yflj2fva': {
-      'fr': 'Liberté',
-      'ar': 'حرية',
-      'en': 'Freedom',
-      'tr': 'Özgürlük',
-    },
-    'wouevk5m': {
-      'fr': 'Reconnaissance',
-      'ar': 'إعتراف',
-      'en': 'Acknowledgement',
-      'tr': 'teşekkür',
-    },
-    'ysmqc5y7': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
-      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
-      'en': 'From 1 to 5 (1 not very important, 10 very important)',
-      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
-    },
-    'g6vr4fu1': {
-      'fr': 'Admiration ',
-      'ar': 'الإعجاب',
-      'en': 'Admiration',
-      'tr': 'hayranlık',
-    },
-    'ljkxmklp': {
-      'fr': 'Fonder une famille',
-      'ar': 'تكوين أسرة',
-      'en': 'Build a family',
-      'tr': 'bir aile kur',
-    },
-    '5ehrybj4': {
-      'fr': 'Continuer',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam et',
-    },
-    'o978kh7p': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'EV',
-    },
-  },
   // QsPage5
   {
     '268nm25r': {
@@ -1085,6 +1010,87 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
+    },
+  },
+  // QsPage4
+  {
+    'ppu4s2x0': {
+      'fr': 'Questionnaire',
+      'ar': 'إستطلاع',
+      'en': 'Survey',
+      'tr': 'Anket',
+    },
+    '7682nbj1': {
+      'fr': '40%',
+      'ar': '40٪',
+      'en': '40%',
+      'tr': '40%',
+    },
+    'il0hvrhc': {
+      'fr': 'Vos besoins',
+      'ar': 'احتياجاتك',
+      'en': 'Your needs',
+      'tr': 'İhtiyaçlarınız',
+    },
+    'b88wrl3j': {
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
+      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
+      'en': 'From 1 to 5 (1 not very important, 10 very important)',
+      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
+    },
+    'ulzkksko': {
+      'fr': 'Affection',
+      'ar': 'عاطفة',
+      'en': 'Affection',
+      'tr': 'Alaka',
+    },
+    'z18sn5vq': {
+      'fr': 'Indépendance',
+      'ar': 'استقلال',
+      'en': 'Independence',
+      'tr': 'Bağımsızlık',
+    },
+    'yflj2fva': {
+      'fr': 'Liberté',
+      'ar': 'حرية',
+      'en': 'Freedom',
+      'tr': 'Özgürlük',
+    },
+    'wouevk5m': {
+      'fr': 'Reconnaissance',
+      'ar': 'إعتراف',
+      'en': 'Acknowledgement',
+      'tr': 'teşekkür',
+    },
+    'ysmqc5y7': {
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
+      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
+      'en': 'From 1 to 5 (1 not very important, 10 very important)',
+      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
+    },
+    'g6vr4fu1': {
+      'fr': 'Admiration ',
+      'ar': 'الإعجاب',
+      'en': 'Admiration',
+      'tr': 'hayranlık',
+    },
+    'ljkxmklp': {
+      'fr': 'Fonder une famille',
+      'ar': 'تكوين أسرة',
+      'en': 'Build a family',
+      'tr': 'bir aile kur',
+    },
+    '5ehrybj4': {
+      'fr': 'Continuer',
+      'ar': 'يكمل',
+      'en': 'Continue',
+      'tr': 'Devam et',
+    },
+    'o978kh7p': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'EV',
     },
   },
   // QsPage6
@@ -1246,7 +1252,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'd48ohd78': {
       'fr': 'Continuer\n',
       'ar': 'لاستكمال',
-      'en': 'To continue',
+      'en': 'Continue',
       'tr': 'Devam etmek',
     },
     'o5zfgh4f': {
@@ -1333,13 +1339,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hhhhcaip': {
       'fr': 'Continuer\n',
       'ar': 'لاستكمال',
-      'en': 'To continue',
+      'en': 'Continue',
       'tr': 'Devam etmek',
     },
     '1ppdc30w': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
       'tr': 'Bu bana yeter!',
     },
     'f3dhdl1s': {
@@ -1373,13 +1379,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sds7x7o4': {
       'fr': 'Continuer\n',
       'ar': 'لاستكمال',
-      'en': 'To continue',
+      'en': 'Continue',
       'tr': 'Devam etmek',
     },
     'yowkqpii': {
       'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That&#39;s enough for me!',
+      'en': 'That\'s enough for me!',
       'tr': 'Bu bana yeter!',
     },
     '1k6hs9mf': {
@@ -1538,7 +1544,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7744c1hs': {
       'fr': 'Continuer',
       'ar': 'لاستكمال',
-      'en': 'To continue',
+      'en': 'Continue',
       'tr': 'Devam etmek',
     },
     '5wxj51h3': {
@@ -1555,6 +1561,96 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'إكتشف',
       'en': 'Discover',
       'tr': 'Keşfetmek',
+    },
+    'kqiymfxc': {
+      'fr': 'Sara',
+      'ar': 'ساره',
+      'en': 'Sarah',
+      'tr': 'Sarah',
+    },
+    '5azsqzew': {
+      'fr': 'Agadir',
+      'ar': 'أكادير',
+      'en': 'agadir',
+      'tr': 'agadir',
+    },
+    'ulj8niej': {
+      'fr': '478 Km',
+      'ar': '478 كم',
+      'en': '478 km',
+      'tr': '478 km',
+    },
+    't8mp8t9l': {
+      'fr': 'Mary',
+      'ar': 'ماري',
+      'en': 'Mary',
+      'tr': 'Mary',
+    },
+    '04mrdc46': {
+      'fr': 'Paris',
+      'ar': 'أكادير',
+      'en': 'agadir',
+      'tr': 'agadir',
+    },
+    'mdzkfqhn': {
+      'fr': '1500 Km',
+      'ar': '1500 كم',
+      'en': '1500km',
+      'tr': '1500km',
+    },
+    'm4gdnnxa': {
+      'fr': 'Deepika',
+      'ar': 'ديبيكا',
+      'en': 'Deepika',
+      'tr': 'Deepika',
+    },
+    'eq8te7vz': {
+      'fr': 'Mumbai',
+      'ar': 'مومباي',
+      'en': 'mumbai',
+      'tr': 'mumbai',
+    },
+    '3lweqy47': {
+      'fr': '10150 km',
+      'ar': '10150 كم',
+      'en': '10150km',
+      'tr': '10150km',
+    },
+    'mhdbxjnl': {
+      'fr': 'Anastasia',
+      'ar': 'اناستاسيا',
+      'en': 'Anastasia',
+      'tr': 'anastasya',
+    },
+    '9u11oc8t': {
+      'fr': 'Moscow',
+      'ar': 'موسكو',
+      'en': 'Moscow',
+      'tr': 'Moskova',
+    },
+    '4vem23df': {
+      'fr': '4500 Km',
+      'ar': '4500 كم',
+      'en': '4500 km',
+      'tr': '4500 km',
+    },
+    'kjnk21la': {
+      'fr': 'Kaoutar',
+      'ar': 'كوثر',
+      'en': 'Kaoutar',
+      'tr': 'kaoutar',
+    },
+    'wnw8ak8w': {
+      'fr': 'Beyrouth',
+      'ar': 'بيروت',
+      'en': 'Beirut',
+      'tr': 'Beyrut',
+    },
+    '6nzk8kr0': {
+      'fr': '5502 Km',
+      'ar': '5502 كم',
+      'en': '5502 km',
+      'tr': '5502 km',
     },
     'lj9lkz1j': {
       'fr': 'Accueil',
@@ -1584,10 +1680,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'yüzde ile',
     },
     '6go3cgq3': {
-      'fr': '--',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': '65%',
+      'ar': '50٪',
+      'en': '50%',
+      'tr': '%50',
     },
     'mpxwk6ui': {
       'fr': 'Démarrez une conversation maintenant ',
@@ -1622,6 +1718,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Matchs',
       'tr': 'Flört',
     },
+    'kt4s5fsh': {
+      'fr': 'Sara',
+      'ar': 'ساره',
+      'en': 'Sarah',
+      'tr': 'Sarah',
+    },
+    'h7f9xqnv': {
+      'fr': 'Mary',
+      'ar': 'ماري',
+      'en': 'Mary',
+      'tr': 'Mary',
+    },
+    '34yx3kdi': {
+      'fr': 'Kaoutar',
+      'ar': 'كوثر',
+      'en': 'Kaoutar',
+      'tr': 'kaoutar',
+    },
     '5cfo1suo': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
@@ -1637,11 +1751,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Profile',
       'tr': 'Profil',
     },
+    'dqis7x6n': {
+      'fr': ',',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
     '0olwx22j': {
       'fr': 'À propos de moi',
       'ar': 'عني',
       'en': 'About me',
       'tr': 'Benim hakkımda',
+    },
+    'mm8kuf2a': {
+      'fr': 'Intérêts',
+      'ar': 'الإهتمامات',
+      'en': 'Interests',
+      'tr': 'ilgi alanları',
+    },
+    'zfssgo4b': {
+      'fr': 'La randonnée',
+      'ar': 'جولة على الأقدام',
+      'en': 'Hiking',
+      'tr': 'Doğa yürüyüşü',
+    },
+    'f4kwb8wf': {
+      'fr': 'Nature/Jardinage',
+      'ar': 'الطبيعة / البستنة',
+      'en': 'Nature/Gardening',
+      'tr': 'Doğa/Bahçecilik',
+    },
+    '2dzl7yvp': {
+      'fr': 'L’art',
+      'ar': 'فن',
+      'en': 'Art',
+      'tr': 'Sanat',
+    },
+    'bk8urqou': {
+      'fr': 'Les voyages',
+      'ar': 'الرحلات',
+      'en': 'The trips',
+      'tr': 'geziler',
+    },
+    'pabqa4hn': {
+      'fr': 'Films/Cinéma',
+      'ar': 'أفلام / سينما',
+      'en': 'Movies/Cinema',
+      'tr': 'Filmler/Sinema',
     },
     '25o6rp5o': {
       'fr': 'Photos',
@@ -3020,63 +3176,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // background
-  {
-    'b5wvpplb': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-    'rj8jbrgo': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // progressbarImage
-  {
-    'uw1m01bo': {
-      'fr': 'Home',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-  },
-  // homePageCopy
-  {
-    '6zgscpc8': {
-      'fr': 'Découvrir',
-      'ar': 'إكتشف',
-      'en': 'Discover',
-      'tr': 'Keşfetmek',
-    },
-    'f5myzcgf': {
-      'fr': 'Hello World',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-    'n935r6yy': {
-      'fr': 'Hello World',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-    'a8gnpd7q': {
-      'fr': 'Hello World',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-    '4wqagmi4': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
   // EmptyChats
   {
     'fh8476sw': {
@@ -3159,6 +3258,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
       'en': '',
       'tr': '',
+    },
+  },
+  // ageChoicePage
+  {
+    '4vk6npjo': {
+      'fr': 'Quelle tranche d’âge\n recherchez-vous ?',
+      'ar': 'ما هي الفئة العمرية التي تبحث عنها؟',
+      'en': 'What age group are you\n looking for?',
+      'tr': 'Hangi yaş grubunu arıyorsunuz?',
+    },
+    '1htmgfon': {
+      'fr': 'Glissez le slider ci-dessous:',
+      'ar': 'إختر عبر المنزلق أدناه:',
+      'en': 'Drag the slider below:',
+      'tr': 'Aşağıdaki kaydırıcıyı sürükleyin:',
+    },
+    '8d7vzcfe': {
+      'fr': 'Continuer',
+      'ar': 'لاستكمال',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
     },
   },
   // Miscellaneous

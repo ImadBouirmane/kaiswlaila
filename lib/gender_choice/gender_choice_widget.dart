@@ -166,7 +166,7 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                               fontFamily: 'Avenir Light ',
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryColor,
+                                                      .tertiaryColor,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: false,
                                             ),
@@ -178,7 +178,7 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                         direction: Axis.horizontal,
                                         radioButtonColor:
                                             FlutterFlowTheme.of(context)
-                                                .primaryColor,
+                                                .tertiaryColor,
                                         inactiveRadioButtonColor:
                                             Color(0x8A000000),
                                         toggleable: false,

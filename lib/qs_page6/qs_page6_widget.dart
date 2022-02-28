@@ -126,7 +126,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   LinearPercentIndicator(
-                                      percent: qsPage6UsersRecord.progressBar,
+                                      percent: 0.7,
                                       width: MediaQuery.of(context).size.width *
                                           0.7,
                                       lineHeight: 24,
@@ -220,7 +220,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    30, 30, 30, 30),
+                                                    30, 0, 30, 30),
                                             child: FlutterFlowCheckboxGroup(
                                               initiallySelected:
                                                   checkboxGroupValues1 != null
@@ -285,7 +285,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    30, 30, 30, 30),
+                                                    30, 0, 30, 30),
                                             child: FlutterFlowCheckboxGroup(
                                               initiallySelected:
                                                   checkboxGroupValues2 != null

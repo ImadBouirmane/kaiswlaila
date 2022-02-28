@@ -2,18 +2,17 @@ import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
-import '../components/no_swipe_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../is_match/is_match_widget.dart';
 import '../profile/profile_widget.dart';
-import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -28,7 +27,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
   PageController pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final animationsMap = {
-    'textOnPageLoadAnimation': AnimationInfo(
+    'textOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
@@ -59,6 +58,186 @@ class _HomePageWidgetState extends State<HomePageWidget>
       ),
     ),
     'cardOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'textOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0.925,
+      ),
+    ),
+    'cardOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'textOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0.925,
+      ),
+    ),
+    'cardOnPageLoadAnimation5': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation6': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'textOnPageLoadAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0.925,
+      ),
+    ),
+    'cardOnPageLoadAnimation7': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation8': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'textOnPageLoadAnimation5': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0.925,
+      ),
+    ),
+    'cardOnPageLoadAnimation9': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(-40, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'cardOnPageLoadAnimation10': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
@@ -312,120 +491,126 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ),
                           ),
                           Expanded(
-                            child: Builder(
-                              builder: (context) {
-                                final usersProfiles = containerUsersRecord.users
-                                        .toList()
-                                        ?.toList() ??
-                                    [];
-                                if (usersProfiles.isEmpty) {
-                                  return Center(
-                                    child: NoSwipeWidget(),
-                                  );
-                                }
-                                return Container(
-                                  width: double.infinity,
-                                  height: 500,
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 50),
-                                    child: PageView.builder(
-                                      controller: pageViewController ??=
-                                          PageController(
-                                              initialPage: min(
-                                                  0, usersProfiles.length - 1)),
-                                      scrollDirection: Axis.horizontal,
-                                      itemCount: usersProfiles.length,
-                                      itemBuilder:
-                                          (context, usersProfilesIndex) {
-                                        final usersProfilesItem =
-                                            usersProfiles[usersProfilesIndex];
-                                        return Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 30, 0, 0),
-                                          child: Container(
-                                            decoration: BoxDecoration(),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                  width: double.infinity,
-                                                  decoration: BoxDecoration(),
-                                                  child: Stack(
+                            child: Container(
+                              width: double.infinity,
+                              height: 500,
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                                child: PageView(
+                                  controller: pageViewController ??=
+                                      PageController(initialPage: 0),
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 30, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                children: [
+                                                  Align(
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            0, 0),
-                                                    children: [
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.2, 0),
-                                                        child: Container(
-                                                          width: 250,
-                                                          height: 250,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                          child: Image.asset(
-                                                            'assets/images/Asset_15@4x.png',
+                                                            0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    decoration: BoxDecoration(),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child:
+                                                              CircularPercentIndicator(
+                                                            percent: 0.7,
+                                                            radius: 115,
+                                                            lineWidth: 10,
+                                                            animation: true,
+                                                            progressColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .customColor6,
                                                           ),
                                                         ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -0.2, 0),
-                                                        child: Container(
-                                                          width: 250,
-                                                          height: 250,
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                          child: Image.asset(
-                                                            'assets/images/Asset_15@4x.png',
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(),
-                                                        child: Stack(
-                                                          children: [
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0, 0),
-                                                              child:
-                                                                  CircularPercentIndicator(
-                                                                percent:
-                                                                    containerUsersRecord
-                                                                        .progressBar,
-                                                                radius: 115,
-                                                                lineWidth: 10,
-                                                                animation: true,
-                                                                progressColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryColor,
-                                                                backgroundColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .customColor6,
-                                                              ),
-                                                            ),
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0, 0),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: InkWell(
+                                                            onTap: () async {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                PageTransition(
+                                                                  type:
+                                                                      PageTransitionType
+                                                                          .fade,
+                                                                  child:
+                                                                      FlutterFlowExpandedImageView(
+                                                                    image: Image
+                                                                        .asset(
+                                                                      'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                                                      fit: BoxFit
+                                                                          .contain,
+                                                                    ),
+                                                                    allowRotation:
+                                                                        false,
+                                                                    tag:
+                                                                        'circleImageTag5',
+                                                                    useHeroAnimation:
+                                                                        true,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                            child: Hero(
+                                                              tag:
+                                                                  'circleImageTag5',
+                                                              transitionOnUserGestures:
+                                                                  true,
                                                               child: Container(
                                                                 width: 220,
                                                                 height: 220,
@@ -437,155 +622,1154 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .circle,
                                                                 ),
                                                                 child:
-                                                                    CachedNetworkImage(
-                                                                  imageUrl:
-                                                                      containerUsersRecord
-                                                                          .photoUrl,
+                                                                    Image.asset(
+                                                                  'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                                                  fit: BoxFit
+                                                                      .fitWidth,
                                                                 ),
                                                               ),
                                                             ),
-                                                          ],
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'kqiymfxc' /* Sara */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1,
+                                                  ).animated([
+                                                    animationsMap[
+                                                        'textOnPageLoadAnimation1']
+                                                  ]),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '5azsqzew' /* Agadir */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
                                                         ),
                                                       ),
-                                                    ],
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation1']
+                                                    ]),
                                                   ),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 20, 0, 0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        containerUsersRecord
-                                                            .displayName
-                                                            .maybeHandleOverflow(
-                                                                maxChars: 25),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .title1,
-                                                      ).animated([
-                                                        animationsMap[
-                                                            'textOnPageLoadAnimation']
-                                                      ]),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 10, 0, 0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(0, 0,
-                                                                    10, 0),
-                                                        child: Card(
-                                                          clipBehavior: Clip
-                                                              .antiAliasWithSaveLayer,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .customColor10,
-                                                          elevation: 2,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10,
-                                                                        10,
-                                                                        10,
-                                                                        10),
-                                                            child: Text(
-                                                              containerUsersRecord
-                                                                  .city,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1,
-                                                            ),
-                                                          ),
-                                                        ).animated([
-                                                          animationsMap[
-                                                              'cardOnPageLoadAnimation1']
-                                                        ]),
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
                                                       ),
-                                                      Padding(
+                                                      child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
-                                                                .fromSTEB(0, 0,
-                                                                    10, 0),
-                                                        child: Card(
-                                                          clipBehavior: Clip
-                                                              .antiAliasWithSaveLayer,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .customColor10,
-                                                          elevation: 2,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'ulj8niej' /* 478 Km */,
                                                           ),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10,
-                                                                        10,
-                                                                        10,
-                                                                        10),
-                                                            child:
-                                                                AuthUserStreamWidget(
-                                                              child: Text(
-                                                                functions
-                                                                    .distance(
-                                                                        containerUsersRecord
-                                                                            .location,
-                                                                        currentUserDocument
-                                                                            ?.location)
-                                                                    .toString(),
-                                                                style: FlutterFlowTheme.of(
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation2']
+                                                    ]),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 30, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    decoration: BoxDecoration(),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child:
+                                                              CircularPercentIndicator(
+                                                            percent: 0.5,
+                                                            radius: 115,
+                                                            lineWidth: 10,
+                                                            animation: true,
+                                                            progressColor:
+                                                                FlutterFlowTheme.of(
                                                                         context)
-                                                                    .bodyText1,
+                                                                    .primaryColor,
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .customColor6,
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: InkWell(
+                                                            onTap: () async {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                PageTransition(
+                                                                  type:
+                                                                      PageTransitionType
+                                                                          .fade,
+                                                                  child:
+                                                                      FlutterFlowExpandedImageView(
+                                                                    image: Image
+                                                                        .asset(
+                                                                      'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                                                      fit: BoxFit
+                                                                          .contain,
+                                                                    ),
+                                                                    allowRotation:
+                                                                        false,
+                                                                    tag:
+                                                                        'circleImageTag8',
+                                                                    useHeroAnimation:
+                                                                        true,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                            child: Hero(
+                                                              tag:
+                                                                  'circleImageTag8',
+                                                              transitionOnUserGestures:
+                                                                  true,
+                                                              child: Container(
+                                                                width: 220,
+                                                                height: 220,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                ),
+                                                                child:
+                                                                    Image.asset(
+                                                                  'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                                                  fit: BoxFit
+                                                                      .fitWidth,
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ).animated([
-                                                          animationsMap[
-                                                              'cardOnPageLoadAnimation2']
-                                                        ]),
-                                                      ),
-                                                    ],
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                        );
-                                      },
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      't8mp8t9l' /* Mary */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1,
+                                                  ).animated([
+                                                    animationsMap[
+                                                        'textOnPageLoadAnimation2']
+                                                  ]),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '04mrdc46' /* Paris */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation3']
+                                                    ]),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'mdzkfqhn' /* 1500 Km */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation4']
+                                                    ]),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                );
-                              },
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 30, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    decoration: BoxDecoration(),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child:
+                                                              CircularPercentIndicator(
+                                                            percent: 0.7,
+                                                            radius: 115,
+                                                            lineWidth: 10,
+                                                            animation: true,
+                                                            progressColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .customColor6,
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: InkWell(
+                                                            onTap: () async {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                PageTransition(
+                                                                  type:
+                                                                      PageTransitionType
+                                                                          .fade,
+                                                                  child:
+                                                                      FlutterFlowExpandedImageView(
+                                                                    image: Image
+                                                                        .asset(
+                                                                      'assets/images/ayush-kumar-Qq2pG8JNXbU-unsplash.jpg',
+                                                                      fit: BoxFit
+                                                                          .contain,
+                                                                    ),
+                                                                    allowRotation:
+                                                                        false,
+                                                                    tag:
+                                                                        'circleImageTag11',
+                                                                    useHeroAnimation:
+                                                                        true,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                            child: Hero(
+                                                              tag:
+                                                                  'circleImageTag11',
+                                                              transitionOnUserGestures:
+                                                                  true,
+                                                              child: Container(
+                                                                width: 220,
+                                                                height: 220,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                ),
+                                                                child:
+                                                                    Image.asset(
+                                                                  'assets/images/ayush-kumar-Qq2pG8JNXbU-unsplash.jpg',
+                                                                  fit: BoxFit
+                                                                      .fitWidth,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'm4gdnnxa' /* Deepika */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1,
+                                                  ).animated([
+                                                    animationsMap[
+                                                        'textOnPageLoadAnimation3']
+                                                  ]),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'eq8te7vz' /* Mumbai */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation5']
+                                                    ]),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '3lweqy47' /* 10150 km */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation6']
+                                                    ]),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 30, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    decoration: BoxDecoration(),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child:
+                                                              CircularPercentIndicator(
+                                                            percent: 0.7,
+                                                            radius: 115,
+                                                            lineWidth: 10,
+                                                            animation: true,
+                                                            progressColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .customColor6,
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: InkWell(
+                                                            onTap: () async {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                PageTransition(
+                                                                  type:
+                                                                      PageTransitionType
+                                                                          .fade,
+                                                                  child:
+                                                                      FlutterFlowExpandedImageView(
+                                                                    image: Image
+                                                                        .asset(
+                                                                      'assets/images/reza-delkhosh-e7526CSLu30-unsplash.jpg',
+                                                                      fit: BoxFit
+                                                                          .contain,
+                                                                    ),
+                                                                    allowRotation:
+                                                                        false,
+                                                                    tag:
+                                                                        'circleImageTag14',
+                                                                    useHeroAnimation:
+                                                                        true,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                            child: Hero(
+                                                              tag:
+                                                                  'circleImageTag14',
+                                                              transitionOnUserGestures:
+                                                                  true,
+                                                              child: Container(
+                                                                width: 220,
+                                                                height: 220,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                ),
+                                                                child:
+                                                                    Image.asset(
+                                                                  'assets/images/reza-delkhosh-e7526CSLu30-unsplash.jpg',
+                                                                  fit: BoxFit
+                                                                      .fitWidth,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'mhdbxjnl' /* Anastasia */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1,
+                                                  ).animated([
+                                                    animationsMap[
+                                                        'textOnPageLoadAnimation4']
+                                                  ]),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '9u11oc8t' /* Moscow */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation7']
+                                                    ]),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '4vem23df' /* 4500 Km */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation8']
+                                                    ]),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 30, 0, 0),
+                                      child: Container(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.2, 0),
+                                                    child: Container(
+                                                      width: 250,
+                                                      height: 250,
+                                                      clipBehavior:
+                                                          Clip.antiAlias,
+                                                      decoration: BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                      ),
+                                                      child: Image.asset(
+                                                        'assets/images/Asset_15@4x.png',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    decoration: BoxDecoration(),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child:
+                                                              CircularPercentIndicator(
+                                                            percent: 0.3,
+                                                            radius: 115,
+                                                            lineWidth: 10,
+                                                            animation: true,
+                                                            progressColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .customColor6,
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: InkWell(
+                                                            onTap: () async {
+                                                              await Navigator
+                                                                  .push(
+                                                                context,
+                                                                PageTransition(
+                                                                  type:
+                                                                      PageTransitionType
+                                                                          .fade,
+                                                                  child:
+                                                                      FlutterFlowExpandedImageView(
+                                                                    image: Image
+                                                                        .asset(
+                                                                      'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                                                      fit: BoxFit
+                                                                          .contain,
+                                                                    ),
+                                                                    allowRotation:
+                                                                        false,
+                                                                    tag:
+                                                                        'circleImageTag17',
+                                                                    useHeroAnimation:
+                                                                        true,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                            child: Hero(
+                                                              tag:
+                                                                  'circleImageTag17',
+                                                              transitionOnUserGestures:
+                                                                  true,
+                                                              child: Container(
+                                                                width: 220,
+                                                                height: 220,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                ),
+                                                                child:
+                                                                    Image.asset(
+                                                                  'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                                                  fit: BoxFit
+                                                                      .cover,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'kjnk21la' /* Kaoutar */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .title1,
+                                                  ).animated([
+                                                    animationsMap[
+                                                        'textOnPageLoadAnimation5']
+                                                  ]),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 10, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'wnw8ak8w' /* Beyrouth */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation9']
+                                                    ]),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .customColor10,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10,
+                                                                    10, 10, 10),
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '6nzk8kr0' /* 5502 Km */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1,
+                                                        ),
+                                                      ),
+                                                    ).animated([
+                                                      animationsMap[
+                                                          'cardOnPageLoadAnimation10']
+                                                    ]),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                           Padding(
@@ -647,21 +1831,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ]),
                                 InkWell(
                                   onTap: () async {
-                                    await pageViewController.nextPage(
-                                      duration: Duration(milliseconds: 300),
-                                      curve: Curves.ease,
-                                    );
-                                    await pageViewController.nextPage(
-                                      duration: Duration(milliseconds: 300),
-                                      curve: Curves.ease,
-                                    );
-                                    final matchesCreateData =
-                                        createMatchesRecordData(
-                                      user: homePageUsersRecord.reference,
-                                    );
-                                    await MatchesRecord.collection
-                                        .doc()
-                                        .set(matchesCreateData);
                                     await Future.delayed(
                                       Duration(
                                         milliseconds: animationsMap[

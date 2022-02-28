@@ -146,7 +146,7 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                                     ),
                                     child: CachedNetworkImage(
                                       imageUrl: uploadedFileUrl,
-                                      fit: BoxFit.contain,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),

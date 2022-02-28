@@ -102,51 +102,55 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: FlutterFlowChoiceChips(
-                            initiallySelected: [genderValue],
-                            options: [
-                              ChipData(FFLocalizations.of(context).getText(
-                                'tb24brgs' /* Homme */,
-                              )),
-                              ChipData(FFLocalizations.of(context).getText(
-                                'ozp4v9m5' /* Femme */,
-                              ))
-                            ],
-                            onChanged: (val) =>
-                                setState(() => genderValue = val.first),
-                            selectedChipStyle: ChipStyle(
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
-                                  ),
-                              iconColor: Colors.white,
-                              iconSize: 18,
-                              elevation: 4,
+                          child: AuthUserStreamWidget(
+                            child: FlutterFlowChoiceChips(
+                              initiallySelected: genderValue != null
+                                  ? [genderValue]
+                                  : [currentUserDocument?.genderChoice],
+                              options: [
+                                ChipData(FFLocalizations.of(context).getText(
+                                  'tb24brgs' /* Homme */,
+                                )),
+                                ChipData(FFLocalizations.of(context).getText(
+                                  'ozp4v9m5' /* Femme */,
+                                ))
+                              ],
+                              onChanged: (val) =>
+                                  setState(() => genderValue = val.first),
+                              selectedChipStyle: ChipStyle(
+                                backgroundColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
+                                iconColor: Colors.white,
+                                iconSize: 18,
+                                elevation: 4,
+                              ),
+                              unselectedChipStyle: ChipStyle(
+                                backgroundColor:
+                                    FlutterFlowTheme.of(context).customColor9,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyText2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor5,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
+                                iconColor: Color(0x00000000),
+                                iconSize: 18,
+                                elevation: 4,
+                              ),
+                              chipSpacing: 20,
+                              multiselect: false,
                             ),
-                            unselectedChipStyle: ChipStyle(
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).customColor9,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText2
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor5,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
-                                  ),
-                              iconColor: Color(0x00000000),
-                              iconSize: 18,
-                              elevation: 4,
-                            ),
-                            chipSpacing: 20,
-                            multiselect: false,
                           ),
                         ),
                       ],

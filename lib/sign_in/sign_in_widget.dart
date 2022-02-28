@@ -463,8 +463,18 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     FlutterFlowTheme.of(context).tertiaryColor,
                                 size: 30,
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
+                              onPressed: () async {
+                                final user = await signInAnonymously(context);
+                                if (user == null) {
+                                  return;
+                                }
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomePageWidget(),
+                                  ),
+                                  (r) => false,
+                                );
                               },
                             ),
                           ),
