@@ -56,7 +56,7 @@ class _ConditionsUtilisationWidgetState
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 20),
+                      padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 10),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -97,17 +97,13 @@ class _ConditionsUtilisationWidgetState
                           ),
                           Container(
                             width: double.infinity,
-                            height: 90,
+                            height: 80,
                             decoration: BoxDecoration(),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '4qvw3h16' /* Nous luttons activement contre... */,
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '4qvw3h16' /* Nous luttons activement contre... */,
                               ),
+                              style: FlutterFlowTheme.of(context).bodyText1,
                             ),
                           ),
                           Padding(
@@ -278,7 +274,8 @@ class _ConditionsUtilisationWidgetState
                             ],
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -299,63 +296,68 @@ class _ConditionsUtilisationWidgetState
                 ),
               ),
             ),
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Expanded(
-                  child: Align(
-                    alignment: AlignmentDirectional(0, 1),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FFButtonWidget(
-                            onPressed: () async {
-                              await Navigator.push(
-                                context,
-                                PageTransition(
-                                  type: PageTransitionType.leftToRight,
-                                  duration: Duration(milliseconds: 200),
-                                  reverseDuration: Duration(milliseconds: 200),
-                                  child: GenderChoiceWidget(),
-                                ),
-                              );
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'ednu7sr1' /* Continuer
- */
-                              ,
-                            ),
-                            options: FFButtonOptions(
-                              width: 200,
-                              height: 50,
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor7,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: false,
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0, 1),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FFButtonWidget(
+                              onPressed: () async {
+                                await Navigator.push(
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    duration: Duration(milliseconds: 200),
+                                    reverseDuration:
+                                        Duration(milliseconds: 200),
+                                    child: GenderChoiceWidget(),
                                   ),
-                              elevation: 5,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'ednu7sr1' /* Continuer
+ */
+                                ,
                               ),
-                              borderRadius: 20,
+                              options: FFButtonOptions(
+                                width: 200,
+                                height: 50,
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
+                                elevation: 5,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
+                                ),
+                                borderRadius: 20,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

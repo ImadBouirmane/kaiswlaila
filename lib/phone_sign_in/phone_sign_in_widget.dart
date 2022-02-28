@@ -4,6 +4,7 @@ import '../components/nav_logo_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import '../phone_verification_sign_in/phone_verification_sign_in_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -155,6 +156,68 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                                 useGoogleFonts: false,
                               ),
                           keyboardType: TextInputType.phone,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0, -1),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          if (currentUserDocument?.isRegistered) {
+                            if (phoneController.text.isEmpty ||
+                                !phoneController.text.startsWith('+')) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content:
+                                      Text(FFLocalizations.of(context).getText(
+                                    'ztpxnq81' /* Numéro de téléphone obligatoir... */,
+                                  )),
+                                ),
+                              );
+                              return;
+                            }
+                            await beginPhoneAuth(
+                              context: context,
+                              phoneNumber: phoneController.text,
+                              onCodeSent: () async {
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        PhoneVerificationSignInWidget(),
+                                  ),
+                                  (r) => false,
+                                );
+                              },
+                            );
+                          } else {
+                            return;
+                          }
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          '36gt66mz' /* Créer */,
+                        ),
+                        options: FFButtonOptions(
+                          width: 200,
+                          height: 50,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .subtitle2
+                              .override(
+                                fontFamily: 'Avenir Light ',
+                                color:
+                                    FlutterFlowTheme.of(context).customColor7,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: false,
+                              ),
+                          elevation: 5,
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).customColor6,
+                            width: 1,
+                          ),
+                          borderRadius: 20,
                         ),
                       ),
                     ),

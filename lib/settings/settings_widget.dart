@@ -266,7 +266,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                           direction: Axis.horizontal,
                                           radioButtonColor:
                                               FlutterFlowTheme.of(context)
-                                                  .primaryColor,
+                                                  .tertiaryColor,
                                           inactiveRadioButtonColor:
                                               Color(0x8A000000),
                                           toggleable: false,
@@ -362,22 +362,19 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 20),
-                                    child: SliderTheme(
-                                      data: SliderThemeData(
-                                        showValueIndicator:
-                                            ShowValueIndicator.always,
-                                      ),
+                                        20, 0, 20, 10),
+                                    child: AuthUserStreamWidget(
                                       child: Slider.adaptive(
                                         activeColor:
                                             FlutterFlowTheme.of(context)
-                                                .primaryColor,
+                                                .tertiaryColor,
                                         inactiveColor: Color(0xFF9E9E9E),
-                                        min: 0,
-                                        max: 10,
+                                        min: 18,
+                                        max: 40,
                                         value: ageChoiceValue ??=
-                                            settingsUsersRecord.ageChoice,
+                                            currentUserDocument?.ageChoice,
                                         label: ageChoiceValue.toString(),
+                                        divisions: 11,
                                         onChanged: (newValue) {
                                           setState(
                                               () => ageChoiceValue = newValue);

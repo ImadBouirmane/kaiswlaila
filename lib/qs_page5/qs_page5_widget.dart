@@ -123,7 +123,7 @@ class _QsPage5WidgetState extends State<QsPage5Widget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   LinearPercentIndicator(
-                                      percent: qsPage5UsersRecord.progressBar,
+                                      percent: 0.6,
                                       width: MediaQuery.of(context).size.width *
                                           0.7,
                                       lineHeight: 24,

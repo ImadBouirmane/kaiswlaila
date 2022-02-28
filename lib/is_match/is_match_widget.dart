@@ -95,11 +95,26 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
         opacity: 1,
       ),
     ),
-    'textOnPageLoadAnimation': AnimationInfo(
+    'textOnPageLoadAnimation1': AnimationInfo(
       curve: Curves.bounceOut,
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 180,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 5,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+    'textOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -305,6 +320,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 10, 0, 5),
                                             child: Container(
+                                              width: 150,
+                                              height: 150,
                                               clipBehavior: Clip.antiAlias,
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
@@ -370,8 +387,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                 decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: CachedNetworkImage(
-                                                  imageUrl: '',
+                                                child: Image.asset(
+                                                  'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -451,12 +468,12 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                               ),
                                         ).animated([
                                           animationsMap[
-                                              'textOnPageLoadAnimation']
+                                              'textOnPageLoadAnimation1']
                                         ]),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '6go3cgq3' /* -- */,
+                                          '6go3cgq3' /* 65% */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .title1
@@ -464,11 +481,14 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                               fontFamily: 'Avenir Light ',
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .secondaryColor,
+                                                      .tertiaryColor,
                                               fontSize: 19,
                                               useGoogleFonts: false,
                                             ),
-                                      ),
+                                      ).animated([
+                                        animationsMap[
+                                            'textOnPageLoadAnimation2']
+                                      ]),
                                     ],
                                   ),
                                 ),

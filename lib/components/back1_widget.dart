@@ -33,7 +33,7 @@ class _Back1WidgetState extends State<Back1Widget> {
                       sigmaY: 2,
                     ),
                     child: Image.asset(
-                      'assets/images/Asset_7@4x.png',
+                      'assets/images/Asset_3@4x_copie.png',
                       height: 500,
                       fit: BoxFit.cover,
                     ),

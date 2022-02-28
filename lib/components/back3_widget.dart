@@ -33,7 +33,7 @@ class _Back3WidgetState extends State<Back3Widget> {
                       sigmaY: 10,
                     ),
                     child: Image.asset(
-                      'assets/images/Asset_7@4x_copie.png',
+                      'assets/images/Asset_12@4x.png',
                       width: 300,
                       height: 500,
                       fit: BoxFit.scaleDown,

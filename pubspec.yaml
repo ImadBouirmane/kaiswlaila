@@ -34,7 +34,8 @@ dependencies:
   dash_chat: 1.1.16
   easy_debounce: 2.0.1
   firebase_auth: 3.2.0
-  firebase_core: 1.10.0
+  firebase_core: 1.12.0
+  firebase_core_web: 1.5.4
   firebase_storage: 10.1.0
   firebase_storage_web: 3.2.8
   flutter_google_places: 0.3.0
