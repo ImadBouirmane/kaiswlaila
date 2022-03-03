@@ -234,26 +234,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              profileUsersRecord.city,
+                                              '${profileUsersRecord.city}, ${profileUsersRecord.country}',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1,
-                                            ),
-                                            Text(
-                                              ',',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1,
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(3, 0, 0, 0),
-                                              child: Text(
-                                                profileUsersRecord.country,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1,
-                                              ),
                                             ),
                                           ],
                                         ),

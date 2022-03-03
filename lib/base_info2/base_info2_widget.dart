@@ -102,11 +102,10 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: AuthUserStreamWidget(
+                          child: Align(
+                            alignment: AlignmentDirectional(0.6, 0),
                             child: FlutterFlowChoiceChips(
-                              initiallySelected: genderValue != null
-                                  ? [genderValue]
-                                  : [currentUserDocument?.genderChoice],
+                              initiallySelected: [genderValue],
                               options: [
                                 ChipData(FFLocalizations.of(context).getText(
                                   'tb24brgs' /* Homme */,

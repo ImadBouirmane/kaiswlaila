@@ -112,7 +112,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                               );
                             },
                             text: FFLocalizations.of(context).getText(
-                              'as69m6hd' /* Langue */,
+                              'as69m6hd' /* Français */,
                             ),
                             icon: Icon(
                               Icons.language,

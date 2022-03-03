@@ -65,395 +65,433 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
               ),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 50, 10, 30),
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).customColor9,
+                child: Material(
+                  color: Colors.transparent,
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              borderWidth: 1,
-                              buttonSize: 60,
-                              icon: Icon(
-                                Icons.chevron_left,
-                                color: Colors.black,
-                                size: 30,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).customColor9,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 60,
+                                icon: Icon(
+                                  Icons.chevron_left,
+                                  color: Colors.black,
+                                  size: 30,
+                                ),
+                                onPressed: () async {
+                                  Navigator.pop(context);
+                                },
                               ),
-                              onPressed: () async {
-                                Navigator.pop(context);
-                              },
-                            ),
-                            Expanded(
-                              child: Align(
-                                alignment: AlignmentDirectional(-0.5, 0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'fm1b6kkn' /* Questionnaire */,
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(-0.5, 0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'fm1b6kkn' /* Questionnaire */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context).title1,
                                   ),
-                                  style: FlutterFlowTheme.of(context).title1,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              LinearPercentIndicator(
-                                  percent: 0.7,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.7,
-                                  lineHeight: 24,
-                                  animation: true,
-                                  progressColor:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  backgroundColor: FlutterFlowTheme.of(context)
-                                      .customColor10,
-                                  center: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'el0pysz9' /* 70% */,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                  barRadius: Radius.circular(10)),
                             ],
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
-                              child: Container(
-                                width: 30,
-                                height: 30,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/icons8_9_key_60px.png',
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 10),
-                                child: Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(),
-                                  child: AutoSizeText(
-                                    FFLocalizations.of(context).getText(
-                                      'k6lqctxp' /* Imaginez que vos amis devaient... */,
-                                    ),
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .subtitle1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: FlutterFlowTheme.of(context)
-                                              .customColor7,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w600,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Expanded(
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            child: Stack(
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 30),
-                                  child: PageView(
-                                    controller: pageViewController ??=
-                                        PageController(initialPage: 0),
-                                    scrollDirection: Axis.horizontal,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            30, 30, 30, 30),
-                                        child: FlutterFlowCheckboxGroup(
-                                          initiallySelected:
-                                              checkboxGroupValues1 != null
-                                                  ? checkboxGroupValues1
-                                                  : qsModifyPage6UsersRecord
-                                                      .qs9C1
-                                                      .toList(),
-                                          options: [
-                                            FFLocalizations.of(context).getText(
-                                              '3vuo8bvj' /* Ses valeurs */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '5hh0pl3q' /* Son énergie */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'cmtapis5' /* L’attachement */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'zn7kk56f' /* Les habitudes */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'gtqartlg' /* Le plaisir et la détente */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'monb5gvp' /* Être à deux */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'cc6yqcyg' /* Ma confiance en elle (lui) */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'ak0tzh2x' /* Son sex-appeal */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'kqxmhgpr' /* Son amour pour les enfants */,
-                                            )
-                                          ],
-                                          onChanged: (val) => setState(
-                                              () => checkboxGroupValues1 = val),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor: Colors.white,
-                                          checkboxBorderColor:
-                                              Color(0xFF95A1AC),
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1,
-                                          labelPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10, 0, 0, 0),
-                                          checkboxBorderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
+                                LinearPercentIndicator(
+                                    percent: 0.7,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    lineHeight: 24,
+                                    animation: true,
+                                    progressColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .customColor10,
+                                    center: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'el0pysz9' /* 70% */,
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            30, 30, 30, 30),
-                                        child: FlutterFlowCheckboxGroup(
-                                          initiallySelected:
-                                              checkboxGroupValues2 != null
-                                                  ? checkboxGroupValues2
-                                                  : qsModifyPage6UsersRecord
-                                                      .qs9C2
-                                                      .toList(),
-                                          options: [
-                                            FFLocalizations.of(context).getText(
-                                              'wq53euo3' /* Le partage */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '41l5tvk9' /* Ses convictions */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'c6erd30f' /* La passion */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'pm935891' /* Sa joie de vivre */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'c20bm97w' /* Son apparence physique  */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'hhswviut' /* Notre attirance réciproque  */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'pvbr1ham' /* Nos similitudes  */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '3f3iel3s' /* L’affection que je ressens
- po... */
-                                              ,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '01754k9i' /* Sa personnalité  */,
-                                            )
-                                          ],
-                                          onChanged: (val) => setState(
-                                              () => checkboxGroupValues2 = val),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor: Colors.white,
-                                          checkboxBorderColor:
-                                              Color(0xFF95A1AC),
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1,
-                                          labelPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10, 0, 0, 0),
-                                          checkboxBorderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            30, 30, 30, 30),
-                                        child: FlutterFlowCheckboxGroup(
-                                          initiallySelected:
-                                              checkboxGroupValues3 != null
-                                                  ? checkboxGroupValues3
-                                                  : qsModifyPage6UsersRecord
-                                                      .qs9C3
-                                                      .toList(),
-                                          options: [
-                                            FFLocalizations.of(context).getText(
-                                              'fwk893s3' /* Sa gentillesse */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              'a3uglnbq' /* Éprouver des sensations fortes */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '8vkaqpql' /* Sa position sociale */,
-                                            ),
-                                            FFLocalizations.of(context).getText(
-                                              '4u3gc4r3' /* J’ai besoin d’un homme
- (d’une... */
-                                              ,
-                                            )
-                                          ],
-                                          onChanged: (val) => setState(
-                                              () => checkboxGroupValues3 = val),
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor: Colors.white,
-                                          checkboxBorderColor:
-                                              Color(0xFF95A1AC),
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1,
-                                          labelPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10, 0, 0, 0),
-                                          checkboxBorderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(-0.05, 0.8),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 10),
-                                    child: SmoothPageIndicator(
-                                      controller: pageViewController ??=
-                                          PageController(initialPage: 0),
-                                      count: 3,
-                                      axisDirection: Axis.horizontal,
-                                      onDotClicked: (i) {
-                                        pageViewController.animateToPage(
-                                          i,
-                                          duration: Duration(milliseconds: 500),
-                                          curve: Curves.ease,
-                                        );
-                                      },
-                                      effect: ExpandingDotsEffect(
-                                        expansionFactor: 2,
-                                        spacing: 8,
-                                        radius: 16,
-                                        dotWidth: 16,
-                                        dotHeight: 16,
-                                        dotColor: FlutterFlowTheme.of(context)
-                                            .customColor9,
-                                        activeDotColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        paintStyle: PaintingStyle.fill,
-                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
-                                  ),
-                                ),
+                                    barRadius: Radius.circular(10)),
                               ],
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              final usersUpdateData = {
-                                'Qs9C1': FieldValue.arrayUnion(
-                                    [checkboxGroupValues1.length.toString()]),
-                                'Qs9C2': FieldValue.arrayUnion(
-                                    [checkboxGroupValues2.length.toString()]),
-                                'Qs9C3': FieldValue.arrayUnion(
-                                    [checkboxGroupValues3.length.toString()]),
-                              };
-                              await currentUserReference
-                                  .update(usersUpdateData);
-                              await Navigator.push(
-                                context,
-                                PageTransition(
-                                  type: PageTransitionType.leftToRight,
-                                  duration: Duration(milliseconds: 200),
-                                  reverseDuration: Duration(milliseconds: 200),
-                                  child: QsModifyPage7Widget(),
-                                ),
-                              );
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'o7lw9o91' /* Continuer
- */
-                              ,
-                            ),
-                            options: FFButtonOptions(
-                              width: 200,
-                              height: 50,
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor7,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: false,
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
+                                child: Container(
+                                  width: 30,
+                                  height: 30,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
                                   ),
-                              elevation: 5,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
+                                  child: Image.asset(
+                                    'assets/images/icons8_9_key_60px.png',
+                                  ),
+                                ),
                               ),
-                              borderRadius: 20,
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 10, 10),
+                                  child: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(),
+                                    child: AutoSizeText(
+                                      FFLocalizations.of(context).getText(
+                                        'k6lqctxp' /* Imaginez que vos amis devaient... */,
+                                      ),
+                                      textAlign: TextAlign.start,
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Expanded(
+                            child: Container(
+                              width: double.infinity,
+                              height: double.infinity,
+                              child: Stack(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 0, 30),
+                                    child: PageView(
+                                      controller: pageViewController ??=
+                                          PageController(initialPage: 0),
+                                      scrollDirection: Axis.horizontal,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  30, 30, 30, 30),
+                                          child: FlutterFlowCheckboxGroup(
+                                            initiallySelected:
+                                                checkboxGroupValues1 != null
+                                                    ? checkboxGroupValues1
+                                                    : qsModifyPage6UsersRecord
+                                                        .qs9C1
+                                                        .toList(),
+                                            options: [
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '3vuo8bvj' /* Ses valeurs */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '5hh0pl3q' /* Son énergie */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'cmtapis5' /* L’attachement */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'zn7kk56f' /* Les habitudes */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'gtqartlg' /* Le plaisir et la détente */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'monb5gvp' /* Être à deux */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'cc6yqcyg' /* Ma confiance en elle (lui) */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'ak0tzh2x' /* Son sex-appeal */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'kqxmhgpr' /* Son amour pour les enfants */,
+                                              )
+                                            ],
+                                            onChanged: (val) => setState(() =>
+                                                checkboxGroupValues1 = val),
+                                            activeColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
+                                            checkColor: Colors.white,
+                                            checkboxBorderColor:
+                                                Color(0xFF95A1AC),
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1,
+                                            labelPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            checkboxBorderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  30, 30, 30, 30),
+                                          child: FlutterFlowCheckboxGroup(
+                                            initiallySelected:
+                                                checkboxGroupValues2 != null
+                                                    ? checkboxGroupValues2
+                                                    : qsModifyPage6UsersRecord
+                                                        .qs9C2
+                                                        .toList(),
+                                            options: [
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'wq53euo3' /* Le partage */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '41l5tvk9' /* Ses convictions */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'c6erd30f' /* La passion */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'pm935891' /* Sa joie de vivre */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'c20bm97w' /* Son apparence physique  */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'hhswviut' /* Notre attirance réciproque  */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'pvbr1ham' /* Nos similitudes  */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '3f3iel3s' /* L’affection que je ressens
+ po... */
+                                                ,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '01754k9i' /* Sa personnalité  */,
+                                              )
+                                            ],
+                                            onChanged: (val) => setState(() =>
+                                                checkboxGroupValues2 = val),
+                                            activeColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
+                                            checkColor: Colors.white,
+                                            checkboxBorderColor:
+                                                Color(0xFF95A1AC),
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1,
+                                            labelPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            checkboxBorderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  30, 30, 30, 30),
+                                          child: FlutterFlowCheckboxGroup(
+                                            initiallySelected:
+                                                checkboxGroupValues3 != null
+                                                    ? checkboxGroupValues3
+                                                    : qsModifyPage6UsersRecord
+                                                        .qs9C3
+                                                        .toList(),
+                                            options: [
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'fwk893s3' /* Sa gentillesse */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'a3uglnbq' /* Éprouver des sensations fortes */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '8vkaqpql' /* Sa position sociale */,
+                                              ),
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '4u3gc4r3' /* J’ai besoin d’un homme
+ (d’une... */
+                                                ,
+                                              )
+                                            ],
+                                            onChanged: (val) => setState(() =>
+                                                checkboxGroupValues3 = val),
+                                            activeColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryColor,
+                                            checkColor: Colors.white,
+                                            checkboxBorderColor:
+                                                Color(0xFF95A1AC),
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1,
+                                            labelPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 0, 0, 0),
+                                            checkboxBorderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(-0.05, 0.8),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 0, 10),
+                                      child: SmoothPageIndicator(
+                                        controller: pageViewController ??=
+                                            PageController(initialPage: 0),
+                                        count: 3,
+                                        axisDirection: Axis.horizontal,
+                                        onDotClicked: (i) {
+                                          pageViewController.animateToPage(
+                                            i,
+                                            duration:
+                                                Duration(milliseconds: 500),
+                                            curve: Curves.ease,
+                                          );
+                                        },
+                                        effect: ExpandingDotsEffect(
+                                          expansionFactor: 2,
+                                          spacing: 8,
+                                          radius: 16,
+                                          dotWidth: 16,
+                                          dotHeight: 16,
+                                          dotColor: FlutterFlowTheme.of(context)
+                                              .customColor9,
+                                          activeDotColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryColor,
+                                          paintStyle: PaintingStyle.fill,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                final usersUpdateData = {
+                                  'Qs9C1': FieldValue.arrayUnion(
+                                      [checkboxGroupValues1.length.toString()]),
+                                  'Qs9C2': FieldValue.arrayUnion(
+                                      [checkboxGroupValues2.length.toString()]),
+                                  'Qs9C3': FieldValue.arrayUnion(
+                                      [checkboxGroupValues3.length.toString()]),
+                                };
+                                await currentUserReference
+                                    .update(usersUpdateData);
+                                await Navigator.push(
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    duration: Duration(milliseconds: 200),
+                                    reverseDuration:
+                                        Duration(milliseconds: 200),
+                                    child: QsModifyPage7Widget(),
+                                  ),
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'o7lw9o91' /* Continuer
+ */
+                                ,
+                              ),
+                              options: FFButtonOptions(
+                                width: 200,
+                                height: 50,
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
+                                elevation: 5,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
+                                ),
+                                borderRadius: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

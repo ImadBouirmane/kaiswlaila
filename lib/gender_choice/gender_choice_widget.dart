@@ -21,7 +21,7 @@ class GenderChoiceWidget extends StatefulWidget {
 }
 
 class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
-  String genderValue;
+  String genderchoiceValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -149,7 +149,8 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                           )
                                         ],
                                         onChanged: (value) {
-                                          setState(() => genderValue = value);
+                                          setState(
+                                              () => genderchoiceValue = value);
                                         },
                                         optionHeight: 35,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -209,7 +210,7 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                   onPressed: () async {
                                     final usersUpdateData =
                                         createUsersRecordData(
-                                      genderChoice: genderValue,
+                                      genderChoice: genderchoiceValue,
                                     );
                                     await currentUserReference
                                         .update(usersUpdateData);

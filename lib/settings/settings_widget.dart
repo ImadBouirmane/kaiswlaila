@@ -186,6 +186,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       color: FlutterFlowTheme.of(context).customColor9,
+                      elevation: 5,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -256,6 +257,17 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                   .override(
                                                     fontFamily: 'Avenir Light ',
                                                     color: Colors.black,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                          selectedTextStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1
+                                                  .override(
+                                                    fontFamily: 'Avenir Light ',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiaryColor,
+                                                    fontWeight: FontWeight.w600,
                                                     useGoogleFonts: false,
                                                   ),
                                           textPadding:

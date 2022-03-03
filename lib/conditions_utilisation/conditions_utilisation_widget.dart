@@ -37,262 +37,273 @@ class _ConditionsUtilisationWidgetState
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 40, 10, 80),
-              child: Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).customColor10,
+              child: Material(
+                color: Colors.transparent,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'assets/images/Asset_12@4x.png',
-                        width: double.infinity,
-                        height: double.infinity,
-                        fit: BoxFit.cover,
+                child: Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).customColor10,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          'assets/images/Asset_12@4x.png',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 10),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 30,
-                                  height: 30,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/Fichier_8.png',
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'b0tz6do3' /* SÉCURITÉ */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .title1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          fontSize: 16,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: 80,
-                            decoration: BoxDecoration(),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '4qvw3h16' /* Nous luttons activement contre... */,
-                              ),
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 30,
-                                  height: 30,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/Fichier_9.png',
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 0, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'l533ecqf' /* CONFIDENTIALITÉ */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .title1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          fontSize: 16,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: 70,
-                            decoration: BoxDecoration(),
-                            child: Padding(
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 10),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Fichier_8.png',
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        10, 0, 0, 0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'b0tz6do3' /* SÉCURITÉ */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .title1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            fontSize: 16,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 80,
+                              decoration: BoxDecoration(),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'lc9oz0sz' /* Le respect de la vie privée no... */,
+                                  '4qvw3h16' /* Nous luttons activement contre... */,
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 30,
-                                  height: 30,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/Fichier_10.png',
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 0, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'bm8e1hav' /* MATCHING */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .title1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          fontSize: 16,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: 90,
-                            decoration: BoxDecoration(),
-                            child: Padding(
+                            Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'ltac2q7o' /* KWL est la première applicatio... */,
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Fichier_9.png',
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 0, 0, 0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'l533ecqf' /* CONFIDENTIALITÉ */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .title1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            fontSize: 16,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 30,
-                                  height: 30,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
+                            Container(
+                              width: double.infinity,
+                              height: 70,
+                              decoration: BoxDecoration(),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'lc9oz0sz' /* Le respect de la vie privée no... */,
                                   ),
-                                  child: Image.asset(
-                                    'assets/images/Fichier_11.png',
-                                  ),
+                                  style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 0, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '9j7mjjoq' /* EXPERTISE */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .title1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          fontSize: 16,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: 150,
-                            decoration: BoxDecoration(),
-                            child: Padding(
+                            Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '6agvmqp2' /* Nos experts sont une équipe de... */,
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Fichier_10.png',
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 0, 0, 0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'bm8e1hav' /* MATCHING */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .title1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            fontSize: 16,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'a8fyy6u9' /* BONNE DECOUVERTE ! */,
+                            Container(
+                              width: double.infinity,
+                              height: 90,
+                              decoration: BoxDecoration(),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'ltac2q7o' /* KWL est la première applicatio... */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .title1
-                                    .override(
-                                      fontFamily: 'Avenir Light ',
-                                      fontSize: 16,
-                                      useGoogleFonts: false,
-                                    ),
                               ),
-                            ],
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                            child: Row(
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Fichier_11.png',
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 0, 0, 0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        '9j7mjjoq' /* EXPERTISE */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .title1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            fontSize: 16,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 150,
+                              decoration: BoxDecoration(),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '6agvmqp2' /* Nos experts sont une équipe de... */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                ),
+                              ),
+                            ),
+                            Row(
                               mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.asset(
-                                  'assets/images/Asset_9@4x_copie.png',
-                                  width: 70,
-                                  height: 60,
-                                  fit: BoxFit.contain,
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'a8fyy6u9' /* BONNE DECOUVERTE ! */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .title1
+                                      .override(
+                                        fontFamily: 'Avenir Light ',
+                                        fontSize: 16,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/Asset_9@4x_copie.png',
+                                    width: 70,
+                                    height: 60,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

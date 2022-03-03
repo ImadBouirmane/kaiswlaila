@@ -129,7 +129,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                   children: [
                                     Material(
                                       color: Colors.transparent,
-                                      elevation: 3,
+                                      elevation: 5,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -240,7 +240,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                   children: [
                                     Material(
                                       color: Colors.transparent,
-                                      elevation: 3,
+                                      elevation: 5,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -351,7 +351,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                   children: [
                                     Material(
                                       color: Colors.transparent,
-                                      elevation: 3,
+                                      elevation: 5,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
@@ -462,7 +462,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                   children: [
                                     Material(
                                       color: Colors.transparent,
-                                      elevation: 3,
+                                      elevation: 5,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),

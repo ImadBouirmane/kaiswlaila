@@ -216,7 +216,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                           child: Material(
                             color: Colors.transparent,
-                            elevation: 3,
+                            elevation: 5,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
@@ -238,7 +238,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                           type: PageTransitionType.fade,
                                           child: FlutterFlowExpandedImageView(
                                             image: Image.asset(
-                                              'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                              'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
                                               fit: BoxFit.contain,
                                             ),
                                             allowRotation: true,
@@ -254,7 +254,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: Image.asset(
-                                          'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                          'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.fill,
@@ -415,7 +415,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                           child: Material(
                             color: Colors.transparent,
-                            elevation: 3,
+                            elevation: 5,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
@@ -437,7 +437,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                           type: PageTransitionType.fade,
                                           child: FlutterFlowExpandedImageView(
                                             image: Image.asset(
-                                              'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                              'assets/images/1e0e9cc32a69c0d10760b13fb45f91b7.jpg',
                                               fit: BoxFit.contain,
                                             ),
                                             allowRotation: true,
@@ -453,7 +453,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: Image.asset(
-                                          'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                          'assets/images/1e0e9cc32a69c0d10760b13fb45f91b7.jpg',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.fill,
@@ -502,7 +502,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'h7f9xqnv' /* Mary */,
+                                                      'h7f9xqnv' /* Hiba */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -614,7 +614,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                           child: Material(
                             color: Colors.transparent,
-                            elevation: 3,
+                            elevation: 5,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
@@ -636,7 +636,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                           type: PageTransitionType.fade,
                                           child: FlutterFlowExpandedImageView(
                                             image: Image.asset(
-                                              'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                              'assets/images/original.jpg',
                                               fit: BoxFit.contain,
                                             ),
                                             allowRotation: true,
@@ -652,7 +652,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: Image.asset(
-                                          'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                          'assets/images/original.jpg',
                                           width: double.infinity,
                                           height: double.infinity,
                                           fit: BoxFit.fill,
@@ -701,7 +701,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '34yx3kdi' /* Kaoutar */,
+                                                      '34yx3kdi' /* Oumaima */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)

@@ -62,345 +62,357 @@ class _QsModifyPage5WidgetState extends State<QsModifyPage5Widget> {
               ),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 50, 10, 30),
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).customColor9,
+                child: Material(
+                  color: Colors.transparent,
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              borderWidth: 1,
-                              buttonSize: 60,
-                              icon: Icon(
-                                Icons.chevron_left,
-                                color: Colors.black,
-                                size: 30,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).customColor9,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 60,
+                                icon: Icon(
+                                  Icons.chevron_left,
+                                  color: Colors.black,
+                                  size: 30,
+                                ),
+                                onPressed: () async {
+                                  Navigator.pop(context);
+                                },
                               ),
-                              onPressed: () async {
-                                Navigator.pop(context);
-                              },
-                            ),
-                            Expanded(
-                              child: Align(
-                                alignment: AlignmentDirectional(-0.5, 0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'owsdkjnr' /* Questionnaire */,
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(-0.5, 0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'owsdkjnr' /* Questionnaire */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context).title1,
                                   ),
-                                  style: FlutterFlowTheme.of(context).title1,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              LinearPercentIndicator(
-                                  percent: 0.6,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.7,
-                                  lineHeight: 24,
-                                  animation: true,
-                                  progressColor:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  backgroundColor: FlutterFlowTheme.of(context)
-                                      .customColor10,
-                                  center: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '2ynuaig3' /* 60% */,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          useGoogleFonts: false,
-                                        ),
-                                  ),
-                                  barRadius: Radius.circular(10)),
                             ],
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-                              child: Container(
-                                width: 30,
-                                height: 30,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/icons8_7_60px.png',
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 40,
-                                  decoration: BoxDecoration(),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    child: AutoSizeText(
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                LinearPercentIndicator(
+                                    percent: 0.6,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    lineHeight: 24,
+                                    animation: true,
+                                    progressColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .customColor10,
+                                    center: Text(
                                       FFLocalizations.of(context).getText(
-                                        'sohrw0zk' /* Quel est votre niveau d’études... */,
+                                        '2ynuaig3' /* 60% */,
                                       ),
-                                      textAlign: TextAlign.start,
+                                      textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
-                                          .subtitle1
+                                          .bodyText1
                                           .override(
                                             fontFamily: 'Avenir Light ',
                                             color: FlutterFlowTheme.of(context)
-                                                .customColor7,
-                                            fontWeight: FontWeight.w600,
+                                                .tertiaryColor,
                                             useGoogleFonts: false,
                                           ),
+                                    ),
+                                    barRadius: Radius.circular(10)),
+                              ],
+                            ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                                child: Container(
+                                  width: 30,
+                                  height: 30,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/icons8_7_60px.png',
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 10, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 40,
+                                    decoration: BoxDecoration(),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 0, 0),
+                                      child: AutoSizeText(
+                                        FFLocalizations.of(context).getText(
+                                          'sohrw0zk' /* Quel est votre niveau d’études... */,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .customColor7,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(-0.7, 0),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                            child: FlutterFlowRadioButton(
-                              options: [
-                                FFLocalizations.of(context).getText(
-                                  '07abpqai' /* Sans diplôme */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'w215zwmk' /* Collège */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  '0x2lp32a' /* BAC ou BAC PRO */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'thu8cxhz' /* BAC +2 /BAC +3 */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'fcmfhh6b' /* BAC +4 / BAC +5 */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'tkqsmrlk' /* Doctorat */,
-                                )
-                              ],
-                              onChanged: (value) {
-                                setState(() => radioButton8Value = value);
-                              },
-                              optionHeight: 25,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.black,
-                                    useGoogleFonts: false,
-                                  ),
-                              selectedTextStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
-                                  ),
-                              textPadding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                              buttonPosition: RadioButtonPosition.left,
-                              direction: Axis.vertical,
-                              radioButtonColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              inactiveRadioButtonColor: Color(0x8A000000),
-                              toggleable: false,
-                              horizontalAlignment: WrapAlignment.start,
-                              verticalAlignment: WrapCrossAlignment.start,
-                            ),
+                            ],
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
+                          Align(
+                            alignment: AlignmentDirectional(-0.7, 0),
+                            child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 19),
-                              child: Container(
-                                width: 30,
-                                height: 30,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/icons8_8_key_60px.png',
-                                ),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                              child: FlutterFlowRadioButton(
+                                options: [
+                                  FFLocalizations.of(context).getText(
+                                    '07abpqai' /* Sans diplôme */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'w215zwmk' /* Collège */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    '0x2lp32a' /* BAC ou BAC PRO */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'thu8cxhz' /* BAC +2 /BAC +3 */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'fcmfhh6b' /* BAC +4 / BAC +5 */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'tkqsmrlk' /* Doctorat */,
+                                  )
+                                ],
+                                onChanged: (value) {
+                                  setState(() => radioButton8Value = value);
+                                },
+                                optionHeight: 25,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: Colors.black,
+                                      useGoogleFonts: false,
+                                    ),
+                                selectedTextStyle: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
+                                textPadding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                buttonPosition: RadioButtonPosition.left,
+                                direction: Axis.vertical,
+                                radioButtonColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                inactiveRadioButtonColor: Color(0x8A000000),
+                                toggleable: false,
+                                horizontalAlignment: WrapAlignment.start,
+                                verticalAlignment: WrapCrossAlignment.start,
                               ),
                             ),
-                            Expanded(
-                              child: Padding(
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
                                 padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 19),
                                 child: Container(
-                                  width: double.infinity,
-                                  height: 50,
-                                  decoration: BoxDecoration(),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    child: AutoSizeText(
-                                      FFLocalizations.of(context).getText(
-                                        '4m7n8ud8' /* Quelle importance attachez-vou... */,
+                                  width: 30,
+                                  height: 30,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/icons8_8_key_60px.png',
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 10, 0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 50,
+                                    decoration: BoxDecoration(),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 0, 0),
+                                      child: AutoSizeText(
+                                        FFLocalizations.of(context).getText(
+                                          '4m7n8ud8' /* Quelle importance attachez-vou... */,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .customColor7,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .customColor7,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: false,
-                                          ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(-0.7, 0),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                            child: FlutterFlowRadioButton(
-                              options: [
-                                FFLocalizations.of(context).getText(
-                                  'yu3ss2rt' /* Aucune importance */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'qdeflx5u' /* Peu important */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'o0bznh2a' /* Important */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'ba8pmla6' /* Plutôt important */,
-                                ),
-                                FFLocalizations.of(context).getText(
-                                  'sap64knb' /* Vraiment important */,
-                                )
-                              ],
-                              onChanged: (value) {
-                                setState(() => radioButton9Value = value);
-                              },
-                              optionHeight: 25,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.black,
-                                    useGoogleFonts: false,
+                            ],
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(-0.7, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                              child: FlutterFlowRadioButton(
+                                options: [
+                                  FFLocalizations.of(context).getText(
+                                    'yu3ss2rt' /* Aucune importance */,
                                   ),
-                              selectedTextStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
+                                  FFLocalizations.of(context).getText(
+                                    'qdeflx5u' /* Peu important */,
                                   ),
-                              textPadding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                              buttonPosition: RadioButtonPosition.left,
-                              direction: Axis.vertical,
-                              radioButtonColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              inactiveRadioButtonColor: Color(0x8A000000),
-                              toggleable: false,
-                              horizontalAlignment: WrapAlignment.start,
-                              verticalAlignment: WrapCrossAlignment.start,
+                                  FFLocalizations.of(context).getText(
+                                    'o0bznh2a' /* Important */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'ba8pmla6' /* Plutôt important */,
+                                  ),
+                                  FFLocalizations.of(context).getText(
+                                    'sap64knb' /* Vraiment important */,
+                                  )
+                                ],
+                                onChanged: (value) {
+                                  setState(() => radioButton9Value = value);
+                                },
+                                optionHeight: 25,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: Colors.black,
+                                      useGoogleFonts: false,
+                                    ),
+                                selectedTextStyle: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
+                                    ),
+                                textPadding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                buttonPosition: RadioButtonPosition.left,
+                                direction: Axis.vertical,
+                                radioButtonColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                inactiveRadioButtonColor: Color(0x8A000000),
+                                toggleable: false,
+                                horizontalAlignment: WrapAlignment.start,
+                                verticalAlignment: WrapCrossAlignment.start,
+                              ),
                             ),
                           ),
-                        ),
-                        Spacer(),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            final usersUpdateData = createUsersRecordData(
-                              qs7Choice: radioButton8Value,
-                              qs8Choice: radioButton9Value,
-                            );
-                            await currentUserReference.update(usersUpdateData);
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.leftToRight,
-                                duration: Duration(milliseconds: 200),
-                                reverseDuration: Duration(milliseconds: 200),
-                                child: QsModifyPage6Widget(),
-                              ),
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'kaf0uhq8' /* Continuer
+                          Spacer(),
+                          FFButtonWidget(
+                            onPressed: () async {
+                              final usersUpdateData = createUsersRecordData(
+                                qs7Choice: radioButton8Value,
+                                qs8Choice: radioButton9Value,
+                              );
+                              await currentUserReference
+                                  .update(usersUpdateData);
+                              await Navigator.push(
+                                context,
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  duration: Duration(milliseconds: 200),
+                                  reverseDuration: Duration(milliseconds: 200),
+                                  child: QsModifyPage6Widget(),
+                                ),
+                              );
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              'kaf0uhq8' /* Continuer
  */
-                            ,
-                          ),
-                          options: FFButtonOptions(
-                            width: 200,
-                            height: 50,
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: 'Avenir Light ',
-                                  color:
-                                      FlutterFlowTheme.of(context).customColor7,
-                                  fontWeight: FontWeight.bold,
-                                  useGoogleFonts: false,
-                                ),
-                            elevation: 5,
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1,
+                              ,
                             ),
-                            borderRadius: 20,
+                            options: FFButtonOptions(
+                              width: 200,
+                              height: 50,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Avenir Light ',
+                                    color: FlutterFlowTheme.of(context)
+                                        .customColor7,
+                                    fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
+                                  ),
+                              elevation: 5,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 20,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

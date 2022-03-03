@@ -69,382 +69,353 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
               ),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 50, 10, 30),
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).customColor9,
+                child: Material(
+                  color: Colors.transparent,
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Stack(
-                    children: [
-                      Back5Widget(),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                FlutterFlowIconButton(
-                                  borderColor: Colors.transparent,
-                                  borderRadius: 30,
-                                  borderWidth: 1,
-                                  buttonSize: 60,
-                                  icon: Icon(
-                                    Icons.chevron_left,
-                                    color: Colors.black,
-                                    size: 30,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).customColor9,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Stack(
+                      children: [
+                        Back5Widget(),
+                        Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(15, 20, 15, 20),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 30,
+                                    borderWidth: 1,
+                                    buttonSize: 60,
+                                    icon: Icon(
+                                      Icons.chevron_left,
+                                      color: Colors.black,
+                                      size: 30,
+                                    ),
+                                    onPressed: () async {
+                                      Navigator.pop(context);
+                                    },
                                   ),
-                                  onPressed: () async {
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                                Expanded(
-                                  child: Align(
-                                    alignment: AlignmentDirectional(-0.5, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hob5p3op' /* Questionnaire */,
+                                  Expanded(
+                                    child: Align(
+                                      alignment: AlignmentDirectional(-0.5, 0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'hob5p3op' /* Questionnaire */,
+                                        ),
+                                        style:
+                                            FlutterFlowTheme.of(context).title1,
                                       ),
-                                      style:
-                                          FlutterFlowTheme.of(context).title1,
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  LinearPercentIndicator(
-                                      percent: 0.8,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.7,
-                                      lineHeight: 24,
-                                      animation: true,
-                                      progressColor:
-                                          FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .customColor10,
-                                      center: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'wobh1re8' /* 80% */,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
-                                              useGoogleFonts: false,
-                                            ),
-                                      ),
-                                      barRadius: Radius.circular(10)),
                                 ],
                               ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 15),
-                                  child: Container(
-                                    width: 30,
-                                    height: 30,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/icons8_10_100px.png',
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 10, 0),
-                                    child: Container(
-                                      width: double.infinity,
-                                      height: 40,
-                                      decoration: BoxDecoration(),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
-                                        child: AutoSizeText(
-                                          FFLocalizations.of(context).getText(
-                                            'sueikj41' /* Je suis spontané(e) */,
-                                          ),
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
-                                              .subtitle1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .customColor7,
-                                                fontWeight: FontWeight.w600,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(-0.7, 0),
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                                child: AuthUserStreamWidget(
-                                  child: FlutterFlowRadioButton(
-                                    options: [
-                                      FFLocalizations.of(context).getText(
-                                        'q5hazta3' /* Pas du tout */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        '3jajp8fy' /* Pas vraiment */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        'bx6idgbl' /* Vraiment */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        'aceyrn2r' /* Tout à fait */,
-                                      )
-                                    ],
-                                    onChanged: (value) {
-                                      setState(() => radioButtonValue1 = value);
-                                    },
-                                    optionHeight: 25,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: Colors.black,
-                                          useGoogleFonts: false,
-                                        ),
-                                    selectedTextStyle:
-                                        FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryColor,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts: false,
-                                            ),
-                                    textPadding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    buttonPosition: RadioButtonPosition.left,
-                                    direction: Axis.vertical,
-                                    radioButtonColor:
-                                        FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                    inactiveRadioButtonColor: Color(0x8A000000),
-                                    toggleable: false,
-                                    horizontalAlignment: WrapAlignment.start,
-                                    verticalAlignment: WrapCrossAlignment.start,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 25),
-                                  child: Container(
-                                    width: 30,
-                                    height: 30,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/icons8_11_100px.png',
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 10, 0),
-                                    child: Container(
-                                      width: double.infinity,
-                                      height: 50,
-                                      decoration: BoxDecoration(),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 0, 0, 0),
-                                        child: AutoSizeText(
-                                          FFLocalizations.of(context).getText(
-                                            'aqx0bpe8' /* Il est facile pour moi de disc... */,
-                                          ),
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
-                                              .subtitle1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .customColor7,
-                                                fontWeight: FontWeight.w600,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(-0.7, 0),
-                              child: Padding(
+                              Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 10, 0, 20),
-                                child: AuthUserStreamWidget(
-                                  child: FlutterFlowRadioButton(
-                                    options: [
-                                      FFLocalizations.of(context).getText(
-                                        'urvjj1rs' /* Pas du tout */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        '9efjwy7x' /* Pas vraiment */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        '68w5pgmv' /* Vraiment */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        'x5ajn5fe' /* Tout à fait */,
-                                      )
-                                    ],
-                                    onChanged: (value) {
-                                      setState(() => radioButtonValue2 = value);
-                                    },
-                                    optionHeight: 25,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: Colors.black,
-                                          useGoogleFonts: false,
+                                    0, 30, 0, 30),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    LinearPercentIndicator(
+                                        percent: 0.8,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.7,
+                                        lineHeight: 24,
+                                        animation: true,
+                                        progressColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primaryColor,
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .customColor10,
+                                        center: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'wobh1re8' /* 80% */,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .tertiaryColor,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
-                                    selectedTextStyle:
-                                        FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryColor,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts: false,
-                                            ),
-                                    textPadding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    buttonPosition: RadioButtonPosition.left,
-                                    direction: Axis.vertical,
-                                    radioButtonColor:
-                                        FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                    inactiveRadioButtonColor: Color(0x8A000000),
-                                    toggleable: false,
-                                    horizontalAlignment: WrapAlignment.start,
-                                    verticalAlignment: WrapCrossAlignment.start,
-                                  ),
+                                        barRadius: Radius.circular(10)),
+                                  ],
                                 ),
                               ),
-                            ),
-                            Spacer(),
-                            FFButtonWidget(
-                              onPressed: () async {
-                                final usersUpdateData = createUsersRecordData(
-                                  qs11Choice: radioButtonValue2,
-                                  qs10Choice: radioButtonValue1,
-                                );
-                                await currentUserReference
-                                    .update(usersUpdateData);
-                                await Navigator.push(
-                                  context,
-                                  PageTransition(
-                                    type: PageTransitionType.leftToRight,
-                                    duration: Duration(milliseconds: 200),
-                                    reverseDuration:
-                                        Duration(milliseconds: 200),
-                                    child: QsPage8Widget(),
-                                  ),
-                                );
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'hhhhcaip' /* Continuer
- */
-                                ,
-                              ),
-                              options: FFButtonOptions(
-                                width: 200,
-                                height: 50,
-                                color:
-                                    FlutterFlowTheme.of(context).tertiaryColor,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.of(context)
-                                          .customColor7,
-                                      fontWeight: FontWeight.bold,
-                                      useGoogleFonts: false,
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 0, 15),
+                                    child: Container(
+                                      width: 30,
+                                      height: 30,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/images/icons8_10_100px.png',
+                                      ),
                                     ),
-                                elevation: 5,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
-                                ),
-                                borderRadius: 20,
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 10, 0),
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 40,
+                                        decoration: BoxDecoration(),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10, 0, 0, 0),
+                                          child: AutoSizeText(
+                                            FFLocalizations.of(context).getText(
+                                              'sueikj41' /* Je suis spontané(e) */,
+                                            ),
+                                            textAlign: TextAlign.start,
+                                            style: FlutterFlowTheme.of(context)
+                                                .subtitle1
+                                                .override(
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                              child: FFButtonWidget(
+                              Align(
+                                alignment: AlignmentDirectional(-0.7, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 0, 20),
+                                  child: AuthUserStreamWidget(
+                                    child: FlutterFlowRadioButton(
+                                      options: [
+                                        FFLocalizations.of(context).getText(
+                                          'q5hazta3' /* Pas du tout */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          '3jajp8fy' /* Pas vraiment */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          'bx6idgbl' /* Vraiment */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          'aceyrn2r' /* Tout à fait */,
+                                        )
+                                      ],
+                                      onChanged: (value) {
+                                        setState(
+                                            () => radioButtonValue1 = value);
+                                      },
+                                      optionHeight: 25,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: Colors.black,
+                                            useGoogleFonts: false,
+                                          ),
+                                      selectedTextStyle:
+                                          FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
+                                              ),
+                                      textPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              10, 0, 0, 0),
+                                      buttonPosition: RadioButtonPosition.left,
+                                      direction: Axis.vertical,
+                                      radioButtonColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      inactiveRadioButtonColor:
+                                          Color(0x8A000000),
+                                      toggleable: false,
+                                      horizontalAlignment: WrapAlignment.start,
+                                      verticalAlignment:
+                                          WrapCrossAlignment.start,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 0, 25),
+                                    child: Container(
+                                      width: 30,
+                                      height: 30,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/images/icons8_11_100px.png',
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 10, 0),
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 50,
+                                        decoration: BoxDecoration(),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10, 0, 0, 0),
+                                          child: AutoSizeText(
+                                            FFLocalizations.of(context).getText(
+                                              'aqx0bpe8' /* Il est facile pour moi de disc... */,
+                                            ),
+                                            textAlign: TextAlign.start,
+                                            style: FlutterFlowTheme.of(context)
+                                                .subtitle1
+                                                .override(
+                                                  fontFamily: 'Avenir Light ',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .customColor7,
+                                                  fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-0.7, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 10, 0, 20),
+                                  child: AuthUserStreamWidget(
+                                    child: FlutterFlowRadioButton(
+                                      options: [
+                                        FFLocalizations.of(context).getText(
+                                          'urvjj1rs' /* Pas du tout */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          '9efjwy7x' /* Pas vraiment */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          '68w5pgmv' /* Vraiment */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          'x5ajn5fe' /* Tout à fait */,
+                                        )
+                                      ],
+                                      onChanged: (value) {
+                                        setState(
+                                            () => radioButtonValue2 = value);
+                                      },
+                                      optionHeight: 25,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: Colors.black,
+                                            useGoogleFonts: false,
+                                          ),
+                                      selectedTextStyle:
+                                          FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
+                                              ),
+                                      textPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              10, 0, 0, 0),
+                                      buttonPosition: RadioButtonPosition.left,
+                                      direction: Axis.vertical,
+                                      radioButtonColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      inactiveRadioButtonColor:
+                                          Color(0x8A000000),
+                                      toggleable: false,
+                                      horizontalAlignment: WrapAlignment.start,
+                                      verticalAlignment:
+                                          WrapCrossAlignment.start,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Spacer(),
+                              FFButtonWidget(
                                 onPressed: () async {
                                   final usersUpdateData = createUsersRecordData(
-                                    qs10Choice: radioButtonValue1,
                                     qs11Choice: radioButtonValue2,
+                                    qs10Choice: radioButtonValue1,
                                   );
                                   await currentUserReference
                                       .update(usersUpdateData);
                                   await Navigator.push(
                                     context,
                                     PageTransition(
-                                      type: PageTransitionType.fade,
+                                      type: PageTransitionType.leftToRight,
                                       duration: Duration(milliseconds: 200),
                                       reverseDuration:
                                           Duration(milliseconds: 200),
-                                      child: HomePageWidget(),
+                                      child: QsPage8Widget(),
                                     ),
                                   );
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  '1ppdc30w' /* Ça suffit pour moi ! */,
+                                  'hhhhcaip' /* Continuer
+ */
+                                  ,
                                 ),
                                 options: FFButtonOptions(
                                   width: 200,
@@ -468,11 +439,60 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                   borderRadius: 20,
                                 ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    final usersUpdateData =
+                                        createUsersRecordData(
+                                      qs10Choice: radioButtonValue1,
+                                      qs11Choice: radioButtonValue2,
+                                    );
+                                    await currentUserReference
+                                        .update(usersUpdateData);
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 200),
+                                        reverseDuration:
+                                            Duration(milliseconds: 200),
+                                        child: HomePageWidget(),
+                                      ),
+                                    );
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    '1ppdc30w' /* Ça suffit pour moi ! */,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 200,
+                                    height: 50,
+                                    color: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor7,
+                                          fontWeight: FontWeight.bold,
+                                          useGoogleFonts: false,
+                                        ),
+                                    elevation: 5,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
+                                    ),
+                                    borderRadius: 20,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

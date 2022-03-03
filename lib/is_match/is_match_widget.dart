@@ -320,8 +320,6 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 10, 0, 5),
                                             child: Container(
-                                              width: 150,
-                                              height: 150,
                                               clipBehavior: Clip.antiAlias,
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
@@ -388,7 +386,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                                  'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -473,7 +471,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '6go3cgq3' /* 65% */,
+                                          '6go3cgq3' /* 80 % */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .title1

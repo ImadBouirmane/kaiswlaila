@@ -73,21 +73,6 @@ class _ChatWidgetState extends State<ChatWidget> {
             Navigator.pop(context);
           },
         ),
-        title: Stack(
-          children: [
-            if (!(isGroupChat()) ?? true)
-              Text(
-                widget.chatUser.displayName,
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Avenir Light ',
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w900,
-                      useGoogleFonts: false,
-                    ),
-              ),
-          ],
-        ),
         actions: [],
         centerTitle: false,
         elevation: 2,

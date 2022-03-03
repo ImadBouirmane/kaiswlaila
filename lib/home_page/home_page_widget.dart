@@ -561,7 +561,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   0, 0),
                                                           child:
                                                               CircularPercentIndicator(
-                                                            percent: 0.7,
+                                                            percent: 0.4,
                                                             radius: 115,
                                                             lineWidth: 10,
                                                             animation: true,
@@ -592,7 +592,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       FlutterFlowExpandedImageView(
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                                                      'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
                                                                       fit: BoxFit
                                                                           .contain,
                                                                     ),
@@ -623,7 +623,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 ),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/egor-shilref-uj5kt5yQquQ-unsplash.jpg',
+                                                                  'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
                                                                   fit: BoxFit
                                                                       .fitWidth,
                                                                 ),
@@ -845,7 +845,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       FlutterFlowExpandedImageView(
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                                                      'assets/images/m-t-elgassier-2OwC0tesaL8-unsplash.jpg',
                                                                       fit: BoxFit
                                                                           .contain,
                                                                     ),
@@ -876,7 +876,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 ),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/stepan-kulyk-oyL5zMxN4Vk-unsplash.jpg',
+                                                                  'assets/images/m-t-elgassier-2OwC0tesaL8-unsplash.jpg',
                                                                   fit: BoxFit
                                                                       .fitWidth,
                                                                 ),
@@ -901,7 +901,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      't8mp8t9l' /* Mary */,
+                                                      't8mp8t9l' /* Nimate */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -949,7 +949,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '04mrdc46' /* Paris */,
+                                                            '04mrdc46' /* Tripoli */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -989,7 +989,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'mdzkfqhn' /* 1500 Km */,
+                                                            'mdzkfqhn' /* 2278 Km */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1098,7 +1098,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       FlutterFlowExpandedImageView(
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/ayush-kumar-Qq2pG8JNXbU-unsplash.jpg',
+                                                                      'assets/images/7702604.jpg',
                                                                       fit: BoxFit
                                                                           .contain,
                                                                     ),
@@ -1129,7 +1129,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 ),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/ayush-kumar-Qq2pG8JNXbU-unsplash.jpg',
+                                                                  'assets/images/7702604.jpg',
                                                                   fit: BoxFit
                                                                       .fitWidth,
                                                                 ),
@@ -1154,7 +1154,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'm4gdnnxa' /* Deepika */,
+                                                      'm4gdnnxa' /* Shana */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1202,7 +1202,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'eq8te7vz' /* Mumbai */,
+                                                            'eq8te7vz' /* Téhéran */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1242,7 +1242,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '3lweqy47' /* 10150 km */,
+                                                            '3lweqy47' /* 6460 km */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1351,7 +1351,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       FlutterFlowExpandedImageView(
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/reza-delkhosh-e7526CSLu30-unsplash.jpg',
+                                                                      'assets/images/1e0e9cc32a69c0d10760b13fb45f91b7.jpg',
                                                                       fit: BoxFit
                                                                           .contain,
                                                                     ),
@@ -1382,7 +1382,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 ),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/reza-delkhosh-e7526CSLu30-unsplash.jpg',
+                                                                  'assets/images/1e0e9cc32a69c0d10760b13fb45f91b7.jpg',
                                                                   fit: BoxFit
                                                                       .fitWidth,
                                                                 ),
@@ -1407,7 +1407,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'mhdbxjnl' /* Anastasia */,
+                                                      'mhdbxjnl' /* Hiba */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1455,7 +1455,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '9u11oc8t' /* Moscow */,
+                                                            '9u11oc8t' /* Kuwait City */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1495,7 +1495,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '4vem23df' /* 4500 Km */,
+                                                            '4vem23df' /* 6677 Km */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1604,7 +1604,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       FlutterFlowExpandedImageView(
                                                                     image: Image
                                                                         .asset(
-                                                                      'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                                                      'assets/images/original.jpg',
                                                                       fit: BoxFit
                                                                           .contain,
                                                                     ),
@@ -1635,7 +1635,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 ),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/adryan-ra--l2jDhVNO7U-unsplash.jpg',
+                                                                  'assets/images/original.jpg',
                                                                   fit: BoxFit
                                                                       .cover,
                                                                 ),
@@ -1660,7 +1660,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'kjnk21la' /* Kaoutar */,
+                                                      'kjnk21la' /* Oumaima */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1855,6 +1855,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           user: homePageUsersRecord,
                                         ),
                                       ),
+                                    );
+                                    await pageViewController.nextPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
                                     );
                                   },
                                   child: Material(
