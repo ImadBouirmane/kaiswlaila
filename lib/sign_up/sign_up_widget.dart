@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../components/back2_widget.dart';
 import '../components/nav_logo_widget.dart';
 import '../conditions_utilisation/conditions_utilisation_widget.dart';
@@ -403,6 +404,17 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 if (user == null) {
                                                   return;
                                                 }
+
+                                                final usersCreateData =
+                                                    createUsersRecordData(
+                                                  email: emailController.text,
+                                                  pwd: pwdController.text,
+                                                  createdTime:
+                                                      getCurrentTimestamp,
+                                                );
+                                                await UsersRecord.collection
+                                                    .doc(user.uid)
+                                                    .update(usersCreateData);
 
                                                 await Navigator.push(
                                                   context,

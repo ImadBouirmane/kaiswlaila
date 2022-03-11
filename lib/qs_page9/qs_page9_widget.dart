@@ -63,7 +63,7 @@ class _QsPage9WidgetState extends State<QsPage9Widget> {
               height: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.none,
+                  fit: BoxFit.cover,
                   image: Image.asset(
                     'assets/images/Asset_5@4x.png',
                   ).image,
@@ -113,7 +113,7 @@ class _QsPage9WidgetState extends State<QsPage9Widget> {
                                   ),
                                   Expanded(
                                     child: Align(
-                                      alignment: AlignmentDirectional(-0.5, 0),
+                                      alignment: AlignmentDirectional(-0.2, 0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'aj5dfmso' /* Questionnaire */,

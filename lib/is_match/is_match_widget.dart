@@ -173,7 +173,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
-      future: UsersRecord.getDocumentOnce(currentUserReference),
+      future: UsersRecord.getDocumentOnce(widget.user.reference),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -241,15 +241,17 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                         .primaryColor,
                                   ),
                                 ),
-                                child: Container(
-                                  width: 50,
-                                  height: 50,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: CachedNetworkImage(
-                                    imageUrl: isMatchUsersRecord.photoUrl,
+                                child: AuthUserStreamWidget(
+                                  child: Container(
+                                    width: 50,
+                                    height: 50,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: CachedNetworkImage(
+                                      imageUrl: currentUserPhoto,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -319,14 +321,15 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 10, 0, 5),
-                                            child: Container(
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: CachedNetworkImage(
-                                                imageUrl:
-                                                    isMatchUsersRecord.photoUrl,
+                                            child: AuthUserStreamWidget(
+                                              child: Container(
+                                                clipBehavior: Clip.antiAlias,
+                                                decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: CachedNetworkImage(
+                                                  imageUrl: currentUserPhoto,
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -385,8 +388,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                                 decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: Image.asset(
-                                                  'assets/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
+                                                child: CachedNetworkImage(
+                                                  imageUrl: '',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -469,24 +472,27 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                               'textOnPageLoadAnimation1']
                                         ]),
                                       ),
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          '6go3cgq3' /* 80 % */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .title1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
-                                              fontSize: 19,
-                                              useGoogleFonts: false,
-                                            ),
-                                      ).animated([
-                                        animationsMap[
-                                            'textOnPageLoadAnimation2']
-                                      ]),
+                                      AuthUserStreamWidget(
+                                        child: Text(
+                                          formatNumber(
+                                            currentUserDocument?.pourcentage,
+                                            formatType: FormatType.percent,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .title1
+                                              .override(
+                                                fontFamily: 'Avenir Light ',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .tertiaryColor,
+                                                fontSize: 19,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ).animated([
+                                          animationsMap[
+                                              'textOnPageLoadAnimation2']
+                                        ]),
+                                      ),
                                     ],
                                   ),
                                 ),

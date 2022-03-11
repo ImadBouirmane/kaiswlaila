@@ -44,182 +44,124 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 }
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // SignIn
+  // homePage
   {
-    'as69m6hd': {
-      'fr': 'Français',
-      'ar': 'العربية',
-      'en': 'English',
-      'tr': 'Türk',
+    'kk1wnohh': {
+      'fr': 'Découvrir',
+      'ar': 'إكتشف',
+      'en': 'Discover',
+      'tr': 'Keşfetmek',
     },
-    'ehobpuwl': {
-      'fr': 'Email',
-      'ar': 'بريد الالكتروني',
-      'en': 'E-mail',
-      'tr': 'E-posta',
+    't8mp8t9l': {
+      'fr': 'Mohamed',
+      'ar': 'محمد',
+      'en': 'Mohammad',
+      'tr': 'Muhammed',
     },
-    'ppwkq56k': {
-      'fr': 'Mot de passe',
-      'ar': 'كلمة السر',
-      'en': 'Password',
-      'tr': 'Şifre',
+    '04mrdc46': {
+      'fr': 'Dubai',
+      'ar': 'دبي',
+      'en': 'dubai',
+      'tr': 'dubai',
     },
-    'nxdkxn3l': {
-      'fr': 'Se connecter',
-      'ar': 'تسجيل الدخول',
-      'en': 'Login',
-      'tr': 'Giriş yapmak',
+    'mdzkfqhn': {
+      'fr': '7666 Km',
+      'ar': '7666 كم',
+      'en': '7666 km',
+      'tr': '7666 km',
     },
-    'li21rn5t': {
-      'fr': 'Mot de passe oublié ?',
-      'ar': 'نسيت رقمك السري ؟',
-      'en': 'Forgot your password ?',
-      'tr': 'Parolanızı mı unuttunuz ?',
+    'm4gdnnxa': {
+      'fr': 'Mostafa',
+      'ar': 'شانا',
+      'en': 'shana',
+      'tr': 'Şana',
     },
-    'n3vpdygg': {
-      'fr': 'Vous n\'avez pas de compte?',
-      'ar': 'لا يوجد لديك حساب؟',
-      'en': 'You do not have an account?',
-      'tr': 'Hesabınız yok mu?',
+    'eq8te7vz': {
+      'fr': 'Khartoum',
+      'ar': 'الخرطوم',
+      'en': 'Khartoum',
+      'tr': 'Hartum',
     },
-    'tjs7xgjs': {
-      'fr': 'Inscrivez-vous',
-      'ar': 'تسجل',
-      'en': 'Register',
-      'tr': 'Kayıt ol',
+    '3lweqy47': {
+      'fr': '6465 km',
+      'ar': '6465 كم',
+      'en': '6465km',
+      'tr': '6465km',
     },
-    'ed8hdv6r': {
+    'mhdbxjnl': {
+      'fr': 'Samih',
+      'ar': 'سميح',
+      'en': 'Samih',
+      'tr': 'Samih',
+    },
+    '9u11oc8t': {
+      'fr': 'Tunis',
+      'ar': 'تونس',
+      'en': 'Tunisia',
+      'tr': 'Tunus',
+    },
+    '4vem23df': {
+      'fr': '1947 Km',
+      'ar': '1947 كم',
+      'en': '1947 km',
+      'tr': '1947 km',
+    },
+    'kjnk21la': {
+      'fr': 'Mouad',
+      'ar': 'معاد',
+      'en': 'Mouad',
+      'tr': 'Mouad',
+    },
+    'wnw8ak8w': {
+      'fr': 'Damas',
+      'ar': 'دمشق',
+      'en': 'Damascus',
+      'tr': 'Şam',
+    },
+    '6nzk8kr0': {
+      'fr': '5232 Km',
+      'ar': '5232 كم',
+      'en': '5232 km',
+      'tr': '5232 km',
+    },
+    'lj9lkz1j': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
     },
   },
-  // PhoneSignIn
+  // selectLocation
   {
-    'b77nv5sa': {
-      'fr': 'Connectez-vous par téléphone',
-      'ar': 'تسجيل الدخول عبر الهاتف المحمول',
-      'en': 'Connect by Phone Number',
-      'tr': 'Mobil giriş',
+    'p43xrbq8': {
+      'fr': 'Partagez votre localisation',
+      'ar': 'شارك موقعك',
+      'en': 'Share your Location',
+      'tr': 'Konumunuzu paylaşın',
     },
-    'eqlje8ar': {
-      'fr': 'Numéro de téléphone',
-      'ar': 'رقم التليفون',
-      'en': 'Phone Number',
-      'tr': 'Telefon numarası',
+    'tvc4xe6r': {
+      'fr': 'Appuyez sur le bouton ci-dessous:',
+      'ar': 'اضغط على الزر أدناه:',
+      'en': 'Press the button below:',
+      'tr': 'Aşağıdaki düğmeye basın:',
     },
-    '36gt66mz': {
-      'fr': 'Créer',
-      'ar': 'إنشاء',
-      'en': 'Create',
-      'tr': 'Yaratmak',
+    'tzk7uib8': {
+      'fr': 'Sélectionnez localisation',
+      'ar': 'اختر موقعا',
+      'en': 'Select Location',
+      'tr': 'Konum Seçin',
     },
-    'n8a0ygiq': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ana sayfa',
+    'hkuwn3lx': {
+      'fr': 'Continuer',
+      'ar': 'لاستكمال',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
     },
-  },
-  // signUp
-  {
-    '8k6ie3sk': {
-      'fr': 'Créez votre compte',
-      'ar': 'إنشاء حسابك',
-      'en': 'Register your account',
-      'tr': 'hesabını oluştur',
-    },
-    'gt7vkk2a': {
-      'fr': 'Par Email',
-      'ar': 'بالبريد الالكتروني',
-      'en': 'By email',
-      'tr': 'Eposta ile',
-    },
-    'z42km0y1': {
-      'fr': 'Email',
-      'ar': 'بريد الالكتروني',
-      'en': 'E-mail',
-      'tr': 'E-posta',
-    },
-    'fqj0yzbm': {
-      'fr': 'Mot de passe',
-      'ar': 'كلمة السر',
-      'en': 'Password',
-      'tr': 'Şifre',
-    },
-    'e4z8ytmt': {
-      'fr': 'Confirmez le mot de passe',
-      'ar': 'تأكيد من كلمة السر',
-      'en': 'Confirm the password',
-      'tr': 'Şifreyi onaylayın',
-    },
-    'syi85ic2': {
-      'fr': 'Créer',
-      'ar': 'إنشاء',
-      'en': 'Create',
-      'tr': 'Yaratmak',
-    },
-    '4frrvv2y': {
-      'fr': 'Par Téléphone',
-      'ar': 'بالهاتف المحمول',
-      'en': 'By telephone',
-      'tr': 'Telefonla',
-    },
-    'm0dlzs3r': {
-      'fr': 'Votre Téléphone',
-      'ar': 'هاتفك',
-      'en': 'Your phone',
-      'tr': 'Telefonunuz',
-    },
-    'jfb6a30q': {
-      'fr': 'Créer',
-      'ar': 'إنشاء',
-      'en': 'Create',
-      'tr': 'Yaratmak',
-    },
-    'uxtc8q7f': {
-      'fr': 'Accueil',
+    'qr03crzg': {
+      'fr': 'Home',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
-    },
-  },
-  // Onboarding
-  {
-    'd2f68ui3': {
-      'fr':
-          'KWL est la première\napplication conçue \npar une équipe d’experts \nen psychologie et \nspécialistes des relations \nde couple. ',
-      'ar':
-          'KWL هو أول تطبيق صممه فريق من خبراء \nعلم النفس وأخصائيي العلاقات الزوجية.',
-      'en':
-          'KWL is the first application\ndesigned by a team of \npsychology experts and \ncouple relationship \nspecialists.',
-      'tr':
-          'KWL ilk\nuygulama tasarlanmış\nuzman bir ekip tarafından\npsikolojide ve\nilişki uzmanları\ntork.',
-    },
-    's11ixzl1': {
-      'fr': 'Trouvez votre \npartenaire idéal\navec nous,',
-      'ar': 'ابحث عن شريكك المثالي معنا ،',
-      'en': 'Find your ideal \npartner with us,',
-      'tr': 'seninkini bul\nideal eş\nbizimle,',
-    },
-    'u3k7yufq': {
-      'fr': 'Love for Real !',
-      'ar': 'الحب الحقيقي!',
-      'en': 'Love for Real!',
-      'tr': 'Gerçek Aşk!',
-    },
-    'p911bmit': {
-      'fr': 'Commencer',
-      'ar': 'بداية',
-      'en': 'Start',
-      'tr': 'Başlamak',
-    },
-    'lmckg3ku': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ana sayfa',
     },
   },
   // conditionsUtilisation
@@ -307,139 +249,46 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // genderChoice
+  // isMatch
   {
-    '3nwj6z0s': {
-      'fr': 'Que cherchez-vous?',
-      'ar': 'ما الذي تبحث عنه؟',
-      'en': 'What are you looking for?',
-      'tr': 'Ne arıyorsun?',
+    'uz3611e0': {
+      'fr': 'Rencontres',
+      'ar': 'مواعدات',
+      'en': 'Matchs',
+      'tr': 'flört',
     },
-    'ofrd39d8': {
-      'fr': 'Connectez-vous et socialisez avec des millions\n de personnes',
-      'ar': 'تواصل واجتماعيا مع\nملايين البشر',
-      'en': 'Connect and socialize with\nmillions people',
-      'tr': 'ile bağlantı kurun ve sosyalleşin\nmilyonlarca\ninsanlar',
+    'fsc9pzu7': {
+      'fr': 'C\'est un match !',
+      'ar': 'إنها مواعدة !',
+      'en': 'It\'s a Match',
+      'tr': 'Çıkıyor!',
     },
-    'u0pll6sm': {
-      'fr': 'Homme',
-      'ar': 'ذكر',
-      'en': 'Male',
-      'tr': 'Erkek',
+    'ywjrqe02': {
+      'fr': 'Avec un pourcentage de ',
+      'ar': 'بنسبة',
+      'en': 'With a percentage of',
+      'tr': 'yüzde ile',
     },
-    'd45gk2qa': {
-      'fr': 'Femme',
-      'ar': 'المؤنث',
-      'en': 'Feminine',
-      'tr': 'Kadınsı',
+    'mpxwk6ui': {
+      'fr': 'Démarrez une conversation maintenant ',
+      'ar': 'ابدأ محادثة الآن',
+      'en': 'Start a conversation now',
+      'tr': 'Şimdi bir konuşma başlatın',
     },
-    'y8imvytw': {
-      'fr': 'Continuer\n',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
+    'fh5z1igs': {
+      'fr': 'Ou',
+      'ar': 'أو',
+      'en': 'Or',
+      'tr': 'Veya',
     },
-    '6ivfyewp': {
+    'uoiyf18y': {
+      'fr': 'Ca suffit pour moi !',
+      'ar': 'هذا يكفي بالنسبة لي!',
+      'en': 'That\'s enough for me!',
+      'tr': 'Bu bana yeter!',
+    },
+    'zah6clms': {
       'fr': 'Accueil',
-      'ar': 'الصفحه الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // selectLocation
-  {
-    'p43xrbq8': {
-      'fr': 'Partagez votre localisation',
-      'ar': 'شارك موقعك',
-      'en': 'Share your Location',
-      'tr': 'Konumunuzu paylaşın',
-    },
-    'tvc4xe6r': {
-      'fr': 'Appuyez sur le bouton ci-dessous:',
-      'ar': 'اضغط على الزر أدناه:',
-      'en': 'Press the button below:',
-      'tr': 'Aşağıdaki düğmeye basın:',
-    },
-    'tzk7uib8': {
-      'fr': 'Sélectionnez localisation',
-      'ar': 'اختر موقعا',
-      'en': 'Select Location',
-      'tr': 'Konum Seçin',
-    },
-    'hkuwn3lx': {
-      'fr': 'Continuer',
-      'ar': 'لاستكمال',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
-    },
-    'qr03crzg': {
-      'fr': 'Home',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // photoProfile
-  {
-    'oeoe3l6k': {
-      'fr': 'Photo de profil',
-      'ar': 'الصوره الشخصيه',
-      'en': 'Profile picture',
-      'tr': 'Profil fotoğrafı',
-    },
-    'jpdcya6h': {
-      'fr': 'Insérez votre photo',
-      'ar': 'أدخل صورتك',
-      'en': 'Insert your photo',
-      'tr': 'Fotoğrafınızı ekleyin',
-    },
-    'wo9oaq4u': {
-      'fr': 'Continuer',
-      'ar': 'لاستكمال',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
-    },
-    'evcfpeyr': {
-      'fr': 'Acceuil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // baseInfo1
-  {
-    'e4oxhcn1': {
-      'fr': 'Base',
-      'ar': 'معلومات أساسية',
-      'en': 'Base',
-      'tr': 'Temelli',
-    },
-    '9vdcx824': {
-      'fr': 'Nom Complet',
-      'ar': 'الاسم الكامل',
-      'en': 'Full Name',
-      'tr': 'Ad Soyad',
-    },
-    'ht2oa9j3': {
-      'fr': 'Fonction',
-      'ar': 'المهنة',
-      'en': 'Job',
-      'tr': 'İşlev',
-    },
-    '5j9y9uqq': {
-      'fr': 'Présentez-vous !',
-      'ar': 'قدم نفسك !',
-      'en': 'Introduce yourself !',
-      'tr': 'Kendini tanıt !',
-    },
-    'kh7tjb9c': {
-      'fr': 'Continuer',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
-    },
-    'eb73lqdc': {
-      'fr': 'Home',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
@@ -453,17 +302,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Gender:',
       'tr': 'Cinsiyet:',
     },
-    'tb24brgs': {
+    'j7y7bnsa': {
       'fr': 'Homme',
-      'ar': 'رجل',
-      'en': 'Man',
-      'tr': 'Erkek adam',
+      'ar': 'ذكر',
+      'en': 'Male',
+      'tr': 'Erkek ',
     },
-    'ozp4v9m5': {
-      'fr': 'Femme',
-      'ar': 'امرأة',
-      'en': 'Women',
-      'tr': 'Kadın',
+    'p46h7z0h': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    '7zi3sr3r': {
+      'fr': 'Féminin',
+      'ar': 'أنثى ',
+      'en': 'Feminine',
+      'tr': 'Kadınsı',
+    },
+    'toz39mc8': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
     },
     'djgnn95q': {
       'fr': 'Date de naissance:',
@@ -622,119 +483,209 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // photos
+  // photoProfile
   {
-    'jqgzv7gq': {
-      'fr': 'Vos Photos',
-      'ar': 'صورك',
-      'en': 'Your pictures',
-      'tr': 'Senin fotoğrafların',
+    'oeoe3l6k': {
+      'fr': 'Photo de profil',
+      'ar': 'الصوره الشخصيه',
+      'en': 'Profile picture',
+      'tr': 'Profil fotoğrafı',
     },
-    'fmsmx7ba': {
-      'fr': 'Veuillez insérer au moins une de vos photos...',
-      'ar': 'الرجاء إدخال واحدة على الأقل من صورك ...',
-      'en': 'Please insert at least one of your photos...',
-      'tr': 'Lütfen fotoğraflarınızdan en az birini ekleyin...',
+    'jpdcya6h': {
+      'fr': 'Insérez votre photo',
+      'ar': 'أدخل صورتك',
+      'en': 'Insert your photo',
+      'tr': 'Fotoğrafınızı ekleyin',
     },
-    'c78disd1': {
+    'wo9oaq4u': {
+      'fr': 'Continuer',
+      'ar': 'لاستكمال',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
+    },
+    'evcfpeyr': {
+      'fr': 'Acceuil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
+  // baseInfo1
+  {
+    'e4oxhcn1': {
+      'fr': 'Base',
+      'ar': 'معلومات أساسية',
+      'en': 'Base',
+      'tr': 'Temelli',
+    },
+    '9vdcx824': {
+      'fr': 'Nom Complet',
+      'ar': 'الاسم الكامل',
+      'en': 'Full Name',
+      'tr': 'Ad Soyad',
+    },
+    'ht2oa9j3': {
+      'fr': 'Fonction',
+      'ar': 'المهنة',
+      'en': 'Job',
+      'tr': 'İşlev',
+    },
+    '5j9y9uqq': {
+      'fr': 'Présentez-vous !',
+      'ar': 'قدم نفسك !',
+      'en': 'Introduce yourself !',
+      'tr': 'Kendini tanıt !',
+    },
+    'kh7tjb9c': {
+      'fr': 'Continuer',
+      'ar': 'يكمل',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
+    },
+    'eb73lqdc': {
+      'fr': 'Home',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
+  // genderChoice
+  {
+    '3nwj6z0s': {
+      'fr': 'Que cherchez-vous?',
+      'ar': 'ما الذي تبحث عنه؟',
+      'en': 'What are you looking for?',
+      'tr': 'Ne arıyorsun?',
+    },
+    'ofrd39d8': {
+      'fr': 'Connectez-vous et socialisez avec des millions\n de personnes',
+      'ar': 'تواصل واجتماعيا مع\nملايين البشر',
+      'en': 'Connect and socialize with\nmillions people',
+      'tr': 'ile bağlantı kurun ve sosyalleşin\nmilyonlarca\ninsanlar',
+    },
+    'ilmhyb2n': {
+      'fr': 'Homme',
+      'ar': 'ذكر',
+      'en': 'Male',
+      'tr': 'Erkek ',
+    },
+    'rhh7fkzv': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'e03jhr7h': {
+      'fr': 'Féminin',
+      'ar': 'أنثى ',
+      'en': 'Feminine',
+      'tr': 'Kadınsı',
+    },
+    'k84a0iwf': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'y8imvytw': {
       'fr': 'Continuer\n',
       'ar': 'يكمل',
       'en': 'Continue',
       'tr': 'Devam etmek',
     },
-    '2xbe9ynp': {
+    '6ivfyewp': {
       'fr': 'Accueil',
       'ar': 'الصفحه الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
     },
   },
-  // QsPage1
+  // matches
   {
-    'c5ye6u7t': {
-      'fr': 'Questionnaire',
-      'ar': 'إستطلاع',
-      'en': 'Survey',
-      'tr': 'Anket',
+    'ixqmo3vn': {
+      'fr': 'Rencontres',
+      'ar': 'مواعدات',
+      'en': 'Matchs',
+      'tr': 'Flört',
     },
-    'vksprlxx': {
-      'fr': '0%',
-      'ar': '0٪',
-      'en': '0%',
-      'tr': '0%',
+    'h7f9xqnv': {
+      'fr': 'Samih',
+      'ar': 'سميح',
+      'en': 'Samih',
+      'tr': 'Samih',
     },
-    'x8q1d0fx': {
-      'fr':
-          'Il est important pour moi de maintenir les valeurs ou les croyances traditionnelles ',
-      'ar': 'من المهم بالنسبة لي الحفاظ على القيم أو المعتقدات التقليدية',
-      'en': 'It is important to me to maintain traditional values or beliefs',
-      'tr':
-          'Geleneksel değerleri veya inançları sürdürmek benim için önemlidir.',
+    '34yx3kdi': {
+      'fr': 'Wael',
+      'ar': 'وائل',
+      'en': 'Wael',
+      'tr': 'Wael',
     },
-    'plyj4lq2': {
-      'fr': 'Pas du tout',
-      'ar': 'لا على الاطلاق',
-      'en': 'Not at all',
-      'tr': 'hiç de bile',
-    },
-    'wbf8z75e': {
-      'fr': 'Pas vraiment',
-      'ar': 'ليس صحيحا',
-      'en': 'Not really',
-      'tr': 'Pek sayılmaz',
-    },
-    'vcxsupx4': {
-      'fr': 'Vraiment',
-      'ar': 'حقا',
-      'en': 'Really',
-      'tr': 'Yok canım',
-    },
-    'rc0ktr4f': {
-      'fr': 'Tout à fait ',
-      'ar': 'تماما',
-      'en': 'Absolutely',
-      'tr': 'Kesinlikle',
-    },
-    '7x6cdcsf': {
-      'fr':
-          'Il est important pour moi de prendre mes propres décisions en ce qui concerne ma vie ',
-      'ar': 'من المهم بالنسبة لي أن أتخذ قراراتي الخاصة فيما يتعلق بحياتي',
-      'en': 'It is important for me to make my own decisions regarding my life',
-      'tr': 'Hayatımla ilgili kendi kararlarımı vermek benim için önemlidir.',
-    },
-    '04w2ce3p': {
-      'fr': 'Pas du tout',
-      'ar': 'لا على الاطلاق',
-      'en': 'Not at all',
-      'tr': 'hiç de bile',
-    },
-    'pvxursmn': {
-      'fr': 'Pas vraiment',
-      'ar': 'ليس صحيحا',
-      'en': 'Not really',
-      'tr': 'Pek sayılmaz',
-    },
-    'ngh7531z': {
-      'fr': 'Vraiment',
-      'ar': 'حقا',
-      'en': 'Really',
-      'tr': 'Yok canım',
-    },
-    'jdbmphar': {
-      'fr': 'Tout à fait ',
-      'ar': 'تماما',
-      'en': 'Absolutely',
-      'tr': 'Kesinlikle',
-    },
-    '4g9k36gl': {
-      'fr': 'Continuer',
-      'ar': 'إستكمال',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
-    },
-    'e5zj2gls': {
+    '5cfo1suo': {
       'fr': 'Accueil',
-      'ar': 'ترحيب',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
+  // Profile
+  {
+    '13jgokol': {
+      'fr': 'Profil',
+      'ar': 'ملفي الشخصي',
+      'en': 'Profile',
+      'tr': 'Profil',
+    },
+    '0olwx22j': {
+      'fr': 'À propos de moi',
+      'ar': 'عني',
+      'en': 'About me',
+      'tr': 'Benim hakkımda',
+    },
+    'mm8kuf2a': {
+      'fr': 'Intérêts',
+      'ar': 'الإهتمامات',
+      'en': 'Interests',
+      'tr': 'ilgi alanları',
+    },
+    'zfssgo4b': {
+      'fr': 'La randonnée',
+      'ar': 'جولة على الأقدام',
+      'en': 'Hiking',
+      'tr': 'Doğa yürüyüşü',
+    },
+    'f4kwb8wf': {
+      'fr': 'Nature/Jardinage',
+      'ar': 'الطبيعة / البستنة',
+      'en': 'Nature/Gardening',
+      'tr': 'Doğa/Bahçecilik',
+    },
+    '2dzl7yvp': {
+      'fr': 'L’art',
+      'ar': 'فن',
+      'en': 'Art',
+      'tr': 'Sanat',
+    },
+    'bk8urqou': {
+      'fr': 'Les voyages',
+      'ar': 'الرحلات',
+      'en': 'The trips',
+      'tr': 'geziler',
+    },
+    'pabqa4hn': {
+      'fr': 'Films/Cinéma',
+      'ar': 'أفلام / سينما',
+      'en': 'Movies/Cinema',
+      'tr': 'Filmler/Sinema',
+    },
+    '25o6rp5o': {
+      'fr': 'Photos',
+      'ar': 'الصور',
+      'en': 'Pictures',
+      'tr': 'Resimler',
+    },
+    'qryw0bxh': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
     },
@@ -830,525 +781,342 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // QsPage3
+  // QsPage1
   {
-    'mc942bqj': {
+    'c5ye6u7t': {
       'fr': 'Questionnaire',
       'ar': 'إستطلاع',
       'en': 'Survey',
       'tr': 'Anket',
     },
-    'pe7k4a3w': {
-      'fr': '30%',
-      'ar': '20٪',
-      'en': '20%',
-      'tr': '20%',
+    'vksprlxx': {
+      'fr': '0%',
+      'ar': '0٪',
+      'en': '0%',
+      'tr': '0%',
     },
-    'jz9ayuiz': {
-      'fr': 'Le plus important dans une relation ?\n (3 choix)',
-      'ar': 'أهم شيء في العلاقة؟ (3 اختيارات)',
-      'en': 'The most important thing in a relationship? (3 choices)',
-      'tr': 'Bir ilişkideki en önemli şey? (3 seçenek)',
-    },
-    'dnrpkcb2': {
-      'fr': 'La passion',
-      'ar': 'الصبر',
-      'en': 'Passion',
-      'tr': 'Tutku',
-    },
-    '3t29gxoa': {
-      'fr': 'L\'amour',
-      'ar': 'الحب',
-      'en': 'love',
-      'tr': 'Aşk',
-    },
-    'ym47iji9': {
-      'fr': 'La complicité',
-      'ar': 'التواطؤ',
-      'en': 'Complicity',
-      'tr': 'suç ortaklığı',
-    },
-    'qanjrt27': {
-      'fr': 'La loyauté',
-      'ar': 'وفاء',
-      'en': 'Loyalty',
-      'tr': 'Bağlılık',
-    },
-    '4p7sq5nj': {
-      'fr': 'La fidélité',
-      'ar': 'جدير بالثقة',
-      'en': 'Faithfulness',
-      'tr': 'sadakat',
-    },
-    'rrdwotq1': {
-      'fr': 'La transparence ',
-      'ar': 'شفافية',
-      'en': 'Transparency',
-      'tr': 'şeffaflık',
-    },
-    'vptosgd4': {
-      'fr': 'L’authenticité ',
-      'ar': 'أصالة',
-      'en': 'Authenticity',
-      'tr': 'özgünlük',
-    },
-    'fqmnws25': {
-      'fr': 'Continuer\n',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam etmek',
-    },
-    'u0ruarh6': {
-      'fr': 'Home',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // QsPage4
-  {
-    'ppu4s2x0': {
-      'fr': 'Questionnaire',
-      'ar': 'إستطلاع',
-      'en': 'Survey',
-      'tr': 'Anket',
-    },
-    '7682nbj1': {
-      'fr': '40%',
-      'ar': '40٪',
-      'en': '40%',
-      'tr': '40%',
-    },
-    'il0hvrhc': {
-      'fr': 'Vos besoins',
-      'ar': 'احتياجاتك',
-      'en': 'Your needs',
-      'tr': 'İhtiyaçlarınız',
-    },
-    'b88wrl3j': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
-      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
-      'en': 'From 1 to 5 (1 not very important, 10 very important)',
-      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
-    },
-    'ulzkksko': {
-      'fr': 'Affection',
-      'ar': 'عاطفة',
-      'en': 'Affection',
-      'tr': 'Alaka',
-    },
-    'z18sn5vq': {
-      'fr': 'Indépendance',
-      'ar': 'استقلال',
-      'en': 'Independence',
-      'tr': 'Bağımsızlık',
-    },
-    'yflj2fva': {
-      'fr': 'Liberté',
-      'ar': 'حرية',
-      'en': 'Freedom',
-      'tr': 'Özgürlük',
-    },
-    'wouevk5m': {
-      'fr': 'Reconnaissance',
-      'ar': 'إعتراف',
-      'en': 'Acknowledgement',
-      'tr': 'teşekkür',
-    },
-    'ysmqc5y7': {
-      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
-      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
-      'en': 'From 1 to 5 (1 not very important, 10 very important)',
-      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
-    },
-    'g6vr4fu1': {
-      'fr': 'Admiration ',
-      'ar': 'الإعجاب',
-      'en': 'Admiration',
-      'tr': 'hayranlık',
-    },
-    'ljkxmklp': {
-      'fr': 'Fonder une famille',
-      'ar': 'تكوين أسرة',
-      'en': 'Build a family',
-      'tr': 'bir aile kur',
-    },
-    '5ehrybj4': {
-      'fr': 'Continuer',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam et',
-    },
-    'o978kh7p': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'EV',
-    },
-  },
-  // QsPage5
-  {
-    '268nm25r': {
-      'fr': 'Questionnaire',
-      'ar': 'إستطلاع',
-      'en': 'Survey',
-      'tr': 'Anket',
-    },
-    '8tb2kgag': {
-      'fr': '60%',
-      'ar': '60٪',
-      'en': '60%',
-      'tr': '60%',
-    },
-    'rgdesdex': {
-      'fr': 'Quel est votre niveau d’études ?',
-      'ar': 'ما هو مستواك الدراسي ؟',
-      'en': 'What is your level of study ?',
-      'tr': 'Eğitim seviyeniz nedir?',
-    },
-    'p9swrnq5': {
-      'fr': 'Sans diplôme',
-      'ar': 'بدون دبلوم',
-      'en': 'Without diploma',
-      'tr': 'diplomasız',
-    },
-    'ruwhy5ui': {
-      'fr': 'Collège',
-      'ar': 'كلية',
-      'en': 'College',
-      'tr': 'Kolej',
-    },
-    'z0kbrf7f': {
-      'fr': 'BAC ou BAC PRO',
-      'ar': 'بكالوريا أو بكالوريا مهنية ',
-      'en': 'BAC or BAC PRO',
-      'tr': 'BAC veya BAC PRO',
-    },
-    'lbmcfc27': {
-      'fr': 'BAC +2 /BAC +3',
-      'ar': 'بكالوريا 2+ أو بكالوريا 3+',
-      'en': 'BAC +2 /BAC +3',
-      'tr': 'BAC +2 /BAC +3',
-    },
-    '0dfcrqgn': {
-      'fr': 'BAC +4 / BAC +5',
-      'ar': 'بكالوريا 4+ أو بكالوريا 5+ ',
-      'en': 'BAC +4 / BAC +5',
-      'tr': 'BAC +4 / BAC +5',
-    },
-    '21btpdlo': {
-      'fr': 'Doctorat',
-      'ar': 'دكتوراه',
-      'en': 'PhD',
-      'tr': 'Doktora',
-    },
-    'benq6kct': {
+    'x8q1d0fx': {
       'fr':
-          'Quelle importance attachez-vous au niveau d’études de votre partenaire ?',
-      'ar': 'ما الأهمية التي توليها لمستوى تعليم شريكك؟',
-      'en':
-          'What importance do you attach to the level of education of your partner?',
-      'tr': 'Partnerinizin eğitim düzeyine ne kadar önem veriyorsunuz?',
-    },
-    'whih40fe': {
-      'fr': 'Aucune importance',
-      'ar': 'لا أهمية',
-      'en': 'Doesn\'t matter',
-      'tr': 'önemli değil',
-    },
-    'm68w14bg': {
-      'fr': 'Peu important',
-      'ar': 'غير مهم',
-      'en': 'Not important',
-      'tr': 'Önemli değil',
-    },
-    'zspmvdas': {
-      'fr': 'Important',
-      'ar': 'الأهمية',
-      'en': 'Important',
-      'tr': 'Önemli',
-    },
-    'p0un418b': {
-      'fr': 'Plutôt important',
-      'ar': 'مهم جدا',
-      'en': 'Quite important',
-      'tr': 'oldukça önemli',
-    },
-    '4lsogzl3': {
-      'fr': 'Vraiment important',
-      'ar': 'مهم للغاية',
-      'en': 'Really important',
-      'tr': 'Gerçekten önemli',
-    },
-    '2kw6o9vt': {
-      'fr': 'Continuer\n',
-      'ar': 'يكمل',
-      'en': 'Continue',
-      'tr': 'Devam et',
-    },
-    '4nhyhv0h': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // QsPage6
-  {
-    'mwt2fa5y': {
-      'fr': 'Questionnaire',
-      'ar': 'إستطلاع',
-      'en': 'Survey',
-      'tr': 'Anket',
-    },
-    '6gmg1s8i': {
-      'fr': '70%',
-      'ar': '70٪',
-      'en': '70%',
-      'tr': '70%',
-    },
-    'rcn30c2m': {
-      'fr':
-          'Imaginez que vos amis devaient vous décrire, quels seraient les adjectifs qui vous correspondraient ?\n(Choisir 9 adjectifs)',
-      'ar':
-          'تخيل أن على أصدقائك أن يصفوك ، ما هي الصفات التي تناسبك؟ (اختر 9 صفات)',
-      'en':
-          'Imagine that your friends had to describe you, what would be the adjectives that would correspond to you? (choose 9 adjectives)',
+          'Il est important pour moi de maintenir les valeurs ou les croyances traditionnelles ',
+      'ar': 'من المهم بالنسبة لي الحفاظ على القيم أو المعتقدات التقليدية',
+      'en': 'It is important to me to maintain traditional values or beliefs',
       'tr':
-          'Arkadaşlarınızın sizi tanımlaması gerektiğini düşünün, size karşılık gelen sıfatlar ne olurdu? (9 sıfat seçin)',
+          'Geleneksel değerleri veya inançları sürdürmek benim için önemlidir.',
     },
-    '1hn5qh91': {
-      'fr': 'Ses valeurs',
-      'ar': 'قيمها',
-      'en': 'Her values',
-      'tr': 'Onun değerleri',
+    'plyj4lq2': {
+      'fr': 'Pas du tout',
+      'ar': 'لا على الاطلاق',
+      'en': 'Not at all',
+      'tr': 'hiç de bile',
     },
-    'voskdiu6': {
-      'fr': 'Son énergie',
-      'ar': 'طاقته',
-      'en': 'His energy',
-      'tr': 'Onun enerjisi',
+    'wbf8z75e': {
+      'fr': 'Pas vraiment',
+      'ar': 'ليس صحيحا',
+      'en': 'Not really',
+      'tr': 'Pek sayılmaz',
     },
-    'zifr7v5v': {
-      'fr': 'L’attachement',
-      'ar': 'مرفق',
-      'en': 'Attachment',
-      'tr': 'Ek dosya',
+    'vcxsupx4': {
+      'fr': 'Vraiment',
+      'ar': 'حقا',
+      'en': 'Really',
+      'tr': 'Yok canım',
     },
-    'k4veflv4': {
-      'fr': 'Les habitudes',
-      'ar': 'العادات',
-      'en': 'Habits',
-      'tr': 'Alışkanlıklar',
+    'rc0ktr4f': {
+      'fr': 'Tout à fait ',
+      'ar': 'تماما',
+      'en': 'Absolutely',
+      'tr': 'Kesinlikle',
     },
-    'mq2x1ksm': {
-      'fr': 'Le plaisir et la détente',
-      'ar': 'المتعة والاسترخاء',
-      'en': 'Pleasure and relaxation',
-      'tr': 'Zevk ve rahatlama',
+    '7x6cdcsf': {
+      'fr':
+          'Il est important pour moi de prendre mes propres décisions en ce qui concerne ma vie ',
+      'ar': 'من المهم بالنسبة لي أن أتخذ قراراتي الخاصة فيما يتعلق بحياتي',
+      'en': 'It is important for me to make my own decisions regarding my life',
+      'tr': 'Hayatımla ilgili kendi kararlarımı vermek benim için önemlidir.',
     },
-    'yj1yf58v': {
-      'fr': 'Être à deux',
-      'ar': 'لنكن معا',
-      'en': 'be together',
-      'tr': 'Birlikte olmak',
+    '04w2ce3p': {
+      'fr': 'Pas du tout',
+      'ar': 'لا على الاطلاق',
+      'en': 'Not at all',
+      'tr': 'hiç de bile',
     },
-    '7q945q5j': {
-      'fr': 'Ma confiance en elle (lui)',
-      'ar': 'ثقتي بها',
-      'en': 'My trust in her (him)',
-      'tr': 'Ona olan güvenim (ona)',
+    'pvxursmn': {
+      'fr': 'Pas vraiment',
+      'ar': 'ليس صحيحا',
+      'en': 'Not really',
+      'tr': 'Pek sayılmaz',
     },
-    'bm14bjj9': {
-      'fr': 'Son sex-appeal',
-      'ar': 'جاذبيتها الجنسية',
-      'en': 'Her sex appeal',
-      'tr': 'Onun seks çekiciliği',
+    'ngh7531z': {
+      'fr': 'Vraiment',
+      'ar': 'حقا',
+      'en': 'Really',
+      'tr': 'Yok canım',
     },
-    'vx0d7yqh': {
-      'fr': 'Son amour pour les enfants',
-      'ar': 'حبه للأطفال',
-      'en': 'His love for children',
-      'tr': 'Çocuklara olan sevgisi',
+    'jdbmphar': {
+      'fr': 'Tout à fait ',
+      'ar': 'تماما',
+      'en': 'Absolutely',
+      'tr': 'Kesinlikle',
     },
-    'mj9rqx3a': {
-      'fr': 'Le partage',
-      'ar': 'مشاركة',
-      'en': 'The sharing',
-      'tr': 'Paylaşım',
-    },
-    'p5vrz6tt': {
-      'fr': 'Ses convictions',
-      'ar': 'قناعاته',
-      'en': 'his convictions',
-      'tr': 'onun mahkumiyetleri',
-    },
-    'fncvqqdj': {
-      'fr': 'La passion',
-      'ar': 'الصبر',
-      'en': 'Passion',
-      'tr': 'Tutku',
-    },
-    '6j84fai7': {
-      'fr': 'Sa joie de vivre',
-      'ar': 'فرحته في العيش',
-      'en': 'His joy of living',
-      'tr': 'Onun yaşama sevinci',
-    },
-    '643vde0y': {
-      'fr': 'Son apparence physique ',
-      'ar': 'مظهره الجسدي',
-      'en': 'His physical appearance',
-      'tr': 'Onun fiziksel görünüşü',
-    },
-    'aak2zz1g': {
-      'fr': 'Notre attirance réciproque ',
-      'ar': 'جاذبيتنا المتبادلة',
-      'en': 'Our mutual attraction',
-      'tr': 'karşılıklı çekiciliğimiz',
-    },
-    '79aw810k': {
-      'fr': 'Nos similitudes ',
-      'ar': 'أوجه التشابه بيننا',
-      'en': 'Our similarities',
-      'tr': 'benzerliklerimiz',
-    },
-    'bn98g8p4': {
-      'fr': 'L’affection que je ressens\n pour elle (lui)',
-      'ar': 'المودة التي أشعر بها تجاهها',
-      'en': 'The affection I feel for her (him)',
-      'tr': 'Onun için hissettiğim sevgi (o)',
-    },
-    'idao9r8m': {
-      'fr': 'Sa personnalité ',
-      'ar': 'شخصيته',
-      'en': 'Her personality',
-      'tr': 'onun kişiliği',
-    },
-    'vk1vfsno': {
-      'fr': 'Sa gentillesse',
-      'ar': 'لطفه',
-      'en': 'His kindness',
-      'tr': 'Onun nezaketi',
-    },
-    '09lp2049': {
-      'fr': 'Éprouver des sensations fortes',
-      'ar': 'تجربة الإثارة',
-      'en': 'Experience thrills',
-      'tr': 'Heyecan yaşayın',
-    },
-    '3pf8k24c': {
-      'fr': 'Sa position sociale',
-      'ar': 'وضعه الاجتماعي',
-      'en': 'His social position',
-      'tr': 'Onun sosyal konumu',
-    },
-    'azcxrjix': {
-      'fr': 'J’ai besoin d’un homme\n (d’une femme) dans ma vie',
-      'ar': 'أحتاج إلى رجل (امرأة) في حياتي',
-      'en': 'I need a man (a woman) in my life',
-      'tr': 'Hayatımda bir erkeğe (bir kadına) ihtiyacım var',
-    },
-    'd48ohd78': {
-      'fr': 'Continuer\n',
-      'ar': 'لاستكمال',
+    '4g9k36gl': {
+      'fr': 'Continuer',
+      'ar': 'إستكمال',
       'en': 'Continue',
       'tr': 'Devam etmek',
     },
-    'o5zfgh4f': {
+    'e5zj2gls': {
       'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
+      'ar': 'ترحيب',
       'en': 'Home',
       'tr': 'Ev',
     },
   },
-  // QsPage7
+  // photos
   {
-    'hob5p3op': {
-      'fr': 'Questionnaire',
-      'ar': 'الدراسة الاستقصائية',
-      'en': 'Survey',
-      'tr': 'Anket',
+    'jqgzv7gq': {
+      'fr': 'Vos Photos',
+      'ar': 'صورك',
+      'en': 'Your pictures',
+      'tr': 'Senin fotoğrafların',
     },
-    'wobh1re8': {
-      'fr': '80%',
-      'ar': '80٪',
-      'en': '80%',
-      'tr': '80%',
+    'fmsmx7ba': {
+      'fr': 'Veuillez insérer au moins une de vos photos...',
+      'ar': 'الرجاء إدخال واحدة على الأقل من صورك ...',
+      'en': 'Please insert at least one of your photos...',
+      'tr': 'Lütfen fotoğraflarınızdan en az birini ekleyin...',
     },
-    'sueikj41': {
-      'fr': 'Je suis spontané(e)',
-      'ar': 'أنا عفوي',
-      'en': 'I am spontaneous',
-      'tr': 'ben spontaneyim',
-    },
-    'q5hazta3': {
-      'fr': 'Pas du tout',
-      'ar': 'لا على الاطلاق',
-      'en': 'Not at all',
-      'tr': 'hiç de bile',
-    },
-    '3jajp8fy': {
-      'fr': 'Pas vraiment',
-      'ar': 'ليس صحيحا',
-      'en': 'Not really',
-      'tr': 'Pek sayılmaz',
-    },
-    'bx6idgbl': {
-      'fr': 'Vraiment',
-      'ar': 'حقا',
-      'en': 'Really',
-      'tr': 'Yok canım',
-    },
-    'aceyrn2r': {
-      'fr': 'Tout à fait',
-      'ar': 'تماما',
-      'en': 'Absolutely',
-      'tr': 'Kesinlikle',
-    },
-    'aqx0bpe8': {
-      'fr': 'Il est facile pour moi de discuter avec de nouvelles personnes',
-      'ar': 'من السهل بالنسبة لي الدردشة مع أشخاص جدد',
-      'en': 'It&#39;s easy for me to chat with new people',
-      'tr': 'Yeni insanlarla sohbet etmek benim için kolay',
-    },
-    'urvjj1rs': {
-      'fr': 'Pas du tout',
-      'ar': 'لا على الاطلاق',
-      'en': 'Not at all',
-      'tr': 'hiç de bile',
-    },
-    '9efjwy7x': {
-      'fr': 'Pas vraiment',
-      'ar': 'ليس صحيحا',
-      'en': 'Not really',
-      'tr': 'Pek sayılmaz',
-    },
-    '68w5pgmv': {
-      'fr': 'Vraiment',
-      'ar': 'حقا',
-      'en': 'Really',
-      'tr': 'Yok canım',
-    },
-    'x5ajn5fe': {
-      'fr': 'Tout à fait',
-      'ar': 'تماما',
-      'en': 'Absolutely',
-      'tr': 'Kesinlikle',
-    },
-    'hhhhcaip': {
+    'c78disd1': {
       'fr': 'Continuer\n',
-      'ar': 'لاستكمال',
+      'ar': 'يكمل',
       'en': 'Continue',
       'tr': 'Devam etmek',
     },
-    '1ppdc30w': {
-      'fr': 'Ça suffit pour moi !',
-      'ar': 'هذا يكفي بالنسبة لي!',
-      'en': 'That\'s enough for me!',
-      'tr': 'Bu bana yeter!',
+    '2xbe9ynp': {
+      'fr': 'Accueil',
+      'ar': 'الصفحه الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
     },
-    'f3dhdl1s': {
+  },
+  // editProfile
+  {
+    'l3uatqmy': {
+      'fr': 'Éditez votre profil',
+      'ar': 'عدل ملفك الشخصي',
+      'en': 'Edit your profile',
+      'tr': 'Profilinizi düzenleyin',
+    },
+    '2efprkqz': {
+      'fr': 'Mon Profil:',
+      'ar': 'ملفي الشخصي',
+      'en': 'My profile',
+      'tr': 'Benim profilim',
+    },
+    't9i89j5t': {
+      'fr': 'Nom Complet',
+      'ar': 'الاسم الكامل',
+      'en': 'Full Name',
+      'tr': 'Ad Soyad',
+    },
+    'boqifj1x': {
+      'fr': 'Métier',
+      'ar': 'مهنة',
+      'en': 'Job',
+      'tr': 'İş',
+    },
+    '12leaikz': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'wd9vpqh6': {
+      'fr': 'Biographie',
+      'ar': 'سيرة شخصية',
+      'en': 'Biography',
+      'tr': 'biyografi',
+    },
+    'foi3lff4': {
+      'fr': 'Sexe:',
+      'ar': 'الجنس',
+      'en': 'Gender',
+      'tr': 'Cinsiyet',
+    },
+    'jt3a1h20': {
+      'fr': 'Homme',
+      'ar': 'ذكر',
+      'en': 'Male',
+      'tr': 'Erkek ',
+    },
+    '7q89d3qx': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'kqkhgv5o': {
+      'fr': 'Féminin',
+      'ar': 'أنثى ',
+      'en': 'Feminine',
+      'tr': 'Kadınsı',
+    },
+    'bxafy80e': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    '5bponwwp': {
+      'fr': 'Date de naissance:',
+      'ar': 'تاريخ الميلاد',
+      'en': 'Date of Birth',
+      'tr': 'Doğum tarihi',
+    },
+    'jgqgzegq': {
+      'fr': 'Jour',
+      'ar': 'يوم',
+      'en': 'Day',
+      'tr': 'Gün',
+    },
+    'p5jfzspu': {
+      'fr': 'Mois',
+      'ar': 'شهر',
+      'en': 'Month',
+      'tr': 'Ay',
+    },
+    'frvjzbxi': {
+      'fr': 'Année',
+      'ar': 'عام',
+      'en': 'Year',
+      'tr': 'Yıl',
+    },
+    'ca4lzles': {
+      'fr': 'Sélectionnez  votre ville:',
+      'ar': 'مدينتك:',
+      'en': 'Your City:',
+      'tr': 'Senin şehirin:',
+    },
+    'h0ueu5id': {
+      'fr': 'Ville',
+      'ar': 'مدينة',
+      'en': 'City',
+      'tr': 'Şehir',
+    },
+    '0jbfg6p4': {
+      'fr': 'Sélectionnez votre pays:',
+      'ar': 'اختر بلدك:',
+      'en': 'Choose your country:',
+      'tr': 'Ülkenizi seçin:',
+    },
+    'wod7xith': {
+      'fr': 'Maroc',
+      'ar': 'المملكة المغربية',
+      'en': 'Morocco',
+      'tr': 'Fas',
+    },
+    '11d1afgd': {
+      'fr': 'Algérie',
+      'ar': 'الجزائر',
+      'en': 'Algeria',
+      'tr': 'Cezayir',
+    },
+    '1cu9v3bt': {
+      'fr': 'Tunisie',
+      'ar': 'تونس',
+      'en': 'Tunisia',
+      'tr': 'Tunus',
+    },
+    '9igd712z': {
+      'fr': 'Libye',
+      'ar': 'ليبيا',
+      'en': 'Libya',
+      'tr': 'Libya',
+    },
+    'a4vsnbxb': {
+      'fr': 'Mauritanie',
+      'ar': 'موريتانيا',
+      'en': 'Mauritania',
+      'tr': 'Moritanya',
+    },
+    'h3hponew': {
+      'fr': 'Egypte',
+      'ar': 'مصر',
+      'en': 'Egypt',
+      'tr': 'Mısır',
+    },
+    'aj862mpk': {
+      'fr': 'Saudi Arabia',
+      'ar': 'المملكة العربية السعودية',
+      'en': 'saudi arabia',
+      'tr': 'Suudi Arabistan',
+    },
+    'kc0kivbo': {
+      'fr': 'UAE',
+      'ar': 'الإمارات العربية المتحدة',
+      'en': 'UAE',
+      'tr': 'BAE',
+    },
+    'ep6joodu': {
+      'fr': 'Oman',
+      'ar': 'سلطنة عمان',
+      'en': 'Oman',
+      'tr': 'Umman',
+    },
+    '6vdqvewf': {
+      'fr': 'Qatar',
+      'ar': 'دولة قطر',
+      'en': 'Qatar',
+      'tr': 'Katar',
+    },
+    'oes0h3he': {
+      'fr': 'Bahrain',
+      'ar': 'البحرين',
+      'en': 'Bahrain',
+      'tr': 'Bahreyn',
+    },
+    'uwb8cyq1': {
+      'fr': 'Kuwait',
+      'ar': 'الكويت',
+      'en': 'Kuwait',
+      'tr': 'Kuveyt',
+    },
+    '8dzu8lug': {
+      'fr': 'Soudan',
+      'ar': 'السودان',
+      'en': 'Sudan',
+      'tr': 'Sudan',
+    },
+    'uzivxrgd': {
+      'fr': 'Syrie',
+      'ar': 'سوريا',
+      'en': 'Syria',
+      'tr': 'Suriye',
+    },
+    'cnljsu8m': {
+      'fr': 'Liban',
+      'ar': 'لبنان',
+      'en': 'Lebanon',
+      'tr': 'Lübnan',
+    },
+    'd9zueiyc': {
+      'fr': 'Turquie',
+      'ar': 'تركيا',
+      'en': 'Turkey',
+      'tr': 'Türkiye',
+    },
+    '51j0jlpg': {
+      'fr': 'Photos:',
+      'ar': 'الصور:',
+      'en': 'Pictures:',
+      'tr': 'Resimler:',
+    },
+    'nncrdp48': {
+      'fr': 'Enregistrer',
+      'ar': 'يسجل',
+      'en': 'Register',
+      'tr': 'Kayıt ol',
+    },
+    '9s60moyv': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
@@ -1389,6 +1157,93 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Bu bana yeter!',
     },
     '1k6hs9mf': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
+  // Settings
+  {
+    'xh8l8uom': {
+      'fr': 'Paramètres',
+      'ar': 'الإعدادات',
+      'en': 'Settings',
+      'tr': 'Ayarlar',
+    },
+    'mvdu5xao': {
+      'fr': 'Je recherche un(e):',
+      'ar': 'أبحث عن:',
+      'en': 'I search for:',
+      'tr': 'şunu arıyorum:',
+    },
+    'enszfip8': {
+      'fr': 'Homme',
+      'ar': 'ذكر',
+      'en': 'Male',
+      'tr': 'Erkek ',
+    },
+    'ox5ie58x': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    '0nl8fyyu': {
+      'fr': 'Féminin',
+      'ar': 'أنثى ',
+      'en': 'Feminine',
+      'tr': 'Kadınsı',
+    },
+    '7yg2nuxc': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    't1prfi43': {
+      'fr': 'Modifier le questionnaire',
+      'ar': 'تحرير الاختبار',
+      'en': 'Edit quiz',
+      'tr': 'Testi düzenle',
+    },
+    'zhp5oi6b': {
+      'fr': 'Tranche d’âge',
+      'ar': 'الفئة العمرية',
+      'en': 'Age range',
+      'tr': 'Yaş aralığı',
+    },
+    'yyfgvofr': {
+      'fr': 'Recevoir les notifications suivantes:',
+      'ar': 'تلقي الإخطارات التالية:',
+      'en': 'Receive the following notifications:',
+      'tr': 'Aşağıdaki bildirimleri alın:',
+    },
+    '7ns2usao': {
+      'fr': 'Nouveaux Matchs',
+      'ar': 'مواعدات جديدة',
+      'en': 'New Matches',
+      'tr': 'Yeni Maçlar',
+    },
+    'k8jdlibi': {
+      'fr': 'Nouveaux J\'aime',
+      'ar': 'إعجابات جديدة',
+      'en': 'New Likes',
+      'tr': 'Yeni Beğeniler',
+    },
+    'b08p41hz': {
+      'fr': 'Nouveaux Messages',
+      'ar': 'محادثات جديدة',
+      'en': 'New Messages',
+      'tr': 'Yeni Mesajlar',
+    },
+    'uoxxytso': {
+      'fr': 'Sélectionnez votre language',
+      'ar': 'اختر لغتك',
+      'en': 'Select your language',
+      'tr': 'Dilinizi seçiniz',
+    },
+    '6kmw5qvn': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
@@ -1554,541 +1409,169 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
-  // homePage
+  // QsPage7
   {
-    'kk1wnohh': {
-      'fr': 'Découvrir',
-      'ar': 'إكتشف',
-      'en': 'Discover',
-      'tr': 'Keşfetmek',
+    'hob5p3op': {
+      'fr': 'Questionnaire',
+      'ar': 'الدراسة الاستقصائية',
+      'en': 'Survey',
+      'tr': 'Anket',
     },
-    'kqiymfxc': {
-      'fr': 'Sara',
-      'ar': 'ساره',
-      'en': 'Sarah',
-      'tr': 'Sarah',
+    'wobh1re8': {
+      'fr': '80%',
+      'ar': '80٪',
+      'en': '80%',
+      'tr': '80%',
     },
-    '5azsqzew': {
-      'fr': 'Agadir',
-      'ar': 'أكادير',
-      'en': 'agadir',
-      'tr': 'agadir',
+    'sueikj41': {
+      'fr': 'Je suis spontané(e)',
+      'ar': 'أنا عفوي',
+      'en': 'I am spontaneous',
+      'tr': 'ben spontaneyim',
     },
-    'ulj8niej': {
-      'fr': '478 Km',
-      'ar': '478 كم',
-      'en': '478 km',
-      'tr': '478 km',
+    'q5hazta3': {
+      'fr': 'Pas du tout',
+      'ar': 'لا على الاطلاق',
+      'en': 'Not at all',
+      'tr': 'hiç de bile',
     },
-    't8mp8t9l': {
-      'fr': 'Nimate',
-      'ar': 'نعمة',
-      'en': 'Nimate',
-      'tr': 'Nimat',
+    '3jajp8fy': {
+      'fr': 'Pas vraiment',
+      'ar': 'ليس صحيحا',
+      'en': 'Not really',
+      'tr': 'Pek sayılmaz',
     },
-    '04mrdc46': {
-      'fr': 'Tripoli',
-      'ar': 'طرابلس',
-      'en': 'Tripoli',
-      'tr': 'Trablus',
+    'bx6idgbl': {
+      'fr': 'Vraiment',
+      'ar': 'حقا',
+      'en': 'Really',
+      'tr': 'Yok canım',
     },
-    'mdzkfqhn': {
-      'fr': '2278 Km',
-      'ar': '2278 كم',
-      'en': '2278 km',
-      'tr': '2278 km',
+    'aceyrn2r': {
+      'fr': 'Tout à fait',
+      'ar': 'تماما',
+      'en': 'Absolutely',
+      'tr': 'Kesinlikle',
     },
-    'm4gdnnxa': {
-      'fr': 'Shana',
-      'ar': 'شانا',
-      'en': 'shana',
-      'tr': 'Şana',
+    'aqx0bpe8': {
+      'fr': 'Il est facile pour moi de discuter avec de nouvelles personnes',
+      'ar': 'من السهل بالنسبة لي الدردشة مع أشخاص جدد',
+      'en': 'It\'s easy for me to chat with new people',
+      'tr': 'Yeni insanlarla sohbet etmek benim için kolay',
     },
-    'eq8te7vz': {
-      'fr': 'Téhéran',
-      'ar': 'طهران',
-      'en': 'Tehran',
-      'tr': 'Tahran',
+    'urvjj1rs': {
+      'fr': 'Pas du tout',
+      'ar': 'لا على الاطلاق',
+      'en': 'Not at all',
+      'tr': 'hiç de bile',
     },
-    '3lweqy47': {
-      'fr': '6460 km',
-      'ar': '6460 كم',
-      'en': '6460 km',
-      'tr': '6460 km',
+    '9efjwy7x': {
+      'fr': 'Pas vraiment',
+      'ar': 'ليس صحيحا',
+      'en': 'Not really',
+      'tr': 'Pek sayılmaz',
     },
-    'mhdbxjnl': {
-      'fr': 'Hiba',
-      'ar': 'هبة',
-      'en': 'hiba',
-      'tr': 'ebegümeci',
+    '68w5pgmv': {
+      'fr': 'Vraiment',
+      'ar': 'حقا',
+      'en': 'Really',
+      'tr': 'Yok canım',
     },
-    '9u11oc8t': {
-      'fr': 'Kuwait City',
-      'ar': 'مدينة الكويت',
-      'en': 'Kuwait City',
-      'tr': 'Kuveyt Şehri',
+    'x5ajn5fe': {
+      'fr': 'Tout à fait',
+      'ar': 'تماما',
+      'en': 'Absolutely',
+      'tr': 'Kesinlikle',
     },
-    '4vem23df': {
-      'fr': '6677 Km',
-      'ar': '6677 كم',
-      'en': '6677 km',
-      'tr': '6677 km',
+    'hhhhcaip': {
+      'fr': 'Continuer\n',
+      'ar': 'لاستكمال',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
     },
-    'kjnk21la': {
-      'fr': 'Oumaima',
-      'ar': 'أميمة',
-      'en': 'Oumaima',
-      'tr': 'Oumaima',
-    },
-    'wnw8ak8w': {
-      'fr': 'Beyrouth',
-      'ar': 'بيروت',
-      'en': 'Beirut',
-      'tr': 'Beyrut',
-    },
-    '6nzk8kr0': {
-      'fr': '5502 Km',
-      'ar': '5502 كم',
-      'en': '5502 km',
-      'tr': '5502 km',
-    },
-    'lj9lkz1j': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // isMatch
-  {
-    'uz3611e0': {
-      'fr': 'Rencontres',
-      'ar': 'مواعدات',
-      'en': 'Matchs',
-      'tr': 'flört',
-    },
-    'fsc9pzu7': {
-      'fr': 'C\'est un match !',
-      'ar': 'إنها مواعدة !',
-      'en': 'It\'s a Match',
-      'tr': 'Çıkıyor!',
-    },
-    'ywjrqe02': {
-      'fr': 'Avec un pourcentage de ',
-      'ar': 'بنسبة',
-      'en': 'With a percentage of',
-      'tr': 'yüzde ile',
-    },
-    '6go3cgq3': {
-      'fr': '80 %',
-      'ar': '80٪  ',
-      'en': '80 %',
-      'tr': '80 %',
-    },
-    'mpxwk6ui': {
-      'fr': 'Démarrez une conversation maintenant ',
-      'ar': 'ابدأ محادثة الآن',
-      'en': 'Start a conversation now',
-      'tr': 'Şimdi bir konuşma başlatın',
-    },
-    'fh5z1igs': {
-      'fr': 'Ou',
-      'ar': 'أو',
-      'en': 'Or',
-      'tr': 'Veya',
-    },
-    'uoiyf18y': {
-      'fr': 'Ca suffit pour moi !',
+    '1ppdc30w': {
+      'fr': 'Ça suffit pour moi !',
       'ar': 'هذا يكفي بالنسبة لي!',
       'en': 'That\'s enough for me!',
       'tr': 'Bu bana yeter!',
     },
-    'zah6clms': {
+    'f3dhdl1s': {
       'fr': 'Accueil',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
     },
   },
-  // matches
+  // QsPage3
   {
-    'ixqmo3vn': {
-      'fr': 'Rencontres',
-      'ar': 'مواعدات',
-      'en': 'Matchs',
-      'tr': 'Flört',
+    'mc942bqj': {
+      'fr': 'Questionnaire',
+      'ar': 'إستطلاع',
+      'en': 'Survey',
+      'tr': 'Anket',
     },
-    'kt4s5fsh': {
-      'fr': 'Sara',
-      'ar': 'ساره',
-      'en': 'Sarah',
-      'tr': 'Sarah',
+    'pe7k4a3w': {
+      'fr': '30%',
+      'ar': '20٪',
+      'en': '20%',
+      'tr': '20%',
     },
-    'h7f9xqnv': {
-      'fr': 'Hiba',
-      'ar': 'هبة',
-      'en': 'hiba',
-      'tr': 'ebegümeci',
+    'jz9ayuiz': {
+      'fr': 'Le plus important dans une relation ?\n (3 choix)',
+      'ar': 'أهم شيء في العلاقة؟ (3 اختيارات)',
+      'en': 'The most important thing in a relationship? (3 choices)',
+      'tr': 'Bir ilişkideki en önemli şey? (3 seçenek)',
     },
-    '34yx3kdi': {
-      'fr': 'Oumaima',
-      'ar': 'أميمة',
-      'en': 'Oumaima',
-      'tr': 'Oumaima',
+    'dnrpkcb2': {
+      'fr': 'La passion',
+      'ar': 'الصبر',
+      'en': 'Passion',
+      'tr': 'Tutku',
     },
-    '5cfo1suo': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
+    '3t29gxoa': {
+      'fr': 'L\'amour',
+      'ar': 'الحب',
+      'en': 'love',
+      'tr': 'Aşk',
     },
-  },
-  // Profile
-  {
-    '13jgokol': {
-      'fr': 'Profil',
-      'ar': 'ملفي الشخصي',
-      'en': 'Profile',
-      'tr': 'Profil',
+    'ym47iji9': {
+      'fr': 'La complicité',
+      'ar': 'التواطؤ',
+      'en': 'Complicity',
+      'tr': 'suç ortaklığı',
     },
-    '0olwx22j': {
-      'fr': 'À propos de moi',
-      'ar': 'عني',
-      'en': 'About me',
-      'tr': 'Benim hakkımda',
+    'qanjrt27': {
+      'fr': 'La loyauté',
+      'ar': 'وفاء',
+      'en': 'Loyalty',
+      'tr': 'Bağlılık',
     },
-    'mm8kuf2a': {
-      'fr': 'Intérêts',
-      'ar': 'الإهتمامات',
-      'en': 'Interests',
-      'tr': 'ilgi alanları',
+    '4p7sq5nj': {
+      'fr': 'La fidélité',
+      'ar': 'جدير بالثقة',
+      'en': 'Faithfulness',
+      'tr': 'sadakat',
     },
-    'zfssgo4b': {
-      'fr': 'La randonnée',
-      'ar': 'جولة على الأقدام',
-      'en': 'Hiking',
-      'tr': 'Doğa yürüyüşü',
+    'rrdwotq1': {
+      'fr': 'La transparence ',
+      'ar': 'شفافية',
+      'en': 'Transparency',
+      'tr': 'şeffaflık',
     },
-    'f4kwb8wf': {
-      'fr': 'Nature/Jardinage',
-      'ar': 'الطبيعة / البستنة',
-      'en': 'Nature/Gardening',
-      'tr': 'Doğa/Bahçecilik',
+    'vptosgd4': {
+      'fr': 'L’authenticité ',
+      'ar': 'أصالة',
+      'en': 'Authenticity',
+      'tr': 'özgünlük',
     },
-    '2dzl7yvp': {
-      'fr': 'L’art',
-      'ar': 'فن',
-      'en': 'Art',
-      'tr': 'Sanat',
+    'fqmnws25': {
+      'fr': 'Continuer\n',
+      'ar': 'يكمل',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
     },
-    'bk8urqou': {
-      'fr': 'Les voyages',
-      'ar': 'الرحلات',
-      'en': 'The trips',
-      'tr': 'geziler',
-    },
-    'pabqa4hn': {
-      'fr': 'Films/Cinéma',
-      'ar': 'أفلام / سينما',
-      'en': 'Movies/Cinema',
-      'tr': 'Filmler/Sinema',
-    },
-    '25o6rp5o': {
-      'fr': 'Photos',
-      'ar': 'الصور',
-      'en': 'Pictures',
-      'tr': 'Resimler',
-    },
-    'qryw0bxh': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // editProfile
-  {
-    'l3uatqmy': {
-      'fr': 'Éditez votre profil',
-      'ar': 'عدل ملفك الشخصي',
-      'en': 'Edit your profile',
-      'tr': 'Profilinizi düzenleyin',
-    },
-    '2efprkqz': {
-      'fr': 'Mon Profil:',
-      'ar': 'ملفي الشخصي',
-      'en': 'My profile',
-      'tr': 'Benim profilim',
-    },
-    't9i89j5t': {
-      'fr': 'Nom Complet',
-      'ar': 'الاسم الكامل',
-      'en': 'Full Name',
-      'tr': 'Ad Soyad',
-    },
-    'boqifj1x': {
-      'fr': 'Métier',
-      'ar': 'مهنة',
-      'en': 'Job',
-      'tr': 'İş',
-    },
-    '12leaikz': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-    'wd9vpqh6': {
-      'fr': 'Biographie',
-      'ar': 'سيرة شخصية',
-      'en': 'Biography',
-      'tr': 'biyografi',
-    },
-    'foi3lff4': {
-      'fr': 'Sexe:',
-      'ar': 'الجنس',
-      'en': 'Gender',
-      'tr': 'Cinsiyet',
-    },
-    'l6m6ng3p': {
-      'fr': 'Homme',
-      'ar': 'ذكر',
-      'en': 'Male',
-      'tr': 'Erkek',
-    },
-    'baim5lij': {
-      'fr': 'Femme',
-      'ar': 'امرأة',
-      'en': 'Women',
-      'tr': 'Kadın',
-    },
-    '5bponwwp': {
-      'fr': 'Date de naissance:',
-      'ar': 'تاريخ الميلاد',
-      'en': 'Date of Birth',
-      'tr': 'Doğum tarihi',
-    },
-    'jgqgzegq': {
-      'fr': 'Jour',
-      'ar': 'يوم',
-      'en': 'Day',
-      'tr': 'Gün',
-    },
-    'p5jfzspu': {
-      'fr': 'Mois',
-      'ar': 'شهر',
-      'en': 'Month',
-      'tr': 'Ay',
-    },
-    'frvjzbxi': {
-      'fr': 'Année',
-      'ar': 'عام',
-      'en': 'Year',
-      'tr': 'Yıl',
-    },
-    'ca4lzles': {
-      'fr': 'Sélectionnez  votre ville:',
-      'ar': 'مدينتك:',
-      'en': 'Your City:',
-      'tr': 'Senin şehirin:',
-    },
-    'h0ueu5id': {
-      'fr': 'Ville',
-      'ar': 'مدينة',
-      'en': 'City',
-      'tr': 'Şehir',
-    },
-    '0jbfg6p4': {
-      'fr': 'Sélectionnez votre pays:',
-      'ar': 'اختر بلدك:',
-      'en': 'Choose your country:',
-      'tr': 'Ülkenizi seçin:',
-    },
-    'wod7xith': {
-      'fr': 'Maroc',
-      'ar': 'المملكة المغربية',
-      'en': 'Morocco',
-      'tr': 'Fas',
-    },
-    '11d1afgd': {
-      'fr': 'Algérie',
-      'ar': 'الجزائر',
-      'en': 'Algeria',
-      'tr': 'Cezayir',
-    },
-    '1cu9v3bt': {
-      'fr': 'Tunisie',
-      'ar': 'تونس',
-      'en': 'Tunisia',
-      'tr': 'Tunus',
-    },
-    '9igd712z': {
-      'fr': 'Libye',
-      'ar': 'ليبيا',
-      'en': 'Libya',
-      'tr': 'Libya',
-    },
-    'a4vsnbxb': {
-      'fr': 'Mauritanie',
-      'ar': 'موريتانيا',
-      'en': 'Mauritania',
-      'tr': 'Moritanya',
-    },
-    'h3hponew': {
-      'fr': 'Egypte',
-      'ar': 'مصر',
-      'en': 'Egypt',
-      'tr': 'Mısır',
-    },
-    'aj862mpk': {
-      'fr': 'Saudi Arabia',
-      'ar': 'المملكة العربية السعودية',
-      'en': 'saudi arabia',
-      'tr': 'Suudi Arabistan',
-    },
-    'kc0kivbo': {
-      'fr': 'UAE',
-      'ar': 'الإمارات العربية المتحدة',
-      'en': 'UAE',
-      'tr': 'BAE',
-    },
-    'ep6joodu': {
-      'fr': 'Oman',
-      'ar': 'سلطنة عمان',
-      'en': 'Oman',
-      'tr': 'Umman',
-    },
-    '6vdqvewf': {
-      'fr': 'Qatar',
-      'ar': 'دولة قطر',
-      'en': 'Qatar',
-      'tr': 'Katar',
-    },
-    'oes0h3he': {
-      'fr': 'Bahrain',
-      'ar': 'البحرين',
-      'en': 'Bahrain',
-      'tr': 'Bahreyn',
-    },
-    'uwb8cyq1': {
-      'fr': 'Kuwait',
-      'ar': 'الكويت',
-      'en': 'Kuwait',
-      'tr': 'Kuveyt',
-    },
-    '8dzu8lug': {
-      'fr': 'Soudan',
-      'ar': 'السودان',
-      'en': 'Sudan',
-      'tr': 'Sudan',
-    },
-    'uzivxrgd': {
-      'fr': 'Syrie',
-      'ar': 'سوريا',
-      'en': 'Syria',
-      'tr': 'Suriye',
-    },
-    'cnljsu8m': {
-      'fr': 'Liban',
-      'ar': 'لبنان',
-      'en': 'Lebanon',
-      'tr': 'Lübnan',
-    },
-    'd9zueiyc': {
-      'fr': 'Turquie',
-      'ar': 'تركيا',
-      'en': 'Turkey',
-      'tr': 'Türkiye',
-    },
-    '51j0jlpg': {
-      'fr': 'Photos:',
-      'ar': 'الصور:',
-      'en': 'Pictures:',
-      'tr': 'Resimler:',
-    },
-    'nncrdp48': {
-      'fr': 'Enregistrer',
-      'ar': 'يسجل',
-      'en': 'Register',
-      'tr': 'Kayıt ol',
-    },
-    '9s60moyv': {
-      'fr': 'Accueil',
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-      'tr': 'Ev',
-    },
-  },
-  // Settings
-  {
-    'xh8l8uom': {
-      'fr': 'Paramètres',
-      'ar': 'الإعدادات',
-      'en': 'Settings',
-      'tr': 'Ayarlar',
-    },
-    'mvdu5xao': {
-      'fr': 'Je recherche un(e):',
-      'ar': 'أبحث عن:',
-      'en': 'I search for:',
-      'tr': 'şunu arıyorum:',
-    },
-    'lmv5diaj': {
-      'fr': 'Homme',
-      'ar': 'ذكر',
-      'en': 'Male',
-      'tr': 'Erkek',
-    },
-    'aj7epfo8': {
-      'fr': 'Femme',
-      'ar': 'المؤنث',
-      'en': 'Feminine',
-      'tr': 'Kadınsı',
-    },
-    't1prfi43': {
-      'fr': 'Modifier le questionnaire',
-      'ar': 'تحرير الاختبار',
-      'en': 'Edit quiz',
-      'tr': 'Testi düzenle',
-    },
-    'zhp5oi6b': {
-      'fr': 'Tranche d’âge',
-      'ar': 'الفئة العمرية',
-      'en': 'Age range',
-      'tr': 'Yaş aralığı',
-    },
-    'yyfgvofr': {
-      'fr': 'Recevoir les notifications suivantes:',
-      'ar': 'تلقي الإخطارات التالية:',
-      'en': 'Receive the following notifications:',
-      'tr': 'Aşağıdaki bildirimleri alın:',
-    },
-    '7ns2usao': {
-      'fr': 'Nouveaux Matchs',
-      'ar': 'مواعدات جديدة',
-      'en': 'New Matches',
-      'tr': 'Yeni Maçlar',
-    },
-    'k8jdlibi': {
-      'fr': 'Nouveaux J\'aime',
-      'ar': 'إعجابات جديدة',
-      'en': 'New Likes',
-      'tr': 'Yeni Beğeniler',
-    },
-    'b08p41hz': {
-      'fr': 'Nouveaux Messages',
-      'ar': 'محادثات جديدة',
-      'en': 'New Messages',
-      'tr': 'Yeni Mesajlar',
-    },
-    'uoxxytso': {
-      'fr': 'Sélectionnez votre language',
-      'ar': 'اختر لغتك',
-      'en': 'Select your language',
-      'tr': 'Dilinizi seçiniz',
-    },
-    '6kmw5qvn': {
-      'fr': 'Accueil',
+    'u0ruarh6': {
+      'fr': 'Home',
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
@@ -2101,6 +1584,87 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
+    },
+  },
+  // QsPage4
+  {
+    'ppu4s2x0': {
+      'fr': 'Questionnaire',
+      'ar': 'إستطلاع',
+      'en': 'Survey',
+      'tr': 'Anket',
+    },
+    '7682nbj1': {
+      'fr': '40%',
+      'ar': '40٪',
+      'en': '40%',
+      'tr': '40%',
+    },
+    'il0hvrhc': {
+      'fr': 'Vos besoins',
+      'ar': 'احتياجاتك',
+      'en': 'Your needs',
+      'tr': 'İhtiyaçlarınız',
+    },
+    'b88wrl3j': {
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
+      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
+      'en': 'From 1 to 5 (1 not very important, 10 very important)',
+      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
+    },
+    'ulzkksko': {
+      'fr': 'Affection',
+      'ar': 'عاطفة',
+      'en': 'Affection',
+      'tr': 'Alaka',
+    },
+    'z18sn5vq': {
+      'fr': 'Indépendance',
+      'ar': 'استقلال',
+      'en': 'Independence',
+      'tr': 'Bağımsızlık',
+    },
+    'yflj2fva': {
+      'fr': 'Liberté',
+      'ar': 'حرية',
+      'en': 'Freedom',
+      'tr': 'Özgürlük',
+    },
+    'wouevk5m': {
+      'fr': 'Reconnaissance',
+      'ar': 'إعتراف',
+      'en': 'Acknowledgement',
+      'tr': 'teşekkür',
+    },
+    'ysmqc5y7': {
+      'fr': 'De 1 à 5 (1 pas très important, 10 très \nimportant)',
+      'ar': 'من 1 إلى 5 (1 ليس مهمًا جدًا ، 10 مهم جدًا)',
+      'en': 'From 1 to 5 (1 not very important, 10 very important)',
+      'tr': '1\'den 5\'e (1 çok önemli değil, 10 çok önemli)',
+    },
+    'g6vr4fu1': {
+      'fr': 'Admiration ',
+      'ar': 'الإعجاب',
+      'en': 'Admiration',
+      'tr': 'hayranlık',
+    },
+    'ljkxmklp': {
+      'fr': 'Fonder une famille',
+      'ar': 'تكوين أسرة',
+      'en': 'Build a family',
+      'tr': 'bir aile kur',
+    },
+    '5ehrybj4': {
+      'fr': 'Continuer',
+      'ar': 'يكمل',
+      'en': 'Continue',
+      'tr': 'Devam et',
+    },
+    'o978kh7p': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'EV',
     },
   },
   // allChatPage
@@ -2116,6 +1680,113 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الدردشات',
       'en': 'Chats',
       'tr': 'kediler',
+    },
+  },
+  // QsPage5
+  {
+    '268nm25r': {
+      'fr': 'Questionnaire',
+      'ar': 'إستطلاع',
+      'en': 'Survey',
+      'tr': 'Anket',
+    },
+    '8tb2kgag': {
+      'fr': '60%',
+      'ar': '60٪',
+      'en': '60%',
+      'tr': '60%',
+    },
+    'rgdesdex': {
+      'fr': 'Quel est votre niveau d’études ?',
+      'ar': 'ما هو مستواك الدراسي ؟',
+      'en': 'What is your level of study ?',
+      'tr': 'Eğitim seviyeniz nedir?',
+    },
+    'p9swrnq5': {
+      'fr': 'Sans diplôme',
+      'ar': 'بدون دبلوم',
+      'en': 'Without diploma',
+      'tr': 'diplomasız',
+    },
+    'ruwhy5ui': {
+      'fr': 'Collège',
+      'ar': 'كلية',
+      'en': 'College',
+      'tr': 'Kolej',
+    },
+    'z0kbrf7f': {
+      'fr': 'BAC ou BAC PRO',
+      'ar': 'بكالوريا أو بكالوريا مهنية ',
+      'en': 'BAC or BAC PRO',
+      'tr': 'BAC veya BAC PRO',
+    },
+    'lbmcfc27': {
+      'fr': 'BAC +2 /BAC +3',
+      'ar': 'بكالوريا 2+ أو بكالوريا 3+',
+      'en': 'BAC +2 /BAC +3',
+      'tr': 'BAC +2 /BAC +3',
+    },
+    '0dfcrqgn': {
+      'fr': 'BAC +4 / BAC +5',
+      'ar': 'بكالوريا 4+ أو بكالوريا 5+ ',
+      'en': 'BAC +4 / BAC +5',
+      'tr': 'BAC +4 / BAC +5',
+    },
+    '21btpdlo': {
+      'fr': 'Doctorat',
+      'ar': 'دكتوراه',
+      'en': 'PhD',
+      'tr': 'Doktora',
+    },
+    'benq6kct': {
+      'fr':
+          'Quelle importance attachez-vous au niveau d’études de votre partenaire ?',
+      'ar': 'ما الأهمية التي توليها لمستوى تعليم شريكك؟',
+      'en':
+          'What importance do you attach to the level of education of your partner?',
+      'tr': 'Partnerinizin eğitim düzeyine ne kadar önem veriyorsunuz?',
+    },
+    'whih40fe': {
+      'fr': 'Aucune importance',
+      'ar': 'لا أهمية',
+      'en': 'Doesn\'t matter',
+      'tr': 'önemli değil',
+    },
+    'm68w14bg': {
+      'fr': 'Peu important',
+      'ar': 'غير مهم',
+      'en': 'Not important',
+      'tr': 'Önemli değil',
+    },
+    'zspmvdas': {
+      'fr': 'Important',
+      'ar': 'الأهمية',
+      'en': 'Important',
+      'tr': 'Önemli',
+    },
+    'p0un418b': {
+      'fr': 'Plutôt important',
+      'ar': 'مهم جدا',
+      'en': 'Quite important',
+      'tr': 'oldukça önemli',
+    },
+    '4lsogzl3': {
+      'fr': 'Vraiment important',
+      'ar': 'مهم للغاية',
+      'en': 'Really important',
+      'tr': 'Gerçekten önemli',
+    },
+    '2kw6o9vt': {
+      'fr': 'Continuer\n',
+      'ar': 'يكمل',
+      'en': 'Continue',
+      'tr': 'Devam et',
+    },
+    '4nhyhv0h': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
     },
   },
   // notifications
@@ -2614,6 +2285,57 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'EV',
     },
   },
+  // SignIn
+  {
+    'as69m6hd': {
+      'fr': 'Français',
+      'ar': 'العربية',
+      'en': 'English',
+      'tr': 'Türk',
+    },
+    'ehobpuwl': {
+      'fr': 'Email',
+      'ar': 'بريد الالكتروني',
+      'en': 'E-mail',
+      'tr': 'E-posta',
+    },
+    'ppwkq56k': {
+      'fr': 'Mot de passe',
+      'ar': 'كلمة السر',
+      'en': 'Password',
+      'tr': 'Şifre',
+    },
+    'nxdkxn3l': {
+      'fr': 'Se connecter',
+      'ar': 'تسجيل الدخول',
+      'en': 'Login',
+      'tr': 'Giriş yapmak',
+    },
+    'li21rn5t': {
+      'fr': 'Mot de passe oublié ?',
+      'ar': 'نسيت رقمك السري ؟',
+      'en': 'Forgot your password ?',
+      'tr': 'Parolanızı mı unuttunuz ?',
+    },
+    'n3vpdygg': {
+      'fr': 'Vous n\'avez pas de compte?',
+      'ar': 'لا يوجد لديك حساب؟',
+      'en': 'You do not have an account?',
+      'tr': 'Hesabınız yok mu?',
+    },
+    'tjs7xgjs': {
+      'fr': 'Inscrivez-vous',
+      'ar': 'تسجل',
+      'en': 'Register',
+      'tr': 'Kayıt ol',
+    },
+    'ed8hdv6r': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
   // QsModifyPage5
   {
     'owsdkjnr': {
@@ -2890,6 +2612,106 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
+  // Onboarding
+  {
+    'd2f68ui3': {
+      'fr':
+          'KWL est la première\napplication conçue \npar une équipe d’experts \nen psychologie et \nspécialistes des relations \nde couple. ',
+      'ar':
+          'KWL هو أول تطبيق صممه فريق من خبراء \nعلم النفس وأخصائيي العلاقات الزوجية.',
+      'en':
+          'KWL is the first application\ndesigned by a team of \npsychology experts and \ncouple relationship \nspecialists.',
+      'tr':
+          'KWL ilk\nuygulama tasarlanmış\nuzman bir ekip tarafından\npsikolojide ve\nilişki uzmanları\ntork.',
+    },
+    's11ixzl1': {
+      'fr': 'Trouvez votre \npartenaire idéal\navec nous,',
+      'ar': 'ابحث عن شريكك المثالي معنا ،',
+      'en': 'Find your ideal \npartner with us,',
+      'tr': 'seninkini bul\nideal eş\nbizimle,',
+    },
+    'u3k7yufq': {
+      'fr': 'Love for Real !',
+      'ar': 'الحب الحقيقي!',
+      'en': 'Love for Real!',
+      'tr': 'Gerçek Aşk!',
+    },
+    'p911bmit': {
+      'fr': 'Commencer',
+      'ar': 'بداية',
+      'en': 'Start',
+      'tr': 'Başlamak',
+    },
+    'lmckg3ku': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ana sayfa',
+    },
+  },
+  // signUp
+  {
+    '8k6ie3sk': {
+      'fr': 'Créez votre compte',
+      'ar': 'إنشاء حسابك',
+      'en': 'Register your account',
+      'tr': 'hesabını oluştur',
+    },
+    'gt7vkk2a': {
+      'fr': 'Par Email',
+      'ar': 'بالبريد الالكتروني',
+      'en': 'By email',
+      'tr': 'Eposta ile',
+    },
+    'z42km0y1': {
+      'fr': 'Email',
+      'ar': 'بريد الالكتروني',
+      'en': 'E-mail',
+      'tr': 'E-posta',
+    },
+    'fqj0yzbm': {
+      'fr': 'Mot de passe',
+      'ar': 'كلمة السر',
+      'en': 'Password',
+      'tr': 'Şifre',
+    },
+    'e4z8ytmt': {
+      'fr': 'Confirmez le mot de passe',
+      'ar': 'تأكيد من كلمة السر',
+      'en': 'Confirm the password',
+      'tr': 'Şifreyi onaylayın',
+    },
+    'syi85ic2': {
+      'fr': 'Créer',
+      'ar': 'إنشاء',
+      'en': 'Create',
+      'tr': 'Yaratmak',
+    },
+    '4frrvv2y': {
+      'fr': 'Par Téléphone',
+      'ar': 'بالهاتف المحمول',
+      'en': 'By telephone',
+      'tr': 'Telefonla',
+    },
+    'm0dlzs3r': {
+      'fr': 'Votre Téléphone',
+      'ar': 'هاتفك',
+      'en': 'Your phone',
+      'tr': 'Telefonunuz',
+    },
+    'jfb6a30q': {
+      'fr': 'Créer',
+      'ar': 'إنشاء',
+      'en': 'Create',
+      'tr': 'Yaratmak',
+    },
+    'uxtc8q7f': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
   // QsModifyPage7
   {
     '2mk7jma5': {
@@ -2975,6 +2797,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الصفحة الرئيسية',
       'en': 'Home',
       'tr': 'Ev',
+    },
+  },
+  // PhoneSignIn
+  {
+    'b77nv5sa': {
+      'fr': 'Connectez-vous par téléphone',
+      'ar': 'تسجيل الدخول عبر الهاتف المحمول',
+      'en': 'Connect by Phone Number',
+      'tr': 'Mobil giriş',
+    },
+    'eqlje8ar': {
+      'fr': 'Numéro de téléphone',
+      'ar': 'رقم التليفون',
+      'en': 'Phone Number',
+      'tr': 'Telefon numarası',
+    },
+    '36gt66mz': {
+      'fr': 'Connecter',
+      'ar': 'تسجيل الدخول',
+      'en': 'Connect',
+      'tr': 'Bağlamak',
+    },
+    'n8a0ygiq': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ana sayfa',
     },
   },
   // QsModifyPage8
@@ -3170,6 +3019,175 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ev',
     },
   },
+  // QsPage6
+  {
+    'mwt2fa5y': {
+      'fr': 'Questionnaire',
+      'ar': 'إستطلاع',
+      'en': 'Survey',
+      'tr': 'Anket',
+    },
+    '6gmg1s8i': {
+      'fr': '70%',
+      'ar': '70٪',
+      'en': '70%',
+      'tr': '70%',
+    },
+    'rcn30c2m': {
+      'fr':
+          'Imaginez que vos amis devaient vous décrire, quels seraient les adjectifs qui vous correspondraient ?\n(Choisir 9 adjectifs)',
+      'ar':
+          'تخيل أن على أصدقائك أن يصفوك ، ما هي الصفات التي تناسبك؟ (اختر 9 صفات)',
+      'en':
+          'Imagine that your friends had to describe you, what would be the adjectives that would correspond to you? (choose 9 adjectives)',
+      'tr':
+          'Arkadaşlarınızın sizi tanımlaması gerektiğini düşünün, size karşılık gelen sıfatlar ne olurdu? (9 sıfat seçin)',
+    },
+    '1hn5qh91': {
+      'fr': 'Ses valeurs',
+      'ar': 'قيمها',
+      'en': 'Her values',
+      'tr': 'Onun değerleri',
+    },
+    'voskdiu6': {
+      'fr': 'Son énergie',
+      'ar': 'طاقته',
+      'en': 'His energy',
+      'tr': 'Onun enerjisi',
+    },
+    'zifr7v5v': {
+      'fr': 'L’attachement',
+      'ar': 'مرفق',
+      'en': 'Attachment',
+      'tr': 'Ek dosya',
+    },
+    'k4veflv4': {
+      'fr': 'Les habitudes',
+      'ar': 'العادات',
+      'en': 'Habits',
+      'tr': 'Alışkanlıklar',
+    },
+    'mq2x1ksm': {
+      'fr': 'Le plaisir et la détente',
+      'ar': 'المتعة والاسترخاء',
+      'en': 'Pleasure and relaxation',
+      'tr': 'Zevk ve rahatlama',
+    },
+    'yj1yf58v': {
+      'fr': 'Être à deux',
+      'ar': 'لنكن معا',
+      'en': 'be together',
+      'tr': 'Birlikte olmak',
+    },
+    '7q945q5j': {
+      'fr': 'Ma confiance en elle (lui)',
+      'ar': 'ثقتي بها',
+      'en': 'My trust in her (him)',
+      'tr': 'Ona olan güvenim (ona)',
+    },
+    'bm14bjj9': {
+      'fr': 'Son sex-appeal',
+      'ar': 'جاذبيتها الجنسية',
+      'en': 'Her sex appeal',
+      'tr': 'Onun seks çekiciliği',
+    },
+    'vx0d7yqh': {
+      'fr': 'Son amour pour les enfants',
+      'ar': 'حبه للأطفال',
+      'en': 'His love for children',
+      'tr': 'Çocuklara olan sevgisi',
+    },
+    'mj9rqx3a': {
+      'fr': 'Le partage',
+      'ar': 'مشاركة',
+      'en': 'The sharing',
+      'tr': 'Paylaşım',
+    },
+    'p5vrz6tt': {
+      'fr': 'Ses convictions',
+      'ar': 'قناعاته',
+      'en': 'his convictions',
+      'tr': 'onun mahkumiyetleri',
+    },
+    'fncvqqdj': {
+      'fr': 'La passion',
+      'ar': 'الصبر',
+      'en': 'Passion',
+      'tr': 'Tutku',
+    },
+    '6j84fai7': {
+      'fr': 'Sa joie de vivre',
+      'ar': 'فرحته في العيش',
+      'en': 'His joy of living',
+      'tr': 'Onun yaşama sevinci',
+    },
+    '643vde0y': {
+      'fr': 'Son apparence physique ',
+      'ar': 'مظهره الجسدي',
+      'en': 'His physical appearance',
+      'tr': 'Onun fiziksel görünüşü',
+    },
+    'aak2zz1g': {
+      'fr': 'Notre attirance réciproque ',
+      'ar': 'جاذبيتنا المتبادلة',
+      'en': 'Our mutual attraction',
+      'tr': 'karşılıklı çekiciliğimiz',
+    },
+    '79aw810k': {
+      'fr': 'Nos similitudes ',
+      'ar': 'أوجه التشابه بيننا',
+      'en': 'Our similarities',
+      'tr': 'benzerliklerimiz',
+    },
+    'bn98g8p4': {
+      'fr': 'L’affection que je ressens\n pour elle (lui)',
+      'ar': 'المودة التي أشعر بها تجاهها',
+      'en': 'The affection I feel for her (him)',
+      'tr': 'Onun için hissettiğim sevgi (o)',
+    },
+    'idao9r8m': {
+      'fr': 'Sa personnalité ',
+      'ar': 'شخصيته',
+      'en': 'Her personality',
+      'tr': 'onun kişiliği',
+    },
+    'vk1vfsno': {
+      'fr': 'Sa gentillesse',
+      'ar': 'لطفه',
+      'en': 'His kindness',
+      'tr': 'Onun nezaketi',
+    },
+    '09lp2049': {
+      'fr': 'Éprouver des sensations fortes',
+      'ar': 'تجربة الإثارة',
+      'en': 'Experience thrills',
+      'tr': 'Heyecan yaşayın',
+    },
+    '3pf8k24c': {
+      'fr': 'Sa position sociale',
+      'ar': 'وضعه الاجتماعي',
+      'en': 'His social position',
+      'tr': 'Onun sosyal konumu',
+    },
+    'azcxrjix': {
+      'fr': 'J’ai besoin d’un homme\n (d’une femme) dans ma vie',
+      'ar': 'أحتاج إلى رجل (امرأة) في حياتي',
+      'en': 'I need a man (a woman) in my life',
+      'tr': 'Hayatımda bir erkeğe (bir kadına) ihtiyacım var',
+    },
+    'd48ohd78': {
+      'fr': 'Continuer\n',
+      'ar': 'لاستكمال',
+      'en': 'Continue',
+      'tr': 'Devam etmek',
+    },
+    'o5zfgh4f': {
+      'fr': 'Accueil',
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+      'tr': 'Ev',
+    },
+  },
   // EmptyChats
   {
     'fh8476sw': {
@@ -3275,6 +3293,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Devam etmek',
     },
   },
+  // asas
+  {
+    '3obn0smn': {
+      'fr': 'Homme',
+      'ar': 'ذكر',
+      'en': 'Male',
+      'tr': 'Erkek ',
+    },
+    '3vxeycpf': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+  },
   // Miscellaneous
   {
     'z6sa2e22': {
@@ -3334,6 +3367,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter SMS verification code',
       'tr': 'SMS doğrulama kodunu girin',
     },
+    'vajas04p': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
     'qwjoggxn': {
       'fr': 'Format de fichier invalide',
       'ar': 'تنسيق ملف غير صالح',
@@ -3363,6 +3402,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'جارٍ إرسال الصورة',
       'en': 'Sending photo',
       'tr': 'fotoğraf gönderme',
+    },
+    '6db7empd': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'ial22wh4': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'rwkq3q0a': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'lrcs38v3': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
+    },
+    'rigkqx0d': {
+      'fr': '',
+      'ar': '',
+      'en': '',
+      'tr': '',
     },
     '9mjte96b': {
       'fr': '',

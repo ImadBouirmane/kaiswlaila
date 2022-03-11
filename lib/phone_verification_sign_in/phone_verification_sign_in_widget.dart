@@ -37,7 +37,7 @@ class _PhoneVerificationSignInWidgetState
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.none,
+            fit: BoxFit.cover,
             image: Image.asset(
               'assets/images/Asset_6@4x.png',
             ).image,
@@ -154,6 +154,7 @@ class _PhoneVerificationSignInWidgetState
                         if (phoneVerifiedUser == null) {
                           return;
                         }
+
                         await Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
@@ -201,6 +202,7 @@ class _PhoneVerificationSignInWidgetState
                         if (phoneVerifiedUser == null) {
                           return;
                         }
+
                         await Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(

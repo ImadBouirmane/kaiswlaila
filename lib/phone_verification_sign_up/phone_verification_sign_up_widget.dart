@@ -1,5 +1,4 @@
 import '../auth/auth_util.dart';
-import '../backend/backend.dart';
 import '../conditions_utilisation/conditions_utilisation_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -7,7 +6,6 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home_page/home_page_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +38,7 @@ class _PhoneVerificationSignUpWidgetState
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.none,
+            fit: BoxFit.cover,
             image: Image.asset(
               'assets/images/Asset_6@4x.png',
             ).image,
@@ -157,6 +155,7 @@ class _PhoneVerificationSignUpWidgetState
                         if (phoneVerifiedUser == null) {
                           return;
                         }
+
                         await Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
@@ -205,10 +204,6 @@ class _PhoneVerificationSignUpWidgetState
                           return;
                         }
 
-                        final usersUpdateData = createUsersRecordData(
-                          isRegistered: true,
-                        );
-                        await currentUserReference.update(usersUpdateData);
                         await Navigator.push(
                           context,
                           PageTransition(

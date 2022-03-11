@@ -12,20 +12,21 @@ abstract class ProfilesRecord
       _$profilesRecordSerializer;
 
   @nullable
-  BuiltList<DocumentReference> get users;
+  BuiltList<DocumentReference> get usersMale;
 
   @nullable
-  DocumentReference get user;
+  BuiltList<DocumentReference> get usersFemale;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
-  static void _initializeBuilder(ProfilesRecordBuilder builder) =>
-      builder..users = ListBuilder();
+  static void _initializeBuilder(ProfilesRecordBuilder builder) => builder
+    ..usersMale = ListBuilder()
+    ..usersFemale = ListBuilder();
 
   static CollectionReference get collection =>
-      FirebaseFirestore.instance.collection('profiles');
+      FirebaseFirestore.instance.collection('Profiles');
 
   static Stream<ProfilesRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
@@ -45,11 +46,8 @@ abstract class ProfilesRecord
           {...mapFromFirestore(data), kDocumentReferenceField: reference});
 }
 
-Map<String, dynamic> createProfilesRecordData({
-  DocumentReference user,
-}) =>
-    serializers.toFirestore(
-        ProfilesRecord.serializer,
-        ProfilesRecord((p) => p
-          ..users = null
-          ..user = user));
+Map<String, dynamic> createProfilesRecordData() => serializers.toFirestore(
+    ProfilesRecord.serializer,
+    ProfilesRecord((p) => p
+      ..usersMale = null
+      ..usersFemale = null));

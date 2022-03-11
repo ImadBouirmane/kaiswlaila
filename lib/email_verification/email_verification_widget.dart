@@ -38,7 +38,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
           height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              fit: BoxFit.none,
+              fit: BoxFit.cover,
               image: Image.asset(
                 'assets/images/Asset_5@4x.png',
               ).image,
@@ -206,6 +206,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                           if (phoneVerifiedUser == null) {
                             return;
                           }
+
                           await Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(

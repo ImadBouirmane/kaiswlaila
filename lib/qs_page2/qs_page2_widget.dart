@@ -60,7 +60,7 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
               height: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.none,
+                  fit: BoxFit.cover,
                   image: Image.asset(
                     'assets/images/Asset_5@4x.png',
                   ).image,

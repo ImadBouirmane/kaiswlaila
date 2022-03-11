@@ -37,7 +37,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.none,
+            fit: BoxFit.cover,
             image: Image.asset(
               'assets/images/Asset_5@4x.png',
             ).image,
@@ -166,38 +166,38 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                       child: FFButtonWidget(
                         onPressed: () async {
                           if (currentUserDocument?.isRegistered) {
-                            if (phoneController.text.isEmpty ||
-                                !phoneController.text.startsWith('+')) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content:
-                                      Text(FFLocalizations.of(context).getText(
-                                    'ztpxnq81' /* Numéro de téléphone obligatoir... */,
-                                  )),
-                                ),
-                              );
-                              return;
-                            }
-                            await beginPhoneAuth(
-                              context: context,
-                              phoneNumber: phoneController.text,
-                              onCodeSent: () async {
-                                await Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        PhoneVerificationSignInWidget(),
-                                  ),
-                                  (r) => false,
-                                );
-                              },
-                            );
-                          } else {
                             return;
                           }
+
+                          if (phoneController.text.isEmpty ||
+                              !phoneController.text.startsWith('+')) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content:
+                                    Text(FFLocalizations.of(context).getText(
+                                  'ztpxnq81' /* Numéro de téléphone obligatoir... */,
+                                )),
+                              ),
+                            );
+                            return;
+                          }
+                          await beginPhoneAuth(
+                            context: context,
+                            phoneNumber: phoneController.text,
+                            onCodeSent: () async {
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      PhoneVerificationSignInWidget(),
+                                ),
+                                (r) => false,
+                              );
+                            },
+                          );
                         },
                         text: FFLocalizations.of(context).getText(
-                          '36gt66mz' /* Créer */,
+                          '36gt66mz' /* Connecter */,
                         ),
                         options: FFButtonOptions(
                           width: 200,

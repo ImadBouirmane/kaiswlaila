@@ -283,9 +283,7 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                                     chatInfo.chatPreviewTitle(),
                                                 userProfilePic:
                                                     chatInfo.chatPreviewPic(),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .customColor9,
+                                                color: Color(0x00000000),
                                                 unreadColor:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryColor,

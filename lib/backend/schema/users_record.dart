@@ -13,9 +13,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   String get pwd;
 
   @nullable
-  String get gender;
-
-  @nullable
   LatLng get location;
 
   @nullable
@@ -23,9 +20,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
 
   @nullable
   String get bio;
-
-  @nullable
-  BuiltList<String> get photos;
 
   @nullable
   String get email;
@@ -93,9 +87,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
 
   @nullable
   double get distance;
-
-  @nullable
-  String get genderChoice;
 
   @nullable
   @BuiltValueField(wireName: 'Qs1Choice')
@@ -200,15 +191,28 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   BuiltList<DocumentReference> get users;
 
   @nullable
+  bool get isMale;
+
+  @nullable
+  bool get isFemale;
+
+  @nullable
+  double get pourcentage;
+
+  @nullable
+  bool get forMale;
+
+  @nullable
+  bool get forFemale;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(UsersRecordBuilder builder) => builder
     ..pwd = ''
-    ..gender = ''
     ..city = ''
     ..bio = ''
-    ..photos = ListBuilder()
     ..email = ''
     ..displayName = ''
     ..photoUrl = ''
@@ -229,7 +233,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..photo4 = ''
     ..ageChoice = 0.0
     ..distance = 0.0
-    ..genderChoice = ''
     ..qs1Choice = ''
     ..qs2Choice = ''
     ..qs3Choice = ''
@@ -255,7 +258,12 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..qs13List2 = ListBuilder()
     ..qs13List3 = ListBuilder()
     ..progressBar = 0.0
-    ..users = ListBuilder();
+    ..users = ListBuilder()
+    ..isMale = false
+    ..isFemale = false
+    ..pourcentage = 0.0
+    ..forMale = false
+    ..forFemale = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -280,7 +288,6 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
 
 Map<String, dynamic> createUsersRecordData({
   String pwd,
-  String gender,
   LatLng location,
   String city,
   String bio,
@@ -305,7 +312,6 @@ Map<String, dynamic> createUsersRecordData({
   String photo4,
   double ageChoice,
   double distance,
-  String genderChoice,
   String qs1Choice,
   String qs2Choice,
   String qs3Choice,
@@ -324,16 +330,19 @@ Map<String, dynamic> createUsersRecordData({
   String qs12TF2,
   String qs12TF3,
   double progressBar,
+  bool isMale,
+  bool isFemale,
+  double pourcentage,
+  bool forMale,
+  bool forFemale,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
         UsersRecord((u) => u
           ..pwd = pwd
-          ..gender = gender
           ..location = location
           ..city = city
           ..bio = bio
-          ..photos = null
           ..email = email
           ..displayName = displayName
           ..photoUrl = photoUrl
@@ -355,7 +364,6 @@ Map<String, dynamic> createUsersRecordData({
           ..photo4 = photo4
           ..ageChoice = ageChoice
           ..distance = distance
-          ..genderChoice = genderChoice
           ..qs1Choice = qs1Choice
           ..qs2Choice = qs2Choice
           ..qs3Choice = qs3Choice
@@ -381,4 +389,9 @@ Map<String, dynamic> createUsersRecordData({
           ..qs13List2 = null
           ..qs13List3 = null
           ..progressBar = progressBar
-          ..users = null));
+          ..users = null
+          ..isMale = isMale
+          ..isFemale = isFemale
+          ..pourcentage = pourcentage
+          ..forMale = forMale
+          ..forFemale = forFemale));

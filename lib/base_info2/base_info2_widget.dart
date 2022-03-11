@@ -1,7 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/back7_widget.dart';
-import '../flutter_flow/flutter_flow_choice_chips.dart';
+import '../components/back6_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -23,10 +22,11 @@ class BaseInfo2Widget extends StatefulWidget {
 
 class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
   String countryValue;
-  String genderValue;
   TextEditingController dayController;
   TextEditingController monthController;
   TextEditingController yearController;
+  bool femaleValue;
+  bool maleValue;
   TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -56,7 +56,7 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
         ),
         child: Stack(
           children: [
-            Back7Widget(),
+            Back6Widget(),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
               child: Column(
@@ -96,59 +96,66 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 20, 20, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: Align(
-                            alignment: AlignmentDirectional(0.6, 0),
-                            child: FlutterFlowChoiceChips(
-                              initiallySelected: [genderValue],
-                              options: [
-                                ChipData(FFLocalizations.of(context).getText(
-                                  'tb24brgs' /* Homme */,
-                                )),
-                                ChipData(FFLocalizations.of(context).getText(
-                                  'ozp4v9m5' /* Femme */,
-                                ))
-                              ],
-                              onChanged: (val) =>
-                                  setState(() => genderValue = val.first),
-                              selectedChipStyle: ChipStyle(
-                                backgroundColor:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      useGoogleFonts: false,
-                                    ),
-                                iconColor: Colors.white,
-                                iconSize: 18,
-                                elevation: 4,
+                          child: Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
                               ),
-                              unselectedChipStyle: ChipStyle(
-                                backgroundColor:
-                                    FlutterFlowTheme.of(context).customColor9,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
-                                    .override(
-                                      fontFamily: 'Avenir Light ',
-                                      color: FlutterFlowTheme.of(context)
-                                          .customColor5,
-                                      fontWeight: FontWeight.w600,
-                                      useGoogleFonts: false,
-                                    ),
-                                iconColor: Color(0x00000000),
-                                iconSize: 18,
-                                elevation: 4,
+                              unselectedWidgetColor: Color(0xFF707070),
+                            ),
+                            child: CheckboxListTile(
+                              value: maleValue ??= true,
+                              onChanged: (newValue) =>
+                                  setState(() => maleValue = newValue),
+                              title: Text(
+                                FFLocalizations.of(context).getText(
+                                  'j7y7bnsa' /* Homme */,
+                                ),
+                                style: FlutterFlowTheme.of(context).title3,
                               ),
-                              chipSpacing: 20,
-                              multiselect: false,
+                              activeColor:
+                                  FlutterFlowTheme.of(context).tertiaryColor,
+                              checkColor:
+                                  FlutterFlowTheme.of(context).primaryColor,
+                              dense: false,
+                              controlAffinity: ListTileControlAffinity.trailing,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
+                              ),
+                              unselectedWidgetColor: Color(0xFF707070),
+                            ),
+                            child: CheckboxListTile(
+                              value: femaleValue ??= false,
+                              onChanged: (newValue) =>
+                                  setState(() => femaleValue = newValue),
+                              title: Text(
+                                FFLocalizations.of(context).getText(
+                                  '7zi3sr3r' /* Féminin */,
+                                ),
+                                style: FlutterFlowTheme.of(context).title3,
+                              ),
+                              activeColor:
+                                  FlutterFlowTheme.of(context).tertiaryColor,
+                              checkColor:
+                                  FlutterFlowTheme.of(context).primaryColor,
+                              dense: false,
+                              controlAffinity: ListTileControlAffinity.trailing,
                             ),
                           ),
                         ),
@@ -476,12 +483,13 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                           FFButtonWidget(
                             onPressed: () async {
                               final usersUpdateData = createUsersRecordData(
-                                gender: genderValue,
                                 day: dayController.text,
                                 month: monthController.text,
                                 year: yearController.text,
                                 country: countryValue,
                                 city: currentUserDocument?.city,
+                                isMale: maleValue,
+                                isFemale: femaleValue,
                               );
                               await currentUserReference
                                   .update(usersUpdateData);

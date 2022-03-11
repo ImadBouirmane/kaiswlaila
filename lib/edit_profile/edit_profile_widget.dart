@@ -1,7 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../backend/firebase_storage/storage.dart';
-import '../flutter_flow/flutter_flow_choice_chips.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -26,11 +25,12 @@ class EditProfileWidget extends StatefulWidget {
 
 class _EditProfileWidgetState extends State<EditProfileWidget> {
   String countryValue;
-  String genderValue;
   String uploadedFileUrl1 = '';
   TextEditingController nomCompletController;
   TextEditingController jobTitleController;
   TextEditingController bioController;
+  bool femaleValue;
+  bool maleValue;
   TextEditingController dayController;
   TextEditingController monthController;
   TextEditingController yearController;
@@ -428,60 +428,78 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                          child: FlutterFlowChoiceChips(
-                            initiallySelected: genderValue != null
-                                ? [genderValue]
-                                : [editProfileUsersRecord.gender],
-                            options: [
-                              ChipData(FFLocalizations.of(context).getText(
-                                'l6m6ng3p' /* Homme */,
-                              )),
-                              ChipData(FFLocalizations.of(context).getText(
-                                'baim5lij' /* Femme */,
-                              ))
-                            ],
-                            onChanged: (val) =>
-                                setState(() => genderValue = val.first),
-                            selectedChipStyle: ChipStyle(
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: AuthUserStreamWidget(
+                              child: Theme(
+                                data: ThemeData(
+                                  checkboxTheme: CheckboxThemeData(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(25),
+                                    ),
                                   ),
-                              iconColor: Colors.white,
-                              iconSize: 18,
-                              elevation: 4,
-                            ),
-                            unselectedChipStyle: ChipStyle(
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).customColor9,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyText2
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor5,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: false,
+                                  unselectedWidgetColor: Color(0xFF707070),
+                                ),
+                                child: CheckboxListTile(
+                                  value: maleValue ??=
+                                      currentUserDocument?.isMale,
+                                  onChanged: (newValue) =>
+                                      setState(() => maleValue = newValue),
+                                  title: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'jt3a1h20' /* Homme */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context).title3,
                                   ),
-                              iconColor: Color(0x00000000),
-                              iconSize: 18,
-                              elevation: 4,
+                                  activeColor: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
+                                  checkColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  dense: false,
+                                  controlAffinity:
+                                      ListTileControlAffinity.trailing,
+                                ),
+                              ),
                             ),
-                            chipSpacing: 20,
-                            multiselect: false,
                           ),
-                        ),
+                          Expanded(
+                            child: AuthUserStreamWidget(
+                              child: Theme(
+                                data: ThemeData(
+                                  checkboxTheme: CheckboxThemeData(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(25),
+                                    ),
+                                  ),
+                                  unselectedWidgetColor: Color(0xFF707070),
+                                ),
+                                child: CheckboxListTile(
+                                  value: femaleValue ??=
+                                      currentUserDocument?.isFemale,
+                                  onChanged: (newValue) =>
+                                      setState(() => femaleValue = newValue),
+                                  title: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'kqkhgv5o' /* Féminin */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context).title3,
+                                  ),
+                                  activeColor: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
+                                  checkColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  dense: false,
+                                  controlAffinity:
+                                      ListTileControlAffinity.trailing,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
@@ -809,7 +827,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         hintText: FFLocalizations.of(context).getText(
                           '0kai99ke' /* Pays */,
                         ),
-                        fillColor: FlutterFlowTheme.of(context).customColor9,
+                        fillColor: FlutterFlowTheme.of(context).tertiaryColor,
                         elevation: 2,
                         borderColor: FlutterFlowTheme.of(context).primaryColor,
                         borderWidth: 0,
@@ -1312,7 +1330,6 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   displayName: nomCompletController?.text ?? '',
                                   function: jobTitleController?.text ?? '',
                                   bio: bioController?.text ?? '',
-                                  gender: genderValue,
                                   day: dayController?.text ?? '',
                                   month: monthController?.text ?? '',
                                   year: yearController?.text ?? '',
@@ -1322,6 +1339,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   photo2: uploadedFileUrl3,
                                   photo3: uploadedFileUrl4,
                                   photo4: uploadedFileUrl5,
+                                  isMale: maleValue,
+                                  isFemale: femaleValue,
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);

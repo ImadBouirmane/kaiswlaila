@@ -396,18 +396,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       .tertiaryColor,
                                   size: 30,
                                 ),
-                                onPressed: () async {
-                                  final user = await signInWithGoogle(context);
-                                  if (user == null) {
-                                    return;
-                                  }
-                                  await Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HomePageWidget(),
-                                    ),
-                                    (r) => false,
-                                  );
+                                onPressed: () {
+                                  print('IconButton pressed ...');
                                 },
                               ),
                             ),
@@ -430,18 +420,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     FlutterFlowTheme.of(context).tertiaryColor,
                                 size: 30,
                               ),
-                              onPressed: () async {
-                                final user = await signInWithApple(context);
-                                if (user == null) {
-                                  return;
-                                }
-                                await Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePageWidget(),
-                                  ),
-                                  (r) => false,
-                                );
+                              onPressed: () {
+                                print('IconButton pressed ...');
                               },
                             ),
                           ),
@@ -457,24 +437,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                               borderRadius: 30,
                               borderWidth: 1,
                               buttonSize: 60,
-                              icon: Icon(
-                                Icons.person_outlined,
+                              icon: FaIcon(
+                                FontAwesomeIcons.facebook,
                                 color:
                                     FlutterFlowTheme.of(context).tertiaryColor,
                                 size: 30,
                               ),
-                              onPressed: () async {
-                                final user = await signInAnonymously(context);
-                                if (user == null) {
-                                  return;
-                                }
-                                await Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePageWidget(),
-                                  ),
-                                  (r) => false,
-                                );
+                              onPressed: () {
+                                print('IconButton pressed ...');
                               },
                             ),
                           ),

@@ -31,7 +31,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
           height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              fit: BoxFit.none,
+              fit: BoxFit.cover,
               image: Image.asset(
                 'assets/images/Asset_6@4x.png',
               ).image,

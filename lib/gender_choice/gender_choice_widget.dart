@@ -2,7 +2,6 @@ import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/back3_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -21,7 +20,8 @@ class GenderChoiceWidget extends StatefulWidget {
 }
 
 class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
-  String genderchoiceValue;
+  bool forFemaleValue;
+  bool forMaleValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -64,200 +64,212 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
             child: Stack(
               children: [
                 Back3Widget(),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          FlutterFlowIconButton(
-                            borderColor: Colors.transparent,
-                            borderRadius: 30,
-                            borderWidth: 1,
-                            buttonSize: 60,
-                            icon: Icon(
-                              Icons.chevron_left_outlined,
-                              color: FlutterFlowTheme.of(context).customColor10,
-                              size: 30,
-                            ),
-                            onPressed: () async {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ],
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 30, 20, 10),
-                        child: Row(
+                Align(
+                  alignment: AlignmentDirectional(0, 17.52),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '3nwj6z0s' /* Que cherchez-vous? */,
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 30,
+                              borderWidth: 1,
+                              buttonSize: 60,
+                              icon: Icon(
+                                Icons.chevron_left_outlined,
+                                color:
+                                    FlutterFlowTheme.of(context).customColor10,
+                                size: 30,
                               ),
-                              style: FlutterFlowTheme.of(context).title1,
+                              onPressed: () async {
+                                Navigator.pop(context);
+                              },
                             ),
                           ],
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            AutoSizeText(
-                              FFLocalizations.of(context).getText(
-                                'ofrd39d8' /* Connectez-vous et socialisez a... */,
-                              ),
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
-                          child: Wrap(
-                            spacing: 0,
-                            runSpacing: 0,
-                            alignment: WrapAlignment.start,
-                            crossAxisAlignment: WrapCrossAlignment.start,
-                            direction: Axis.horizontal,
-                            runAlignment: WrapAlignment.start,
-                            verticalDirection: VerticalDirection.down,
-                            clipBehavior: Clip.none,
+                        Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(20, 30, 20, 10),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Expanded(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(0.05, 0),
-                                      child: FlutterFlowRadioButton(
-                                        options: [
-                                          FFLocalizations.of(context).getText(
-                                            'u0pll6sm' /* Homme */,
-                                          ),
-                                          FFLocalizations.of(context).getText(
-                                            'd45gk2qa' /* Femme */,
-                                          )
-                                        ],
-                                        onChanged: (value) {
-                                          setState(
-                                              () => genderchoiceValue = value);
-                                        },
-                                        optionHeight: 35,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color: Colors.black,
-                                              useGoogleFonts: false,
-                                            ),
-                                        selectedTextStyle: FlutterFlowTheme.of(
-                                                context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Avenir Light ',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts: false,
-                                            ),
-                                        textPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0, 0, 50, 0),
-                                        buttonPosition:
-                                            RadioButtonPosition.left,
-                                        direction: Axis.horizontal,
-                                        radioButtonColor:
-                                            FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
-                                        inactiveRadioButtonColor:
-                                            Color(0x8A000000),
-                                        toggleable: false,
-                                        horizontalAlignment:
-                                            WrapAlignment.start,
-                                        verticalAlignment:
-                                            WrapCrossAlignment.start,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '3nwj6z0s' /* Que cherchez-vous? */,
+                                ),
+                                style: FlutterFlowTheme.of(context).title1,
                               ),
                             ],
                           ),
                         ),
-                      ),
-                      Expanded(
-                        child: Align(
-                          alignment: AlignmentDirectional(0, 1),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              AutoSizeText(
+                                FFLocalizations.of(context).getText(
+                                  'ofrd39d8' /* Connectez-vous et socialisez a... */,
+                                ),
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.of(context).bodyText1,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
                           child: Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
+                                EdgeInsetsDirectional.fromSTEB(30, 50, 30, 0),
+                            child: Wrap(
+                              spacing: 0,
+                              runSpacing: 0,
+                              alignment: WrapAlignment.start,
+                              crossAxisAlignment: WrapCrossAlignment.start,
+                              direction: Axis.horizontal,
+                              runAlignment: WrapAlignment.start,
+                              verticalDirection: VerticalDirection.down,
+                              clipBehavior: Clip.none,
                               children: [
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    final usersUpdateData =
-                                        createUsersRecordData(
-                                      genderChoice: genderchoiceValue,
-                                    );
-                                    await currentUserReference
-                                        .update(usersUpdateData);
-                                    await Navigator.push(
-                                      context,
-                                      PageTransition(
-                                        type: PageTransitionType.leftToRight,
-                                        duration: Duration(milliseconds: 200),
-                                        reverseDuration:
-                                            Duration(milliseconds: 200),
-                                        child: SelectLocationWidget(),
-                                      ),
-                                    );
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'y8imvytw' /* Continuer
- */
-                                    ,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width: 200,
-                                    height: 50,
-                                    color: FlutterFlowTheme.of(context)
-                                        .tertiaryColor,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .subtitle2
-                                        .override(
-                                          fontFamily: 'Avenir Light ',
-                                          color: FlutterFlowTheme.of(context)
-                                              .customColor7,
-                                          fontWeight: FontWeight.bold,
-                                          useGoogleFonts: false,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 0, 20),
+                                  child: Theme(
+                                    data: ThemeData(
+                                      checkboxTheme: CheckboxThemeData(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(25),
                                         ),
-                                    elevation: 5,
-                                    borderSide: BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1,
+                                      ),
+                                      unselectedWidgetColor: Color(0xFF707070),
                                     ),
-                                    borderRadius: 20,
+                                    child: CheckboxListTile(
+                                      value: forMaleValue ??= true,
+                                      onChanged: (newValue) => setState(
+                                          () => forMaleValue = newValue),
+                                      title: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'ilmhyb2n' /* Homme */,
+                                        ),
+                                        style:
+                                            FlutterFlowTheme.of(context).title3,
+                                      ),
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                    ),
+                                  ),
+                                ),
+                                Theme(
+                                  data: ThemeData(
+                                    checkboxTheme: CheckboxThemeData(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(25),
+                                      ),
+                                    ),
+                                    unselectedWidgetColor: Color(0xFF707070),
+                                  ),
+                                  child: CheckboxListTile(
+                                    value: forFemaleValue ??= false,
+                                    onChanged: (newValue) => setState(
+                                        () => forFemaleValue = newValue),
+                                    title: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'e03jhr7h' /* Féminin */,
+                                      ),
+                                      style:
+                                          FlutterFlowTheme.of(context).title3,
+                                    ),
+                                    activeColor: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
+                                    checkColor: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    dense: false,
+                                    controlAffinity:
+                                        ListTileControlAffinity.trailing,
                                   ),
                                 ),
                               ],
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(0, 1),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      final usersUpdateData =
+                                          createUsersRecordData(
+                                        forMale:
+                                            (forMaleValue) != (forFemaleValue),
+                                        forFemale:
+                                            (forFemaleValue) != (forMaleValue),
+                                      );
+                                      await currentUserReference
+                                          .update(usersUpdateData);
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 0),
+                                          reverseDuration:
+                                              Duration(milliseconds: 0),
+                                          child: SelectLocationWidget(),
+                                        ),
+                                      );
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'y8imvytw' /* Continuer
+ */
+                                      ,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 200,
+                                      height: 50,
+                                      color: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .subtitle2
+                                          .override(
+                                            fontFamily: 'Avenir Light ',
+                                            color: FlutterFlowTheme.of(context)
+                                                .customColor7,
+                                            fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
+                                          ),
+                                      elevation: 5,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1,
+                                      ),
+                                      borderRadius: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

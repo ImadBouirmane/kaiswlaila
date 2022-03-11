@@ -51,7 +51,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             height: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.none,
+                fit: BoxFit.cover,
                 image: Image.asset(
                   'assets/images/Asset_5@4x.png',
                 ).image,

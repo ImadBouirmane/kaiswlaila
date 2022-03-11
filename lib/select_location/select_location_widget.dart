@@ -34,7 +34,7 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.none,
+            fit: BoxFit.cover,
             image: Image.asset(
               'assets/images/Asset_6@4x.png',
             ).image,
@@ -173,23 +173,6 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                                 ),
                               ),
                             ],
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  valueOrDefault<String>(
-                                    placePickerValue.city,
-                                    'Ville',
-                                  ),
-                                  style: FlutterFlowTheme.of(context).subtitle1,
-                                ),
-                              ],
-                            ),
                           ),
                         ],
                       ),

@@ -5,7 +5,6 @@ import '../components/navbar_widget.dart';
 import '../components/select_language_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../profile/profile_widget.dart';
@@ -24,7 +23,8 @@ class SettingsWidget extends StatefulWidget {
 
 class _SettingsWidgetState extends State<SettingsWidget>
     with TickerProviderStateMixin {
-  String genderValue;
+  bool femaleValue;
+  bool maleValue;
   double ageChoiceValue;
   bool newMatchesValue;
   bool newLikesValue;
@@ -84,7 +84,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
             height: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.none,
+                fit: BoxFit.cover,
                 image: Image.asset(
                   'assets/images/Asset_6@4x.png',
                 ).image,
@@ -230,65 +230,177 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                       ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 20),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        FlutterFlowRadioButton(
-                                          options: [
-                                            FFLocalizations.of(context).getText(
-                                              'lmv5diaj' /* Homme */,
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10, 0, 0, 0),
+                                          child:
+                                              FutureBuilder<List<UsersRecord>>(
+                                            future: queryUsersRecordOnce(
+                                              queryBuilder: (usersRecord) =>
+                                                  usersRecord.where('forMale',
+                                                      isEqualTo: true),
+                                              singleRecord: true,
                                             ),
-                                            FFLocalizations.of(context).getText(
-                                              'aj7epfo8' /* Femme */,
-                                            )
-                                          ],
-                                          onChanged: (value) {
-                                            setState(() => genderValue = value);
-                                          },
-                                          optionHeight: 35,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Avenir Light ',
-                                                    color: Colors.black,
-                                                    useGoogleFonts: false,
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 30,
+                                                    height: 30,
+                                                    child: SpinKitFadingCircle(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryColor,
+                                                      size: 30,
+                                                    ),
                                                   ),
-                                          selectedTextStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1
-                                                  .override(
-                                                    fontFamily: 'Avenir Light ',
+                                                );
+                                              }
+                                              List<UsersRecord>
+                                                  maleUsersRecordList =
+                                                  snapshot.data;
+                                              // Return an empty Container when the document does not exist.
+                                              if (snapshot.data.isEmpty) {
+                                                return Container();
+                                              }
+                                              final maleUsersRecord =
+                                                  maleUsersRecordList.isNotEmpty
+                                                      ? maleUsersRecordList
+                                                          .first
+                                                      : null;
+                                              return Theme(
+                                                data: ThemeData(
+                                                  checkboxTheme:
+                                                      CheckboxThemeData(
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25),
+                                                    ),
+                                                  ),
+                                                  unselectedWidgetColor:
+                                                      Color(0xFF707070),
+                                                ),
+                                                child: CheckboxListTile(
+                                                  value: maleValue ??= false,
+                                                  onChanged: (newValue) =>
+                                                      setState(() =>
+                                                          maleValue = newValue),
+                                                  title: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'enszfip8' /* Homme */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .subtitle1,
+                                                  ),
+                                                  activeColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .tertiaryColor,
+                                                  checkColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primaryColor,
+                                                  dense: false,
+                                                  controlAffinity:
+                                                      ListTileControlAffinity
+                                                          .trailing,
+                                                  contentPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(
+                                                              0, 0, 10, 0),
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: FutureBuilder<List<UsersRecord>>(
+                                          future: queryUsersRecordOnce(
+                                            queryBuilder: (usersRecord) =>
+                                                usersRecord.where('forFemale',
+                                                    isEqualTo: true),
+                                            singleRecord: true,
+                                          ),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 30,
+                                                  height: 30,
+                                                  child: SpinKitFadingCircle(
                                                     color: FlutterFlowTheme.of(
                                                             context)
-                                                        .tertiaryColor,
-                                                    fontWeight: FontWeight.w600,
-                                                    useGoogleFonts: false,
+                                                        .primaryColor,
+                                                    size: 30,
                                                   ),
-                                          textPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 50, 0),
-                                          buttonPosition:
-                                              RadioButtonPosition.left,
-                                          direction: Axis.horizontal,
-                                          radioButtonColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          inactiveRadioButtonColor:
-                                              Color(0x8A000000),
-                                          toggleable: false,
-                                          horizontalAlignment:
-                                              WrapAlignment.start,
-                                          verticalAlignment:
-                                              WrapCrossAlignment.start,
+                                                ),
+                                              );
+                                            }
+                                            List<UsersRecord>
+                                                femaleUsersRecordList =
+                                                snapshot.data;
+                                            final femaleUsersRecord =
+                                                femaleUsersRecordList.isNotEmpty
+                                                    ? femaleUsersRecordList
+                                                        .first
+                                                    : null;
+                                            return Theme(
+                                              data: ThemeData(
+                                                checkboxTheme:
+                                                    CheckboxThemeData(
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            25),
+                                                  ),
+                                                ),
+                                                unselectedWidgetColor:
+                                                    Color(0xFF707070),
+                                              ),
+                                              child: CheckboxListTile(
+                                                value: femaleValue ??= false,
+                                                onChanged: (newValue) =>
+                                                    setState(() =>
+                                                        femaleValue = newValue),
+                                                title: Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '0nl8fyyu' /* Féminin */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .subtitle1,
+                                                ),
+                                                activeColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .tertiaryColor,
+                                                checkColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
+                                                dense: false,
+                                                controlAffinity:
+                                                    ListTileControlAffinity
+                                                        .trailing,
+                                              ),
+                                            );
+                                          },
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(

@@ -23,13 +23,17 @@ abstract class MatchesRecord
   bool get like;
 
   @nullable
+  BuiltList<DocumentReference> get users;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(MatchesRecordBuilder builder) => builder
     ..isMatch = false
     ..isNotMatch = false
-    ..like = false;
+    ..like = false
+    ..users = ListBuilder();
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('matches');
@@ -64,4 +68,5 @@ Map<String, dynamic> createMatchesRecordData({
           ..user = user
           ..isMatch = isMatch
           ..isNotMatch = isNotMatch
-          ..like = like));
+          ..like = like
+          ..users = null));
