@@ -533,6 +533,9 @@ Veui... */
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     final usersUpdateData = {
+                                      ...createUsersRecordData(
+                                        progressBar: 1.0,
+                                      ),
                                       'Qs13List1': FieldValue.arrayUnion(
                                           [interests1Values.length.toString()]),
                                       'Qs13List2': FieldValue.arrayUnion(

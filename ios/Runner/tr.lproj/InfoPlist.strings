@@ -1,2 +1,3 @@
 NSCameraUsageDescription = "Bir fotoğraf veya video çekmek için bu uygulama kameraya erişim izni gerektirir.";
 NSPhotoLibraryUsageDescription = "Medya yüklemek için bu uygulama fotoğraf kitaplığına erişim izni gerektirir.";
+NSLocationWhenInUseUsageDescription = "Yakınlarda arama yapmak için bu uygulamanın mevcut konumunuza erişmesi gerekiyor.";

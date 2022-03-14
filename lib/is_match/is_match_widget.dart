@@ -381,17 +381,45 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0, 10, 0, 5),
-                                              child: Container(
-                                                width: 150,
-                                                height: 150,
-                                                clipBehavior: Clip.antiAlias,
-                                                decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: CachedNetworkImage(
-                                                  imageUrl: '',
-                                                  fit: BoxFit.cover,
-                                                ),
+                                              child: FutureBuilder<UsersRecord>(
+                                                future:
+                                                    UsersRecord.getDocumentOnce(
+                                                        widget.user.reference),
+                                                builder: (context, snapshot) {
+                                                  // Customize what your widget looks like when it's loading.
+                                                  if (!snapshot.hasData) {
+                                                    return Center(
+                                                      child: SizedBox(
+                                                        width: 30,
+                                                        height: 30,
+                                                        child:
+                                                            SpinKitFadingCircle(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryColor,
+                                                          size: 30,
+                                                        ),
+                                                      ),
+                                                    );
+                                                  }
+                                                  final matchPhotoUsersRecord =
+                                                      snapshot.data;
+                                                  return Container(
+                                                    width: 150,
+                                                    height: 150,
+                                                    clipBehavior:
+                                                        Clip.antiAlias,
+                                                    decoration: BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: CachedNetworkImage(
+                                                      imageUrl:
+                                                          matchPhotoUsersRecord
+                                                              .photoUrl,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  );
+                                                },
                                               ),
                                             ),
                                           ),
@@ -452,7 +480,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 3, 0),
+                                            0, 0, 5, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'ywjrqe02' /* Avec un pourcentage de  */,

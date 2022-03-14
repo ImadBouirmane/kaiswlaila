@@ -22,6 +22,7 @@ class SelectLocationWidget extends StatefulWidget {
 }
 
 class _SelectLocationWidgetState extends State<SelectLocationWidget> {
+  LatLng currentUserLocationValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   var placePickerValue = FFPlace();
 
@@ -190,8 +191,12 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
+                                currentUserLocationValue =
+                                    await getCurrentUserLocation(
+                                        defaultLocation: LatLng(0.0, 0.0));
+
                                 final usersUpdateData = createUsersRecordData(
-                                  location: placePickerValue.latLng,
+                                  location: currentUserLocationValue,
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);

@@ -1,2 +1,3 @@
 NSCameraUsageDescription = "Pour prendre une photo ou une vidéo, cette application nécessite l'autorisation d'accéder à l'appareil photo.";
 NSPhotoLibraryUsageDescription = "Afin de télécharger des médias, cette application nécessite l'autorisation d'accéder à la photothèque.";
+NSLocationWhenInUseUsageDescription = "Afin de rechercher à proximité, cette application nécessite l'accès à votre emplacement actuel.";

@@ -46,6 +46,8 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Afin de rechercher à proximité, cette application nécessite l'accès à votre emplacement actuel.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Pour prendre une photo ou une vidéo, cette application nécessite l'autorisation d'accéder à l'appareil photo.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -151,7 +151,7 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                       unselectedWidgetColor: Color(0xFF707070),
                                     ),
                                     child: CheckboxListTile(
-                                      value: forMaleValue ??= true,
+                                      value: forMaleValue ??= false,
                                       onChanged: (newValue) => setState(
                                           () => forMaleValue = newValue),
                                       title: Text(
@@ -216,13 +216,16 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
-                                      final usersUpdateData =
-                                          createUsersRecordData(
-                                        forMale:
-                                            (forMaleValue) != (forFemaleValue),
-                                        forFemale:
-                                            (forFemaleValue) != (forMaleValue),
-                                      );
+                                      final usersUpdateData = {
+                                        ...createUsersRecordData(
+                                          forMale: (forMaleValue) !=
+                                              (genderChoiceUsersRecord.forMale),
+                                          forFemale: (forFemaleValue) ==
+                                              (genderChoiceUsersRecord.forMale),
+                                        ),
+                                        'users': FieldValue.arrayUnion(
+                                            [currentUserReference]),
+                                      };
                                       await currentUserReference
                                           .update(usersUpdateData);
                                       await Navigator.push(

@@ -1,2 +1,3 @@
 NSCameraUsageDescription = "من أجل التقاط صورة أو مقطع فيديو ، يتطلب هذا التطبيق إذنًا للوصول إلى الكاميرا.";
 NSPhotoLibraryUsageDescription = "لتحميل الوسائط ، يتطلب هذا التطبيق إذنًا للوصول إلى مكتبة الصور.";
+NSLocationWhenInUseUsageDescription = "من أجل البحث في مكان قريب ، يتطلب هذا التطبيق الوصول إلى موقعك الحالي.";

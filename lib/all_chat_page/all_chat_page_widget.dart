@@ -1,6 +1,7 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../chat/chat_widget.dart';
+import '../components/empty_chats_widget.dart';
 import '../components/navbar_widget.dart';
 import '../flutter_flow/chat/index.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
@@ -225,6 +226,9 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                     }
                                     List<ChatsRecord> listViewChatsRecordList =
                                         snapshot.data;
+                                    if (listViewChatsRecordList.isEmpty) {
+                                      return EmptyChatsWidget();
+                                    }
                                     return ListView.builder(
                                       padding: EdgeInsets.zero,
                                       shrinkWrap: true,

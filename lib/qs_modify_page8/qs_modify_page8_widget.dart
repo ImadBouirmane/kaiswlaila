@@ -399,6 +399,7 @@ class _QsModifyPage8WidgetState extends State<QsModifyPage8Widget> {
                               qs12TF1: rs1Controller?.text ?? '',
                               qs12TF2: rs2Controller?.text ?? '',
                               qs12TF3: rs3Controller?.text ?? '',
+                              progressBar: 0.9,
                             );
                             await currentUserReference.update(usersUpdateData);
                             await Navigator.push(

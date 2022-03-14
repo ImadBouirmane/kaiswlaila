@@ -20,10 +20,7 @@ class _EmptyChatsWidgetState extends State<EmptyChatsWidget> {
       child: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).customColor10,
-          borderRadius: BorderRadius.circular(20),
-        ),
+        decoration: BoxDecoration(),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,

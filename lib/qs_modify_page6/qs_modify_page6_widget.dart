@@ -442,6 +442,9 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                             child: FFButtonWidget(
                               onPressed: () async {
                                 final usersUpdateData = {
+                                  ...createUsersRecordData(
+                                    progressBar: 0.7,
+                                  ),
                                   'Qs9C1': FieldValue.arrayUnion(
                                       [checkboxGroupValues1.length.toString()]),
                                   'Qs9C2': FieldValue.arrayUnion(

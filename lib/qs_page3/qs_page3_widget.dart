@@ -216,7 +216,7 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                 child: FlutterFlowCheckboxGroup(
                                   initiallySelected: checkboxGroupValues != null
                                       ? checkboxGroupValues
-                                      : [],
+                                      : qsPage3UsersRecord.qs5.toList(),
                                   options: [
                                     FFLocalizations.of(context).getText(
                                       'dnrpkcb2' /* La passion */,
@@ -258,8 +258,14 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                               FFButtonWidget(
                                 onPressed: () async {
                                   final usersUpdateData = {
+                                    ...createUsersRecordData(
+                                      progressBar: 0.3,
+                                    ),
                                     'Qs5': FieldValue.arrayUnion([
-                                      checkboxGroupValues.length.toString()
+                                      qsPage3UsersRecord.qs5
+                                          .toList()
+                                          .length
+                                          .toString()
                                     ]),
                                   };
                                   await currentUserReference

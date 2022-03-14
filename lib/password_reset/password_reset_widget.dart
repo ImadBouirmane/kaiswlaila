@@ -138,55 +138,59 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                           ),
                         ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FFButtonWidget(
-                            onPressed: () async {
-                              if (emailController.text.isEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'p7g1hpbb' /* Email (requis) */,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FFButtonWidget(
+                              onPressed: () async {
+                                if (emailController.text.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'p7g1hpbb' /* Email (requis) */,
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                  );
+                                  return;
+                                }
+                                await resetPassword(
+                                  email: emailController.text,
+                                  context: context,
                                 );
-                                return;
-                              }
-                              await resetPassword(
-                                email: emailController.text,
-                                context: context,
-                              );
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '9rsctwyn' /* Enregistrer */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 160,
-                              height: 50,
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    fontFamily: 'Avenir Light ',
-                                    color: FlutterFlowTheme.of(context)
-                                        .customColor7,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: false,
-                                  ),
-                              borderSide: BorderSide(
-                                color:
-                                    FlutterFlowTheme.of(context).customColor6,
-                                width: 1,
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '9rsctwyn' /* Enregistrer */,
                               ),
-                              borderRadius: 20,
+                              options: FFButtonOptions(
+                                width: 160,
+                                height: 50,
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Avenir Light ',
+                                      color: FlutterFlowTheme.of(context)
+                                          .customColor7,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
+                                borderSide: BorderSide(
+                                  color:
+                                      FlutterFlowTheme.of(context).customColor6,
+                                  width: 1,
+                                ),
+                                borderRadius: 20,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

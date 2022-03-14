@@ -424,6 +424,7 @@ class _QsPage8WidgetState extends State<QsPage8Widget> {
                                   qs12TF1: rs1Controller.text,
                                   qs12TF2: rs2Controller.text,
                                   qs12TF3: rs3Controller.text,
+                                  progressBar: 0.9,
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);

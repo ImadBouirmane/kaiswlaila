@@ -241,6 +241,9 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                           FFButtonWidget(
                             onPressed: () async {
                               final usersUpdateData = {
+                                ...createUsersRecordData(
+                                  progressBar: 0.3,
+                                ),
                                 'Qs5': FieldValue.arrayUnion([
                                   currentUserDocument?.qs5.length.toString()
                                 ]),

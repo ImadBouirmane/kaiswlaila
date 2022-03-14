@@ -705,6 +705,7 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
                                   qs6RB4: ratingBar4Value,
                                   qs6RB5: ratingBar5Value,
                                   qs6RB6: ratingBar6Value,
+                                  progressBar: 0.4,
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);

@@ -2,7 +2,6 @@ import '../all_chat_page/all_chat_page_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/navbar_widget.dart';
-import '../components/pourcentage_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -451,6 +450,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           ),
                                           child: CachedNetworkImage(
                                             imageUrl: currentUserPhoto,
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
                                       ),
@@ -504,8 +504,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             child: FutureBuilder<List<UsersRecord>>(
                               future: queryUsersRecordOnce(
                                 queryBuilder: (usersRecord) => usersRecord
-                                    .where('forMale', isEqualTo: true)
-                                    .where('forFemale', isEqualTo: true)
+                                    .where('forMale',
+                                        isEqualTo:
+                                            homePageUsersRecord.forFemale)
+                                    .where('forFemale',
+                                        isEqualTo: homePageUsersRecord.forMale)
                                     .orderBy('pourcentage', descending: true),
                               ),
                               builder: (context, snapshot) {
@@ -609,8 +612,69 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0, 0),
-                                                              child:
-                                                                  PourcentageWidget(),
+                                                              child: FutureBuilder<
+                                                                  List<
+                                                                      UsersRecord>>(
+                                                                future:
+                                                                    queryUsersRecordOnce(
+                                                                  singleRecord:
+                                                                      true,
+                                                                ),
+                                                                builder: (context,
+                                                                    snapshot) {
+                                                                  // Customize what your widget looks like when it's loading.
+                                                                  if (!snapshot
+                                                                      .hasData) {
+                                                                    return Center(
+                                                                      child:
+                                                                          SizedBox(
+                                                                        width:
+                                                                            30,
+                                                                        height:
+                                                                            30,
+                                                                        child:
+                                                                            SpinKitFadingCircle(
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).primaryColor,
+                                                                          size:
+                                                                              30,
+                                                                        ),
+                                                                      ),
+                                                                    );
+                                                                  }
+                                                                  List<UsersRecord>
+                                                                      progressBarUsersRecordList =
+                                                                      snapshot
+                                                                          .data;
+                                                                  // Return an empty Container when the document does not exist.
+                                                                  if (snapshot
+                                                                      .data
+                                                                      .isEmpty) {
+                                                                    return Container();
+                                                                  }
+                                                                  final progressBarUsersRecord = progressBarUsersRecordList
+                                                                          .isNotEmpty
+                                                                      ? progressBarUsersRecordList
+                                                                          .first
+                                                                      : null;
+                                                                  return CircularPercentIndicator(
+                                                                    percent:
+                                                                        homePageUsersRecord
+                                                                            .progressBar,
+                                                                    radius: 115,
+                                                                    lineWidth:
+                                                                        10,
+                                                                    animation:
+                                                                        true,
+                                                                    progressColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .primaryColor,
+                                                                    backgroundColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .customColor6,
+                                                                  );
+                                                                },
+                                                              ),
                                                             ),
                                                             Align(
                                                               alignment:
@@ -714,46 +778,50 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         MainAxisAlignment
                                                             .center,
                                                     children: [
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(0, 0,
-                                                                    10, 0),
-                                                        child: Card(
-                                                          clipBehavior: Clip
-                                                              .antiAliasWithSaveLayer,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .customColor10,
-                                                          elevation: 2,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10,
-                                                                        10,
-                                                                        10,
-                                                                        10),
-                                                            child: Text(
-                                                              pageViewUsersRecord
-                                                                  .city,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1,
+                                                      if ((pageViewUsersRecord
+                                                              .city) ==
+                                                          (pageViewUsersRecord
+                                                              .city))
+                                                        Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      0, 10, 0),
+                                                          child: Card(
+                                                            clipBehavior: Clip
+                                                                .antiAliasWithSaveLayer,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .customColor10,
+                                                            elevation: 2,
+                                                            shape:
+                                                                RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          20),
                                                             ),
-                                                          ),
-                                                        ).animated([
-                                                          animationsMap[
-                                                              'cardOnPageLoadAnimation1']
-                                                        ]),
-                                                      ),
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          10,
+                                                                          10,
+                                                                          10,
+                                                                          10),
+                                                              child: Text(
+                                                                pageViewUsersRecord
+                                                                    .city,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1,
+                                                              ),
+                                                            ),
+                                                          ).animated([
+                                                            animationsMap[
+                                                                'cardOnPageLoadAnimation1']
+                                                          ]),
+                                                        ),
                                                       Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
@@ -784,13 +852,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             child:
                                                                 AuthUserStreamWidget(
                                                               child: Text(
-                                                                functions
-                                                                    .distance(
-                                                                        currentUserDocument
-                                                                            ?.location,
-                                                                        pageViewUsersRecord
-                                                                            .location)
-                                                                    .toString(),
+                                                                valueOrDefault<
+                                                                    String>(
+                                                                  functions
+                                                                      .distance(
+                                                                          currentUserDocument
+                                                                              ?.location,
+                                                                          pageViewUsersRecord
+                                                                              .location)
+                                                                      .toString(),
+                                                                  'Km',
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyText1,
@@ -876,7 +948,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 InkWell(
                                   onTap: () async {
                                     if ((currentUserDocument?.like) ==
-                                        (!(homePageUsersRecord.like))) {
+                                        (homePageUsersRecord.like)) {
                                       final matchesCreateData = {
                                         'users': [
                                           homePageUsersRecord.reference
@@ -890,6 +962,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         duration: Duration(milliseconds: 300),
                                         curve: Curves.ease,
                                       );
+                                      return;
                                     }
 
                                     await Future.delayed(

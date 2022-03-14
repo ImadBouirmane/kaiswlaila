@@ -363,6 +363,7 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                               final usersUpdateData = createUsersRecordData(
                                 qs11Choice: radioButtonValue2,
                                 qs10Choice: radioButtonValue1,
+                                progressBar: 0.8,
                               );
                               await currentUserReference
                                   .update(usersUpdateData);

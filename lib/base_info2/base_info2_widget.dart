@@ -102,60 +102,68 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: Theme(
-                            data: ThemeData(
-                              checkboxTheme: CheckboxThemeData(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(25),
+                          child: AuthUserStreamWidget(
+                            child: Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                  ),
                                 ),
+                                unselectedWidgetColor: Color(0xFF707070),
                               ),
-                              unselectedWidgetColor: Color(0xFF707070),
-                            ),
-                            child: CheckboxListTile(
-                              value: maleValue ??= true,
-                              onChanged: (newValue) =>
-                                  setState(() => maleValue = newValue),
-                              title: Text(
-                                FFLocalizations.of(context).getText(
-                                  'j7y7bnsa' /* Homme */,
+                              child: CheckboxListTile(
+                                value: maleValue ??=
+                                    !(currentUserDocument?.forFemale),
+                                onChanged: (newValue) =>
+                                    setState(() => maleValue = newValue),
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'j7y7bnsa' /* Homme */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context).title3,
                                 ),
-                                style: FlutterFlowTheme.of(context).title3,
+                                activeColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                checkColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                dense: false,
+                                controlAffinity:
+                                    ListTileControlAffinity.trailing,
                               ),
-                              activeColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                              checkColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              dense: false,
-                              controlAffinity: ListTileControlAffinity.trailing,
                             ),
                           ),
                         ),
                         Expanded(
-                          child: Theme(
-                            data: ThemeData(
-                              checkboxTheme: CheckboxThemeData(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(25),
+                          child: AuthUserStreamWidget(
+                            child: Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25),
+                                  ),
                                 ),
+                                unselectedWidgetColor: Color(0xFF707070),
                               ),
-                              unselectedWidgetColor: Color(0xFF707070),
-                            ),
-                            child: CheckboxListTile(
-                              value: femaleValue ??= false,
-                              onChanged: (newValue) =>
-                                  setState(() => femaleValue = newValue),
-                              title: Text(
-                                FFLocalizations.of(context).getText(
-                                  '7zi3sr3r' /* Féminin */,
+                              child: CheckboxListTile(
+                                value: femaleValue ??=
+                                    !(currentUserDocument?.forMale),
+                                onChanged: (newValue) =>
+                                    setState(() => femaleValue = newValue),
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '7zi3sr3r' /* Féminin */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context).title3,
                                 ),
-                                style: FlutterFlowTheme.of(context).title3,
+                                activeColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                checkColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                dense: false,
+                                controlAffinity:
+                                    ListTileControlAffinity.trailing,
                               ),
-                              activeColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                              checkColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              dense: false,
-                              controlAffinity: ListTileControlAffinity.trailing,
                             ),
                           ),
                         ),
@@ -487,9 +495,9 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                                 month: monthController.text,
                                 year: yearController.text,
                                 country: countryValue,
-                                city: currentUserDocument?.city,
-                                isMale: maleValue,
-                                isFemale: femaleValue,
+                                city: textController4.text,
+                                isMale: currentUserDocument?.forFemale,
+                                isFemale: currentUserDocument?.forMale,
                               );
                               await currentUserReference
                                   .update(usersUpdateData);

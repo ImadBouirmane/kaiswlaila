@@ -3193,7 +3193,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fh8476sw': {
       'fr': 'Vous n’avez pas de messages !',
       'ar': 'ليس لديك رسائل!',
-      'en': 'You have no messages!a',
+      'en': 'You have no messages!',
       'tr': 'Mesajınız yok!',
     },
   },
@@ -3293,21 +3293,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Devam etmek',
     },
   },
-  // asas
-  {
-    '3obn0smn': {
-      'fr': 'Homme',
-      'ar': 'ذكر',
-      'en': 'Male',
-      'tr': 'Erkek ',
-    },
-    '3vxeycpf': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
-    },
-  },
   // Miscellaneous
   {
     'z6sa2e22': {
@@ -3328,6 +3313,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'In order to upload media, this app requires permission to access the photo library.',
       'tr':
           'Medya yüklemek için bu uygulama fotoğraf kitaplığına erişim izni gerektirir.',
+    },
+    'q7kjooau': {
+      'fr':
+          'Afin de rechercher à proximité, cette application nécessite l\'accès à votre emplacement actuel.',
+      'ar':
+          'من أجل البحث في مكان قريب ، يتطلب هذا التطبيق الوصول إلى موقعك الحالي.',
+      'en':
+          'In order to search nearby, this app requires access to your current location.',
+      'tr':
+          'Yakınlarda arama yapmak için bu uygulamanın mevcut konumunuza erişmesi gerekiyor.',
     },
     '7api57zb': {
       'fr':
@@ -3404,34 +3399,34 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'fotoğraf gönderme',
     },
     '6db7empd': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': 'Choisissez la source',
+      'ar': 'اختر المصدر',
+      'en': 'Choose source',
+      'tr': 'Kaynak Seç',
     },
     'ial22wh4': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': 'Gallerie',
+      'ar': 'لائحة ',
+      'en': 'Gallery',
+      'tr': 'Galeri',
     },
     'rwkq3q0a': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': 'Gallerie (Photos)',
+      'ar': 'لائحة الصور',
+      'en': 'Gallery(Pictures)',
+      'tr': 'Galeri(Resimler)',
     },
     'lrcs38v3': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': 'Galleire(Video)',
+      'ar': 'معرض (فيديو)',
+      'en': 'Gallery(Video)',
+      'tr': 'Galeri(Video)',
     },
     'rigkqx0d': {
-      'fr': '',
-      'ar': '',
-      'en': '',
-      'tr': '',
+      'fr': 'Camera',
+      'ar': 'الكاميرا',
+      'en': 'Camera',
+      'tr': 'Kamera',
     },
     '9mjte96b': {
       'fr': '',

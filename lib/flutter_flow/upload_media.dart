@@ -62,7 +62,9 @@ Future<SelectedMedia> selectMediaWithSourceBottomSheet({
               padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
               child: ListTile(
                 title: Text(
-                  'Choose Source',
+                  FFLocalizations.of(context).getText(
+                    '6db7empd' /* Choisissez la source */,
+                  ),
                   textAlign: TextAlign.center,
                   style: GoogleFonts.getFont(
                     pickerFontFamily,
@@ -78,26 +80,38 @@ Future<SelectedMedia> selectMediaWithSourceBottomSheet({
             const Divider(),
             if (allowPhoto && allowVideo) ...[
               createUploadMediaListTile(
-                'Gallery (Photo)',
+                FFLocalizations.of(context).getText(
+                  'rwkq3q0a' /* Gallerie (Photos) */,
+                ),
                 MediaSource.photoGallery,
               ),
               const Divider(),
               createUploadMediaListTile(
-                'Gallery (Video)',
+                FFLocalizations.of(context).getText(
+                  'lrcs38v3' /* Galleire(Video) */,
+                ),
                 MediaSource.videoGallery,
               ),
             ] else if (allowPhoto)
               createUploadMediaListTile(
-                'Gallery',
+                FFLocalizations.of(context).getText(
+                  'ial22wh4' /* Gallerie */,
+                ),
                 MediaSource.photoGallery,
               )
             else
               createUploadMediaListTile(
-                'Gallery',
+                FFLocalizations.of(context).getText(
+                  'ial22wh4' /* Gallerie */,
+                ),
                 MediaSource.videoGallery,
               ),
             const Divider(),
-            createUploadMediaListTile('Camera', MediaSource.camera),
+            createUploadMediaListTile(
+                FFLocalizations.of(context).getText(
+                  'rigkqx0d' /* Camera */,
+                ),
+                MediaSource.camera),
             const Divider(),
             const SizedBox(height: 10),
           ],
