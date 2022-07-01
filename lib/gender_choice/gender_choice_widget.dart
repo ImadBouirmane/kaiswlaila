@@ -25,6 +25,13 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'genderChoice'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -86,6 +93,9 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                 size: 30,
                               ),
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'GENDER_CHOICE_chevron_left_outlined_ICN_');
+                                logFirebaseEvent('IconButton_Navigate-Back');
                                 Navigator.pop(context);
                               },
                             ),
@@ -216,6 +226,10 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'GENDER_CHOICE_PAGE_step4_ON_TAP');
+                                      logFirebaseEvent('step4_Backend-Call');
+
                                       final usersUpdateData = {
                                         ...createUsersRecordData(
                                           forMale: (forMaleValue) !=
@@ -228,6 +242,7 @@ class _GenderChoiceWidgetState extends State<GenderChoiceWidget> {
                                       };
                                       await currentUserReference
                                           .update(usersUpdateData);
+                                      logFirebaseEvent('step4_Navigate-To');
                                       await Navigator.push(
                                         context,
                                         PageTransition(

@@ -28,6 +28,12 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage2'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -105,6 +111,10 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE2_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -130,34 +140,35 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 0.2,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'gglth7yf' /* 20% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 0.2,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'gglth7yf' /* 20% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -227,7 +238,7 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                                       FFLocalizations.of(context).getText(
                                         'wtsdzneb' /* Tout à fait  */,
                                       )
-                                    ],
+                                    ].toList(),
                                     onChanged: (value) {
                                       setState(() => radioButton3Value = value);
                                     },
@@ -331,7 +342,7 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                                       FFLocalizations.of(context).getText(
                                         'lsvv4p73' /* Tout à fait  */,
                                       )
-                                    ],
+                                    ].toList(),
                                     onChanged: (value) {
                                       setState(() => radioButton4Value = value);
                                     },
@@ -372,6 +383,10 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                               Spacer(),
                               FFButtonWidget(
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_PAGE2_PAGE_step4_ON_TAP');
+                                  logFirebaseEvent('step4_Backend-Call');
+
                                   final usersUpdateData = createUsersRecordData(
                                     qs3Choice: radioButton3Value,
                                     qs4Choice: radioButton4Value,
@@ -379,6 +394,7 @@ class _QsPage2WidgetState extends State<QsPage2Widget> {
                                   );
                                   await currentUserReference
                                       .update(usersUpdateData);
+                                  logFirebaseEvent('step4_Navigate-To');
                                   await Navigator.push(
                                     context,
                                     PageTransition(

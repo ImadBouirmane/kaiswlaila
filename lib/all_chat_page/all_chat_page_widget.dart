@@ -27,6 +27,7 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
     'chatPreviewOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-49, 0),
@@ -50,6 +51,8 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'allChatPage'});
   }
 
   @override
@@ -116,6 +119,9 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                 children: [
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'ALL_CHAT_Container_t4c296xp_ON_TAP');
+                                      logFirebaseEvent('Container_Navigate-To');
                                       await Navigator.push(
                                         context,
                                         PageTransition(
@@ -169,6 +175,9 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                   ),
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'ALL_CHAT_Container_99pikpn2_ON_TAP');
+                                      logFirebaseEvent('Container_Navigate-To');
                                       await Navigator.push(
                                         context,
                                         PageTransition(
@@ -252,28 +261,24 @@ class _AllChatPageWidgetState extends State<AllChatPageWidget>
                                                   FFChatInfo(
                                                       listViewChatsRecord);
                                               return FFChatPreview(
-                                                onTap: chatInfo != null
-                                                    ? () => Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                            builder:
-                                                                (context) =>
-                                                                    ChatWidget(
-                                                              chatUser: chatInfo
-                                                                          .otherUsers
-                                                                          .length ==
-                                                                      1
-                                                                  ? chatInfo
-                                                                      .otherUsersList
-                                                                      .first
-                                                                  : null,
-                                                              chatRef: chatInfo
-                                                                  .chatRecord
-                                                                  .reference,
-                                                            ),
-                                                          ),
-                                                        )
-                                                    : null,
+                                                onTap: () => Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        ChatWidget(
+                                                      chatUser: chatInfo
+                                                                  .otherUsers
+                                                                  .length ==
+                                                              1
+                                                          ? chatInfo
+                                                              .otherUsersList
+                                                              .first
+                                                          : null,
+                                                      chatRef: chatInfo
+                                                          .chatRecord.reference,
+                                                    ),
+                                                  ),
+                                                ),
                                                 lastChatText: chatInfo
                                                     .chatPreviewMessage(),
                                                 lastChatTime:

@@ -22,9 +22,16 @@ class SelectLocationWidget extends StatefulWidget {
 }
 
 class _SelectLocationWidgetState extends State<SelectLocationWidget> {
-  LatLng currentUserLocationValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  LatLng currentUserLocationValue;
   var placePickerValue = FFPlace();
+
+  @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'selectLocation'});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +72,9 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                             size: 30,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'SELECT_LOCATION_chevron_left_outlined_IC');
+                            logFirebaseEvent('IconButton_Navigate-Back');
                             Navigator.pop(context);
                           },
                         ),
@@ -139,8 +149,9 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                                     'AIzaSyDxjHZT2D1EOXyymfoXVc8hYBoBYooYamQ',
                                 webGoogleMapsApiKey:
                                     'AIzaSyBCsBl5jw4Ib5oNY45UtUtM9A4qmIgCX-E',
-                                onSelect: (place) =>
-                                    setState(() => placePickerValue = place),
+                                onSelect: (place) async {
+                                  setState(() => placePickerValue = place);
+                                },
                                 defaultText:
                                     FFLocalizations.of(context).getText(
                                   'tzk7uib8' /* Sélectionnez localisation */,
@@ -191,15 +202,19 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'SELECT_LOCATION_PAGE_step2_ON_TAP');
                                 currentUserLocationValue =
                                     await getCurrentUserLocation(
                                         defaultLocation: LatLng(0.0, 0.0));
+                                logFirebaseEvent('step2_Backend-Call');
 
                                 final usersUpdateData = createUsersRecordData(
                                   location: currentUserLocationValue,
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);
+                                logFirebaseEvent('step2_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

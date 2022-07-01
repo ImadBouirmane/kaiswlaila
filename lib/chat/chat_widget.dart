@@ -50,6 +50,8 @@ class _ChatWidgetState extends State<ChatWidget> {
         setState(() => _chatInfo = info);
       }
     });
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'chat'});
   }
 
   @override
@@ -70,6 +72,8 @@ class _ChatWidgetState extends State<ChatWidget> {
             size: 24,
           ),
           onPressed: () async {
+            logFirebaseEvent('CHAT_PAGE_chevron_left_ICN_ON_TAP');
+            logFirebaseEvent('IconButton_Navigate-Back');
             Navigator.pop(context);
           },
         ),

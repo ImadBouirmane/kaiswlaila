@@ -34,6 +34,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
     'cardOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 49),
@@ -56,6 +57,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Settings'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -104,6 +108,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                       children: [
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'SETTINGS_PAGE_Container_q52ze24w_ON_TAP');
+                            logFirebaseEvent('Container_Navigate-To');
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -156,6 +163,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                         ),
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'SETTINGS_CircleImage_pbct4rxg_ON_TAP');
+                            logFirebaseEvent('CircleImage_Navigate-To');
                             await Navigator.push(
                               context,
                               PageTransition(
@@ -295,8 +305,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                   ),
                                                   child: CheckboxListTile(
                                                     value: maleValue ??=
-                                                        currentUserDocument
-                                                            ?.forMale,
+                                                        valueOrDefault(
+                                                            currentUserDocument
+                                                                ?.forMale,
+                                                            false),
                                                     onChanged: (newValue) =>
                                                         setState(() =>
                                                             maleValue =
@@ -387,8 +399,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 ),
                                                 child: CheckboxListTile(
                                                   value: femaleValue ??=
-                                                      currentUserDocument
-                                                          ?.forFemale,
+                                                      valueOrDefault(
+                                                          currentUserDocument
+                                                              ?.forFemale,
+                                                          false),
                                                   onChanged: (newValue) =>
                                                       setState(() =>
                                                           femaleValue =
@@ -427,6 +441,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         0, 0, 0, 20),
                                     child: InkWell(
                                       onTap: () async {
+                                        logFirebaseEvent(
+                                            'SETTINGS_PAGE_Row_64zwcb8j_ON_TAP');
+                                        logFirebaseEvent('Row_Navigate-To');
                                         await Navigator.push(
                                           context,
                                           PageTransition(
@@ -516,7 +533,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         min: 18,
                                         max: 40,
                                         value: ageChoiceValue ??=
-                                            currentUserDocument?.ageChoice,
+                                            valueOrDefault(
+                                                currentUserDocument?.ageChoice,
+                                                0.0),
                                         label: ageChoiceValue.toString(),
                                         divisions: 11,
                                         onChanged: (newValue) {
@@ -739,6 +758,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         0, 0, 0, 10),
                                     child: InkWell(
                                       onTap: () async {
+                                        logFirebaseEvent(
+                                            'SETTINGS_PAGE_Row_k0pd1odw_ON_TAP');
+                                        logFirebaseEvent('Row_Bottom-Sheet');
                                         await showModalBottomSheet(
                                           isScrollControlled: true,
                                           backgroundColor: Colors.transparent,

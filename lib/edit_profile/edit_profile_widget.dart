@@ -24,7 +24,6 @@ class EditProfileWidget extends StatefulWidget {
 }
 
 class _EditProfileWidgetState extends State<EditProfileWidget> {
-  String countryValue;
   String uploadedFileUrl1 = '';
   TextEditingController nomCompletController;
   TextEditingController jobTitleController;
@@ -35,11 +34,18 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
   TextEditingController monthController;
   TextEditingController yearController;
   TextEditingController textController7;
+  String countryValue;
   String uploadedFileUrl2 = '';
   String uploadedFileUrl3 = '';
   String uploadedFileUrl4 = '';
   String uploadedFileUrl5 = '';
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'editProfile'});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +106,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 size: 30,
                               ),
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'EDIT_PROFILE_chevron_left_ICN_ON_TAP');
+                                logFirebaseEvent('IconButton_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(
@@ -161,6 +170,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     ),
                                     child: InkWell(
                                       onTap: () async {
+                                        logFirebaseEvent(
+                                            'EDIT_PROFILE_CircleImage_hdh8zu42_ON_TAP');
+                                        logFirebaseEvent(
+                                            'CircleImage_Expand-Image');
                                         await Navigator.push(
                                           context,
                                           PageTransition(
@@ -203,6 +216,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             ),
                             InkWell(
                               onTap: () async {
+                                logFirebaseEvent(
+                                    'EDIT_PROFILE_Container_e19k2pyb_ON_TAP');
+                                logFirebaseEvent(
+                                    'Container_Upload-Photo-Video');
                                 final selectedMedia =
                                     await selectMediaWithSourceBottomSheet(
                                   context: context,
@@ -212,8 +229,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   pickerFontFamily: 'Lato',
                                 );
                                 if (selectedMedia != null &&
-                                    validateFileFormat(
-                                        selectedMedia.storagePath, context)) {
+                                    selectedMedia.every((m) =>
+                                        validateFileFormat(
+                                            m.storagePath, context))) {
                                   showUploadMessage(
                                     context,
                                     FFLocalizations.of(context).getText(
@@ -221,14 +239,19 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     ),
                                     showLoading: true,
                                   );
-                                  final downloadUrl = await uploadData(
-                                      selectedMedia.storagePath,
-                                      selectedMedia.bytes);
+                                  final downloadUrls = (await Future.wait(
+                                          selectedMedia.map((m) async =>
+                                              await uploadData(
+                                                  m.storagePath, m.bytes))))
+                                      .where((u) => u != null)
+                                      .toList();
                                   ScaffoldMessenger.of(context)
                                       .hideCurrentSnackBar();
-                                  if (downloadUrl != null) {
-                                    setState(
-                                        () => uploadedFileUrl1 = downloadUrl);
+                                  if (downloadUrls != null &&
+                                      downloadUrls.length ==
+                                          selectedMedia.length) {
+                                    setState(() =>
+                                        uploadedFileUrl1 = downloadUrls.first);
                                     showUploadMessage(
                                       context,
                                       FFLocalizations.of(context).getText(
@@ -445,8 +468,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   unselectedWidgetColor: Color(0xFF707070),
                                 ),
                                 child: CheckboxListTile(
-                                  value: maleValue ??=
-                                      currentUserDocument?.isMale,
+                                  value: maleValue ??= valueOrDefault(
+                                      currentUserDocument?.isMale, false),
                                   onChanged: (newValue) =>
                                       setState(() => maleValue = newValue),
                                   title: Text(
@@ -478,8 +501,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   unselectedWidgetColor: Color(0xFF707070),
                                 ),
                                 child: CheckboxListTile(
-                                  value: femaleValue ??=
-                                      currentUserDocument?.isFemale,
+                                  value: femaleValue ??= valueOrDefault(
+                                      currentUserDocument?.isFemale, false),
                                   onChanged: (newValue) =>
                                       setState(() => femaleValue = newValue),
                                   title: Text(
@@ -812,7 +835,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           FFLocalizations.of(context).getText(
                             'd9zueiyc' /* Turquie */,
                           )
-                        ].toList(),
+                        ],
                         onChanged: (val) => setState(() => countryValue = val),
                         width: double.infinity,
                         height: 50,
@@ -885,6 +908,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           width: 200,
                                           height: 250,
                                           decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: CachedNetworkImageProvider(
+                                                valueOrDefault(
+                                                    currentUserDocument?.photo1,
+                                                    ''),
+                                              ),
+                                            ),
                                             borderRadius:
                                                 BorderRadius.circular(16),
                                           ),
@@ -905,6 +936,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'EDIT_PROFILE_Container_ywhmbknt_ON_TAP');
+                                      logFirebaseEvent(
+                                          'Container_Upload-Photo-Video');
                                       final selectedMedia =
                                           await selectMediaWithSourceBottomSheet(
                                         context: context,
@@ -914,9 +949,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         pickerFontFamily: 'Lato',
                                       );
                                       if (selectedMedia != null &&
-                                          validateFileFormat(
-                                              selectedMedia.storagePath,
-                                              context)) {
+                                          selectedMedia.every((m) =>
+                                              validateFileFormat(
+                                                  m.storagePath, context))) {
                                         showUploadMessage(
                                           context,
                                           FFLocalizations.of(context).getText(
@@ -924,14 +959,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           ),
                                           showLoading: true,
                                         );
-                                        final downloadUrl = await uploadData(
-                                            selectedMedia.storagePath,
-                                            selectedMedia.bytes);
+                                        final downloadUrls = (await Future.wait(
+                                                selectedMedia.map((m) async =>
+                                                    await uploadData(
+                                                        m.storagePath,
+                                                        m.bytes))))
+                                            .where((u) => u != null)
+                                            .toList();
                                         ScaffoldMessenger.of(context)
                                             .hideCurrentSnackBar();
-                                        if (downloadUrl != null) {
-                                          setState(() =>
-                                              uploadedFileUrl2 = downloadUrl);
+                                        if (downloadUrls != null &&
+                                            downloadUrls.length ==
+                                                selectedMedia.length) {
+                                          setState(() => uploadedFileUrl2 =
+                                              downloadUrls.first);
                                           showUploadMessage(
                                             context,
                                             FFLocalizations.of(context).getText(
@@ -996,6 +1037,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             width: 200,
                                             height: 250,
                                             decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image:
+                                                    CachedNetworkImageProvider(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.photo2,
+                                                      ''),
+                                                ),
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16),
                                             ),
@@ -1017,6 +1068,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'EDIT_PROFILE_Container_26egxctk_ON_TAP');
+                                      logFirebaseEvent(
+                                          'Container_Upload-Photo-Video');
                                       final selectedMedia =
                                           await selectMediaWithSourceBottomSheet(
                                         context: context,
@@ -1026,9 +1081,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         pickerFontFamily: 'Lato',
                                       );
                                       if (selectedMedia != null &&
-                                          validateFileFormat(
-                                              selectedMedia.storagePath,
-                                              context)) {
+                                          selectedMedia.every((m) =>
+                                              validateFileFormat(
+                                                  m.storagePath, context))) {
                                         showUploadMessage(
                                           context,
                                           FFLocalizations.of(context).getText(
@@ -1036,14 +1091,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           ),
                                           showLoading: true,
                                         );
-                                        final downloadUrl = await uploadData(
-                                            selectedMedia.storagePath,
-                                            selectedMedia.bytes);
+                                        final downloadUrls = (await Future.wait(
+                                                selectedMedia.map((m) async =>
+                                                    await uploadData(
+                                                        m.storagePath,
+                                                        m.bytes))))
+                                            .where((u) => u != null)
+                                            .toList();
                                         ScaffoldMessenger.of(context)
                                             .hideCurrentSnackBar();
-                                        if (downloadUrl != null) {
-                                          setState(() =>
-                                              uploadedFileUrl3 = downloadUrl);
+                                        if (downloadUrls != null &&
+                                            downloadUrls.length ==
+                                                selectedMedia.length) {
+                                          setState(() => uploadedFileUrl3 =
+                                              downloadUrls.first);
                                           showUploadMessage(
                                             context,
                                             FFLocalizations.of(context).getText(
@@ -1108,6 +1169,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             width: 200,
                                             height: 250,
                                             decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image:
+                                                    CachedNetworkImageProvider(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.photo3,
+                                                      ''),
+                                                ),
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16),
                                             ),
@@ -1129,6 +1200,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'EDIT_PROFILE_Container_3atb7i9t_ON_TAP');
+                                      logFirebaseEvent(
+                                          'Container_Upload-Photo-Video');
                                       final selectedMedia =
                                           await selectMediaWithSourceBottomSheet(
                                         context: context,
@@ -1138,9 +1213,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         pickerFontFamily: 'Lato',
                                       );
                                       if (selectedMedia != null &&
-                                          validateFileFormat(
-                                              selectedMedia.storagePath,
-                                              context)) {
+                                          selectedMedia.every((m) =>
+                                              validateFileFormat(
+                                                  m.storagePath, context))) {
                                         showUploadMessage(
                                           context,
                                           FFLocalizations.of(context).getText(
@@ -1148,14 +1223,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           ),
                                           showLoading: true,
                                         );
-                                        final downloadUrl = await uploadData(
-                                            selectedMedia.storagePath,
-                                            selectedMedia.bytes);
+                                        final downloadUrls = (await Future.wait(
+                                                selectedMedia.map((m) async =>
+                                                    await uploadData(
+                                                        m.storagePath,
+                                                        m.bytes))))
+                                            .where((u) => u != null)
+                                            .toList();
                                         ScaffoldMessenger.of(context)
                                             .hideCurrentSnackBar();
-                                        if (downloadUrl != null) {
-                                          setState(() =>
-                                              uploadedFileUrl4 = downloadUrl);
+                                        if (downloadUrls != null &&
+                                            downloadUrls.length ==
+                                                selectedMedia.length) {
+                                          setState(() => uploadedFileUrl4 =
+                                              downloadUrls.first);
                                           showUploadMessage(
                                             context,
                                             FFLocalizations.of(context).getText(
@@ -1220,6 +1301,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             width: 200,
                                             height: 250,
                                             decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image:
+                                                    CachedNetworkImageProvider(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.photo2,
+                                                      ''),
+                                                ),
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16),
                                             ),
@@ -1241,6 +1332,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   InkWell(
                                     onTap: () async {
+                                      logFirebaseEvent(
+                                          'EDIT_PROFILE_Container_4mbipeiz_ON_TAP');
+                                      logFirebaseEvent(
+                                          'Container_Upload-Photo-Video');
                                       final selectedMedia =
                                           await selectMediaWithSourceBottomSheet(
                                         context: context,
@@ -1250,9 +1345,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         pickerFontFamily: 'Lato',
                                       );
                                       if (selectedMedia != null &&
-                                          validateFileFormat(
-                                              selectedMedia.storagePath,
-                                              context)) {
+                                          selectedMedia.every((m) =>
+                                              validateFileFormat(
+                                                  m.storagePath, context))) {
                                         showUploadMessage(
                                           context,
                                           FFLocalizations.of(context).getText(
@@ -1260,14 +1355,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           ),
                                           showLoading: true,
                                         );
-                                        final downloadUrl = await uploadData(
-                                            selectedMedia.storagePath,
-                                            selectedMedia.bytes);
+                                        final downloadUrls = (await Future.wait(
+                                                selectedMedia.map((m) async =>
+                                                    await uploadData(
+                                                        m.storagePath,
+                                                        m.bytes))))
+                                            .where((u) => u != null)
+                                            .toList();
                                         ScaffoldMessenger.of(context)
                                             .hideCurrentSnackBar();
-                                        if (downloadUrl != null) {
-                                          setState(() =>
-                                              uploadedFileUrl5 = downloadUrl);
+                                        if (downloadUrls != null &&
+                                            downloadUrls.length ==
+                                                selectedMedia.length) {
+                                          setState(() => uploadedFileUrl5 =
+                                              downloadUrls.first);
                                           showUploadMessage(
                                             context,
                                             FFLocalizations.of(context).getText(
@@ -1325,6 +1426,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'EDIT_PROFILE_PAGE_step1_ON_TAP');
+                                logFirebaseEvent('step1_Backend-Call');
+
                                 final usersUpdateData = createUsersRecordData(
                                   photoUrl: uploadedFileUrl1,
                                   displayName: nomCompletController?.text ?? '',
@@ -1344,6 +1449,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);
+                                logFirebaseEvent('step1_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

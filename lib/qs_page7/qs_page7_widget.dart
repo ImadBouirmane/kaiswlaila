@@ -29,6 +29,12 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage7'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -106,6 +112,10 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE7_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -131,34 +141,35 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 0.8,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'wobh1re8' /* 80% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 0.8,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'wobh1re8' /* 80% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -234,7 +245,7 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                         FFLocalizations.of(context).getText(
                                           'aceyrn2r' /* Tout à fait */,
                                         )
-                                      ],
+                                      ].toList(),
                                       onChanged: (value) {
                                         setState(
                                             () => radioButtonValue1 = value);
@@ -349,7 +360,7 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                         FFLocalizations.of(context).getText(
                                           'x5ajn5fe' /* Tout à fait */,
                                         )
-                                      ],
+                                      ].toList(),
                                       onChanged: (value) {
                                         setState(
                                             () => radioButtonValue2 = value);
@@ -395,6 +406,10 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                               Spacer(),
                               FFButtonWidget(
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_PAGE7_PAGE_step4_ON_TAP');
+                                  logFirebaseEvent('step4_Backend-Call');
+
                                   final usersUpdateData = createUsersRecordData(
                                     qs11Choice: radioButtonValue2,
                                     qs10Choice: radioButtonValue1,
@@ -402,6 +417,7 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                   );
                                   await currentUserReference
                                       .update(usersUpdateData);
+                                  logFirebaseEvent('step4_Navigate-To');
                                   await Navigator.push(
                                     context,
                                     PageTransition(
@@ -445,6 +461,10 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
+                                    logFirebaseEvent(
+                                        'QS_PAGE7_PAGE_step4_ON_TAP');
+                                    logFirebaseEvent('step4_Backend-Call');
+
                                     final usersUpdateData =
                                         createUsersRecordData(
                                       qs10Choice: radioButtonValue1,
@@ -452,6 +472,7 @@ class _QsPage7WidgetState extends State<QsPage7Widget> {
                                     );
                                     await currentUserReference
                                         .update(usersUpdateData);
+                                    logFirebaseEvent('step4_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(

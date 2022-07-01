@@ -26,6 +26,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Profile'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -82,6 +88,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 size: 30,
                               ),
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'PROFILE_chevron_left_outlined_ICN_ON_TAP');
+                                logFirebaseEvent('IconButton_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(
@@ -117,6 +126,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 size: 30,
                               ),
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'PROFILE_PAGE_more_vert_ICN_ON_TAP');
+                                logFirebaseEvent('IconButton_Bottom-Sheet');
                                 await showModalBottomSheet(
                                   isScrollControlled: true,
                                   backgroundColor: Colors.transparent,
@@ -528,6 +540,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             ),
                                             child: InkWell(
                                               onTap: () async {
+                                                logFirebaseEvent(
+                                                    'PROFILE_PAGE_Image_xkefr23n_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'Image_Expand-Image');
                                                 await Navigator.push(
                                                   context,
                                                   PageTransition(
@@ -587,6 +603,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             ),
                                             child: InkWell(
                                               onTap: () async {
+                                                logFirebaseEvent(
+                                                    'PROFILE_PAGE_Image_6jovvp2x_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'Image_Expand-Image');
                                                 await Navigator.push(
                                                   context,
                                                   PageTransition(
@@ -646,6 +666,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             ),
                                             child: InkWell(
                                               onTap: () async {
+                                                logFirebaseEvent(
+                                                    'PROFILE_PAGE_Image_zxgs4wtz_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'Image_Expand-Image');
                                                 await Navigator.push(
                                                   context,
                                                   PageTransition(
@@ -705,6 +729,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             ),
                                             child: InkWell(
                                               onTap: () async {
+                                                logFirebaseEvent(
+                                                    'PROFILE_PAGE_Image_44k8hzb1_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'Image_Expand-Image');
                                                 await Navigator.push(
                                                   context,
                                                   PageTransition(

@@ -56,6 +56,9 @@ class _AgeChoicePageWidgetState extends State<AgeChoicePageWidget> {
                         size: 30,
                       ),
                       onPressed: () async {
+                        logFirebaseEvent(
+                            'AGE_CHOICE_chevron_left_outlined_ICN_ON_');
+                        logFirebaseEvent('IconButton_Navigate-Back');
                         Navigator.pop(context);
                       },
                     ),
@@ -128,8 +131,8 @@ class _AgeChoicePageWidgetState extends State<AgeChoicePageWidget> {
                               inactiveColor: Color(0xFF9E9E9E),
                               min: 18,
                               max: 40,
-                              value: ageChoiceValue ??=
-                                  currentUserDocument?.ageChoice,
+                              value: ageChoiceValue ??= valueOrDefault(
+                                  currentUserDocument?.ageChoice, 0.0),
                               label: ageChoiceValue.toString(),
                               divisions: 11,
                               onChanged: (newValue) {
@@ -154,11 +157,16 @@ class _AgeChoicePageWidgetState extends State<AgeChoicePageWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'AGE_CHOICE_PAGE_COMP_step2_ON_TAP');
+                              logFirebaseEvent('step2_Backend-Call');
+
                               final usersUpdateData = createUsersRecordData(
                                 ageChoice: ageChoiceValue,
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step2_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

@@ -27,6 +27,13 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'QsModifyPage7'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -95,6 +102,9 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_MODIFY_PAGE7_chevron_left_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-Back');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -119,31 +129,32 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 LinearPercentIndicator(
-                                    percent: 0.8,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    lineHeight: 24,
-                                    animation: true,
-                                    progressColor: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .customColor10,
-                                    center: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '4ykhfcl7' /* 80% */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
-                                            useGoogleFonts: false,
-                                          ),
+                                  percent: 0.8,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  lineHeight: 24,
+                                  animation: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  backgroundColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
+                                  center: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '4ykhfcl7' /* 80% */,
                                     ),
-                                    barRadius: Radius.circular(10)),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                  barRadius: Radius.circular(10),
+                                  padding: EdgeInsets.zero,
+                                ),
                               ],
                             ),
                           ),
@@ -217,7 +228,7 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                                   FFLocalizations.of(context).getText(
                                     '3jmiuwtw' /* Tout à fait */,
                                   )
-                                ],
+                                ].toList(),
                                 onChanged: (value) {
                                   setState(() => radioButtonValue1 = value);
                                 },
@@ -322,7 +333,7 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                                   FFLocalizations.of(context).getText(
                                     '7snzivoa' /* Tout à fait */,
                                   )
-                                ],
+                                ].toList(),
                                 onChanged: (value) {
                                   setState(() => radioButtonValue2 = value);
                                 },
@@ -360,6 +371,10 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                           Spacer(),
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'QS_MODIFY_PAGE7_PAGE_step4_ON_TAP');
+                              logFirebaseEvent('step4_Backend-Call');
+
                               final usersUpdateData = createUsersRecordData(
                                 qs11Choice: radioButtonValue2,
                                 qs10Choice: radioButtonValue1,
@@ -367,6 +382,7 @@ class _QsModifyPage7WidgetState extends State<QsModifyPage7Widget> {
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step4_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

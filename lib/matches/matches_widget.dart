@@ -35,6 +35,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 100,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -51,6 +52,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 100,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -67,6 +69,7 @@ class _MatchesWidgetState extends State<MatchesWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 100,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -90,6 +93,8 @@ class _MatchesWidgetState extends State<MatchesWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'matches'});
   }
 
   @override
@@ -122,6 +127,9 @@ class _MatchesWidgetState extends State<MatchesWidget>
                     children: [
                       InkWell(
                         onTap: () async {
+                          logFirebaseEvent(
+                              'MATCHES_PAGE_Container_2k3e31sn_ON_TAP');
+                          logFirebaseEvent('Container_Navigate-To');
                           await Navigator.push(
                             context,
                             PageTransition(
@@ -174,6 +182,9 @@ class _MatchesWidgetState extends State<MatchesWidget>
                       ),
                       InkWell(
                         onTap: () async {
+                          logFirebaseEvent(
+                              'MATCHES_PAGE_CircleImage_5l2vr95u_ON_TAP');
+                          logFirebaseEvent('CircleImage_Navigate-To');
                           await Navigator.push(
                             context,
                             PageTransition(
@@ -285,6 +296,10 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                         children: [
                                           InkWell(
                                             onTap: () async {
+                                              logFirebaseEvent(
+                                                  'MATCHES_PAGE_Image_xdu8q18z_ON_TAP');
+                                              logFirebaseEvent(
+                                                  'Image_Expand-Image');
                                               await Navigator.push(
                                                 context,
                                                 PageTransition(
@@ -391,11 +406,12 @@ class _MatchesWidgetState extends State<MatchesWidget>
                                                                     UsersRecord>>(
                                                               future:
                                                                   queryUsersRecordOnce(
-                                                                queryBuilder: (usersRecord) =>
-                                                                    usersRecord.where(
-                                                                        'like',
-                                                                        isEqualTo:
-                                                                            currentUserDocument?.like),
+                                                                queryBuilder: (usersRecord) => usersRecord.where(
+                                                                    'like',
+                                                                    isEqualTo: valueOrDefault(
+                                                                        currentUserDocument
+                                                                            ?.like,
+                                                                        false)),
                                                                 singleRecord:
                                                                     true,
                                                               ),

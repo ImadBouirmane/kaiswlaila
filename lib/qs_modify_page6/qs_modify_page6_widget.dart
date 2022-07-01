@@ -30,6 +30,14 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'QsModifyPage6'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -98,6 +106,9 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_MODIFY_PAGE6_chevron_left_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-Back');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -122,31 +133,32 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 LinearPercentIndicator(
-                                    percent: 0.7,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    lineHeight: 24,
-                                    animation: true,
-                                    progressColor: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .customColor10,
-                                    center: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'el0pysz9' /* 70% */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
-                                            useGoogleFonts: false,
-                                          ),
+                                  percent: 0.7,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  lineHeight: 24,
+                                  animation: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  backgroundColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
+                                  center: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'el0pysz9' /* 70% */,
                                     ),
-                                    barRadius: Radius.circular(10)),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                  barRadius: Radius.circular(10),
+                                  padding: EdgeInsets.zero,
+                                ),
                               ],
                             ),
                           ),
@@ -216,9 +228,8 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                                   30, 30, 30, 30),
                                           child: FlutterFlowCheckboxGroup(
                                             initiallySelected:
-                                                checkboxGroupValues1 != null
-                                                    ? checkboxGroupValues1
-                                                    : qsModifyPage6UsersRecord
+                                                checkboxGroupValues1 ??=
+                                                    qsModifyPage6UsersRecord
                                                         .qs9C1
                                                         .toList(),
                                             options: [
@@ -258,7 +269,7 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                                   .getText(
                                                 'kqxmhgpr' /* Son amour pour les enfants */,
                                               )
-                                            ],
+                                            ].toList(),
                                             onChanged: (val) => setState(() =>
                                                 checkboxGroupValues1 = val),
                                             activeColor:
@@ -283,9 +294,8 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                                   30, 30, 30, 30),
                                           child: FlutterFlowCheckboxGroup(
                                             initiallySelected:
-                                                checkboxGroupValues2 != null
-                                                    ? checkboxGroupValues2
-                                                    : qsModifyPage6UsersRecord
+                                                checkboxGroupValues2 ??=
+                                                    qsModifyPage6UsersRecord
                                                         .qs9C2
                                                         .toList(),
                                             options: [
@@ -327,7 +337,7 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                                   .getText(
                                                 '01754k9i' /* Sa personnalité  */,
                                               )
-                                            ],
+                                            ].toList(),
                                             onChanged: (val) => setState(() =>
                                                 checkboxGroupValues2 = val),
                                             activeColor:
@@ -352,9 +362,8 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                                   30, 30, 30, 30),
                                           child: FlutterFlowCheckboxGroup(
                                             initiallySelected:
-                                                checkboxGroupValues3 != null
-                                                    ? checkboxGroupValues3
-                                                    : qsModifyPage6UsersRecord
+                                                checkboxGroupValues3 ??=
+                                                    qsModifyPage6UsersRecord
                                                         .qs9C3
                                                         .toList(),
                                             options: [
@@ -376,7 +385,7 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
  (d’une... */
                                                 ,
                                               )
-                                            ],
+                                            ].toList(),
                                             onChanged: (val) => setState(() =>
                                                 checkboxGroupValues3 = val),
                                             activeColor:
@@ -441,6 +450,10 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'QS_MODIFY_PAGE6_PAGE_step4_ON_TAP');
+                                logFirebaseEvent('step4_Backend-Call');
+
                                 final usersUpdateData = {
                                   ...createUsersRecordData(
                                     progressBar: 0.7,
@@ -454,6 +467,7 @@ class _QsModifyPage6WidgetState extends State<QsModifyPage6Widget> {
                                 };
                                 await currentUserReference
                                     .update(usersUpdateData);
+                                logFirebaseEvent('step4_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

@@ -54,6 +54,8 @@ class _SelectLanguageWidgetState extends State<SelectLanguageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    logFirebaseEvent('SELECT_LANGUAGE_COMP_ARABE_BTN_ON_TAP');
+                    logFirebaseEvent('Button_Set-App-Language');
                     setAppLanguage(context, 'ar');
                   },
                   text: FFLocalizations.of(context).getText(
@@ -82,6 +84,9 @@ class _SelectLanguageWidgetState extends State<SelectLanguageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    logFirebaseEvent(
+                        'SELECT_LANGUAGE_COMP_FRANÇAIS_BTN_ON_TAP');
+                    logFirebaseEvent('Button_Set-App-Language');
                     setAppLanguage(context, 'fr');
                   },
                   text: FFLocalizations.of(context).getText(
@@ -110,6 +115,8 @@ class _SelectLanguageWidgetState extends State<SelectLanguageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    logFirebaseEvent('SELECT_LANGUAGE_COMP_ANGLAIS_BTN_ON_TAP');
+                    logFirebaseEvent('Button_Set-App-Language');
                     setAppLanguage(context, 'en');
                   },
                   text: FFLocalizations.of(context).getText(
@@ -138,6 +145,8 @@ class _SelectLanguageWidgetState extends State<SelectLanguageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    logFirebaseEvent('SELECT_LANGUAGE_COMP_TURQUIE_BTN_ON_TAP');
+                    logFirebaseEvent('Button_Set-App-Language');
                     setAppLanguage(context, 'tr');
                   },
                   text: FFLocalizations.of(context).getText(

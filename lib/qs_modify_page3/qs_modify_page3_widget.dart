@@ -26,6 +26,14 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'QsModifyPage3'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -94,6 +102,9 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_MODIFY_PAGE3_chevron_left_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-Back');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -118,31 +129,32 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 LinearPercentIndicator(
-                                    percent: 0.3,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    lineHeight: 24,
-                                    animation: true,
-                                    progressColor: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .customColor10,
-                                    center: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hryeok42' /* 30% */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            useGoogleFonts: false,
-                                          ),
+                                  percent: 0.3,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  lineHeight: 24,
+                                  animation: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  backgroundColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
+                                  center: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'hryeok42' /* 30% */,
                                     ),
-                                    barRadius: Radius.circular(10)),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                  barRadius: Radius.circular(10),
+                                  padding: EdgeInsets.zero,
+                                ),
                               ],
                             ),
                           ),
@@ -199,9 +211,8 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(30, 30, 30, 30),
                             child: FlutterFlowCheckboxGroup(
-                              initiallySelected: checkboxGroupValues != null
-                                  ? checkboxGroupValues
-                                  : qsModifyPage3UsersRecord.qs5.toList(),
+                              initiallySelected: checkboxGroupValues ??=
+                                  qsModifyPage3UsersRecord.qs5.toList(),
                               options: [
                                 FFLocalizations.of(context).getText(
                                   'vf393g57' /* La passion */,
@@ -224,7 +235,7 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                                 FFLocalizations.of(context).getText(
                                   '0vbr2adi' /* L’authenticité  */,
                                 )
-                              ],
+                              ].toList(),
                               onChanged: (val) =>
                                   setState(() => checkboxGroupValues = val),
                               activeColor:
@@ -240,16 +251,23 @@ class _QsModifyPage3WidgetState extends State<QsModifyPage3Widget> {
                           Spacer(),
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'QS_MODIFY_PAGE3_PAGE_step4_ON_TAP');
+                              logFirebaseEvent('step4_Backend-Call');
+
                               final usersUpdateData = {
                                 ...createUsersRecordData(
                                   progressBar: 0.3,
                                 ),
                                 'Qs5': FieldValue.arrayUnion([
-                                  currentUserDocument?.qs5.length.toString()
+                                  (currentUserDocument?.qs5?.toList() ?? [])
+                                      .length
+                                      .toString()
                                 ]),
                               };
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step4_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

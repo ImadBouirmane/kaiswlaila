@@ -25,9 +25,11 @@ class _InterestsContainerWidgetState extends State<InterestsContainerWidget> {
         child: AuthUserStreamWidget(
           child: Builder(
             builder: (context) {
-              final qs13List1 = (currentUserDocument?.qs13List1?.toList() ?? [])
-                  .take(5)
-                  .toList();
+              final qs13List1 =
+                  ((currentUserDocument?.qs13List1?.toList() ?? [])?.toList() ??
+                          [])
+                      .take(5)
+                      .toList();
               return Wrap(
                 spacing: 2,
                 runSpacing: 2,

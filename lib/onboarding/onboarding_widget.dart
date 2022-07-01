@@ -21,6 +21,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Onboarding'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -58,6 +64,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                           size: 30,
                         ),
                         onPressed: () async {
+                          logFirebaseEvent(
+                              'ONBOARDING_chevron_left_outlined_ICN_ON_');
+                          logFirebaseEvent('IconButton_Navigate-Back');
                           Navigator.pop(context);
                         },
                       ),
@@ -289,6 +298,9 @@ partenaire idéa... */
                   children: [
                     FFButtonWidget(
                       onPressed: () async {
+                        logFirebaseEvent(
+                            'ONBOARDING_PAGE_COMMENCER_BTN_ON_TAP');
+                        logFirebaseEvent('Button_Navigate-To');
                         await Navigator.push(
                           context,
                           PageTransition(

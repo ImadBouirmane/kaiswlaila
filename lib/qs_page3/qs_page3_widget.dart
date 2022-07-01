@@ -27,6 +27,13 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage3'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -104,6 +111,10 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE3_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -129,34 +140,35 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 0.3,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'pe7k4a3w' /* 30% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 0.3,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'pe7k4a3w' /* 30% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -214,9 +226,8 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     30, 30, 30, 30),
                                 child: FlutterFlowCheckboxGroup(
-                                  initiallySelected: checkboxGroupValues != null
-                                      ? checkboxGroupValues
-                                      : qsPage3UsersRecord.qs5.toList(),
+                                  initiallySelected: checkboxGroupValues ??=
+                                      qsPage3UsersRecord.qs5.toList(),
                                   options: [
                                     FFLocalizations.of(context).getText(
                                       'dnrpkcb2' /* La passion */,
@@ -239,7 +250,7 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                     FFLocalizations.of(context).getText(
                                       'vptosgd4' /* L’authenticité  */,
                                     )
-                                  ],
+                                  ].toList(),
                                   onChanged: (val) =>
                                       setState(() => checkboxGroupValues = val),
                                   activeColor:
@@ -257,6 +268,10 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                               Spacer(),
                               FFButtonWidget(
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_PAGE3_PAGE_step4_ON_TAP');
+                                  logFirebaseEvent('step4_Backend-Call');
+
                                   final usersUpdateData = {
                                     ...createUsersRecordData(
                                       progressBar: 0.3,
@@ -270,6 +285,7 @@ class _QsPage3WidgetState extends State<QsPage3Widget> {
                                   };
                                   await currentUserReference
                                       .update(usersUpdateData);
+                                  logFirebaseEvent('step4_Navigate-To');
                                   await Navigator.push(
                                     context,
                                     PageTransition(

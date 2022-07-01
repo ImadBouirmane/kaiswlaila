@@ -36,6 +36,8 @@ class _MenuWidgetState extends State<MenuWidget> {
           children: [
             InkWell(
               onTap: () async {
+                logFirebaseEvent('MENU_COMP_Container_u6dmk9ze_ON_TAP');
+                logFirebaseEvent('Container_Navigate-To');
                 await Navigator.push(
                   context,
                   PageTransition(
@@ -104,6 +106,8 @@ class _MenuWidgetState extends State<MenuWidget> {
             ),
             InkWell(
               onTap: () async {
+                logFirebaseEvent('MENU_COMP_Container_ezkyda46_ON_TAP');
+                logFirebaseEvent('Container_Navigate-To');
                 await Navigator.push(
                   context,
                   PageTransition(
@@ -172,6 +176,8 @@ class _MenuWidgetState extends State<MenuWidget> {
             ),
             InkWell(
               onTap: () async {
+                logFirebaseEvent('MENU_COMP_Container_0qrln374_ON_TAP');
+                logFirebaseEvent('Container_Auth');
                 await signOut();
                 await Navigator.pushAndRemoveUntil(
                   context,

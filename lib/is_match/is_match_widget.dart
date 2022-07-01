@@ -33,6 +33,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 160,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-59, -59),
@@ -50,6 +51,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 550,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(46, 46),
@@ -66,6 +68,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 160,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(59, 59),
@@ -83,6 +86,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 550,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(46, 46),
@@ -100,6 +104,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 180,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -115,6 +120,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
     'textOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -130,6 +136,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 23),
@@ -145,6 +152,7 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
     'buttonOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 45),
@@ -168,6 +176,8 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'isMatch'});
   }
 
   @override
@@ -217,6 +227,9 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                         children: [
                           InkWell(
                             onTap: () async {
+                              logFirebaseEvent(
+                                  'IS_MATCH_PAGE_Container_13uomo9g_ON_TAP');
+                              logFirebaseEvent('Container_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(
@@ -503,7 +516,10 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       AuthUserStreamWidget(
                                         child: Text(
                                           formatNumber(
-                                            currentUserDocument?.pourcentage,
+                                            valueOrDefault(
+                                                currentUserDocument
+                                                    ?.pourcentage,
+                                                0.0),
                                             formatType: FormatType.percent,
                                           ),
                                           style: FlutterFlowTheme.of(context)
@@ -528,6 +544,9 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
+                                        logFirebaseEvent(
+                                            'IS_MATCH_DÉMARREZ_UNE_CONVERSATION_MAINT');
+                                        logFirebaseEvent('Button_Navigate-To');
                                         await Navigator.push(
                                           context,
                                           PageTransition(
@@ -604,6 +623,9 @@ class _IsMatchWidgetState extends State<IsMatchWidget>
                                       0, 20, 0, 20),
                                   child: FFButtonWidget(
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'IS_MATCH_CA_SUFFIT_POUR_MOI_!_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_Navigate-To');
                                       await Navigator.push(
                                         context,
                                         PageTransition(

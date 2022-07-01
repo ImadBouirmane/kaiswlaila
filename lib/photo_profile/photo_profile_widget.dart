@@ -28,6 +28,13 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'photoProfile'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -69,6 +76,9 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                               size: 30,
                             ),
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'PHOTO_PROFILE_chevron_left_outlined_ICN_');
+                              logFirebaseEvent('IconButton_Navigate-Back');
                               Navigator.pop(context);
                             },
                           ),
@@ -118,6 +128,9 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'PHOTO_PROFILE_CircleImage_1pddrxqo_ON_TA');
+                                  logFirebaseEvent('CircleImage_Expand-Image');
                                   await Navigator.push(
                                     context,
                                     PageTransition(
@@ -127,7 +140,7 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                                           imageUrl: uploadedFileUrl,
                                           fit: BoxFit.contain,
                                         ),
-                                        allowRotation: false,
+                                        allowRotation: true,
                                         tag: uploadedFileUrl,
                                         useHeroAnimation: true,
                                       ),
@@ -164,6 +177,10 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'PHOTO_PROFILE_avatarUploadBtn_ON_TAP');
+                              logFirebaseEvent(
+                                  'avatarUploadBtn_Upload-Photo-Video');
                               final selectedMedia =
                                   await selectMediaWithSourceBottomSheet(
                                 context: context,
@@ -173,8 +190,8 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                                 pickerFontFamily: 'Lato',
                               );
                               if (selectedMedia != null &&
-                                  validateFileFormat(
-                                      selectedMedia.storagePath, context)) {
+                                  selectedMedia.every((m) => validateFileFormat(
+                                      m.storagePath, context))) {
                                 showUploadMessage(
                                   context,
                                   FFLocalizations.of(context).getText(
@@ -182,13 +199,19 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                                   ),
                                   showLoading: true,
                                 );
-                                final downloadUrl = await uploadData(
-                                    selectedMedia.storagePath,
-                                    selectedMedia.bytes);
+                                final downloadUrls = (await Future.wait(
+                                        selectedMedia.map((m) async =>
+                                            await uploadData(
+                                                m.storagePath, m.bytes))))
+                                    .where((u) => u != null)
+                                    .toList();
                                 ScaffoldMessenger.of(context)
                                     .hideCurrentSnackBar();
-                                if (downloadUrl != null) {
-                                  setState(() => uploadedFileUrl = downloadUrl);
+                                if (downloadUrls != null &&
+                                    downloadUrls.length ==
+                                        selectedMedia.length) {
+                                  setState(() =>
+                                      uploadedFileUrl = downloadUrls.first);
                                   showUploadMessage(
                                     context,
                                     FFLocalizations.of(context).getText(
@@ -244,11 +267,16 @@ class _PhotoProfileWidgetState extends State<PhotoProfileWidget> {
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'PHOTO_PROFILE_PAGE_step2_ON_TAP');
+                                  logFirebaseEvent('step2_Backend-Call');
+
                                   final usersUpdateData = createUsersRecordData(
                                     photoUrl: uploadedFileUrl,
                                   );
                                   await currentUserReference
                                       .update(usersUpdateData);
+                                  logFirebaseEvent('step2_Navigate-To');
                                   await Navigator.push(
                                     context,
                                     PageTransition(

@@ -13,14 +13,15 @@ import '../main.dart';
 
 import 'lat_lng.dart';
 
+export 'lat_lng.dart';
+export 'place.dart';
 export '../app_state.dart';
 export 'dart:math' show min, max;
 export 'package:intl/intl.dart';
 export 'package:cloud_firestore/cloud_firestore.dart' show DocumentReference;
 export 'package:page_transition/page_transition.dart';
 export 'internationalization.dart' show FFLocalizations;
-export 'lat_lng.dart';
-export 'place.dart';
+export '../backend/firebase_analytics/analytics.dart';
 
 T valueOrDefault<T>(T value, T defaultValue) =>
     (value is String && value.isEmpty) || value == null ? defaultValue : value;
@@ -137,6 +138,8 @@ dynamic getJsonField(dynamic response, String jsonPath) {
 }
 
 bool get isAndroid => !kIsWeb && Platform.isAndroid;
+bool get isiOS => !kIsWeb && Platform.isIOS;
+bool get isWeb => kIsWeb;
 bool responsiveVisibility({
   @required BuildContext context,
   bool phone = true,
@@ -156,20 +159,28 @@ bool responsiveVisibility({
   }
 }
 
+const kTextValidatorUsernameRegex = r'^[a-zA-Z][a-zA-Z0-9_-]{2,16}$';
+const kTextValidatorEmailRegex =
+    r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$";
+const kTextValidatorWebsiteRegex =
+    r'(https?:\/\/)?(www\.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)|(https?:\/\/)?(www\.)?(?!ww)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)';
+
 LatLng cachedUserLocation;
 Future<LatLng> getCurrentUserLocation(
-        {LatLng defaultLocation, bool cached = false}) async =>
-    cached && cachedUserLocation != null
-        ? cachedUserLocation
-        : queryCurrentUserLocation().then((loc) {
-            if (loc != null) {
-              cachedUserLocation = loc;
-            }
-            return loc;
-          }).onError((error, _) {
-            print("Error querying user location: $error");
-            return defaultLocation;
-          });
+    {LatLng defaultLocation, bool cached = false}) async {
+  if (cached && cachedUserLocation != null) {
+    return cachedUserLocation;
+  }
+  return queryCurrentUserLocation().then((loc) {
+    if (loc != null) {
+      cachedUserLocation = loc;
+    }
+    return loc ?? defaultLocation;
+  }).onError((error, _) {
+    print("Error querying user location: $error");
+    return defaultLocation;
+  });
+}
 
 Future<LatLng> queryCurrentUserLocation() async {
   final serviceEnabled = await Geolocator.isLocationServiceEnabled();

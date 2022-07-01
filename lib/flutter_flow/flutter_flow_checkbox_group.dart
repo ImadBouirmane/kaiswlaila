@@ -55,6 +55,9 @@ class _FlutterFlowCheckboxGroupState extends State<FlutterFlowCheckboxGroup> {
                   Checkbox(
                     value: selected,
                     onChanged: (isSelected) {
+                      if (isSelected == null) {
+                        return;
+                      }
                       isSelected
                           ? checkboxValues.add(option)
                           : checkboxValues.remove(option);

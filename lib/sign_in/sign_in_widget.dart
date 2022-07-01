@@ -34,6 +34,7 @@ class _SignInWidgetState extends State<SignInWidget> {
     emailController = TextEditingController();
     pwdController = TextEditingController();
     pwdVisibility = false;
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'SignIn'});
   }
 
   @override
@@ -94,6 +95,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'SIGN_IN_PAGE_FRANÇAIS_BTN_ON_TAP');
+                              logFirebaseEvent('Button_Bottom-Sheet');
                               await showModalBottomSheet(
                                 isScrollControlled: true,
                                 backgroundColor: Colors.transparent,
@@ -203,12 +207,12 @@ class _SignInWidgetState extends State<SignInWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                       child: TextFormField(
+                        controller: pwdController,
                         onChanged: (_) => EasyDebounce.debounce(
                           'pwdController',
                           Duration(milliseconds: 2000),
                           () => setState(() {}),
                         ),
-                        controller: pwdController,
                         obscureText: !pwdVisibility,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
@@ -238,6 +242,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                             onTap: () => setState(
                               () => pwdVisibility = !pwdVisibility,
                             ),
+                            focusNode: FocusNode(skipTraversal: true),
                             child: Icon(
                               pwdVisibility
                                   ? Icons.visibility_outlined
@@ -262,6 +267,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                       children: [
                         FFButtonWidget(
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'SIGN_IN_PAGE_SE_CONNECTER_BTN_ON_TAP');
+                            logFirebaseEvent('Button_Auth');
+
                             final user = await signInWithEmail(
                               context,
                               emailController.text,
@@ -308,6 +317,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                           child: InkWell(
                             onTap: () async {
+                              logFirebaseEvent(
+                                  'SIGN_IN_PAGE_Text_93p3pbif_ON_TAP');
+                              logFirebaseEvent('Text_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(
@@ -362,6 +374,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'SIGN_IN_PAGE_phone_rounded_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-To');
                                   await Navigator.push(
                                     context,
                                     PageTransition(
@@ -475,6 +490,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                             child: InkWell(
                               onTap: () async {
+                                logFirebaseEvent(
+                                    'SIGN_IN_PAGE_Text_6htihz9i_ON_TAP');
+                                logFirebaseEvent('Text_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

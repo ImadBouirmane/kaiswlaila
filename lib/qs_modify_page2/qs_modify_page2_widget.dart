@@ -27,6 +27,13 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'QsModifyPage2'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -95,6 +102,9 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_MODIFY_PAGE2_chevron_left_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-Back');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -119,31 +129,32 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 LinearPercentIndicator(
-                                    percent: 0.2,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    lineHeight: 24,
-                                    animation: true,
-                                    progressColor: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .customColor10,
-                                    center: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'ra9mocly' /* 20% */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            useGoogleFonts: false,
-                                          ),
+                                  percent: 0.2,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  lineHeight: 24,
+                                  animation: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  backgroundColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
+                                  center: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'ra9mocly' /* 20% */,
                                     ),
-                                    barRadius: Radius.circular(10)),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                  barRadius: Radius.circular(10),
+                                  padding: EdgeInsets.zero,
+                                ),
                               ],
                             ),
                           ),
@@ -212,7 +223,7 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                                   FFLocalizations.of(context).getText(
                                     'u80g5es1' /* Tout à fait  */,
                                   )
-                                ],
+                                ].toList(),
                                 onChanged: (value) {
                                   setState(() => radioButton3Value = value);
                                 },
@@ -312,7 +323,7 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                                   FFLocalizations.of(context).getText(
                                     'e07rwz1b' /* Tout à fait  */,
                                   )
-                                ],
+                                ].toList(),
                                 onChanged: (value) {
                                   setState(() => radioButton4Value = value);
                                 },
@@ -350,6 +361,10 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                           Spacer(),
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'QS_MODIFY_PAGE2_PAGE_step4_ON_TAP');
+                              logFirebaseEvent('step4_Backend-Call');
+
                               final usersUpdateData = createUsersRecordData(
                                 qs3Choice: radioButton3Value,
                                 qs4Choice: radioButton4Value,
@@ -357,6 +372,7 @@ class _QsModifyPage2WidgetState extends State<QsModifyPage2Widget> {
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step4_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

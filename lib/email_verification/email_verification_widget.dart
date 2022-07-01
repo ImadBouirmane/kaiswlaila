@@ -25,6 +25,8 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
   void initState() {
     super.initState();
     codeController = TextEditingController();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'EmailVerification'});
   }
 
   @override
@@ -63,6 +65,9 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                         size: 30,
                       ),
                       onPressed: () async {
+                        logFirebaseEvent(
+                            'EMAIL_VERIFICATION_chevron_left_ICN_ON_T');
+                        logFirebaseEvent('IconButton_Navigate-Back');
                         Navigator.pop(context);
                       },
                     ),
@@ -159,6 +164,9 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                     children: [
                       InkWell(
                         onTap: () async {
+                          logFirebaseEvent(
+                              'EMAIL_VERIFICATION_Text_sh2qr9om_ON_TAP');
+                          logFirebaseEvent('Text_Auth');
                           await sendEmailVerification();
                         },
                         child: Text(
@@ -188,7 +196,11 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                     children: [
                       FFButtonWidget(
                         onPressed: () async {
-                          if (codeController.text.isEmpty) {
+                          logFirebaseEvent(
+                              'EMAIL_VERIFICATION_VALIDER_BTN_ON_TAP');
+                          logFirebaseEvent('Button_Auth');
+                          final smsCodeVal = codeController.text;
+                          if (smsCodeVal == null || smsCodeVal.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content:
@@ -201,7 +213,7 @@ class _EmailVerificationWidgetState extends State<EmailVerificationWidget> {
                           }
                           final phoneVerifiedUser = await verifySmsCode(
                             context: context,
-                            smsCode: codeController.text,
+                            smsCode: smsCodeVal,
                           );
                           if (phoneVerifiedUser == null) {
                             return;

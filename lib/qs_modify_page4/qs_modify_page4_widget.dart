@@ -33,6 +33,13 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'QsModifyPage4'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
       future: UsersRecord.getDocumentOnce(currentUserReference),
@@ -101,6 +108,9 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
                                   size: 30,
                                 ),
                                 onPressed: () async {
+                                  logFirebaseEvent(
+                                      'QS_MODIFY_PAGE4_chevron_left_ICN_ON_TAP');
+                                  logFirebaseEvent('IconButton_Navigate-Back');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -125,31 +135,32 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 LinearPercentIndicator(
-                                    percent: 0.4,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.7,
-                                    lineHeight: 24,
-                                    animation: true,
-                                    progressColor: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .customColor10,
-                                    center: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '3i7m1mkc' /* 40% */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Avenir Light ',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            useGoogleFonts: false,
-                                          ),
+                                  percent: 0.4,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  lineHeight: 24,
+                                  animation: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  backgroundColor: FlutterFlowTheme.of(context)
+                                      .customColor10,
+                                  center: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '3i7m1mkc' /* 40% */,
                                     ),
-                                    barRadius: Radius.circular(10)),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Avenir Light ',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                  barRadius: Radius.circular(10),
+                                  padding: EdgeInsets.zero,
+                                ),
                               ],
                             ),
                           ),
@@ -698,6 +709,10 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'QS_MODIFY_PAGE4_PAGE_step4_ON_TAP');
+                                logFirebaseEvent('step4_Backend-Call');
+
                                 final usersUpdateData = createUsersRecordData(
                                   qs6RB1: ratingBar1Value,
                                   qs6RB2: ratingBar2Value,
@@ -709,6 +724,7 @@ class _QsModifyPage4WidgetState extends State<QsModifyPage4Widget> {
                                 );
                                 await currentUserReference
                                     .update(usersUpdateData);
+                                logFirebaseEvent('step4_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

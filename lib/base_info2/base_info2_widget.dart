@@ -37,6 +37,7 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
     monthController = TextEditingController();
     yearController = TextEditingController();
     textController4 = TextEditingController();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'baseInfo2'});
   }
 
   @override
@@ -76,6 +77,9 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                           size: 30,
                         ),
                         onPressed: () async {
+                          logFirebaseEvent(
+                              'BASE_INFO2_chevron_left_outlined_ICN_ON_');
+                          logFirebaseEvent('IconButton_Navigate-Back');
                           Navigator.pop(context);
                         },
                       ),
@@ -113,8 +117,8 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                                 unselectedWidgetColor: Color(0xFF707070),
                               ),
                               child: CheckboxListTile(
-                                value: maleValue ??=
-                                    !(currentUserDocument?.forFemale),
+                                value: maleValue ??= !(valueOrDefault(
+                                    currentUserDocument?.forFemale, false)),
                                 onChanged: (newValue) =>
                                     setState(() => maleValue = newValue),
                                 title: Text(
@@ -146,8 +150,8 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                                 unselectedWidgetColor: Color(0xFF707070),
                               ),
                               child: CheckboxListTile(
-                                value: femaleValue ??=
-                                    !(currentUserDocument?.forMale),
+                                value: femaleValue ??= !(valueOrDefault(
+                                    currentUserDocument?.forMale, false)),
                                 onChanged: (newValue) =>
                                     setState(() => femaleValue = newValue),
                                 title: Text(
@@ -452,7 +456,7 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                             FFLocalizations.of(context).getText(
                               'bc1sw9k4' /* Turquie */,
                             )
-                          ].toList(),
+                          ],
                           onChanged: (val) =>
                               setState(() => countryValue = val),
                           width: 200,
@@ -490,17 +494,23 @@ class _BaseInfo2WidgetState extends State<BaseInfo2Widget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent('BASE_INFO2_PAGE_step3_ON_TAP');
+                              logFirebaseEvent('step3_Backend-Call');
+
                               final usersUpdateData = createUsersRecordData(
                                 day: dayController.text,
                                 month: monthController.text,
                                 year: yearController.text,
                                 country: countryValue,
                                 city: textController4.text,
-                                isMale: currentUserDocument?.forFemale,
-                                isFemale: currentUserDocument?.forMale,
+                                isMale: valueOrDefault(
+                                    currentUserDocument?.forFemale, false),
+                                isFemale: valueOrDefault(
+                                    currentUserDocument?.forMale, false),
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step3_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

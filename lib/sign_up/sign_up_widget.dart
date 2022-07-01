@@ -39,6 +39,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
     pwdConfirmController = TextEditingController();
     pwdConfirmVisibility = false;
     phoneController = TextEditingController();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'signUp'});
   }
 
   @override
@@ -81,6 +82,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             size: 30,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'SIGN_UP_chevron_left_outlined_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-Back');
                             Navigator.pop(context);
                           },
                         ),
@@ -214,13 +218,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 0, 0, 10),
                                             child: TextFormField(
+                                              controller: pwdController,
                                               onChanged: (_) =>
                                                   EasyDebounce.debounce(
                                                 'pwdController',
                                                 Duration(milliseconds: 2000),
                                                 () => setState(() {}),
                                               ),
-                                              controller: pwdController,
                                               obscureText: !pwdVisibility,
                                               decoration: InputDecoration(
                                                 labelText:
@@ -265,6 +269,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     () => pwdVisibility =
                                                         !pwdVisibility,
                                                   ),
+                                                  focusNode: FocusNode(
+                                                      skipTraversal: true),
                                                   child: Icon(
                                                     pwdVisibility
                                                         ? Icons
@@ -344,6 +350,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     () => pwdConfirmVisibility =
                                                         !pwdConfirmVisibility,
                                                   ),
+                                                  focusNode: FocusNode(
+                                                      skipTraversal: true),
                                                   child: Icon(
                                                     pwdConfirmVisibility
                                                         ? Icons
@@ -378,8 +386,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     0, 20, 0, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
-                                                if (pwdController.text !=
-                                                    pwdConfirmController.text) {
+                                                logFirebaseEvent(
+                                                    'SIGN_UP_PAGE_emzilRegister_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'emzilRegister_Auth');
+                                                if (pwdController?.text !=
+                                                    pwdConfirmController
+                                                        ?.text) {
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
                                                     SnackBar(
@@ -416,6 +429,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     .doc(user.uid)
                                                     .update(usersCreateData);
 
+                                                logFirebaseEvent(
+                                                    'emzilRegister_Navigate-To');
                                                 await Navigator.push(
                                                   context,
                                                   PageTransition(
@@ -538,9 +553,15 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     0, 20, 0, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
-                                                if (phoneController
-                                                        .text.isEmpty ||
-                                                    !phoneController.text
+                                                logFirebaseEvent(
+                                                    'SIGN_UP_PAGE_phoneRegister_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'phoneRegister_Auth');
+                                                final phoneNumberVal =
+                                                    phoneController.text;
+                                                if (phoneNumberVal == null ||
+                                                    phoneNumberVal.isEmpty ||
+                                                    !phoneNumberVal
                                                         .startsWith('+')) {
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
@@ -557,8 +578,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 }
                                                 await beginPhoneAuth(
                                                   context: context,
-                                                  phoneNumber:
-                                                      phoneController.text,
+                                                  phoneNumber: phoneNumberVal,
                                                   onCodeSent: () async {
                                                     await Navigator
                                                         .pushAndRemoveUntil(

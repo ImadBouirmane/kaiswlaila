@@ -24,6 +24,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
     'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-37, 0),
@@ -45,6 +46,9 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'notifications'});
   }
 
   @override
@@ -79,6 +83,9 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                       children: [
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'NOTIFICATIONS_Container_nlf7lr5y_ON_TAP');
+                            logFirebaseEvent('Container_Navigate-To');
                             await Navigator.push(
                               context,
                               PageTransition(
@@ -131,6 +138,9 @@ class _NotificationsWidgetState extends State<NotificationsWidget>
                         ),
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'NOTIFICATIONS_CircleImage_tq7tb0mc_ON_TA');
+                            logFirebaseEvent('CircleImage_Navigate-To');
                             await Navigator.push(
                               context,
                               PageTransition(

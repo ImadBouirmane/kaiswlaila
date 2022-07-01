@@ -25,6 +25,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
   @override
   void initState() {
     super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'PhoneSignIn'});
     phoneController = TextEditingController();
   }
 
@@ -68,6 +69,9 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                             size: 30,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'PHONE_SIGN_IN_chevron_left_outlined_ICN_');
+                            logFirebaseEvent('IconButton_Navigate-Back');
                             Navigator.pop(context);
                           },
                         ),
@@ -89,9 +93,15 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: TextFormField(
+                          controller: phoneController,
                           onFieldSubmitted: (_) async {
-                            if (phoneController.text.isEmpty ||
-                                !phoneController.text.startsWith('+')) {
+                            logFirebaseEvent(
+                                'PHONE_SIGN_IN_phone_ON_TEXTFIELD_SUBMIT');
+                            logFirebaseEvent('phone_Auth');
+                            final phoneNumberVal = phoneController.text;
+                            if (phoneNumberVal == null ||
+                                phoneNumberVal.isEmpty ||
+                                !phoneNumberVal.startsWith('+')) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content:
@@ -104,7 +114,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                             }
                             await beginPhoneAuth(
                               context: context,
-                              phoneNumber: phoneController.text,
+                              phoneNumber: phoneNumberVal,
                               onCodeSent: () async {
                                 await Navigator.pushAndRemoveUntil(
                                   context,
@@ -117,7 +127,6 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                               },
                             );
                           },
-                          controller: phoneController,
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: FFLocalizations.of(context).getText(
@@ -165,12 +174,18 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                       alignment: AlignmentDirectional(0, -1),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          if (currentUserDocument?.isRegistered) {
+                          logFirebaseEvent(
+                              'PHONE_SIGN_IN_PAGE_phoneRegister_ON_TAP');
+                          if (valueOrDefault(
+                              currentUserDocument?.isRegistered, false)) {
                             return;
                           }
 
-                          if (phoneController.text.isEmpty ||
-                              !phoneController.text.startsWith('+')) {
+                          logFirebaseEvent('phoneRegister_Auth');
+                          final phoneNumberVal = phoneController.text;
+                          if (phoneNumberVal == null ||
+                              phoneNumberVal.isEmpty ||
+                              !phoneNumberVal.startsWith('+')) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content:
@@ -183,7 +198,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget> {
                           }
                           await beginPhoneAuth(
                             context: context,
-                            phoneNumber: phoneController.text,
+                            phoneNumber: phoneNumberVal,
                             onCodeSent: () async {
                               await Navigator.pushAndRemoveUntil(
                                 context,

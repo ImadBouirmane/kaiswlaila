@@ -31,6 +31,13 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage6'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -108,6 +115,10 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE6_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -133,34 +144,35 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 0.7,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '6gmg1s8i' /* 70% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 0.7,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '6gmg1s8i' /* 70% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -230,9 +242,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                                   .fromSTEB(30, 0, 30, 30),
                                               child: FlutterFlowCheckboxGroup(
                                                 initiallySelected:
-                                                    checkboxGroupValues1 != null
-                                                        ? checkboxGroupValues1
-                                                        : [],
+                                                    checkboxGroupValues1 ??= [],
                                                 options: [
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -270,7 +280,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                                       .getText(
                                                     'vx0d7yqh' /* Son amour pour les enfants */,
                                                   )
-                                                ],
+                                                ].toList(),
                                                 onChanged: (val) => setState(
                                                     () => checkboxGroupValues1 =
                                                         val),
@@ -295,9 +305,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                                   .fromSTEB(30, 0, 30, 30),
                                               child: FlutterFlowCheckboxGroup(
                                                 initiallySelected:
-                                                    checkboxGroupValues2 != null
-                                                        ? checkboxGroupValues2
-                                                        : [],
+                                                    checkboxGroupValues2 ??= [],
                                                 options: [
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -337,7 +345,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                                       .getText(
                                                     'idao9r8m' /* Sa personnalité  */,
                                                   )
-                                                ],
+                                                ].toList(),
                                                 onChanged: (val) => setState(
                                                     () => checkboxGroupValues2 =
                                                         val),
@@ -362,9 +370,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                                   .fromSTEB(30, 30, 30, 30),
                                               child: FlutterFlowCheckboxGroup(
                                                 initiallySelected:
-                                                    checkboxGroupValues3 != null
-                                                        ? checkboxGroupValues3
-                                                        : [],
+                                                    checkboxGroupValues3 ??= [],
                                                 options: [
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -384,7 +390,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
  (d’une... */
                                                     ,
                                                   )
-                                                ],
+                                                ].toList(),
                                                 onChanged: (val) => setState(
                                                     () => checkboxGroupValues3 =
                                                         val),
@@ -453,6 +459,10 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
+                                    logFirebaseEvent(
+                                        'QS_PAGE6_PAGE_step4_ON_TAP');
+                                    logFirebaseEvent('step4_Backend-Call');
+
                                     final usersUpdateData = {
                                       ...createUsersRecordData(
                                         progressBar: 0.7,
@@ -469,6 +479,7 @@ class _QsPage6WidgetState extends State<QsPage6Widget> {
                                     };
                                     await currentUserReference
                                         .update(usersUpdateData);
+                                    logFirebaseEvent('step4_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(

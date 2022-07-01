@@ -29,6 +29,12 @@ class _PhotosWidgetState extends State<PhotosWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'photos'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -67,6 +73,9 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                             size: 30,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'PHOTOS_chevron_left_outlined_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-Back');
                             Navigator.pop(context);
                           },
                         ),
@@ -170,9 +179,14 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                           size: 20,
                                         ),
                                         onPressed: () async {
+                                          logFirebaseEvent(
+                                              'PHOTOS_PAGE_add_outlined_ICN_ON_TAP');
+                                          logFirebaseEvent(
+                                              'IconButton_Upload-Photo-Video');
                                           final selectedMedia =
                                               await selectMediaWithSourceBottomSheet(
                                             context: context,
+                                            imageQuality: 98,
                                             allowPhoto: true,
                                             backgroundColor:
                                                 FlutterFlowTheme.of(context)
@@ -183,9 +197,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                             pickerFontFamily: 'Lato',
                                           );
                                           if (selectedMedia != null &&
-                                              validateFileFormat(
-                                                  selectedMedia.storagePath,
-                                                  context)) {
+                                              selectedMedia.every((m) =>
+                                                  validateFileFormat(
+                                                      m.storagePath,
+                                                      context))) {
                                             showUploadMessage(
                                               context,
                                               FFLocalizations.of(context)
@@ -194,15 +209,21 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                               ),
                                               showLoading: true,
                                             );
-                                            final downloadUrl =
-                                                await uploadData(
-                                                    selectedMedia.storagePath,
-                                                    selectedMedia.bytes);
+                                            final downloadUrls =
+                                                (await Future.wait(selectedMedia
+                                                        .map((m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes))))
+                                                    .where((u) => u != null)
+                                                    .toList();
                                             ScaffoldMessenger.of(context)
                                                 .hideCurrentSnackBar();
-                                            if (downloadUrl != null) {
+                                            if (downloadUrls != null &&
+                                                downloadUrls.length ==
+                                                    selectedMedia.length) {
                                               setState(() => uploadedFileUrl1 =
-                                                  downloadUrl);
+                                                  downloadUrls.first);
                                               showUploadMessage(
                                                 context,
                                                 FFLocalizations.of(context)
@@ -281,6 +302,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                           size: 20,
                                         ),
                                         onPressed: () async {
+                                          logFirebaseEvent(
+                                              'PHOTOS_PAGE_add_outlined_ICN_ON_TAP');
+                                          logFirebaseEvent(
+                                              'IconButton_Upload-Photo-Video');
                                           final selectedMedia =
                                               await selectMediaWithSourceBottomSheet(
                                             context: context,
@@ -294,9 +319,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                             pickerFontFamily: 'Lato',
                                           );
                                           if (selectedMedia != null &&
-                                              validateFileFormat(
-                                                  selectedMedia.storagePath,
-                                                  context)) {
+                                              selectedMedia.every((m) =>
+                                                  validateFileFormat(
+                                                      m.storagePath,
+                                                      context))) {
                                             showUploadMessage(
                                               context,
                                               FFLocalizations.of(context)
@@ -305,15 +331,21 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                               ),
                                               showLoading: true,
                                             );
-                                            final downloadUrl =
-                                                await uploadData(
-                                                    selectedMedia.storagePath,
-                                                    selectedMedia.bytes);
+                                            final downloadUrls =
+                                                (await Future.wait(selectedMedia
+                                                        .map((m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes))))
+                                                    .where((u) => u != null)
+                                                    .toList();
                                             ScaffoldMessenger.of(context)
                                                 .hideCurrentSnackBar();
-                                            if (downloadUrl != null) {
+                                            if (downloadUrls != null &&
+                                                downloadUrls.length ==
+                                                    selectedMedia.length) {
                                               setState(() => uploadedFileUrl2 =
-                                                  downloadUrl);
+                                                  downloadUrls.first);
                                               showUploadMessage(
                                                 context,
                                                 FFLocalizations.of(context)
@@ -392,6 +424,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                           size: 20,
                                         ),
                                         onPressed: () async {
+                                          logFirebaseEvent(
+                                              'PHOTOS_PAGE_add_outlined_ICN_ON_TAP');
+                                          logFirebaseEvent(
+                                              'IconButton_Upload-Photo-Video');
                                           final selectedMedia =
                                               await selectMediaWithSourceBottomSheet(
                                             context: context,
@@ -405,9 +441,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                             pickerFontFamily: 'Lato',
                                           );
                                           if (selectedMedia != null &&
-                                              validateFileFormat(
-                                                  selectedMedia.storagePath,
-                                                  context)) {
+                                              selectedMedia.every((m) =>
+                                                  validateFileFormat(
+                                                      m.storagePath,
+                                                      context))) {
                                             showUploadMessage(
                                               context,
                                               FFLocalizations.of(context)
@@ -416,15 +453,21 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                               ),
                                               showLoading: true,
                                             );
-                                            final downloadUrl =
-                                                await uploadData(
-                                                    selectedMedia.storagePath,
-                                                    selectedMedia.bytes);
+                                            final downloadUrls =
+                                                (await Future.wait(selectedMedia
+                                                        .map((m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes))))
+                                                    .where((u) => u != null)
+                                                    .toList();
                                             ScaffoldMessenger.of(context)
                                                 .hideCurrentSnackBar();
-                                            if (downloadUrl != null) {
+                                            if (downloadUrls != null &&
+                                                downloadUrls.length ==
+                                                    selectedMedia.length) {
                                               setState(() => uploadedFileUrl3 =
-                                                  downloadUrl);
+                                                  downloadUrls.first);
                                               showUploadMessage(
                                                 context,
                                                 FFLocalizations.of(context)
@@ -503,6 +546,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                           size: 20,
                                         ),
                                         onPressed: () async {
+                                          logFirebaseEvent(
+                                              'PHOTOS_PAGE_add_outlined_ICN_ON_TAP');
+                                          logFirebaseEvent(
+                                              'IconButton_Upload-Photo-Video');
                                           final selectedMedia =
                                               await selectMediaWithSourceBottomSheet(
                                             context: context,
@@ -516,9 +563,10 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                             pickerFontFamily: 'Lato',
                                           );
                                           if (selectedMedia != null &&
-                                              validateFileFormat(
-                                                  selectedMedia.storagePath,
-                                                  context)) {
+                                              selectedMedia.every((m) =>
+                                                  validateFileFormat(
+                                                      m.storagePath,
+                                                      context))) {
                                             showUploadMessage(
                                               context,
                                               FFLocalizations.of(context)
@@ -527,15 +575,21 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                                               ),
                                               showLoading: true,
                                             );
-                                            final downloadUrl =
-                                                await uploadData(
-                                                    selectedMedia.storagePath,
-                                                    selectedMedia.bytes);
+                                            final downloadUrls =
+                                                (await Future.wait(selectedMedia
+                                                        .map((m) async =>
+                                                            await uploadData(
+                                                                m.storagePath,
+                                                                m.bytes))))
+                                                    .where((u) => u != null)
+                                                    .toList();
                                             ScaffoldMessenger.of(context)
                                                 .hideCurrentSnackBar();
-                                            if (downloadUrl != null) {
+                                            if (downloadUrls != null &&
+                                                downloadUrls.length ==
+                                                    selectedMedia.length) {
                                               setState(() => uploadedFileUrl4 =
-                                                  downloadUrl);
+                                                  downloadUrls.first);
                                               showUploadMessage(
                                                 context,
                                                 FFLocalizations.of(context)
@@ -573,6 +627,9 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                         children: [
                           FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent('PHOTOS_PAGE_step4_ON_TAP');
+                              logFirebaseEvent('step4_Backend-Call');
+
                               final usersUpdateData = createUsersRecordData(
                                 photo1: uploadedFileUrl1,
                                 photo2: uploadedFileUrl2,
@@ -581,6 +638,7 @@ class _PhotosWidgetState extends State<PhotosWidget> {
                               );
                               await currentUserReference
                                   .update(usersUpdateData);
+                              logFirebaseEvent('step4_Navigate-To');
                               await Navigator.push(
                                 context,
                                 PageTransition(

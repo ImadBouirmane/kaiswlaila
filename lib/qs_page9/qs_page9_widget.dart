@@ -31,6 +31,13 @@ class _QsPage9WidgetState extends State<QsPage9Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage9'});
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -108,6 +115,10 @@ class _QsPage9WidgetState extends State<QsPage9Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE9_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -133,34 +144,35 @@ class _QsPage9WidgetState extends State<QsPage9Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 1,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'l8rpdkni' /* 100% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 1,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'l8rpdkni' /* 100% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -250,9 +262,7 @@ Veui... */
                                                   child:
                                                       FlutterFlowCheckboxGroup(
                                                     initiallySelected:
-                                                        interests1Values != null
-                                                            ? interests1Values
-                                                            : [],
+                                                        interests1Values ??= [],
                                                     options: [
                                                       FFLocalizations.of(
                                                               context)
@@ -299,7 +309,7 @@ Veui... */
                                                           .getText(
                                                         'z9xvtx7r' /* Diner au restaurant */,
                                                       )
-                                                    ],
+                                                    ].toList(),
                                                     onChanged: (val) =>
                                                         setState(() =>
                                                             interests1Values =
@@ -344,9 +354,7 @@ Veui... */
                                                   child:
                                                       FlutterFlowCheckboxGroup(
                                                     initiallySelected:
-                                                        interests2Values != null
-                                                            ? interests2Values
-                                                            : [],
+                                                        interests2Values ??= [],
                                                     options: [
                                                       FFLocalizations.of(
                                                               context)
@@ -393,7 +401,7 @@ Veui... */
                                                           .getText(
                                                         'hwcp3n6f' /* La famille */,
                                                       )
-                                                    ],
+                                                    ].toList(),
                                                     onChanged: (val) =>
                                                         setState(() =>
                                                             interests2Values =
@@ -438,9 +446,7 @@ Veui... */
                                                   child:
                                                       FlutterFlowCheckboxGroup(
                                                     initiallySelected:
-                                                        interests3Values != null
-                                                            ? interests3Values
-                                                            : [],
+                                                        interests3Values ??= [],
                                                     options: [
                                                       FFLocalizations.of(
                                                               context)
@@ -457,7 +463,7 @@ Veui... */
                                                           .getText(
                                                         '7gfg32j4' /* Les voyages */,
                                                       )
-                                                    ],
+                                                    ].toList(),
                                                     onChanged: (val) =>
                                                         setState(() =>
                                                             interests3Values =
@@ -532,6 +538,10 @@ Veui... */
                                     EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
+                                    logFirebaseEvent(
+                                        'QS_PAGE9_PAGE_step4_ON_TAP');
+                                    logFirebaseEvent('step4_Backend-Call');
+
                                     final usersUpdateData = {
                                       ...createUsersRecordData(
                                         progressBar: 1.0,
@@ -545,6 +555,7 @@ Veui... */
                                     };
                                     await currentUserReference
                                         .update(usersUpdateData);
+                                    logFirebaseEvent('step4_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(

@@ -19,6 +19,13 @@ class _ConditionsUtilisationWidgetState
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'conditionsUtilisation'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -324,6 +331,9 @@ class _ConditionsUtilisationWidgetState
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'CONDITIONS_UTILISATION_PAGE_step4_ON_TAP');
+                                logFirebaseEvent('step4_Navigate-To');
                                 await Navigator.push(
                                   context,
                                   PageTransition(

@@ -23,6 +23,8 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
   void initState() {
     super.initState();
     emailController = TextEditingController();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'PasswordReset'});
   }
 
   @override
@@ -62,6 +64,9 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                         size: 30,
                       ),
                       onPressed: () async {
+                        logFirebaseEvent(
+                            'PASSWORD_RESET_chevron_left_outlined_ICN');
+                        logFirebaseEvent('IconButton_Navigate-Back');
                         Navigator.pop(context);
                       },
                     ),
@@ -146,6 +151,9 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
+                                logFirebaseEvent(
+                                    'PASSWORD_RESET_ENREGISTRER_BTN_ON_TAP');
+                                logFirebaseEvent('Button_Auth');
                                 if (emailController.text.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
@@ -181,6 +189,7 @@ class _PasswordResetWidgetState extends State<PasswordResetWidget> {
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: false,
                                     ),
+                                elevation: 5,
                                 borderSide: BorderSide(
                                   color:
                                       FlutterFlowTheme.of(context).customColor6,

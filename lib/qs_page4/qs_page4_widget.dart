@@ -34,6 +34,12 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'QsPage4'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<UsersRecord>>(
       future: queryUsersRecordOnce(
@@ -111,6 +117,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                       size: 30,
                                     ),
                                     onPressed: () async {
+                                      logFirebaseEvent(
+                                          'QS_PAGE4_PAGE_chevron_left_ICN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'IconButton_Navigate-Back');
                                       Navigator.pop(context);
                                     },
                                   ),
@@ -136,34 +146,35 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     LinearPercentIndicator(
-                                        percent: 0.4,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.7,
-                                        lineHeight: 24,
-                                        animation: true,
-                                        progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .customColor10,
-                                        center: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '7682nbj1' /* 40% */,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Avenir Light ',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryColor,
-                                                useGoogleFonts: false,
-                                              ),
+                                      percent: 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7,
+                                      lineHeight: 24,
+                                      animation: true,
+                                      progressColor:
+                                          FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .customColor10,
+                                      center: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '7682nbj1' /* 40% */,
                                         ),
-                                        barRadius: Radius.circular(10)),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Avenir Light ',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryColor,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(10),
+                                      padding: EdgeInsets.zero,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -328,8 +339,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                             Axis.horizontal,
                                                         initialRating:
                                                             ratingBar1Value ??=
-                                                                currentUserDocument
-                                                                    ?.qs6RB1,
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.qs6RB1,
+                                                                    0.0),
                                                         unratedColor:
                                                             Color(0xFF9E9E9E),
                                                         itemCount: 5,
@@ -392,8 +405,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                             Axis.horizontal,
                                                         initialRating:
                                                             ratingBar2Value ??=
-                                                                currentUserDocument
-                                                                    ?.qs6RB2,
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.qs6RB2,
+                                                                    0.0),
                                                         unratedColor:
                                                             Color(0xFF9E9E9E),
                                                         itemCount: 5,
@@ -456,8 +471,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                             Axis.horizontal,
                                                         initialRating:
                                                             ratingBar3Value ??=
-                                                                currentUserDocument
-                                                                    ?.qs6RB3,
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.qs6RB3,
+                                                                    0.0),
                                                         unratedColor:
                                                             Color(0xFF9E9E9E),
                                                         itemCount: 5,
@@ -520,8 +537,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                             Axis.horizontal,
                                                         initialRating:
                                                             ratingBar4Value ??=
-                                                                currentUserDocument
-                                                                    ?.qs6RB4,
+                                                                valueOrDefault(
+                                                                    currentUserDocument
+                                                                        ?.qs6RB4,
+                                                                    0.0),
                                                         unratedColor:
                                                             Color(0xFF9E9E9E),
                                                         itemCount: 5,
@@ -634,8 +653,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                               Axis.horizontal,
                                                           initialRating:
                                                               ratingBar5Value ??=
-                                                                  currentUserDocument
-                                                                      ?.qs6RB5,
+                                                                  valueOrDefault(
+                                                                      currentUserDocument
+                                                                          ?.qs6RB5,
+                                                                      0.0),
                                                           unratedColor:
                                                               Color(0xFF9E9E9E),
                                                           itemCount: 5,
@@ -703,8 +724,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                                               Axis.horizontal,
                                                           initialRating:
                                                               ratingBar6Value ??=
-                                                                  currentUserDocument
-                                                                      ?.qs6RB6,
+                                                                  valueOrDefault(
+                                                                      currentUserDocument
+                                                                          ?.qs6RB6,
+                                                                      0.0),
                                                           unratedColor:
                                                               Color(0xFF9E9E9E),
                                                           itemCount: 5,
@@ -769,6 +792,10 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
+                                    logFirebaseEvent(
+                                        'QS_PAGE4_PAGE_step4_ON_TAP');
+                                    logFirebaseEvent('step4_Backend-Call');
+
                                     final usersUpdateData =
                                         createUsersRecordData(
                                       qs6RB1: ratingBar1Value,
@@ -781,6 +808,7 @@ class _QsPage4WidgetState extends State<QsPage4Widget> {
                                     );
                                     await currentUserReference
                                         .update(usersUpdateData);
+                                    logFirebaseEvent('step4_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(

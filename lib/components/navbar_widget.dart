@@ -24,6 +24,7 @@ class _NavbarWidgetState extends State<NavbarWidget>
     'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -92,6 +93,8 @@ class _NavbarWidgetState extends State<NavbarWidget>
               children: [
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVBAR_COMP_Container_awygusd0_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     await Navigator.push(
                       context,
                       PageTransition(
@@ -123,6 +126,8 @@ class _NavbarWidgetState extends State<NavbarWidget>
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVBAR_COMP_Container_yc9dcy9i_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     await Navigator.push(
                       context,
                       PageTransition(
@@ -154,6 +159,8 @@ class _NavbarWidgetState extends State<NavbarWidget>
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVBAR_COMP_Container_m0xzt30x_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     await Navigator.push(
                       context,
                       PageTransition(
@@ -185,6 +192,8 @@ class _NavbarWidgetState extends State<NavbarWidget>
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVBAR_COMP_Container_kvqma7dy_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     await Navigator.push(
                       context,
                       PageTransition(

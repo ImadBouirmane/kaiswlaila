@@ -27,6 +27,8 @@ class _PhoneVerificationSignUpWidgetState
   void initState() {
     super.initState();
     codeController = TextEditingController();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'PhoneVerificationSignUp'});
   }
 
   @override
@@ -63,6 +65,9 @@ class _PhoneVerificationSignUpWidgetState
                       size: 30,
                     ),
                     onPressed: () async {
+                      logFirebaseEvent(
+                          'PHONE_VERIFICATION_SIGN_UP_chevron_left_');
+                      logFirebaseEvent('IconButton_Navigate-Back');
                       Navigator.pop(context);
                     },
                   ),
@@ -138,7 +143,11 @@ class _PhoneVerificationSignUpWidgetState
                   children: [
                     InkWell(
                       onTap: () async {
-                        if (codeController.text.isEmpty) {
+                        logFirebaseEvent(
+                            'PHONE_VERIFICATION_SIGN_UP_Text_23cuqdiz');
+                        logFirebaseEvent('Text_Auth');
+                        final smsCodeVal = codeController.text;
+                        if (smsCodeVal == null || smsCodeVal.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(FFLocalizations.of(context).getText(
@@ -150,7 +159,7 @@ class _PhoneVerificationSignUpWidgetState
                         }
                         final phoneVerifiedUser = await verifySmsCode(
                           context: context,
-                          smsCode: codeController.text,
+                          smsCode: smsCodeVal,
                         );
                         if (phoneVerifiedUser == null) {
                           return;
@@ -186,7 +195,11 @@ class _PhoneVerificationSignUpWidgetState
                   children: [
                     FFButtonWidget(
                       onPressed: () async {
-                        if (codeController.text.isEmpty) {
+                        logFirebaseEvent(
+                            'PHONE_VERIFICATION_SIGN_UP_VALIDER_BTN_O');
+                        logFirebaseEvent('Button_Auth');
+                        final smsCodeVal = codeController.text;
+                        if (smsCodeVal == null || smsCodeVal.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(FFLocalizations.of(context).getText(
@@ -198,12 +211,13 @@ class _PhoneVerificationSignUpWidgetState
                         }
                         final phoneVerifiedUser = await verifySmsCode(
                           context: context,
-                          smsCode: codeController.text,
+                          smsCode: smsCodeVal,
                         );
                         if (phoneVerifiedUser == null) {
                           return;
                         }
 
+                        logFirebaseEvent('Button_Navigate-To');
                         await Navigator.push(
                           context,
                           PageTransition(

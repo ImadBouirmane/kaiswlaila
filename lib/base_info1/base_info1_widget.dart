@@ -31,6 +31,7 @@ class _BaseInfo1WidgetState extends State<BaseInfo1Widget> {
     bioController = TextEditingController();
     fullNameController = TextEditingController();
     jobTitleController = TextEditingController();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'baseInfo1'});
   }
 
   @override
@@ -236,12 +237,16 @@ class _BaseInfo1WidgetState extends State<BaseInfo1Widget> {
                   Spacer(),
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('BASE_INFO1_PAGE_step3_ON_TAP');
+                      logFirebaseEvent('step3_Backend-Call');
+
                       final usersUpdateData = createUsersRecordData(
                         displayName: fullNameController.text,
                         function: jobTitleController.text,
                         bio: bioController.text,
                       );
                       await currentUserReference.update(usersUpdateData);
+                      logFirebaseEvent('step3_Navigate-To');
                       await Navigator.push(
                         context,
                         PageTransition(

@@ -39,6 +39,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'textOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -54,6 +55,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -69,6 +71,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -84,6 +87,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'textOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -99,6 +103,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -114,6 +119,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -129,6 +135,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'textOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -144,6 +151,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation5': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -159,6 +167,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation6': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -174,6 +183,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'textOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -189,6 +199,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation7': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -204,6 +215,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation8': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -219,6 +231,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'textOnPageLoadAnimation5': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 0),
@@ -234,6 +247,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation9': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -249,6 +263,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'cardOnPageLoadAnimation10': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -264,6 +279,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(-40, 0),
@@ -280,6 +296,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 810,
       delay: 170,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 50),
@@ -296,6 +313,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
       trigger: AnimationTrigger.onActionTrigger,
       duration: 600,
       delay: 150,
+      hideBeforeAnimating: false,
       initialState: AnimationState(
         offset: Offset(0, 0),
         scale: 3,
@@ -310,6 +328,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(40, 0),
@@ -337,6 +356,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onActionTrigger),
       this,
     );
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'homePage'});
   }
 
   @override
@@ -419,6 +440,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               children: [
                                 InkWell(
                                   onTap: () async {
+                                    logFirebaseEvent(
+                                        'HOME_PAGE_PAGE_Container_pna6db68_ON_TAP');
+                                    logFirebaseEvent('Container_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -474,6 +498,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ),
                                 InkWell(
                                   onTap: () async {
+                                    logFirebaseEvent(
+                                        'HOME_CircleImage_pizgmbzj_ON_TAP');
+                                    logFirebaseEvent('CircleImage_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(
@@ -530,7 +557,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     snapshot.data;
                                 return Container(
                                   width: double.infinity,
-                                  height: 500,
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 50),
@@ -683,6 +709,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               child: InkWell(
                                                                 onTap:
                                                                     () async {
+                                                                  logFirebaseEvent(
+                                                                      'HOME_CircleImage_jtqpdmfm_ON_TAP');
+                                                                  logFirebaseEvent(
+                                                                      'CircleImage_Expand-Image');
                                                                   await Navigator
                                                                       .push(
                                                                     context,
@@ -897,6 +927,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               children: [
                                 InkWell(
                                   onTap: () async {
+                                    logFirebaseEvent(
+                                        'HOME_PAGE_PAGE_Container_m69cwoz2_ON_TAP');
+                                    logFirebaseEvent('Container_Page-View');
                                     await pageViewController.previousPage(
                                       duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
@@ -947,8 +980,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ]),
                                 InkWell(
                                   onTap: () async {
-                                    if ((currentUserDocument?.like) ==
+                                    logFirebaseEvent(
+                                        'HOME_PAGE_PAGE_Container_t25ixfqy_ON_TAP');
+                                    if ((valueOrDefault(
+                                            currentUserDocument?.like,
+                                            false)) ==
                                         (homePageUsersRecord.like)) {
+                                      logFirebaseEvent(
+                                          'Container_Backend-Call');
+
                                       final matchesCreateData = {
                                         'users': [
                                           homePageUsersRecord.reference
@@ -958,6 +998,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           .doc()
                                           .set(matchesCreateData);
                                     } else {
+                                      logFirebaseEvent('Container_Page-View');
                                       await pageViewController.nextPage(
                                         duration: Duration(milliseconds: 300),
                                         curve: Curves.ease,
@@ -965,6 +1006,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       return;
                                     }
 
+                                    logFirebaseEvent(
+                                        'Container_Widget-Animation');
                                     await Future.delayed(
                                       Duration(
                                         milliseconds: animationsMap[
@@ -978,6 +1021,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               .parent as AnimationController)
                                           .forward(from: 0.0),
                                     );
+                                    logFirebaseEvent('Container_Navigate-To');
                                     await Navigator.push(
                                       context,
                                       PageTransition(
@@ -1033,6 +1077,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ]),
                                 InkWell(
                                   onTap: () async {
+                                    logFirebaseEvent(
+                                        'HOME_PAGE_PAGE_Container_wrqysmcg_ON_TAP');
+                                    logFirebaseEvent('Container_Page-View');
                                     await pageViewController.nextPage(
                                       duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
